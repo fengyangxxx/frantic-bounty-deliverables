@@ -1,0 +1,150 @@
+{
+  "schema": "frantic.verifiable_web_research.v1",
+  "bounty": {
+    "platform": "Frantic",
+    "number": 24,
+    "posting_id": "p-b5e7d3b9b4",
+    "title": "runx skill: verifiable web research"
+  },
+  "question": "Which current bounty venues in our scan expose agent-oriented work routes, and what blockers remain before an agent can submit?",
+  "generated_at": "2026-06-18T16:16:01+00:00",
+  "sources": [
+    {
+      "id": "frantic_skill",
+      "url": "https://gofrantic.com/SKILL.md",
+      "final_url": "https://gofrantic.com/SKILL.md",
+      "status": 200,
+      "content_type": "text/markdown",
+      "sha256": "3acadbacc3c3d8dd1a5d8e372dc039bb0dc7f798c66ec8f61fb6502ea3b0bab5",
+      "purpose": "Frantic protocol, signup, claim, delivery, and identity rules."
+    },
+    {
+      "id": "frantic_21",
+      "url": "https://gofrantic.com/v1/bounties/p-b14252e1b0",
+      "final_url": "https://gofrantic.com/v1/bounties/p-b14252e1b0",
+      "status": 200,
+      "content_type": "application/json",
+      "sha256": "4524cb570cc88582cb01c0a2fffcd535ff999eced417b2ac0fc3850da596f488",
+      "purpose": "Frantic dependency CVE audit bounty state and requirements."
+    },
+    {
+      "id": "frantic_24",
+      "url": "https://gofrantic.com/v1/bounties/p-b5e7d3b9b4",
+      "final_url": "https://gofrantic.com/v1/bounties/p-b5e7d3b9b4",
+      "status": 200,
+      "content_type": "application/json",
+      "sha256": "df002f0cd92ca27ae683b009bad9d6056d74d2c242d2c586bf06fdfa35cccfc7",
+      "purpose": "Frantic verifiable web research bounty state and requirements."
+    },
+    {
+      "id": "superteam_skill",
+      "url": "https://superteam.fun/skill.md",
+      "final_url": "https://superteam.fun/skill.md",
+      "status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "sha256": "44745026273c267572762b1851c46bda58d52a55a28cf54d7c1a72b76a6bb350",
+      "purpose": "Superteam agent route rules and claim code flow."
+    },
+    {
+      "id": "superteam_bounties",
+      "url": "https://superteam.fun/api/agents/listings/live?take=100&type=bounty",
+      "final_url": "https://superteam.fun/api/agents/listings/live?take=100&type=bounty",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "efa7c19282864cda3a8d2b202e521e94cc4f9e4fa3e2c9e85b5fb24f99e2585f",
+      "purpose": "Live Superteam agent bounty listings."
+    },
+    {
+      "id": "superteam_projects",
+      "url": "https://superteam.fun/api/agents/listings/live?take=100&type=project",
+      "final_url": "https://superteam.fun/api/agents/listings/live?take=100&type=project",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "purpose": "Live Superteam agent project listings."
+    }
+  ],
+  "claims": [
+    {
+      "id": "fact_frantic_signup",
+      "source_ids": [
+        "frantic_skill"
+      ],
+      "claim": "Frantic supports first-class agent entry through its homepage form or POST /v1/signup, returning an agent token and public agent key id.",
+      "snippet": "ath by intent: - Agent entry: go to `https://gofrantic.com/#enlist` or call `POST /v1/signup`. This creates the agent, returns the private `agent_token`, and mints the birth receipt. No runx install is required"
+    },
+    {
+      "id": "fact_frantic_claim_delivery",
+      "source_ids": [
+        "frantic_skill"
+      ],
+      "claim": "Frantic claims are made with POST /v1/claims and deliveries are submitted with POST /v1/deliveries before the claim fuse expires.",
+      "snippet": "d` and `agent_token`. - `frantic.claim_bounty`: claims a funded bounty through `POST /v1/claims`; requires `bounty`, `agent_kid`, and `agent_token`. - `frantic.submit_delivery`: submits artifact references through"
+    },
+    {
+      "id": "fact_frantic_identity",
+      "source_ids": [
+        "frantic_skill"
+      ],
+      "claim": "Frantic funded claims require active identity proof: verified email in open_email mode or runx GitHub identity in runx_github mode.",
+      "snippet": "es, emails, wallets, or agents to bypass caps, cooldowns, or payout limits. - Funded claims require the active identity proof. In open-email mode that means verified email plus the GitHub age/activity gate. In runx-Gi"
+    },
+    {
+      "id": "fact_frantic_21_open",
+      "source_ids": [
+        "frantic_21"
+      ],
+      "claim": "Frantic #21 'runx skill: dependency CVE audit' is listed as open with 1 claim slot(s) available and $12 posted reward.",
+      "snippet": "{\"title\": \"runx skill: dependency CVE audit\", \"status\": \"open\", \"priceUsd\": 12, \"claimProgress\": {\"capacity\": 1, \"occupied\": 0, \"available\": 1, \"active\": 0, \"delivered\": 0, \"accepted\": 0, \"paid\": 0, \"revising\": 0, \"rejected\": 0, \"expired\": 0}}"
+    },
+    {
+      "id": "fact_frantic_21_criteria",
+      "source_ids": [
+        "frantic_21"
+      ],
+      "claim": "Frantic #21 requires a governed skill, evidence.json, report.md, receipt reference, and a real run matching its acceptance criteria.",
+      "snippet": "[]"
+    },
+    {
+      "id": "fact_frantic_24_open",
+      "source_ids": [
+        "frantic_24"
+      ],
+      "claim": "Frantic #24 'runx skill: verifiable web research' is listed as open with 1 claim slot(s) available and $15 posted reward.",
+      "snippet": "{\"title\": \"runx skill: verifiable web research\", \"status\": \"open\", \"priceUsd\": 15, \"claimProgress\": {\"capacity\": 1, \"occupied\": 0, \"available\": 1, \"active\": 0, \"delivered\": 0, \"accepted\": 0, \"paid\": 0, \"revising\": 0, \"rejected\": 0, \"expired\": 0}}"
+    },
+    {
+      "id": "fact_frantic_24_criteria",
+      "source_ids": [
+        "frantic_24"
+      ],
+      "claim": "Frantic #24 requires a governed skill, evidence.json, report.md, receipt reference, and a real run matching its acceptance criteria.",
+      "snippet": "[]"
+    },
+    {
+      "id": "fact_superteam_agents_route",
+      "source_ids": [
+        "superteam_skill"
+      ],
+      "claim": "Superteam exposes an agent workflow with registration, API key, listing endpoints, submission creation, and a human claim URL containing the agent claim code.",
+      "snippet": "name\":\"my-agent-name\"}' ``` Response includes: - `apiKey` (store securely) - `claimCode` (give to a human to claim later) - `agentId` - `username` (agent talent profile slug) 2. Authenticate subsequent requ"
+    },
+    {
+      "id": "fact_superteam_bounties_count",
+      "source_ids": [
+        "superteam_bounties"
+      ],
+      "claim": "Superteam bounties agent API returned 7 listing(s), including 7 listing(s) marked AGENT_ALLOWED or AGENT_ONLY.",
+      "snippet": "[{\"title\": \"Develop a narrative detection and idea generation tool\", \"url\": \"https://superteam.fun/earn/develop-a-narrative-detection-and-idea-generation-tool\", \"agentAccess\": \"AGENT_ONLY\", \"status\": \"OPEN\", \"rewardAmount\": 3500}, {\"title\": \"Audit & Fix Open-Source Solana Repositories for Vulnerabilities\", \"url\": \"h..."
+    },
+    {
+      "id": "fact_superteam_projects_count",
+      "source_ids": [
+        "superteam_projects"
+      ],
+      "claim": "Superteam projects agent API returned 0 listing(s), including 0 listing(s) marked AGENT_ALLOWED or AGENT_ONLY.",
+      "snippet": "[]"
+    }
+  ],
+  "method": "Fetch official sources, hash each response, extract bounded facts, and map every report claim to one or more source ids."
+}

@@ -1,0 +1,29 @@
+skill: verifiable-web-research
+runners:
+  verifiable-web-research:
+    default: true
+    type: cli-tool
+    command: F:/ProgramData/anaconda3/python.exe
+    cwd: F:/work/ai_work/get_money/frantic_tasks/verifiable-web-research
+    cwd_policy: skill-directory
+    args:
+      - tools/verifiable_research.py
+    timeout_seconds: 180
+    inputs:
+      question:
+        type: string
+        required: true
+      output_dir:
+        type: string
+        required: true
+harness:
+  cases:
+    - name: agent-bounty-route-research
+      runner: verifiable-web-research
+      inputs:
+        question: Which current bounty venues in our scan expose agent-oriented work routes, and what blockers remain before an agent can submit?
+        output_dir: runs/agent-bounty-routes
+      expect:
+        status: sealed
+        receipt:
+          kind: receipt
