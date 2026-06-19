@@ -1,0 +1,85 @@
+{
+  "bounty": {
+    "platform": "Frantic",
+    "id": "p-2fe96b012e",
+    "title": "Build a runx connector skill"
+  },
+  "delivery": {
+    "skill_name": "open-library-book-lookup",
+    "provider": "open-library",
+    "canonical_skill": "runx/web-fetch",
+    "runtime_path": "nango",
+    "scope": "open-library:search:read",
+    "method": "GET",
+    "host": "openlibrary.org",
+    "path": "/search.json",
+    "mutation_allowed": false,
+    "credential_material_allowed": false
+  },
+  "runx_registry": {
+    "status": "success",
+    "skill_id": "fengyangxxx/open-library-book-lookup",
+    "listing": "https://runx.ai/x/fengyangxxx/open-library-book-lookup",
+    "page_url": "https://runx.ai/x/fengyangxxx/open-library-book-lookup@sha-c60ba5f59af1",
+    "install_command": "runx skill add fengyangxxx/open-library-book-lookup@sha-c60ba5f59af1",
+    "version": "sha-c60ba5f59af1",
+    "trust_tier": "community",
+    "latest_digest": "dee12080c4e31d1331a778c9ffd11c4b54a1398a4a6e5ba23da3722756aa0e95",
+    "profile_digest": "731d61f45af51b56895b38cbdbb0434de2f66ec7ce554c928dbec6a2f70db22b"
+  },
+  "source": {
+    "repo": "https://github.com/fengyangxxx/frantic-bounty-deliverables",
+    "commit": "c60ba5f59af11315b6a8ea58e32db02b1b317b58",
+    "delivery_dir": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-2fe96b012e-open-library-connector",
+    "indexable_skill_dir": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/skills/open-library-book-lookup",
+    "skill_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/SKILL.md",
+    "profile_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/X.yaml",
+    "tool_manifest_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/tools/open_library/search/manifest.json",
+    "tool_source_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/tools/open_library/search/run.mjs"
+  },
+  "verification": {
+    "runx_tool_build": {
+      "status": "success",
+      "source_hash": "sha256:441cd4ddda579b1daf011e5849cb99ff2dba3efdda143026c769def34c40adc8",
+      "schema_hash": "sha256:be265af7ca5377d466a759f089cc223302cdcd71713a2a24f165617c8629e31b"
+    },
+    "runx_doctor": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/doctor-output.json"
+    },
+    "runx_dev_deterministic": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/harness-dev-output.json",
+      "fixtures": [
+        "open-library-search-fixture",
+        "open-library-search-basic"
+      ]
+    },
+    "tool_direct_fixture_run": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/tool-output.json"
+    },
+    "runx_registry_index": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/runx-api-v1-index-output.json"
+    },
+    "runx_index_status": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/runx-index-status-output.json"
+    },
+    "runx_skill_detail": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/runx-skill-detail-output.json"
+    },
+    "runx_skill_harness_detail": {
+      "status": "success",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/runx-skill-harness-output.json"
+    },
+    "windows_inline_harness": {
+      "status": "environment_failure",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/windows-runx-harness-output.json",
+      "note": "Local Windows inline harness receipt sealing reached runx receipt store os error 87. The same package passes runx doctor, deterministic runx dev fixtures, direct tool execution, and runx hosted URL indexing."
+    }
+  },
+  "public_artifact_statement": "This evidence file intentionally contains only public artifact links, public registry metadata, and non-sensitive verification summaries."
+}
