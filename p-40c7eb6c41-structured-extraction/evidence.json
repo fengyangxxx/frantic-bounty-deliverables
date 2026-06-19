@@ -56,6 +56,33 @@
                       "proves":  "Human-readable report maps artifacts to each acceptance criterion."
                   }
               ],
+    "observations":  [
+                         {
+                             "title":  "Governed skill definition is complete",
+                             "evidence":  "X.yaml declares typed inputs, typed outputs, scopes, policy, emits, tool routing, and fixture-backed example invocation.",
+                             "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/X.yaml"
+                         },
+                         {
+                             "title":  "Real messy input is byte-reproducible",
+                             "evidence":  "The committed RFC 9110 HTML fixture is 1192867 bytes and hashes to sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6.",
+                             "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/fixtures/rfc9110-http-semantics.html"
+                         },
+                         {
+                             "title":  "Output validates against the declared schema",
+                             "evidence":  "direct-tool-output.json reports validation.valid=true, schema_id=runx.structured_extraction.result.v1, and 18 extracted records.",
+                             "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json"
+                         },
+                         {
+                             "title":  "Sealed receipt and verification artifacts are public",
+                             "evidence":  "receipt-verify-output.json reports valid=true for a two-receipt tree rooted at sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb.",
+                             "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipt-verify-output.json"
+                         },
+                         {
+                             "title":  "Skill was submitted upstream",
+                             "evidence":  "The skill is opened as runxhq/runx PR #80 rather than only existing in local artifacts.",
+                             "artifact":  "https://github.com/runxhq/runx/pull/80"
+                         }
+                     ],
     "source":  {
                    "url":  "https://www.rfc-editor.org/rfc/rfc9110.html",
                    "content_type":  "text/html",
