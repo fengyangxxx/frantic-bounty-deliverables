@@ -2,9 +2,9 @@
     "schema":  "frantic.delivery.evidence.v1",
     "bounty":  "p-40c7eb6c41",
     "title":  "runx skill: structured extraction",
-    "summary":  "Governed runx structured-extraction skill that extracts schema-validated JSON from the real RFC 9110 HTML document. The evidence binds the source input, committed fixture digest, declared JSON schema, validated output payload, runx PR, harness output, and verified sealed receipt refs.",
+    "summary":  "Governed runx structured-extraction skill that extracts JSON from the real RFC 9110 HTML document, uses a typed item schema, validates the final output through native-json-schema-subset-v1, and publishes verified sealed receipt refs.",
     "claim_ref":  "frantic:claim:b2ba428c-8a2f-416f-8593-1a44fa50fe2a",
-    "receipt_ref":  "runx:receipt:sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+    "receipt_ref":  "runx:receipt:sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
     "runx_pr":  "https://github.com/runxhq/runx/pull/80",
     "skill_repo":  "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-40c7eb6c41-structured-extraction",
     "artifact_urls":  {
@@ -35,20 +35,20 @@
                   {
                       "name":  "declared_schema",
                       "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/schemas/extraction.schema.json",
-                      "sha256":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
-                      "proves":  "Output schema is declared and used for validation."
+                      "sha256":  "sha256:87b8648f47bdd68b962d642dcf2f982fd20f07ec7a278651a275465c682f3a93",
+                      "proves":  "Output schema defines real typed items, per-kind fields, summary constraints, validation fields, and is used by run.mjs for final validation."
                   },
                   {
                       "name":  "validated_output",
                       "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json",
                       "sha256":  "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
-                      "proves":  "Tool produced schema-valid JSON output with 18 extracted records."
+                      "proves":  "Tool produced schema-valid JSON output with 18 extracted records and json_schema_validation=true."
                   },
                   {
                       "name":  "sealed_receipt",
                       "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
-                      "receipt_ref":  "runx:receipt:sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
-                      "proves":  "Verified runx receipt tree binds the governed run and child skill artifact refs."
+                      "receipt_ref":  "runx:receipt:sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
+                      "proves":  "Verified runx receipt tree binds the governed run and child skill artifact refs after the schema-validation revision."
                   },
                   {
                       "name":  "report",
@@ -69,12 +69,12 @@
                          },
                          {
                              "title":  "Output validates against the declared schema",
-                             "evidence":  "direct-tool-output.json reports validation.valid=true, schema_id=runx.structured_extraction.result.v1, and 18 extracted records.",
+                             "evidence":  "direct-tool-output.json reports validation.valid=true, engine=native-json-schema-subset-v1, json_schema_validation=true, schema_sha256=sha256:87b8648f47bdd68b962d642dcf2f982fd20f07ec7a278651a275465c682f3a93, and 18 extracted records.",
                              "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json"
                          },
                          {
                              "title":  "Sealed receipt and verification artifacts are public",
-                             "evidence":  "receipt-verify-output.json reports valid=true for a two-receipt tree rooted at sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb.",
+                             "evidence":  "receipt-verify-output.json reports valid=true for a two-receipt tree rooted at sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c.",
                              "artifact":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipt-verify-output.json"
                          },
                          {
@@ -99,14 +99,9 @@
                },
     "schema_validation":  {
                               "schema_id":  "runx.structured_extraction.result.v1",
-                              "schema_sha256":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                              "schema_sha256":  "sha256:87b8648f47bdd68b962d642dcf2f982fd20f07ec7a278651a275465c682f3a93",
                               "valid":  true,
                               "checks":  [
-                                             {
-                                                 "name":  "required_top_level_fields",
-                                                 "passed":  true,
-                                                 "detail":  "present"
-                                             },
                                              {
                                                  "name":  "has_source_digest",
                                                  "passed":  true,
@@ -115,22 +110,33 @@
                                              {
                                                  "name":  "has_schema_digest",
                                                  "passed":  true,
-                                                 "detail":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0"
+                                                 "detail":  "sha256:87b8648f47bdd68b962d642dcf2f982fd20f07ec7a278651a275465c682f3a93"
                                              },
                                              {
-                                                 "name":  "has_items",
+                                                 "name":  "has_minimum_items",
                                                  "passed":  true,
                                                  "detail":  "18"
+                                             },
+                                             {
+                                                 "name":  "summary_counts_match_items",
+                                                 "passed":  true,
+                                                 "detail":  "{\"heading\":9,\"term\":6,\"paragraph\":3}"
+                                             },
+                                             {
+                                                 "name":  "json_schema_validation",
+                                                 "passed":  true,
+                                                 "detail":  "output validates against schemas/extraction.schema.json"
                                              }
-                                         ]
+                                         ],
+                              "engine":  "native-json-schema-subset-v1"
                           },
     "receipt":  {
-                    "root_receipt_id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                    "root_receipt_id":  "sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
                     "verify_valid":  true,
                     "receipt_count":  2,
                     "trees":  [
                                   {
-                                      "root_receipt_id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                                      "root_receipt_id":  "sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
                                       "receipt_count":  2,
                                       "parent_missing":  null,
                                       "valid":  true,
@@ -141,18 +147,18 @@
                               ],
                     "receipts":  [
                                      {
-                                         "id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
-                                         "subject":  "graph",
-                                         "file":  "sha256_4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb.json",
-                                         "artifact_refs":  0,
-                                         "source_refs":  0
-                                     },
-                                     {
-                                         "id":  "sha256:8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820",
+                                         "id":  "sha256:226ef9f9057219f2056e7d5d1ff0453a0102cde6cc2be9bf1a27f08e87b8b343",
                                          "subject":  "skill",
-                                         "file":  "sha256_8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820.json",
+                                         "file":  "sha256_226ef9f9057219f2056e7d5d1ff0453a0102cde6cc2be9bf1a27f08e87b8b343.json",
                                          "artifact_refs":  6,
                                          "source_refs":  1
+                                     },
+                                     {
+                                         "id":  "sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
+                                         "subject":  "graph",
+                                         "file":  "sha256_3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c.json",
+                                         "artifact_refs":  0,
+                                         "source_refs":  0
                                      }
                                  ]
                 },
@@ -177,13 +183,16 @@
                                    "evidence":  [
                                                     "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/schemas/extraction.schema.json",
                                                     "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json",
-                                                    "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+                                                    "sha256:87b8648f47bdd68b962d642dcf2f982fd20f07ec7a278651a275465c682f3a93",
+                                                    "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                                                    "validation.engine=native-json-schema-subset-v1",
+                                                    "json_schema_validation=true"
                                                 ]
                                },
                                {
                                    "criterion":  "sealed receipt binds input/schema/output artifact refs",
                                    "evidence":  [
-                                                    "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                                                    "sha256:3e321e587d8423ef8a8474cf59f15d17c372c6ec4e22d0a24e493d02ee6da04c",
                                                     "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
                                                     "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipt-verify-output.json"
                                                 ]
