@@ -2,7 +2,9 @@
     "schema":  "frantic.delivery.evidence.v1",
     "bounty":  "p-40c7eb6c41",
     "title":  "runx skill: structured extraction",
+    "summary":  "Governed runx structured-extraction skill that extracts schema-validated JSON from the real RFC 9110 HTML document. The evidence binds the source input, committed fixture digest, declared JSON schema, validated output payload, runx PR, harness output, and verified sealed receipt refs.",
     "claim_ref":  "frantic:claim:b2ba428c-8a2f-416f-8593-1a44fa50fe2a",
+    "receipt_ref":  "runx:receipt:sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
     "runx_pr":  "https://github.com/runxhq/runx/pull/80",
     "skill_repo":  "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-40c7eb6c41-structured-extraction",
     "artifact_urls":  {
@@ -17,6 +19,43 @@
                           "receipt_index":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
                           "report":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/report.md"
                       },
+    "items":  [
+                  {
+                      "name":  "runx_pr",
+                      "url":  "https://github.com/runxhq/runx/pull/80",
+                      "proves":  "Submitted to runx as a real governed skill via PR."
+                  },
+                  {
+                      "name":  "real_input_fixture",
+                      "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/fixtures/rfc9110-http-semantics.html",
+                      "sha256":  "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "bytes":  1192867,
+                      "proves":  "Real messy RFC 9110 HTML input is committed and byte-reproducible."
+                  },
+                  {
+                      "name":  "declared_schema",
+                      "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/schemas/extraction.schema.json",
+                      "sha256":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "proves":  "Output schema is declared and used for validation."
+                  },
+                  {
+                      "name":  "validated_output",
+                      "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json",
+                      "sha256":  "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "proves":  "Tool produced schema-valid JSON output with 18 extracted records."
+                  },
+                  {
+                      "name":  "sealed_receipt",
+                      "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
+                      "receipt_ref":  "runx:receipt:sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                      "proves":  "Verified runx receipt tree binds the governed run and child skill artifact refs."
+                  },
+                  {
+                      "name":  "report",
+                      "url":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/report.md",
+                      "proves":  "Human-readable report maps artifacts to each acceptance criterion."
+                  }
+              ],
     "source":  {
                    "url":  "https://www.rfc-editor.org/rfc/rfc9110.html",
                    "content_type":  "text/html",
