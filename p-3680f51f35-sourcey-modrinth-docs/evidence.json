@@ -25,9 +25,12 @@
                     "generated_output":  "dist/"
                 },
     "hosting":  {
-                    "status":  "prepared_not_claimed",
-                    "site_url":  "pending_commit_pinned_rawgithack_url",
-                    "note":  "The site is generated and will be served from a pinned commit URL before any Frantic submission. GitHub Pages and pages.dev are intentionally not used."
+                    "status":  "prepared_public_url_verified",
+                    "site_url":  "https://raw.githack.com/fengyangxxx/frantic-bounty-deliverables/c5eb04e9fa57bb3481f9033c7502387c3d3ca3f7/p-3680f51f35-sourcey-modrinth-docs/dist/index.html",
+                    "note":  "Pinned commit RawGitHack URL returned HTTP 200 for index.html, api.html, search-index.json, sourcey.css, and sourcey.js. This is not github.io or pages.dev, but final QA must still decide whether Frantic will accept it as a stable host.",
+                    "api_reference_url":  "https://raw.githack.com/fengyangxxx/frantic-bounty-deliverables/c5eb04e9fa57bb3481f9033c7502387c3d3ca3f7/p-3680f51f35-sourcey-modrinth-docs/dist/api.html",
+                    "host":  "raw.githack.com",
+                    "pinned_commit":  "c5eb04e9fa57bb3481f9033c7502387c3d3ca3f7"
                 },
     "artifact_paths":  {
                            "source_config":  "sourcey.config.ts",

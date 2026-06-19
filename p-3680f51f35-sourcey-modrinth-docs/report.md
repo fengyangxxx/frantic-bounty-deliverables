@@ -42,7 +42,15 @@ category, well above the 20-endpoint Frantic requirement.
 
 ## Current Blocker
 
-This package is locally built and ready for hosting validation. Frantic's
-previous #2 review accepted the quality of a Modrinth Sourcey build but rejected
-throwaway hosting. Before submission, the final site URL must pass QA as a
-stable public host that is not `github.io` or `*.pages.dev`.
+Public pinned site URL:
+
+https://raw.githack.com/fengyangxxx/frantic-bounty-deliverables/c5eb04e9fa57bb3481f9033c7502387c3d3ca3f7/p-3680f51f35-sourcey-modrinth-docs/dist/index.html
+
+Public pinned API reference URL:
+
+https://raw.githack.com/fengyangxxx/frantic-bounty-deliverables/c5eb04e9fa57bb3481f9033c7502387c3d3ca3f7/p-3680f51f35-sourcey-modrinth-docs/dist/api.html
+
+Frantic's previous #2 review accepted the quality of a Modrinth Sourcey build
+but rejected throwaway hosting. This draft uses a pinned RawGitHack commit URL,
+not `github.io` or `*.pages.dev`. Before submission, QA still needs to decide
+whether Frantic is likely to accept RawGitHack as a sufficiently stable host.
