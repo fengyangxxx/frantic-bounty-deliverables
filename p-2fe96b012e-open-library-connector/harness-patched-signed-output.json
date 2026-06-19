@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "case_count": 1,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "open-library-search-fixture"
+  ],
+  "receipt_ids": [
+    "sha256:536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17"
+  ],
+  "graph_case_count": 1
+}

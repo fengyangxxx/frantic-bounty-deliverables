@@ -1,0 +1,707 @@
+{
+  "schema": "runx.graph_skill_state.v1",
+  "run_id": "run_search_78763fb335e1",
+  "runner_name": "search",
+  "graph_inputs": {
+    "fixture_path": "fixtures/open-library-search-response.json",
+    "limit": 2,
+    "query": "the left hand of darkness"
+  },
+  "checkpoint": {
+    "graph_name": "open-library-book-lookup",
+    "state": {
+      "graphId": "open-library-book-lookup",
+      "status": "running",
+      "steps": [
+        {
+          "stepId": "open_library_search",
+          "status": "succeeded",
+          "attempts": 1,
+          "startedAt": "2026-06-19T09:59:10.478Z",
+          "completedAt": "2026-06-19T09:59:10.478Z",
+          "receiptId": "sha256:a319be46007d319c06119f9c0dd13e83b2ddf1ef996074178cd7c447847bcd89",
+          "outputs": {
+            "data": {
+              "connector": {
+                "auth": "none",
+                "id": "open-library-public-search",
+                "scope_used": "open-library:search:read",
+                "transport": "nango"
+              },
+              "decision": "ready",
+              "policy": {
+                "allowed_host": "openlibrary.org",
+                "allowed_method": "GET",
+                "allowed_path": "/search.json",
+                "allowlist_decision": "allowed",
+                "credential_material_allowed": false,
+                "mutation_allowed": false
+              },
+              "provenance": {
+                "final_url": "file://fixtures/open-library-search-response.json",
+                "mode": "fixture",
+                "observed_at": "2026-06-19T07:45:00Z",
+                "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                "status": 200
+              },
+              "provider": "open-library",
+              "request": {
+                "host": "openlibrary.org",
+                "limit": 2,
+                "method": "GET",
+                "path": "/search.json",
+                "query": "the left hand of darkness"
+              },
+              "result": {
+                "num_found": 2,
+                "returned": 2,
+                "works": [
+                  {
+                    "author_names": [
+                      "Ursula K. Le Guin"
+                    ],
+                    "edition_count": 95,
+                    "first_publish_year": 1969,
+                    "key": "/works/OL31574W",
+                    "title": "The Left Hand of Darkness"
+                  },
+                  {
+                    "author_names": [
+                      "Ursula K. Le Guin"
+                    ],
+                    "edition_count": 88,
+                    "first_publish_year": 1974,
+                    "key": "/works/OL27396W",
+                    "title": "The Dispossessed"
+                  }
+                ]
+              }
+            },
+            "open_library_search_result": {
+              "data": {
+                "data": {
+                  "data": {
+                    "connector": {
+                      "auth": "none",
+                      "id": "open-library-public-search",
+                      "scope_used": "open-library:search:read",
+                      "transport": "nango"
+                    },
+                    "decision": "ready",
+                    "policy": {
+                      "allowed_host": "openlibrary.org",
+                      "allowed_method": "GET",
+                      "allowed_path": "/search.json",
+                      "allowlist_decision": "allowed",
+                      "credential_material_allowed": false,
+                      "mutation_allowed": false
+                    },
+                    "provenance": {
+                      "final_url": "file://fixtures/open-library-search-response.json",
+                      "mode": "fixture",
+                      "observed_at": "2026-06-19T07:45:00Z",
+                      "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                      "status": 200
+                    },
+                    "provider": "open-library",
+                    "request": {
+                      "host": "openlibrary.org",
+                      "limit": 2,
+                      "method": "GET",
+                      "path": "/search.json",
+                      "query": "the left hand of darkness"
+                    },
+                    "result": {
+                      "num_found": 2,
+                      "returned": 2,
+                      "works": [
+                        {
+                          "author_names": [
+                            "Ursula K. Le Guin"
+                          ],
+                          "edition_count": 95,
+                          "first_publish_year": 1969,
+                          "key": "/works/OL31574W",
+                          "title": "The Left Hand of Darkness"
+                        },
+                        {
+                          "author_names": [
+                            "Ursula K. Le Guin"
+                          ],
+                          "edition_count": 88,
+                          "first_publish_year": 1974,
+                          "key": "/works/OL27396W",
+                          "title": "The Dispossessed"
+                        }
+                      ]
+                    }
+                  },
+                  "schema": "runx.open_library.search_result.v1"
+                }
+              }
+            },
+            "raw": "{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"open_library_search_result\":{\"data\":{\"data\":{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"schema\":\"runx.open_library.search_result.v1\"}}},\"schema\":\"runx.open_library.search_result.v1\"}",
+            "schema": "runx.open_library.search_result.v1",
+            "skill_claim": {
+              "data": {
+                "connector": {
+                  "auth": "none",
+                  "id": "open-library-public-search",
+                  "scope_used": "open-library:search:read",
+                  "transport": "nango"
+                },
+                "decision": "ready",
+                "policy": {
+                  "allowed_host": "openlibrary.org",
+                  "allowed_method": "GET",
+                  "allowed_path": "/search.json",
+                  "allowlist_decision": "allowed",
+                  "credential_material_allowed": false,
+                  "mutation_allowed": false
+                },
+                "provenance": {
+                  "final_url": "file://fixtures/open-library-search-response.json",
+                  "mode": "fixture",
+                  "observed_at": "2026-06-19T07:45:00Z",
+                  "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                  "status": 200
+                },
+                "provider": "open-library",
+                "request": {
+                  "host": "openlibrary.org",
+                  "limit": 2,
+                  "method": "GET",
+                  "path": "/search.json",
+                  "query": "the left hand of darkness"
+                },
+                "result": {
+                  "num_found": 2,
+                  "returned": 2,
+                  "works": [
+                    {
+                      "author_names": [
+                        "Ursula K. Le Guin"
+                      ],
+                      "edition_count": 95,
+                      "first_publish_year": 1969,
+                      "key": "/works/OL31574W",
+                      "title": "The Left Hand of Darkness"
+                    },
+                    {
+                      "author_names": [
+                        "Ursula K. Le Guin"
+                      ],
+                      "edition_count": 88,
+                      "first_publish_year": 1974,
+                      "key": "/works/OL27396W",
+                      "title": "The Dispossessed"
+                    }
+                  ]
+                }
+              },
+              "open_library_search_result": {
+                "data": {
+                  "data": {
+                    "data": {
+                      "connector": {
+                        "auth": "none",
+                        "id": "open-library-public-search",
+                        "scope_used": "open-library:search:read",
+                        "transport": "nango"
+                      },
+                      "decision": "ready",
+                      "policy": {
+                        "allowed_host": "openlibrary.org",
+                        "allowed_method": "GET",
+                        "allowed_path": "/search.json",
+                        "allowlist_decision": "allowed",
+                        "credential_material_allowed": false,
+                        "mutation_allowed": false
+                      },
+                      "provenance": {
+                        "final_url": "file://fixtures/open-library-search-response.json",
+                        "mode": "fixture",
+                        "observed_at": "2026-06-19T07:45:00Z",
+                        "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                        "status": 200
+                      },
+                      "provider": "open-library",
+                      "request": {
+                        "host": "openlibrary.org",
+                        "limit": 2,
+                        "method": "GET",
+                        "path": "/search.json",
+                        "query": "the left hand of darkness"
+                      },
+                      "result": {
+                        "num_found": 2,
+                        "returned": 2,
+                        "works": [
+                          {
+                            "author_names": [
+                              "Ursula K. Le Guin"
+                            ],
+                            "edition_count": 95,
+                            "first_publish_year": 1969,
+                            "key": "/works/OL31574W",
+                            "title": "The Left Hand of Darkness"
+                          },
+                          {
+                            "author_names": [
+                              "Ursula K. Le Guin"
+                            ],
+                            "edition_count": 88,
+                            "first_publish_year": 1974,
+                            "key": "/works/OL27396W",
+                            "title": "The Dispossessed"
+                          }
+                        ]
+                      }
+                    },
+                    "schema": "runx.open_library.search_result.v1"
+                  }
+                }
+              },
+              "schema": "runx.open_library.search_result.v1"
+            },
+            "status": "success",
+            "stderr": "",
+            "stdout": "{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"open_library_search_result\":{\"data\":{\"data\":{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"schema\":\"runx.open_library.search_result.v1\"}}},\"schema\":\"runx.open_library.search_result.v1\"}"
+          }
+        }
+      ]
+    },
+    "steps": [
+      {
+        "step_id": "open_library_search",
+        "attempt": 1,
+        "skill": "tool:open_library.search",
+        "runner": null,
+        "fanout_group": null,
+        "output": {
+          "status": "Success",
+          "stdout": "{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"open_library_search_result\":{\"data\":{\"data\":{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"schema\":\"runx.open_library.search_result.v1\"}}},\"schema\":\"runx.open_library.search_result.v1\"}",
+          "stderr": "",
+          "exit_code": 0,
+          "duration_ms": 138,
+          "metadata": {}
+        },
+        "outputs": {
+          "data": {
+            "connector": {
+              "auth": "none",
+              "id": "open-library-public-search",
+              "scope_used": "open-library:search:read",
+              "transport": "nango"
+            },
+            "decision": "ready",
+            "policy": {
+              "allowed_host": "openlibrary.org",
+              "allowed_method": "GET",
+              "allowed_path": "/search.json",
+              "allowlist_decision": "allowed",
+              "credential_material_allowed": false,
+              "mutation_allowed": false
+            },
+            "provenance": {
+              "final_url": "file://fixtures/open-library-search-response.json",
+              "mode": "fixture",
+              "observed_at": "2026-06-19T07:45:00Z",
+              "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+              "status": 200
+            },
+            "provider": "open-library",
+            "request": {
+              "host": "openlibrary.org",
+              "limit": 2,
+              "method": "GET",
+              "path": "/search.json",
+              "query": "the left hand of darkness"
+            },
+            "result": {
+              "num_found": 2,
+              "returned": 2,
+              "works": [
+                {
+                  "author_names": [
+                    "Ursula K. Le Guin"
+                  ],
+                  "edition_count": 95,
+                  "first_publish_year": 1969,
+                  "key": "/works/OL31574W",
+                  "title": "The Left Hand of Darkness"
+                },
+                {
+                  "author_names": [
+                    "Ursula K. Le Guin"
+                  ],
+                  "edition_count": 88,
+                  "first_publish_year": 1974,
+                  "key": "/works/OL27396W",
+                  "title": "The Dispossessed"
+                }
+              ]
+            }
+          },
+          "open_library_search_result": {
+            "data": {
+              "data": {
+                "data": {
+                  "connector": {
+                    "auth": "none",
+                    "id": "open-library-public-search",
+                    "scope_used": "open-library:search:read",
+                    "transport": "nango"
+                  },
+                  "decision": "ready",
+                  "policy": {
+                    "allowed_host": "openlibrary.org",
+                    "allowed_method": "GET",
+                    "allowed_path": "/search.json",
+                    "allowlist_decision": "allowed",
+                    "credential_material_allowed": false,
+                    "mutation_allowed": false
+                  },
+                  "provenance": {
+                    "final_url": "file://fixtures/open-library-search-response.json",
+                    "mode": "fixture",
+                    "observed_at": "2026-06-19T07:45:00Z",
+                    "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                    "status": 200
+                  },
+                  "provider": "open-library",
+                  "request": {
+                    "host": "openlibrary.org",
+                    "limit": 2,
+                    "method": "GET",
+                    "path": "/search.json",
+                    "query": "the left hand of darkness"
+                  },
+                  "result": {
+                    "num_found": 2,
+                    "returned": 2,
+                    "works": [
+                      {
+                        "author_names": [
+                          "Ursula K. Le Guin"
+                        ],
+                        "edition_count": 95,
+                        "first_publish_year": 1969,
+                        "key": "/works/OL31574W",
+                        "title": "The Left Hand of Darkness"
+                      },
+                      {
+                        "author_names": [
+                          "Ursula K. Le Guin"
+                        ],
+                        "edition_count": 88,
+                        "first_publish_year": 1974,
+                        "key": "/works/OL27396W",
+                        "title": "The Dispossessed"
+                      }
+                    ]
+                  }
+                },
+                "schema": "runx.open_library.search_result.v1"
+              }
+            }
+          },
+          "raw": "{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"open_library_search_result\":{\"data\":{\"data\":{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"schema\":\"runx.open_library.search_result.v1\"}}},\"schema\":\"runx.open_library.search_result.v1\"}",
+          "schema": "runx.open_library.search_result.v1",
+          "skill_claim": {
+            "data": {
+              "connector": {
+                "auth": "none",
+                "id": "open-library-public-search",
+                "scope_used": "open-library:search:read",
+                "transport": "nango"
+              },
+              "decision": "ready",
+              "policy": {
+                "allowed_host": "openlibrary.org",
+                "allowed_method": "GET",
+                "allowed_path": "/search.json",
+                "allowlist_decision": "allowed",
+                "credential_material_allowed": false,
+                "mutation_allowed": false
+              },
+              "provenance": {
+                "final_url": "file://fixtures/open-library-search-response.json",
+                "mode": "fixture",
+                "observed_at": "2026-06-19T07:45:00Z",
+                "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                "status": 200
+              },
+              "provider": "open-library",
+              "request": {
+                "host": "openlibrary.org",
+                "limit": 2,
+                "method": "GET",
+                "path": "/search.json",
+                "query": "the left hand of darkness"
+              },
+              "result": {
+                "num_found": 2,
+                "returned": 2,
+                "works": [
+                  {
+                    "author_names": [
+                      "Ursula K. Le Guin"
+                    ],
+                    "edition_count": 95,
+                    "first_publish_year": 1969,
+                    "key": "/works/OL31574W",
+                    "title": "The Left Hand of Darkness"
+                  },
+                  {
+                    "author_names": [
+                      "Ursula K. Le Guin"
+                    ],
+                    "edition_count": 88,
+                    "first_publish_year": 1974,
+                    "key": "/works/OL27396W",
+                    "title": "The Dispossessed"
+                  }
+                ]
+              }
+            },
+            "open_library_search_result": {
+              "data": {
+                "data": {
+                  "data": {
+                    "connector": {
+                      "auth": "none",
+                      "id": "open-library-public-search",
+                      "scope_used": "open-library:search:read",
+                      "transport": "nango"
+                    },
+                    "decision": "ready",
+                    "policy": {
+                      "allowed_host": "openlibrary.org",
+                      "allowed_method": "GET",
+                      "allowed_path": "/search.json",
+                      "allowlist_decision": "allowed",
+                      "credential_material_allowed": false,
+                      "mutation_allowed": false
+                    },
+                    "provenance": {
+                      "final_url": "file://fixtures/open-library-search-response.json",
+                      "mode": "fixture",
+                      "observed_at": "2026-06-19T07:45:00Z",
+                      "payload_digest": "sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc",
+                      "status": 200
+                    },
+                    "provider": "open-library",
+                    "request": {
+                      "host": "openlibrary.org",
+                      "limit": 2,
+                      "method": "GET",
+                      "path": "/search.json",
+                      "query": "the left hand of darkness"
+                    },
+                    "result": {
+                      "num_found": 2,
+                      "returned": 2,
+                      "works": [
+                        {
+                          "author_names": [
+                            "Ursula K. Le Guin"
+                          ],
+                          "edition_count": 95,
+                          "first_publish_year": 1969,
+                          "key": "/works/OL31574W",
+                          "title": "The Left Hand of Darkness"
+                        },
+                        {
+                          "author_names": [
+                            "Ursula K. Le Guin"
+                          ],
+                          "edition_count": 88,
+                          "first_publish_year": 1974,
+                          "key": "/works/OL27396W",
+                          "title": "The Dispossessed"
+                        }
+                      ]
+                    }
+                  },
+                  "schema": "runx.open_library.search_result.v1"
+                }
+              }
+            },
+            "schema": "runx.open_library.search_result.v1"
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"open_library_search_result\":{\"data\":{\"data\":{\"data\":{\"connector\":{\"auth\":\"none\",\"id\":\"open-library-public-search\",\"scope_used\":\"open-library:search:read\",\"transport\":\"nango\"},\"decision\":\"ready\",\"policy\":{\"allowed_host\":\"openlibrary.org\",\"allowed_method\":\"GET\",\"allowed_path\":\"/search.json\",\"allowlist_decision\":\"allowed\",\"credential_material_allowed\":false,\"mutation_allowed\":false},\"provenance\":{\"final_url\":\"file://fixtures/open-library-search-response.json\",\"mode\":\"fixture\",\"observed_at\":\"2026-06-19T07:45:00Z\",\"payload_digest\":\"sha256:49be076e871d32975372c7f1945cc5307645080537743fe6defe3515d66212fc\",\"status\":200},\"provider\":\"open-library\",\"request\":{\"host\":\"openlibrary.org\",\"limit\":2,\"method\":\"GET\",\"path\":\"/search.json\",\"query\":\"the left hand of darkness\"},\"result\":{\"num_found\":2,\"returned\":2,\"works\":[{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":95,\"first_publish_year\":1969,\"key\":\"/works/OL31574W\",\"title\":\"The Left Hand of Darkness\"},{\"author_names\":[\"Ursula K. Le Guin\"],\"edition_count\":88,\"first_publish_year\":1974,\"key\":\"/works/OL27396W\",\"title\":\"The Dispossessed\"}]}},\"schema\":\"runx.open_library.search_result.v1\"}}},\"schema\":\"runx.open_library.search_result.v1\"}"
+        },
+        "receipt": {
+          "schema": "runx.receipt.v1",
+          "id": "sha256:a319be46007d319c06119f9c0dd13e83b2ddf1ef996074178cd7c447847bcd89",
+          "created_at": "2026-06-19T09:59:10.478Z",
+          "canonicalization": "runx.receipt.c14n.v1",
+          "issuer": {
+            "type": "hosted",
+            "kid": "open-library-book-lookup-test-key",
+            "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f"
+          },
+          "signature": {
+            "alg": "Ed25519",
+            "value": "base64:ndHZ5LHkJ08QoHo9hklgK1Tz5F1_FLez1_YelXNx2O83wWLODaA6IEOh-e_iNe1Z_HXF1F_VYn1WukgeiQSMAA"
+          },
+          "digest": "sha256:15b62a898af7b992131457089f3aa01c5874c2c0158e96b7851ad6a23e73bff0",
+          "idempotency": {
+            "intent_key": "sha256:open-library-book-lookup-open_library_search-intent",
+            "trigger_fingerprint": "sha256:open-library-book-lookup-open_library_search-trigger",
+            "content_hash": "sha256:open-library-book-lookup-open_library_search-content"
+          },
+          "subject": {
+            "kind": "skill",
+            "ref": {
+              "type": "harness",
+              "uri": "hrn_open-library-book-lookup_open_library_search"
+            },
+            "commitments": []
+          },
+          "authority": {
+            "actor_ref": {
+              "type": "principal",
+              "uri": "runx:principal:local_runtime"
+            },
+            "grant_refs": [],
+            "scope_refs": [],
+            "authority_proof_refs": [],
+            "attenuation": {
+              "parent_authority_ref": null,
+              "subset_proof": null
+            },
+            "terms": [],
+            "enforcement": {
+              "profile_hash": "sha256:runtime-skeleton-enforcement",
+              "redaction_refs": [],
+              "setup_refs": [],
+              "teardown_refs": []
+            }
+          },
+          "signals": [],
+          "decisions": [
+            {
+              "decision_id": "dec_open_library_search",
+              "choice": "open",
+              "inputs": {
+                "signal_refs": [],
+                "target_ref": null,
+                "opportunity_refs": [],
+                "selection_ref": null
+              },
+              "proposed_intent": {
+                "purpose": "Open runtime node open_library_search",
+                "legitimacy": "Local graph execution requested this node",
+                "success_criteria": [],
+                "constraints": [],
+                "derived_from": []
+              },
+              "selected_act_id": "act_open_library_search",
+              "selected_harness_ref": null,
+              "justification": {
+                "summary": "runtime graph planner selected this node",
+                "evidence_refs": []
+              },
+              "closure": null,
+              "artifact_refs": []
+            }
+          ],
+          "acts": [
+            {
+              "id": "act_open_library_search",
+              "form": "observation",
+              "intent": {
+                "purpose": "Run graph step open_library_search",
+                "legitimacy": "Runtime graph execution was admitted by the local harness",
+                "success_criteria": [
+                  {
+                    "criterion_id": "process_exit",
+                    "statement": "cli-tool exits successfully",
+                    "required": true
+                  }
+                ],
+                "constraints": [],
+                "derived_from": []
+              },
+              "summary": "Executed graph step open_library_search",
+              "criterion_bindings": [
+                {
+                  "criterion_id": "process_exit",
+                  "status": "verified",
+                  "evidence_refs": [],
+                  "verification_refs": [],
+                  "summary": "cli-tool exited successfully"
+                }
+              ],
+              "source_refs": [],
+              "target_refs": [],
+              "artifact_refs": [],
+              "closure": {
+                "disposition": "closed",
+                "reason_code": "process_exit",
+                "summary": "cli-tool exited successfully",
+                "closed_at": "2026-06-19T09:59:10.478Z"
+              }
+            }
+          ],
+          "seal": {
+            "disposition": "closed",
+            "reason_code": "process_closed",
+            "summary": "step open_library_search completed",
+            "closed_at": "2026-06-19T09:59:10.478Z",
+            "last_observed_at": "2026-06-19T09:59:10.478Z",
+            "criteria": [
+              {
+                "criterion_id": "process_exit",
+                "status": "verified",
+                "evidence_refs": [],
+                "verification_refs": [],
+                "summary": "cli-tool exited successfully"
+              }
+            ]
+          },
+          "lineage": {
+            "children": [],
+            "sync": []
+          }
+        },
+        "admission_witness": {
+          "stepId": "open_library_search",
+          "receiptId": "sha256:a319be46007d319c06119f9c0dd13e83b2ddf1ef996074178cd7c447847bcd89"
+        }
+      }
+    ],
+    "sync_points": [],
+    "journal": {
+      "entries": [
+        {
+          "event": {
+            "type": "step_started",
+            "message": "step open_library_search started",
+            "data": {
+              "act_id": "act_open_library_search",
+              "kind": "act_started",
+              "step_id": "open_library_search"
+            }
+          }
+        },
+        {
+          "event": {
+            "type": "step_completed",
+            "message": "step open_library_search completed",
+            "data": {
+              "act_id": "act_open_library_search",
+              "disposition": "closed",
+              "kind": "act_closed",
+              "step_id": "open_library_search"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -27,15 +27,27 @@
     "latest_digest": "dee12080c4e31d1331a778c9ffd11c4b54a1398a4a6e5ba23da3722756aa0e95",
     "profile_digest": "731d61f45af51b56895b38cbdbb0434de2f66ec7ce554c928dbec6a2f70db22b"
   },
+  "runx_upstream_pr": {
+    "status": "open",
+    "target": "https://github.com/runxhq/runx",
+    "url": "https://github.com/runxhq/runx/pull/86",
+    "branch": "https://github.com/fengyangxxx/runx/tree/fy/open-library-book-lookup-v2",
+    "commit": "c92e17d91e3406a6e70686e94bbe5e7dea9f9f37",
+    "github_state": "OPEN",
+    "github_merge_state": "BLOCKED",
+    "note": "The PR adds the skill package under skills/open-library-book-lookup and is non-draft. GitHub reports BLOCKED because repository checks or branch protection are pending, not because the PR is closed."
+  },
   "source": {
     "repo": "https://github.com/fengyangxxx/frantic-bounty-deliverables",
-    "commit": "c60ba5f59af11315b6a8ea58e32db02b1b317b58",
+    "previous_published_commit": "c60ba5f59af11315b6a8ea58e32db02b1b317b58",
     "delivery_dir": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-2fe96b012e-open-library-connector",
     "indexable_skill_dir": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/skills/open-library-book-lookup",
     "skill_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/SKILL.md",
     "profile_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/X.yaml",
     "tool_manifest_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/tools/open_library/search/manifest.json",
-    "tool_source_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/tools/open_library/search/run.mjs"
+    "tool_source_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/skills/open-library-book-lookup/tools/open_library/search/run.mjs",
+    "delivery_evidence_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/evidence.json",
+    "delivery_report_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/delivery.md"
   },
   "verification": {
     "runx_tool_build": {
@@ -75,10 +87,29 @@
       "status": "success",
       "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/runx-skill-harness-output.json"
     },
-    "windows_inline_harness": {
-      "status": "environment_failure",
-      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/windows-runx-harness-output.json",
-      "note": "Local Windows inline harness receipt sealing reached runx receipt store os error 87. The same package passes runx doctor, deterministic runx dev fixtures, direct tool execution, and runx hosted URL indexing."
+    "signed_inline_harness": {
+      "status": "passed",
+      "raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/harness-patched-signed-output.json",
+      "case_count": 1,
+      "assertion_error_count": 0,
+      "receipt_ids": [
+        "sha256:536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17"
+      ]
+    },
+    "receipt_store": {
+      "status": "valid",
+      "root_receipt_id": "sha256:536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17",
+      "receipt_ref": "runx:receipt:sha256:536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17",
+      "index_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/receipts/index.json",
+      "root_receipt_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/receipts/sha256_536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17.json",
+      "graph_state_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/receipts/runs/run_search_78763fb335e1.graph-state.json",
+      "verification_raw": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-2fe96b012e-open-library-connector/receipt-verify-output.json",
+      "verification_summary": {
+        "signature_mode": "production",
+        "receipt_count": 2,
+        "valid": true,
+        "findings": []
+      }
     }
   },
   "public_artifact_statement": "This evidence file intentionally contains only public artifact links, public registry metadata, and non-sensitive verification summaries."

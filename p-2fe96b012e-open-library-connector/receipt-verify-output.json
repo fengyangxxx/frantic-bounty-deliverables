@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "F:\\work\\ai_work\\get_money\\tmp\\runx-receipts-open-library-patched3",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:536d5dcce1df9850fd7a057412873b2a336d3aa7d7c1d89bc4dc2ce9de6f4c17",
+      "receipt_count": 2,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}
