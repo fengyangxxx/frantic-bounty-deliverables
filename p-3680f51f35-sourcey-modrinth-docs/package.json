@@ -1,0 +1,12 @@
+{
+  "name": "modrinth-api-sourcey-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "sourcey build"
+  },
+  "devDependencies": {
+    "sourcey": "3.6.3"
+  }
+}

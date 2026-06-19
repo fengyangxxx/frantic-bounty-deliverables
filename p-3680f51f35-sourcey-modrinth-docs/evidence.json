@@ -1,0 +1,541 @@
+{
+    "bounty":  {
+                   "platform":  "Frantic",
+                   "id":  "p-3680f51f35",
+                   "number":  2,
+                   "title":  "Generate and publish docs for a real OSS library with Sourcey"
+               },
+    "target_library":  {
+                           "name":  "Modrinth Labrinth API",
+                           "type":  "real public API",
+                           "source_repo":  "https://github.com/modrinth/code",
+                           "official_docs":  "https://docs.modrinth.com/api/",
+                           "openapi_source":  "https://docs.modrinth.com/openapi.yaml",
+                           "openapi_info_version":  "v2.7.0/366f528",
+                           "source_commit_from_spec":  "366f528"
+                       },
+    "sourcey":  {
+                    "version":  "3.6.3",
+                    "adapter":  "openapi()",
+                    "config":  "sourcey.config.ts",
+                    "build_command":  "npm run build",
+                    "build_status":  "success",
+                    "generated_pages_count":  2,
+                    "documented_endpoint_count":  77,
+                    "generated_output":  "dist/"
+                },
+    "hosting":  {
+                    "status":  "prepared_not_claimed",
+                    "site_url":  "pending_commit_pinned_rawgithack_url",
+                    "note":  "The site is generated and will be served from a pinned commit URL before any Frantic submission. GitHub Pages and pages.dev are intentionally not used."
+                },
+    "artifact_paths":  {
+                           "source_config":  "sourcey.config.ts",
+                           "openapi_yaml":  "openapi.yaml",
+                           "report":  "report.md",
+                           "dist_index":  "dist/index.html",
+                           "dist_api":  "dist/api.html",
+                           "search_index":  "dist/search-index.json",
+                           "llms_full":  "dist/llms-full.txt"
+                       },
+    "pages":  [
+                  {
+                      "title":  "Overview",
+                      "path":  "index.html",
+                      "kind":  "markdown"
+                  },
+                  {
+                      "title":  "Introduction",
+                      "path":  "introduction.html",
+                      "kind":  "markdown"
+                  },
+                  {
+                      "title":  "API Reference",
+                      "path":  "api.html",
+                      "kind":  "openapi"
+                  },
+                  {
+                      "title":  "LLMs summary",
+                      "path":  "llms.txt",
+                      "kind":  "llms"
+                  },
+                  {
+                      "title":  "Full LLMs context",
+                      "path":  "llms-full.txt",
+                      "kind":  "llms"
+                  },
+                  {
+                      "title":  "Search index",
+                      "path":  "search-index.json",
+                      "kind":  "search"
+                  }
+              ],
+    "endpoints":  [
+                      {
+                          "title":  "Search projects",
+                          "method":  "get",
+                          "path":  "/search",
+                          "url":  "/api.html#operation-search-get"
+                      },
+                      {
+                          "title":  "Get a project",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}",
+                          "url":  "/api.html#operation-project-id-slug-get"
+                      },
+                      {
+                          "title":  "Delete a project",
+                          "method":  "delete",
+                          "path":  "/project/{id|slug}",
+                          "url":  "/api.html#operation-project-id-slug-delete"
+                      },
+                      {
+                          "title":  "Modify a project",
+                          "method":  "patch",
+                          "path":  "/project/{id|slug}",
+                          "url":  "/api.html#operation-project-id-slug-patch"
+                      },
+                      {
+                          "title":  "Get multiple projects",
+                          "method":  "get",
+                          "path":  "/projects",
+                          "url":  "/api.html#operation-projects-get"
+                      },
+                      {
+                          "title":  "Bulk-edit multiple projects",
+                          "method":  "patch",
+                          "path":  "/projects",
+                          "url":  "/api.html#operation-projects-patch"
+                      },
+                      {
+                          "title":  "Get a list of random projects",
+                          "method":  "get",
+                          "path":  "/projects_random",
+                          "url":  "/api.html#operation-projects-random-get"
+                      },
+                      {
+                          "title":  "Create a project",
+                          "method":  "post",
+                          "path":  "/project",
+                          "url":  "/api.html#operation-project-post"
+                      },
+                      {
+                          "title":  "Delete project\u0027s icon",
+                          "method":  "delete",
+                          "path":  "/project/{id|slug}/icon",
+                          "url":  "/api.html#operation-project-id-slug-icon-delete"
+                      },
+                      {
+                          "title":  "Change project\u0027s icon",
+                          "method":  "patch",
+                          "path":  "/project/{id|slug}/icon",
+                          "url":  "/api.html#operation-project-id-slug-icon-patch"
+                      },
+                      {
+                          "title":  "Check project slug/ID validity",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}/check",
+                          "url":  "/api.html#operation-project-id-slug-check-get"
+                      },
+                      {
+                          "title":  "Add a gallery image",
+                          "method":  "post",
+                          "path":  "/project/{id|slug}/gallery",
+                          "url":  "/api.html#operation-project-id-slug-gallery-post"
+                      },
+                      {
+                          "title":  "Delete a gallery image",
+                          "method":  "delete",
+                          "path":  "/project/{id|slug}/gallery",
+                          "url":  "/api.html#operation-project-id-slug-gallery-delete"
+                      },
+                      {
+                          "title":  "Modify a gallery image",
+                          "method":  "patch",
+                          "path":  "/project/{id|slug}/gallery",
+                          "url":  "/api.html#operation-project-id-slug-gallery-patch"
+                      },
+                      {
+                          "title":  "Get all of a project\u0027s dependencies",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}/dependencies",
+                          "url":  "/api.html#operation-project-id-slug-dependencies-get"
+                      },
+                      {
+                          "title":  "Follow a project",
+                          "method":  "post",
+                          "path":  "/project/{id|slug}/follow",
+                          "url":  "/api.html#operation-project-id-slug-follow-post"
+                      },
+                      {
+                          "title":  "Unfollow a project",
+                          "method":  "delete",
+                          "path":  "/project/{id|slug}/follow",
+                          "url":  "/api.html#operation-project-id-slug-follow-delete"
+                      },
+                      {
+                          "title":  "Schedule a project",
+                          "method":  "post",
+                          "path":  "/project/{id|slug}/schedule",
+                          "url":  "/api.html#operation-project-id-slug-schedule-post"
+                      },
+                      {
+                          "title":  "List project\u0027s versions",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}/version",
+                          "url":  "/api.html#operation-project-id-slug-version-get"
+                      },
+                      {
+                          "title":  "Get a version",
+                          "method":  "get",
+                          "path":  "/version/{id}",
+                          "url":  "/api.html#operation-version-id-get"
+                      },
+                      {
+                          "title":  "Delete a version",
+                          "method":  "delete",
+                          "path":  "/version/{id}",
+                          "url":  "/api.html#operation-version-id-delete"
+                      },
+                      {
+                          "title":  "Modify a version",
+                          "method":  "patch",
+                          "path":  "/version/{id}",
+                          "url":  "/api.html#operation-version-id-patch"
+                      },
+                      {
+                          "title":  "Get a version given a version number or ID",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}/version/{id|number}",
+                          "url":  "/api.html#operation-project-id-slug-version-id-number-get"
+                      },
+                      {
+                          "title":  "Create a version",
+                          "method":  "post",
+                          "path":  "/version",
+                          "url":  "/api.html#operation-version-post"
+                      },
+                      {
+                          "title":  "Schedule a version",
+                          "method":  "post",
+                          "path":  "/version/{id}/schedule",
+                          "url":  "/api.html#operation-version-id-schedule-post"
+                      },
+                      {
+                          "title":  "Get multiple versions",
+                          "method":  "get",
+                          "path":  "/versions",
+                          "url":  "/api.html#operation-versions-get"
+                      },
+                      {
+                          "title":  "Add files to version",
+                          "method":  "post",
+                          "path":  "/version/{id}/file",
+                          "url":  "/api.html#operation-version-id-file-post"
+                      },
+                      {
+                          "title":  "Get version from hash",
+                          "method":  "get",
+                          "path":  "/version_file/{hash}",
+                          "url":  "/api.html#operation-version-file-hash-get"
+                      },
+                      {
+                          "title":  "Delete a file from its hash",
+                          "method":  "delete",
+                          "path":  "/version_file/{hash}",
+                          "url":  "/api.html#operation-version-file-hash-delete"
+                      },
+                      {
+                          "title":  "Latest version of a project from a hash, loader(s), and game version(s)",
+                          "method":  "post",
+                          "path":  "/version_file/{hash}/update",
+                          "url":  "/api.html#operation-version-file-hash-update-post"
+                      },
+                      {
+                          "title":  "Get versions from hashes",
+                          "method":  "post",
+                          "path":  "/version_files",
+                          "url":  "/api.html#operation-version-files-post"
+                      },
+                      {
+                          "title":  "Latest versions of multiple project from hashes, loader(s), and game version(s)",
+                          "method":  "post",
+                          "path":  "/version_files/update",
+                          "url":  "/api.html#operation-version-files-update-post"
+                      },
+                      {
+                          "title":  "Get a user",
+                          "method":  "get",
+                          "path":  "/user/{id|username}",
+                          "url":  "/api.html#operation-user-id-username-get"
+                      },
+                      {
+                          "title":  "Modify a user",
+                          "method":  "patch",
+                          "path":  "/user/{id|username}",
+                          "url":  "/api.html#operation-user-id-username-patch"
+                      },
+                      {
+                          "title":  "Get user from authorization header",
+                          "method":  "get",
+                          "path":  "/user",
+                          "url":  "/api.html#operation-user-get"
+                      },
+                      {
+                          "title":  "Get multiple users",
+                          "method":  "get",
+                          "path":  "/users",
+                          "url":  "/api.html#operation-users-get"
+                      },
+                      {
+                          "title":  "Remove user\u0027s avatar",
+                          "method":  "delete",
+                          "path":  "/user/{id|username}/icon",
+                          "url":  "/api.html#operation-user-id-username-icon-delete"
+                      },
+                      {
+                          "title":  "Change user\u0027s avatar",
+                          "method":  "patch",
+                          "path":  "/user/{id|username}/icon",
+                          "url":  "/api.html#operation-user-id-username-icon-patch"
+                      },
+                      {
+                          "title":  "Get user\u0027s projects",
+                          "method":  "get",
+                          "path":  "/user/{id|username}/projects",
+                          "url":  "/api.html#operation-user-id-username-projects-get"
+                      },
+                      {
+                          "title":  "Get user\u0027s followed projects",
+                          "method":  "get",
+                          "path":  "/user/{id|username}/follows",
+                          "url":  "/api.html#operation-user-id-username-follows-get"
+                      },
+                      {
+                          "title":  "Get user\u0027s payout history",
+                          "method":  "get",
+                          "path":  "/user/{id|username}/payouts",
+                          "url":  "/api.html#operation-user-id-username-payouts-get"
+                      },
+                      {
+                          "title":  "Withdraw payout balance to PayPal or Venmo",
+                          "method":  "post",
+                          "path":  "/user/{id|username}/payouts",
+                          "url":  "/api.html#operation-user-id-username-payouts-post"
+                      },
+                      {
+                          "title":  "Get user\u0027s notifications",
+                          "method":  "get",
+                          "path":  "/user/{id|username}/notifications",
+                          "url":  "/api.html#operation-user-id-username-notifications-get"
+                      },
+                      {
+                          "title":  "Get notification from ID",
+                          "method":  "get",
+                          "path":  "/notification/{id}",
+                          "url":  "/api.html#operation-notification-id-get"
+                      },
+                      {
+                          "title":  "Delete notification",
+                          "method":  "delete",
+                          "path":  "/notification/{id}",
+                          "url":  "/api.html#operation-notification-id-delete"
+                      },
+                      {
+                          "title":  "Mark notification as read",
+                          "method":  "patch",
+                          "path":  "/notification/{id}",
+                          "url":  "/api.html#operation-notification-id-patch"
+                      },
+                      {
+                          "title":  "Get multiple notifications",
+                          "method":  "get",
+                          "path":  "/notifications",
+                          "url":  "/api.html#operation-notifications-get"
+                      },
+                      {
+                          "title":  "Delete multiple notifications",
+                          "method":  "delete",
+                          "path":  "/notifications",
+                          "url":  "/api.html#operation-notifications-delete"
+                      },
+                      {
+                          "title":  "Mark multiple notifications as read",
+                          "method":  "patch",
+                          "path":  "/notifications",
+                          "url":  "/api.html#operation-notifications-patch"
+                      },
+                      {
+                          "title":  "Get your open reports",
+                          "method":  "get",
+                          "path":  "/report",
+                          "url":  "/api.html#operation-report-get"
+                      },
+                      {
+                          "title":  "Report a project, user, or version",
+                          "method":  "post",
+                          "path":  "/report",
+                          "url":  "/api.html#operation-report-post"
+                      },
+                      {
+                          "title":  "Get report from ID",
+                          "method":  "get",
+                          "path":  "/report/{id}",
+                          "url":  "/api.html#operation-report-id-get"
+                      },
+                      {
+                          "title":  "Modify a report",
+                          "method":  "patch",
+                          "path":  "/report/{id}",
+                          "url":  "/api.html#operation-report-id-patch"
+                      },
+                      {
+                          "title":  "Get multiple reports",
+                          "method":  "get",
+                          "path":  "/reports",
+                          "url":  "/api.html#operation-reports-get"
+                      },
+                      {
+                          "title":  "Get a thread",
+                          "method":  "get",
+                          "path":  "/thread/{id}",
+                          "url":  "/api.html#operation-thread-id-get"
+                      },
+                      {
+                          "title":  "Send a text message to a thread",
+                          "method":  "post",
+                          "path":  "/thread/{id}",
+                          "url":  "/api.html#operation-thread-id-post"
+                      },
+                      {
+                          "title":  "Get multiple threads",
+                          "method":  "get",
+                          "path":  "/threads",
+                          "url":  "/api.html#operation-threads-get"
+                      },
+                      {
+                          "title":  "Delete a thread message",
+                          "method":  "delete",
+                          "path":  "/message/{id}",
+                          "url":  "/api.html#operation-message-id-delete"
+                      },
+                      {
+                          "title":  "Get a project\u0027s team members",
+                          "method":  "get",
+                          "path":  "/project/{id|slug}/members",
+                          "url":  "/api.html#operation-project-id-slug-members-get"
+                      },
+                      {
+                          "title":  "Get a team\u0027s members",
+                          "method":  "get",
+                          "path":  "/team/{id}/members",
+                          "url":  "/api.html#operation-team-id-members-get"
+                      },
+                      {
+                          "title":  "Add a user to a team",
+                          "method":  "post",
+                          "path":  "/team/{id}/members",
+                          "url":  "/api.html#operation-team-id-members-post"
+                      },
+                      {
+                          "title":  "Get the members of multiple teams",
+                          "method":  "get",
+                          "path":  "/teams",
+                          "url":  "/api.html#operation-teams-get"
+                      },
+                      {
+                          "title":  "Join a team",
+                          "method":  "post",
+                          "path":  "/team/{id}/join",
+                          "url":  "/api.html#operation-team-id-join-post"
+                      },
+                      {
+                          "title":  "Remove a member from a team",
+                          "method":  "delete",
+                          "path":  "/team/{id}/members/{id|username}",
+                          "url":  "/api.html#operation-team-id-members-id-username-delete"
+                      },
+                      {
+                          "title":  "Modify a team member\u0027s information",
+                          "method":  "patch",
+                          "path":  "/team/{id}/members/{id|username}",
+                          "url":  "/api.html#operation-team-id-members-id-username-patch"
+                      },
+                      {
+                          "title":  "Transfer team\u0027s ownership to another user",
+                          "method":  "patch",
+                          "path":  "/team/{id}/owner",
+                          "url":  "/api.html#operation-team-id-owner-patch"
+                      },
+                      {
+                          "title":  "Get a list of categories",
+                          "method":  "get",
+                          "path":  "/tag/category",
+                          "url":  "/api.html#operation-tag-category-get"
+                      },
+                      {
+                          "title":  "Get a list of loaders",
+                          "method":  "get",
+                          "path":  "/tag/loader",
+                          "url":  "/api.html#operation-tag-loader-get"
+                      },
+                      {
+                          "title":  "Get a list of game versions",
+                          "method":  "get",
+                          "path":  "/tag/game_version",
+                          "url":  "/api.html#operation-tag-game-version-get"
+                      },
+                      {
+                          "title":  "Get a list of licenses",
+                          "method":  "get",
+                          "path":  "/tag/license",
+                          "url":  "/api.html#operation-tag-license-get"
+                      },
+                      {
+                          "title":  "Get the text and title of a license",
+                          "method":  "get",
+                          "path":  "/tag/license/{id}",
+                          "url":  "/api.html#operation-tag-license-id-get"
+                      },
+                      {
+                          "title":  "Get a list of donation platforms",
+                          "method":  "get",
+                          "path":  "/tag/donation_platform",
+                          "url":  "/api.html#operation-tag-donation-platform-get"
+                      },
+                      {
+                          "title":  "Get a list of report types",
+                          "method":  "get",
+                          "path":  "/tag/report_type",
+                          "url":  "/api.html#operation-tag-report-type-get"
+                      },
+                      {
+                          "title":  "Get a list of project types",
+                          "method":  "get",
+                          "path":  "/tag/project_type",
+                          "url":  "/api.html#operation-tag-project-type-get"
+                      },
+                      {
+                          "title":  "Get a list of side types",
+                          "method":  "get",
+                          "path":  "/tag/side_type",
+                          "url":  "/api.html#operation-tag-side-type-get"
+                      },
+                      {
+                          "title":  "Forge Updates JSON file",
+                          "method":  "get",
+                          "path":  "/updates/{id|slug}/forge_updates.json",
+                          "url":  "/api.html#operation-updates-id-slug-forge-updates-json-get"
+                      },
+                      {
+                          "title":  "Various statistics about this Modrinth instance",
+                          "method":  "get",
+                          "path":  "/statistics",
+                          "url":  "/api.html#operation-statistics-get"
+                      }
+                  ],
+    "safety":  {
+                   "secret_scan":  "redacted the public example Authorization credential string from the local OpenAPI copy; no sensitive credential patterns were found after redaction",
+                   "unauthorized_testing":  "none; static documentation generation only"
+               }
+}
