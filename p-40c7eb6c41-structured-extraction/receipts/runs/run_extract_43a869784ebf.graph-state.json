@@ -1,0 +1,2022 @@
+{
+  "schema": "runx.graph_skill_state.v1",
+  "run_id": "run_extract_43a869784ebf",
+  "runner_name": "extract",
+  "graph_inputs": {
+    "content_type": "text/html",
+    "input_path": "fixtures/rfc9110-http-semantics.html",
+    "max_items": 18,
+    "schema_path": "schemas/extraction.schema.json",
+    "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+  },
+  "checkpoint": {
+    "graph_name": "structured-extraction",
+    "state": {
+      "graphId": "structured-extraction",
+      "status": "running",
+      "steps": [
+        {
+          "stepId": "extract_structured_json",
+          "status": "succeeded",
+          "attempts": 1,
+          "startedAt": "2026-06-19T10:48:39.091Z",
+          "completedAt": "2026-06-19T10:48:39.091Z",
+          "receiptId": "sha256:8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820",
+          "outputs": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "artifact_type": "input_fixture",
+                "byte_count": 1192867,
+                "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "label": "RFC 9110 HTML fixture",
+                "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                "type": "input_fixture"
+              },
+              {
+                "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "artifact_type": "json_schema",
+                "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "label": "runx.structured_extraction.result.v1",
+                "type": "json_schema"
+              },
+              {
+                "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "artifact_type": "validated_output",
+                "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "label": "Structured extraction JSON payload",
+                "type": "validated_output"
+              }
+            ],
+            "extraction": {
+              "items": [
+                {
+                  "anchor": "rfcnum",
+                  "kind": "heading",
+                  "level": 1,
+                  "text": "RFC 9110"
+                },
+                {
+                  "anchor": "title",
+                  "kind": "heading",
+                  "level": 1,
+                  "text": "HTTP Semantics"
+                },
+                {
+                  "anchor": "abstract",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Abstract"
+                },
+                {
+                  "anchor": "name-status-of-this-memo",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Status of This Memo"
+                },
+                {
+                  "anchor": "name-copyright-notice",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Copyright Notice"
+                },
+                {
+                  "anchor": "name-table-of-contents",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Table of Contents"
+                },
+                {
+                  "anchor": "name-introduction",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "1. Introduction"
+                },
+                {
+                  "anchor": "name-purpose",
+                  "kind": "heading",
+                  "level": 3,
+                  "text": "1.1. Purpose"
+                },
+                {
+                  "anchor": "name-history-and-evolution",
+                  "kind": "heading",
+                  "level": 3,
+                  "text": "1.2. History and Evolution"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                },
+                {
+                  "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                  "kind": "term",
+                  "text": "Content-Type"
+                },
+                {
+                  "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                  "kind": "term",
+                  "text": "Content-Length"
+                },
+                {
+                  "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                  "kind": "term",
+                  "text": "Location"
+                },
+                {
+                  "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                  "kind": "term",
+                  "text": "ETag"
+                },
+                {
+                  "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                  "kind": "term",
+                  "text": "GET"
+                },
+                {
+                  "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                  "kind": "term",
+                  "text": "HEAD"
+                }
+              ],
+              "summary": {
+                "heading_count": 9,
+                "item_count": 18,
+                "paragraph_count": 3,
+                "term_count": 6,
+                "text_chars": 452518
+              },
+              "title": "RFC 9110: HTTP Semantics"
+            },
+            "provenance": {
+              "mode": "fixture",
+              "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "source_kind": "real_public_document",
+              "tool_version": "0.1.0"
+            },
+            "raw": "{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"structured_extraction_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}}},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}",
+            "schema": "runx.structured_extraction.result.v1",
+            "signal": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "artifact_type": "input_fixture",
+                  "byte_count": 1192867,
+                  "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "RFC 9110 HTML fixture",
+                  "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "type": "input_fixture"
+                },
+                {
+                  "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "artifact_type": "json_schema",
+                  "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "runx.structured_extraction.result.v1",
+                  "type": "json_schema"
+                },
+                {
+                  "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "artifact_type": "validated_output",
+                  "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "Structured extraction JSON payload",
+                  "type": "validated_output"
+                }
+              ],
+              "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "source_events": [
+                {
+                  "provider": "rfc-editor",
+                  "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "title": "RFC 9110 HTTP Semantics HTML"
+                }
+              ]
+            },
+            "skill_claim": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "artifact_type": "input_fixture",
+                  "byte_count": 1192867,
+                  "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "RFC 9110 HTML fixture",
+                  "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "type": "input_fixture"
+                },
+                {
+                  "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "artifact_type": "json_schema",
+                  "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "runx.structured_extraction.result.v1",
+                  "type": "json_schema"
+                },
+                {
+                  "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "artifact_type": "validated_output",
+                  "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "Structured extraction JSON payload",
+                  "type": "validated_output"
+                }
+              ],
+              "extraction": {
+                "items": [
+                  {
+                    "anchor": "rfcnum",
+                    "kind": "heading",
+                    "level": 1,
+                    "text": "RFC 9110"
+                  },
+                  {
+                    "anchor": "title",
+                    "kind": "heading",
+                    "level": 1,
+                    "text": "HTTP Semantics"
+                  },
+                  {
+                    "anchor": "abstract",
+                    "kind": "heading",
+                    "level": 2,
+                    "text": "Abstract"
+                  },
+                  {
+                    "anchor": "name-status-of-this-memo",
+                    "kind": "heading",
+                    "level": 2,
+                    "text": "Status of This Memo"
+                  },
+                  {
+                    "anchor": "name-copyright-notice",
+                    "kind": "heading",
+                    "level": 2,
+                    "text": "Copyright Notice"
+                  },
+                  {
+                    "anchor": "name-table-of-contents",
+                    "kind": "heading",
+                    "level": 2,
+                    "text": "Table of Contents"
+                  },
+                  {
+                    "anchor": "name-introduction",
+                    "kind": "heading",
+                    "level": 2,
+                    "text": "1. Introduction"
+                  },
+                  {
+                    "anchor": "name-purpose",
+                    "kind": "heading",
+                    "level": 3,
+                    "text": "1.1. Purpose"
+                  },
+                  {
+                    "anchor": "name-history-and-evolution",
+                    "kind": "heading",
+                    "level": 3,
+                    "text": "1.2. History and Evolution"
+                  },
+                  {
+                    "kind": "paragraph",
+                    "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                  },
+                  {
+                    "kind": "paragraph",
+                    "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                  },
+                  {
+                    "kind": "paragraph",
+                    "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                  },
+                  {
+                    "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                    "kind": "term",
+                    "text": "Content-Type"
+                  },
+                  {
+                    "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                    "kind": "term",
+                    "text": "Content-Length"
+                  },
+                  {
+                    "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                    "kind": "term",
+                    "text": "Location"
+                  },
+                  {
+                    "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                    "kind": "term",
+                    "text": "ETag"
+                  },
+                  {
+                    "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                    "kind": "term",
+                    "text": "GET"
+                  },
+                  {
+                    "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                    "kind": "term",
+                    "text": "HEAD"
+                  }
+                ],
+                "summary": {
+                  "heading_count": 9,
+                  "item_count": 18,
+                  "paragraph_count": 3,
+                  "term_count": 6,
+                  "text_chars": 452518
+                },
+                "title": "RFC 9110: HTTP Semantics"
+              },
+              "provenance": {
+                "mode": "fixture",
+                "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "source_kind": "real_public_document",
+                "tool_version": "0.1.0"
+              },
+              "schema": "runx.structured_extraction.result.v1",
+              "signal": {
+                "artifacts": [
+                  {
+                    "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "artifact_type": "input_fixture",
+                    "byte_count": 1192867,
+                    "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "label": "RFC 9110 HTML fixture",
+                    "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                    "type": "input_fixture"
+                  },
+                  {
+                    "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "artifact_type": "json_schema",
+                    "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "label": "runx.structured_extraction.result.v1",
+                    "type": "json_schema"
+                  },
+                  {
+                    "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "artifact_type": "validated_output",
+                    "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "label": "Structured extraction JSON payload",
+                    "type": "validated_output"
+                  }
+                ],
+                "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "source_events": [
+                  {
+                    "provider": "rfc-editor",
+                    "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                    "title": "RFC 9110 HTTP Semantics HTML"
+                  }
+                ]
+              },
+              "source": {
+                "content_type": "text/html",
+                "input_bytes": 1192867,
+                "input_path": "fixtures/rfc9110-http-semantics.html",
+                "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+              },
+              "structured_extraction_result": {
+                "data": {
+                  "data": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "artifact_type": "input_fixture",
+                        "byte_count": 1192867,
+                        "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "label": "RFC 9110 HTML fixture",
+                        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                        "type": "input_fixture"
+                      },
+                      {
+                        "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "artifact_type": "json_schema",
+                        "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "label": "runx.structured_extraction.result.v1",
+                        "type": "json_schema"
+                      },
+                      {
+                        "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "artifact_type": "validated_output",
+                        "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "label": "Structured extraction JSON payload",
+                        "type": "validated_output"
+                      }
+                    ],
+                    "extraction": {
+                      "items": [
+                        {
+                          "anchor": "rfcnum",
+                          "kind": "heading",
+                          "level": 1,
+                          "text": "RFC 9110"
+                        },
+                        {
+                          "anchor": "title",
+                          "kind": "heading",
+                          "level": 1,
+                          "text": "HTTP Semantics"
+                        },
+                        {
+                          "anchor": "abstract",
+                          "kind": "heading",
+                          "level": 2,
+                          "text": "Abstract"
+                        },
+                        {
+                          "anchor": "name-status-of-this-memo",
+                          "kind": "heading",
+                          "level": 2,
+                          "text": "Status of This Memo"
+                        },
+                        {
+                          "anchor": "name-copyright-notice",
+                          "kind": "heading",
+                          "level": 2,
+                          "text": "Copyright Notice"
+                        },
+                        {
+                          "anchor": "name-table-of-contents",
+                          "kind": "heading",
+                          "level": 2,
+                          "text": "Table of Contents"
+                        },
+                        {
+                          "anchor": "name-introduction",
+                          "kind": "heading",
+                          "level": 2,
+                          "text": "1. Introduction"
+                        },
+                        {
+                          "anchor": "name-purpose",
+                          "kind": "heading",
+                          "level": 3,
+                          "text": "1.1. Purpose"
+                        },
+                        {
+                          "anchor": "name-history-and-evolution",
+                          "kind": "heading",
+                          "level": 3,
+                          "text": "1.2. History and Evolution"
+                        },
+                        {
+                          "kind": "paragraph",
+                          "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                        },
+                        {
+                          "kind": "paragraph",
+                          "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                        },
+                        {
+                          "kind": "paragraph",
+                          "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                        },
+                        {
+                          "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                          "kind": "term",
+                          "text": "Content-Type"
+                        },
+                        {
+                          "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                          "kind": "term",
+                          "text": "Content-Length"
+                        },
+                        {
+                          "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                          "kind": "term",
+                          "text": "Location"
+                        },
+                        {
+                          "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                          "kind": "term",
+                          "text": "ETag"
+                        },
+                        {
+                          "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                          "kind": "term",
+                          "text": "GET"
+                        },
+                        {
+                          "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                          "kind": "term",
+                          "text": "HEAD"
+                        }
+                      ],
+                      "summary": {
+                        "heading_count": 9,
+                        "item_count": 18,
+                        "paragraph_count": 3,
+                        "term_count": 6,
+                        "text_chars": 452518
+                      },
+                      "title": "RFC 9110: HTTP Semantics"
+                    },
+                    "provenance": {
+                      "mode": "fixture",
+                      "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "source_kind": "real_public_document",
+                      "tool_version": "0.1.0"
+                    },
+                    "schema": "runx.structured_extraction.result.v1",
+                    "signal": {
+                      "artifacts": [
+                        {
+                          "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                          "artifact_type": "input_fixture",
+                          "byte_count": 1192867,
+                          "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                          "label": "RFC 9110 HTML fixture",
+                          "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                          "type": "input_fixture"
+                        },
+                        {
+                          "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                          "artifact_type": "json_schema",
+                          "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                          "label": "runx.structured_extraction.result.v1",
+                          "type": "json_schema"
+                        },
+                        {
+                          "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                          "artifact_type": "validated_output",
+                          "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                          "label": "Structured extraction JSON payload",
+                          "type": "validated_output"
+                        }
+                      ],
+                      "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "source_events": [
+                        {
+                          "provider": "rfc-editor",
+                          "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                          "title": "RFC 9110 HTTP Semantics HTML"
+                        }
+                      ]
+                    },
+                    "source": {
+                      "content_type": "text/html",
+                      "input_bytes": 1192867,
+                      "input_path": "fixtures/rfc9110-http-semantics.html",
+                      "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+                    },
+                    "validation": {
+                      "checks": [
+                        {
+                          "detail": "present",
+                          "name": "required_top_level_fields",
+                          "passed": true
+                        },
+                        {
+                          "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                          "name": "has_source_digest",
+                          "passed": true
+                        },
+                        {
+                          "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                          "name": "has_schema_digest",
+                          "passed": true
+                        },
+                        {
+                          "detail": "18",
+                          "name": "has_items",
+                          "passed": true
+                        }
+                      ],
+                      "schema_id": "runx.structured_extraction.result.v1",
+                      "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "valid": true
+                    }
+                  }
+                }
+              },
+              "validation": {
+                "checks": [
+                  {
+                    "detail": "present",
+                    "name": "required_top_level_fields",
+                    "passed": true
+                  },
+                  {
+                    "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "name": "has_source_digest",
+                    "passed": true
+                  },
+                  {
+                    "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "name": "has_schema_digest",
+                    "passed": true
+                  },
+                  {
+                    "detail": "18",
+                    "name": "has_items",
+                    "passed": true
+                  }
+                ],
+                "schema_id": "runx.structured_extraction.result.v1",
+                "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "valid": true
+              }
+            },
+            "source": {
+              "content_type": "text/html",
+              "input_bytes": 1192867,
+              "input_path": "fixtures/rfc9110-http-semantics.html",
+              "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+              "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+            },
+            "status": "success",
+            "stderr": "",
+            "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"structured_extraction_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}}},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}",
+            "structured_extraction_result": {
+              "data": {
+                "data": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "artifact_type": "input_fixture",
+                      "byte_count": 1192867,
+                      "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "label": "RFC 9110 HTML fixture",
+                      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                      "type": "input_fixture"
+                    },
+                    {
+                      "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "artifact_type": "json_schema",
+                      "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "label": "runx.structured_extraction.result.v1",
+                      "type": "json_schema"
+                    },
+                    {
+                      "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "artifact_type": "validated_output",
+                      "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "label": "Structured extraction JSON payload",
+                      "type": "validated_output"
+                    }
+                  ],
+                  "extraction": {
+                    "items": [
+                      {
+                        "anchor": "rfcnum",
+                        "kind": "heading",
+                        "level": 1,
+                        "text": "RFC 9110"
+                      },
+                      {
+                        "anchor": "title",
+                        "kind": "heading",
+                        "level": 1,
+                        "text": "HTTP Semantics"
+                      },
+                      {
+                        "anchor": "abstract",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Abstract"
+                      },
+                      {
+                        "anchor": "name-status-of-this-memo",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Status of This Memo"
+                      },
+                      {
+                        "anchor": "name-copyright-notice",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Copyright Notice"
+                      },
+                      {
+                        "anchor": "name-table-of-contents",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Table of Contents"
+                      },
+                      {
+                        "anchor": "name-introduction",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "1. Introduction"
+                      },
+                      {
+                        "anchor": "name-purpose",
+                        "kind": "heading",
+                        "level": 3,
+                        "text": "1.1. Purpose"
+                      },
+                      {
+                        "anchor": "name-history-and-evolution",
+                        "kind": "heading",
+                        "level": 3,
+                        "text": "1.2. History and Evolution"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                      },
+                      {
+                        "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                        "kind": "term",
+                        "text": "Content-Type"
+                      },
+                      {
+                        "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                        "kind": "term",
+                        "text": "Content-Length"
+                      },
+                      {
+                        "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                        "kind": "term",
+                        "text": "Location"
+                      },
+                      {
+                        "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                        "kind": "term",
+                        "text": "ETag"
+                      },
+                      {
+                        "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                        "kind": "term",
+                        "text": "GET"
+                      },
+                      {
+                        "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                        "kind": "term",
+                        "text": "HEAD"
+                      }
+                    ],
+                    "summary": {
+                      "heading_count": 9,
+                      "item_count": 18,
+                      "paragraph_count": 3,
+                      "term_count": 6,
+                      "text_chars": 452518
+                    },
+                    "title": "RFC 9110: HTTP Semantics"
+                  },
+                  "provenance": {
+                    "mode": "fixture",
+                    "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "source_kind": "real_public_document",
+                    "tool_version": "0.1.0"
+                  },
+                  "schema": "runx.structured_extraction.result.v1",
+                  "signal": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "artifact_type": "input_fixture",
+                        "byte_count": 1192867,
+                        "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "label": "RFC 9110 HTML fixture",
+                        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                        "type": "input_fixture"
+                      },
+                      {
+                        "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "artifact_type": "json_schema",
+                        "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "label": "runx.structured_extraction.result.v1",
+                        "type": "json_schema"
+                      },
+                      {
+                        "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "artifact_type": "validated_output",
+                        "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "label": "Structured extraction JSON payload",
+                        "type": "validated_output"
+                      }
+                    ],
+                    "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "source_events": [
+                      {
+                        "provider": "rfc-editor",
+                        "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                        "title": "RFC 9110 HTTP Semantics HTML"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "content_type": "text/html",
+                    "input_bytes": 1192867,
+                    "input_path": "fixtures/rfc9110-http-semantics.html",
+                    "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+                  },
+                  "validation": {
+                    "checks": [
+                      {
+                        "detail": "present",
+                        "name": "required_top_level_fields",
+                        "passed": true
+                      },
+                      {
+                        "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "name": "has_source_digest",
+                        "passed": true
+                      },
+                      {
+                        "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "name": "has_schema_digest",
+                        "passed": true
+                      },
+                      {
+                        "detail": "18",
+                        "name": "has_items",
+                        "passed": true
+                      }
+                    ],
+                    "schema_id": "runx.structured_extraction.result.v1",
+                    "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "valid": true
+                  }
+                }
+              }
+            },
+            "validation": {
+              "checks": [
+                {
+                  "detail": "present",
+                  "name": "required_top_level_fields",
+                  "passed": true
+                },
+                {
+                  "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "name": "has_source_digest",
+                  "passed": true
+                },
+                {
+                  "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "name": "has_schema_digest",
+                  "passed": true
+                },
+                {
+                  "detail": "18",
+                  "name": "has_items",
+                  "passed": true
+                }
+              ],
+              "schema_id": "runx.structured_extraction.result.v1",
+              "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+              "valid": true
+            }
+          }
+        }
+      ]
+    },
+    "steps": [
+      {
+        "step_id": "extract_structured_json",
+        "attempt": 1,
+        "skill": "tool:structured.extract",
+        "runner": null,
+        "fanout_group": null,
+        "output": {
+          "status": "Success",
+          "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"structured_extraction_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}}},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}",
+          "stderr": "",
+          "exit_code": 0,
+          "duration_ms": 171,
+          "metadata": {}
+        },
+        "outputs": {
+          "artifacts": [
+            {
+              "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+              "artifact_type": "input_fixture",
+              "byte_count": 1192867,
+              "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+              "label": "RFC 9110 HTML fixture",
+              "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+              "type": "input_fixture"
+            },
+            {
+              "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+              "artifact_type": "json_schema",
+              "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+              "label": "runx.structured_extraction.result.v1",
+              "type": "json_schema"
+            },
+            {
+              "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "artifact_type": "validated_output",
+              "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "label": "Structured extraction JSON payload",
+              "type": "validated_output"
+            }
+          ],
+          "extraction": {
+            "items": [
+              {
+                "anchor": "rfcnum",
+                "kind": "heading",
+                "level": 1,
+                "text": "RFC 9110"
+              },
+              {
+                "anchor": "title",
+                "kind": "heading",
+                "level": 1,
+                "text": "HTTP Semantics"
+              },
+              {
+                "anchor": "abstract",
+                "kind": "heading",
+                "level": 2,
+                "text": "Abstract"
+              },
+              {
+                "anchor": "name-status-of-this-memo",
+                "kind": "heading",
+                "level": 2,
+                "text": "Status of This Memo"
+              },
+              {
+                "anchor": "name-copyright-notice",
+                "kind": "heading",
+                "level": 2,
+                "text": "Copyright Notice"
+              },
+              {
+                "anchor": "name-table-of-contents",
+                "kind": "heading",
+                "level": 2,
+                "text": "Table of Contents"
+              },
+              {
+                "anchor": "name-introduction",
+                "kind": "heading",
+                "level": 2,
+                "text": "1. Introduction"
+              },
+              {
+                "anchor": "name-purpose",
+                "kind": "heading",
+                "level": 3,
+                "text": "1.1. Purpose"
+              },
+              {
+                "anchor": "name-history-and-evolution",
+                "kind": "heading",
+                "level": 3,
+                "text": "1.2. History and Evolution"
+              },
+              {
+                "kind": "paragraph",
+                "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+              },
+              {
+                "kind": "paragraph",
+                "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+              },
+              {
+                "kind": "paragraph",
+                "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+              },
+              {
+                "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                "kind": "term",
+                "text": "Content-Type"
+              },
+              {
+                "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                "kind": "term",
+                "text": "Content-Length"
+              },
+              {
+                "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                "kind": "term",
+                "text": "Location"
+              },
+              {
+                "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                "kind": "term",
+                "text": "ETag"
+              },
+              {
+                "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                "kind": "term",
+                "text": "GET"
+              },
+              {
+                "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                "kind": "term",
+                "text": "HEAD"
+              }
+            ],
+            "summary": {
+              "heading_count": 9,
+              "item_count": 18,
+              "paragraph_count": 3,
+              "term_count": 6,
+              "text_chars": 452518
+            },
+            "title": "RFC 9110: HTTP Semantics"
+          },
+          "provenance": {
+            "mode": "fixture",
+            "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+            "source_kind": "real_public_document",
+            "tool_version": "0.1.0"
+          },
+          "raw": "{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"structured_extraction_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}}},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}",
+          "schema": "runx.structured_extraction.result.v1",
+          "signal": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "artifact_type": "input_fixture",
+                "byte_count": 1192867,
+                "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "label": "RFC 9110 HTML fixture",
+                "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                "type": "input_fixture"
+              },
+              {
+                "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "artifact_type": "json_schema",
+                "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "label": "runx.structured_extraction.result.v1",
+                "type": "json_schema"
+              },
+              {
+                "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "artifact_type": "validated_output",
+                "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "label": "Structured extraction JSON payload",
+                "type": "validated_output"
+              }
+            ],
+            "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+            "source_events": [
+              {
+                "provider": "rfc-editor",
+                "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                "title": "RFC 9110 HTTP Semantics HTML"
+              }
+            ]
+          },
+          "skill_claim": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "artifact_type": "input_fixture",
+                "byte_count": 1192867,
+                "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "label": "RFC 9110 HTML fixture",
+                "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                "type": "input_fixture"
+              },
+              {
+                "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "artifact_type": "json_schema",
+                "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "label": "runx.structured_extraction.result.v1",
+                "type": "json_schema"
+              },
+              {
+                "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "artifact_type": "validated_output",
+                "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                "label": "Structured extraction JSON payload",
+                "type": "validated_output"
+              }
+            ],
+            "extraction": {
+              "items": [
+                {
+                  "anchor": "rfcnum",
+                  "kind": "heading",
+                  "level": 1,
+                  "text": "RFC 9110"
+                },
+                {
+                  "anchor": "title",
+                  "kind": "heading",
+                  "level": 1,
+                  "text": "HTTP Semantics"
+                },
+                {
+                  "anchor": "abstract",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Abstract"
+                },
+                {
+                  "anchor": "name-status-of-this-memo",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Status of This Memo"
+                },
+                {
+                  "anchor": "name-copyright-notice",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Copyright Notice"
+                },
+                {
+                  "anchor": "name-table-of-contents",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "Table of Contents"
+                },
+                {
+                  "anchor": "name-introduction",
+                  "kind": "heading",
+                  "level": 2,
+                  "text": "1. Introduction"
+                },
+                {
+                  "anchor": "name-purpose",
+                  "kind": "heading",
+                  "level": 3,
+                  "text": "1.1. Purpose"
+                },
+                {
+                  "anchor": "name-history-and-evolution",
+                  "kind": "heading",
+                  "level": 3,
+                  "text": "1.2. History and Evolution"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                },
+                {
+                  "kind": "paragraph",
+                  "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                },
+                {
+                  "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                  "kind": "term",
+                  "text": "Content-Type"
+                },
+                {
+                  "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                  "kind": "term",
+                  "text": "Content-Length"
+                },
+                {
+                  "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                  "kind": "term",
+                  "text": "Location"
+                },
+                {
+                  "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                  "kind": "term",
+                  "text": "ETag"
+                },
+                {
+                  "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                  "kind": "term",
+                  "text": "GET"
+                },
+                {
+                  "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                  "kind": "term",
+                  "text": "HEAD"
+                }
+              ],
+              "summary": {
+                "heading_count": 9,
+                "item_count": 18,
+                "paragraph_count": 3,
+                "term_count": 6,
+                "text_chars": 452518
+              },
+              "title": "RFC 9110: HTTP Semantics"
+            },
+            "provenance": {
+              "mode": "fixture",
+              "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "source_kind": "real_public_document",
+              "tool_version": "0.1.0"
+            },
+            "schema": "runx.structured_extraction.result.v1",
+            "signal": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "artifact_type": "input_fixture",
+                  "byte_count": 1192867,
+                  "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "RFC 9110 HTML fixture",
+                  "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "type": "input_fixture"
+                },
+                {
+                  "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "artifact_type": "json_schema",
+                  "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "runx.structured_extraction.result.v1",
+                  "type": "json_schema"
+                },
+                {
+                  "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "artifact_type": "validated_output",
+                  "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "Structured extraction JSON payload",
+                  "type": "validated_output"
+                }
+              ],
+              "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+              "source_events": [
+                {
+                  "provider": "rfc-editor",
+                  "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "title": "RFC 9110 HTTP Semantics HTML"
+                }
+              ]
+            },
+            "source": {
+              "content_type": "text/html",
+              "input_bytes": 1192867,
+              "input_path": "fixtures/rfc9110-http-semantics.html",
+              "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+              "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+            },
+            "structured_extraction_result": {
+              "data": {
+                "data": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "artifact_type": "input_fixture",
+                      "byte_count": 1192867,
+                      "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "label": "RFC 9110 HTML fixture",
+                      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                      "type": "input_fixture"
+                    },
+                    {
+                      "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "artifact_type": "json_schema",
+                      "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "label": "runx.structured_extraction.result.v1",
+                      "type": "json_schema"
+                    },
+                    {
+                      "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "artifact_type": "validated_output",
+                      "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "label": "Structured extraction JSON payload",
+                      "type": "validated_output"
+                    }
+                  ],
+                  "extraction": {
+                    "items": [
+                      {
+                        "anchor": "rfcnum",
+                        "kind": "heading",
+                        "level": 1,
+                        "text": "RFC 9110"
+                      },
+                      {
+                        "anchor": "title",
+                        "kind": "heading",
+                        "level": 1,
+                        "text": "HTTP Semantics"
+                      },
+                      {
+                        "anchor": "abstract",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Abstract"
+                      },
+                      {
+                        "anchor": "name-status-of-this-memo",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Status of This Memo"
+                      },
+                      {
+                        "anchor": "name-copyright-notice",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Copyright Notice"
+                      },
+                      {
+                        "anchor": "name-table-of-contents",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "Table of Contents"
+                      },
+                      {
+                        "anchor": "name-introduction",
+                        "kind": "heading",
+                        "level": 2,
+                        "text": "1. Introduction"
+                      },
+                      {
+                        "anchor": "name-purpose",
+                        "kind": "heading",
+                        "level": 3,
+                        "text": "1.1. Purpose"
+                      },
+                      {
+                        "anchor": "name-history-and-evolution",
+                        "kind": "heading",
+                        "level": 3,
+                        "text": "1.2. History and Evolution"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                      },
+                      {
+                        "kind": "paragraph",
+                        "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                      },
+                      {
+                        "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                        "kind": "term",
+                        "text": "Content-Type"
+                      },
+                      {
+                        "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                        "kind": "term",
+                        "text": "Content-Length"
+                      },
+                      {
+                        "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                        "kind": "term",
+                        "text": "Location"
+                      },
+                      {
+                        "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                        "kind": "term",
+                        "text": "ETag"
+                      },
+                      {
+                        "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                        "kind": "term",
+                        "text": "GET"
+                      },
+                      {
+                        "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                        "kind": "term",
+                        "text": "HEAD"
+                      }
+                    ],
+                    "summary": {
+                      "heading_count": 9,
+                      "item_count": 18,
+                      "paragraph_count": 3,
+                      "term_count": 6,
+                      "text_chars": 452518
+                    },
+                    "title": "RFC 9110: HTTP Semantics"
+                  },
+                  "provenance": {
+                    "mode": "fixture",
+                    "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "source_kind": "real_public_document",
+                    "tool_version": "0.1.0"
+                  },
+                  "schema": "runx.structured_extraction.result.v1",
+                  "signal": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "artifact_type": "input_fixture",
+                        "byte_count": 1192867,
+                        "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "label": "RFC 9110 HTML fixture",
+                        "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                        "type": "input_fixture"
+                      },
+                      {
+                        "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "artifact_type": "json_schema",
+                        "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "label": "runx.structured_extraction.result.v1",
+                        "type": "json_schema"
+                      },
+                      {
+                        "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "artifact_type": "validated_output",
+                        "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                        "label": "Structured extraction JSON payload",
+                        "type": "validated_output"
+                      }
+                    ],
+                    "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "source_events": [
+                      {
+                        "provider": "rfc-editor",
+                        "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                        "title": "RFC 9110 HTTP Semantics HTML"
+                      }
+                    ]
+                  },
+                  "source": {
+                    "content_type": "text/html",
+                    "input_bytes": 1192867,
+                    "input_path": "fixtures/rfc9110-http-semantics.html",
+                    "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+                  },
+                  "validation": {
+                    "checks": [
+                      {
+                        "detail": "present",
+                        "name": "required_top_level_fields",
+                        "passed": true
+                      },
+                      {
+                        "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                        "name": "has_source_digest",
+                        "passed": true
+                      },
+                      {
+                        "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                        "name": "has_schema_digest",
+                        "passed": true
+                      },
+                      {
+                        "detail": "18",
+                        "name": "has_items",
+                        "passed": true
+                      }
+                    ],
+                    "schema_id": "runx.structured_extraction.result.v1",
+                    "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "valid": true
+                  }
+                }
+              }
+            },
+            "validation": {
+              "checks": [
+                {
+                  "detail": "present",
+                  "name": "required_top_level_fields",
+                  "passed": true
+                },
+                {
+                  "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "name": "has_source_digest",
+                  "passed": true
+                },
+                {
+                  "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "name": "has_schema_digest",
+                  "passed": true
+                },
+                {
+                  "detail": "18",
+                  "name": "has_items",
+                  "passed": true
+                }
+              ],
+              "schema_id": "runx.structured_extraction.result.v1",
+              "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+              "valid": true
+            }
+          },
+          "source": {
+            "content_type": "text/html",
+            "input_bytes": 1192867,
+            "input_path": "fixtures/rfc9110-http-semantics.html",
+            "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+            "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"structured_extraction_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"extraction\":{\"items\":[{\"anchor\":\"rfcnum\",\"kind\":\"heading\",\"level\":1,\"text\":\"RFC 9110\"},{\"anchor\":\"title\",\"kind\":\"heading\",\"level\":1,\"text\":\"HTTP Semantics\"},{\"anchor\":\"abstract\",\"kind\":\"heading\",\"level\":2,\"text\":\"Abstract\"},{\"anchor\":\"name-status-of-this-memo\",\"kind\":\"heading\",\"level\":2,\"text\":\"Status of This Memo\"},{\"anchor\":\"name-copyright-notice\",\"kind\":\"heading\",\"level\":2,\"text\":\"Copyright Notice\"},{\"anchor\":\"name-table-of-contents\",\"kind\":\"heading\",\"level\":2,\"text\":\"Table of Contents\"},{\"anchor\":\"name-introduction\",\"kind\":\"heading\",\"level\":2,\"text\":\"1. Introduction\"},{\"anchor\":\"name-purpose\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.1. Purpose\"},{\"anchor\":\"name-history-and-evolution\",\"kind\":\"heading\",\"level\":3,\"text\":\"1.2. History and Evolution\"},{\"kind\":\"paragraph\",\"text\":\"The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil\"},{\"kind\":\"paragraph\",\"text\":\"This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶\"},{\"kind\":\"paragraph\",\"text\":\"This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶\"},{\"context\":\"Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco\",\"kind\":\"term\",\"text\":\"Content-Type\"},{\"context\":\"ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .\",\"kind\":\"term\",\"text\":\"Content-Length\"},{\"context\":\"5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1\",\"kind\":\"term\",\"text\":\"Location\"},{\"context\":\"trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying\",\"kind\":\"term\",\"text\":\"ETag\"},{\"context\":\"Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7\",\"kind\":\"term\",\"text\":\"GET\"},{\"context\":\"hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.\",\"kind\":\"term\",\"text\":\"HEAD\"}],\"summary\":{\"heading_count\":9,\"item_count\":18,\"paragraph_count\":3,\"term_count\":6,\"text_chars\":452518},\"title\":\"RFC 9110: HTTP Semantics\"},\"provenance\":{\"mode\":\"fixture\",\"output_payload_sha256\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_kind\":\"real_public_document\",\"tool_version\":\"0.1.0\"},\"schema\":\"runx.structured_extraction.result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"artifact_type\":\"input_fixture\",\"byte_count\":1192867,\"id\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"label\":\"RFC 9110 HTML fixture\",\"source_url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"type\":\"input_fixture\"},{\"artifact_id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"artifact_type\":\"json_schema\",\"id\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"label\":\"runx.structured_extraction.result.v1\",\"type\":\"json_schema\"},{\"artifact_id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"artifact_type\":\"validated_output\",\"id\":\"sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"label\":\"Structured extraction JSON payload\",\"type\":\"validated_output\"}],\"signal_id\":\"structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e\",\"source_events\":[{\"provider\":\"rfc-editor\",\"source_locator\":\"https://www.rfc-editor.org/rfc/rfc9110.html\",\"title\":\"RFC 9110 HTTP Semantics HTML\"}]},\"source\":{\"content_type\":\"text/html\",\"input_bytes\":1192867,\"input_path\":\"fixtures/rfc9110-http-semantics.html\",\"input_sha256\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"url\":\"https://www.rfc-editor.org/rfc/rfc9110.html\"},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}}},\"validation\":{\"checks\":[{\"detail\":\"present\",\"name\":\"required_top_level_fields\",\"passed\":true},{\"detail\":\"sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6\",\"name\":\"has_source_digest\",\"passed\":true},{\"detail\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"name\":\"has_schema_digest\",\"passed\":true},{\"detail\":\"18\",\"name\":\"has_items\",\"passed\":true}],\"schema_id\":\"runx.structured_extraction.result.v1\",\"schema_sha256\":\"sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0\",\"valid\":true}}",
+          "structured_extraction_result": {
+            "data": {
+              "data": {
+                "artifacts": [
+                  {
+                    "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "artifact_type": "input_fixture",
+                    "byte_count": 1192867,
+                    "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                    "label": "RFC 9110 HTML fixture",
+                    "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                    "type": "input_fixture"
+                  },
+                  {
+                    "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "artifact_type": "json_schema",
+                    "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                    "label": "runx.structured_extraction.result.v1",
+                    "type": "json_schema"
+                  },
+                  {
+                    "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "artifact_type": "validated_output",
+                    "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                    "label": "Structured extraction JSON payload",
+                    "type": "validated_output"
+                  }
+                ],
+                "extraction": {
+                  "items": [
+                    {
+                      "anchor": "rfcnum",
+                      "kind": "heading",
+                      "level": 1,
+                      "text": "RFC 9110"
+                    },
+                    {
+                      "anchor": "title",
+                      "kind": "heading",
+                      "level": 1,
+                      "text": "HTTP Semantics"
+                    },
+                    {
+                      "anchor": "abstract",
+                      "kind": "heading",
+                      "level": 2,
+                      "text": "Abstract"
+                    },
+                    {
+                      "anchor": "name-status-of-this-memo",
+                      "kind": "heading",
+                      "level": 2,
+                      "text": "Status of This Memo"
+                    },
+                    {
+                      "anchor": "name-copyright-notice",
+                      "kind": "heading",
+                      "level": 2,
+                      "text": "Copyright Notice"
+                    },
+                    {
+                      "anchor": "name-table-of-contents",
+                      "kind": "heading",
+                      "level": 2,
+                      "text": "Table of Contents"
+                    },
+                    {
+                      "anchor": "name-introduction",
+                      "kind": "heading",
+                      "level": 2,
+                      "text": "1. Introduction"
+                    },
+                    {
+                      "anchor": "name-purpose",
+                      "kind": "heading",
+                      "level": 3,
+                      "text": "1.1. Purpose"
+                    },
+                    {
+                      "anchor": "name-history-and-evolution",
+                      "kind": "heading",
+                      "level": 3,
+                      "text": "1.2. History and Evolution"
+                    },
+                    {
+                      "kind": "paragraph",
+                      "text": "The Hypertext Transfer Protocol (HTTP) is a stateless application-level protocol for distributed, collaborative, hypertext information systems. This document describes the overall architecture of HTTP, establishes common terminology, and defines aspects of the protocol that are shared by all versions. In this definition are core protocol elements, extensibil"
+                    },
+                    {
+                      "kind": "paragraph",
+                      "text": "This document updates RFC 3864 and obsoletes RFCs 2818, 7231, 7232, 7233, 7235, 7538, 7615, 7694, and portions of 7230. Â¶"
+                    },
+                    {
+                      "kind": "paragraph",
+                      "text": "This document is a product of the Internet Engineering Task Force (IETF). It represents the consensus of the IETF community. It has received public review and has been approved for publication by the Internet Engineering Steering Group (IESG). Further information on Internet Standards is available in Section 2 of RFC 7841. Â¶"
+                    },
+                    {
+                      "context": "Data and Metadata 8.1 .Â Â Representation Data 8.2 .Â Â Representation Metadata 8.3 .Â Â Content-Type 8.3.1 .Â Â Media Type 8.3.2 .Â Â Charset 8.3.3 .Â Â Multipart Types 8.4 .Â Â Content-Enco",
+                      "kind": "term",
+                      "text": "Content-Type"
+                    },
+                    {
+                      "context": "ding 8.4.1.3 .Â Â Gzip Coding 8.5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .",
+                      "kind": "term",
+                      "text": "Content-Length"
+                    },
+                    {
+                      "context": "5 .Â Â Content-Language 8.5.1 .Â Â Language Tags 8.6 .Â Â Content-Length 8.7 .Â Â Content-Location 8.8 .Â Â Validator Fields 8.8.1 .Â Â Weak versus Strong 8.8.2 .Â Â Last-Modified 8.8.2.1",
+                      "kind": "term",
+                      "text": "Location"
+                    },
+                    {
+                      "context": "trong 8.8.2 .Â Â Last-Modified 8.8.2.1 .Â Â Generation 8.8.2.2 .Â Â Comparison 8.8.3 .Â Â ETag 8.8.3.1 .Â Â Generation 8.8.3.2 .Â Â Comparison 8.8.3.3 .Â Â Example: Entity Tags Varying",
+                      "kind": "term",
+                      "text": "ETag"
+                    },
+                    {
+                      "context": "Idempotent Methods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7",
+                      "kind": "term",
+                      "text": "GET"
+                    },
+                    {
+                      "context": "hods 9.2.3 .Â Â Methods and Caching 9.3 .Â Â Method Definitions 9.3.1 .Â Â GET 9.3.2 .Â Â HEAD 9.3.3 .Â Â POST 9.3.4 .Â Â PUT 9.3.5 .Â Â DELETE 9.3.6 .Â Â CONNECT 9.3.7 .Â Â OPTIONS 9.",
+                      "kind": "term",
+                      "text": "HEAD"
+                    }
+                  ],
+                  "summary": {
+                    "heading_count": 9,
+                    "item_count": 18,
+                    "paragraph_count": 3,
+                    "term_count": 6,
+                    "text_chars": 452518
+                  },
+                  "title": "RFC 9110: HTTP Semantics"
+                },
+                "provenance": {
+                  "mode": "fixture",
+                  "output_payload_sha256": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "source_kind": "real_public_document",
+                  "tool_version": "0.1.0"
+                },
+                "schema": "runx.structured_extraction.result.v1",
+                "signal": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "artifact_type": "input_fixture",
+                      "byte_count": 1192867,
+                      "id": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "label": "RFC 9110 HTML fixture",
+                      "source_url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                      "type": "input_fixture"
+                    },
+                    {
+                      "artifact_id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "artifact_type": "json_schema",
+                      "id": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "label": "runx.structured_extraction.result.v1",
+                      "type": "json_schema"
+                    },
+                    {
+                      "artifact_id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "artifact_type": "validated_output",
+                      "id": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                      "label": "Structured extraction JSON payload",
+                      "type": "validated_output"
+                    }
+                  ],
+                  "signal_id": "structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "source_events": [
+                    {
+                      "provider": "rfc-editor",
+                      "source_locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                      "title": "RFC 9110 HTTP Semantics HTML"
+                    }
+                  ]
+                },
+                "source": {
+                  "content_type": "text/html",
+                  "input_bytes": 1192867,
+                  "input_path": "fixtures/rfc9110-http-semantics.html",
+                  "input_sha256": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+                },
+                "validation": {
+                  "checks": [
+                    {
+                      "detail": "present",
+                      "name": "required_top_level_fields",
+                      "passed": true
+                    },
+                    {
+                      "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                      "name": "has_source_digest",
+                      "passed": true
+                    },
+                    {
+                      "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                      "name": "has_schema_digest",
+                      "passed": true
+                    },
+                    {
+                      "detail": "18",
+                      "name": "has_items",
+                      "passed": true
+                    }
+                  ],
+                  "schema_id": "runx.structured_extraction.result.v1",
+                  "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "valid": true
+                }
+              }
+            }
+          },
+          "validation": {
+            "checks": [
+              {
+                "detail": "present",
+                "name": "required_top_level_fields",
+                "passed": true
+              },
+              {
+                "detail": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                "name": "has_source_digest",
+                "passed": true
+              },
+              {
+                "detail": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                "name": "has_schema_digest",
+                "passed": true
+              },
+              {
+                "detail": "18",
+                "name": "has_items",
+                "passed": true
+              }
+            ],
+            "schema_id": "runx.structured_extraction.result.v1",
+            "schema_sha256": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+            "valid": true
+          }
+        },
+        "receipt": {
+          "schema": "runx.receipt.v1",
+          "id": "sha256:8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820",
+          "created_at": "2026-06-19T10:48:39.091Z",
+          "canonicalization": "runx.receipt.c14n.v1",
+          "issuer": {
+            "type": "hosted",
+            "kid": "structured-extraction-test-key",
+            "public_key_sha256": "sha256:c321a2f8bf7cd6e16d59892d0c95865aa87c48778b837bb1406ea674772a1433"
+          },
+          "signature": {
+            "alg": "Ed25519",
+            "value": "base64:X0SzcLwPadec1RqF8cjmyMP9eed_ZWW61HEIffPWTdIu0RwRa8NmFCcLriMgDSmvNg5ROaQ7reJn6CcxVmJnBw"
+          },
+          "digest": "sha256:aef8af5cb33e2781148a2fcbd39642bd4157e81d7358b90622013a6433b3842d",
+          "idempotency": {
+            "intent_key": "sha256:structured-extraction-extract_structured_json-intent",
+            "trigger_fingerprint": "sha256:structured-extraction-extract_structured_json-trigger",
+            "content_hash": "sha256:structured-extraction-extract_structured_json-content"
+          },
+          "subject": {
+            "kind": "skill",
+            "ref": {
+              "type": "harness",
+              "uri": "hrn_structured-extraction_extract_structured_json"
+            },
+            "commitments": []
+          },
+          "authority": {
+            "actor_ref": {
+              "type": "principal",
+              "uri": "runx:principal:local_runtime"
+            },
+            "grant_refs": [],
+            "scope_refs": [],
+            "authority_proof_refs": [],
+            "attenuation": {
+              "parent_authority_ref": null,
+              "subset_proof": null
+            },
+            "terms": [],
+            "enforcement": {
+              "profile_hash": "sha256:runtime-skeleton-enforcement",
+              "redaction_refs": [],
+              "setup_refs": [],
+              "teardown_refs": []
+            }
+          },
+          "signals": [
+            {
+              "type": "signal",
+              "uri": "runx:signal:structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+            }
+          ],
+          "decisions": [
+            {
+              "decision_id": "dec_extract_structured_json",
+              "choice": "open",
+              "inputs": {
+                "signal_refs": [
+                  {
+                    "type": "signal",
+                    "uri": "runx:signal:structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+                  }
+                ],
+                "target_ref": null,
+                "opportunity_refs": [],
+                "selection_ref": null
+              },
+              "proposed_intent": {
+                "purpose": "Open runtime node extract_structured_json",
+                "legitimacy": "Local graph execution requested this node",
+                "success_criteria": [],
+                "constraints": [],
+                "derived_from": []
+              },
+              "selected_act_id": "act_extract_structured_json",
+              "selected_harness_ref": null,
+              "justification": {
+                "summary": "runtime graph planner selected this node",
+                "evidence_refs": [
+                  {
+                    "type": "signal",
+                    "uri": "runx:signal:structured-extraction:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+                  }
+                ]
+              },
+              "closure": null,
+              "artifact_refs": [
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "locator": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "input_fixture"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "locator": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "json_schema"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "locator": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "validated_output"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "locator": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "input_fixture"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "locator": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "json_schema"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "locator": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "validated_output"
+                }
+              ]
+            }
+          ],
+          "acts": [
+            {
+              "id": "act_extract_structured_json",
+              "form": "observation",
+              "intent": {
+                "purpose": "Run graph step extract_structured_json",
+                "legitimacy": "Runtime graph execution was admitted by the local harness",
+                "success_criteria": [
+                  {
+                    "criterion_id": "process_exit",
+                    "statement": "cli-tool exits successfully",
+                    "required": true
+                  }
+                ],
+                "constraints": [],
+                "derived_from": []
+              },
+              "summary": "Executed graph step extract_structured_json",
+              "criterion_bindings": [
+                {
+                  "criterion_id": "process_exit",
+                  "status": "verified",
+                  "evidence_refs": [],
+                  "verification_refs": [],
+                  "summary": "cli-tool exited successfully"
+                }
+              ],
+              "source_refs": [
+                {
+                  "type": "external_url",
+                  "uri": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "provider": "rfc-editor",
+                  "locator": "https://www.rfc-editor.org/rfc/rfc9110.html",
+                  "label": "RFC 9110 HTTP Semantics HTML"
+                }
+              ],
+              "target_refs": [],
+              "artifact_refs": [
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "locator": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "input_fixture"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "locator": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "json_schema"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "locator": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "validated_output"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "locator": "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                  "label": "input_fixture"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "locator": "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                  "label": "json_schema"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "locator": "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e",
+                  "label": "validated_output"
+                }
+              ],
+              "closure": {
+                "disposition": "closed",
+                "reason_code": "process_exit",
+                "summary": "cli-tool exited successfully",
+                "closed_at": "2026-06-19T10:48:39.091Z"
+              }
+            }
+          ],
+          "seal": {
+            "disposition": "closed",
+            "reason_code": "process_closed",
+            "summary": "step extract_structured_json completed",
+            "closed_at": "2026-06-19T10:48:39.091Z",
+            "last_observed_at": "2026-06-19T10:48:39.091Z",
+            "criteria": [
+              {
+                "criterion_id": "process_exit",
+                "status": "verified",
+                "evidence_refs": [],
+                "verification_refs": [],
+                "summary": "cli-tool exited successfully"
+              }
+            ]
+          },
+          "lineage": {
+            "children": [],
+            "sync": []
+          }
+        },
+        "admission_witness": {
+          "stepId": "extract_structured_json",
+          "receiptId": "sha256:8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820"
+        }
+      }
+    ],
+    "sync_points": [],
+    "journal": {
+      "entries": [
+        {
+          "event": {
+            "type": "step_started",
+            "message": "step extract_structured_json started",
+            "data": {
+              "act_id": "act_extract_structured_json",
+              "kind": "act_started",
+              "step_id": "extract_structured_json"
+            }
+          }
+        },
+        {
+          "event": {
+            "type": "step_completed",
+            "message": "step extract_structured_json completed",
+            "data": {
+              "act_id": "act_extract_structured_json",
+              "disposition": "closed",
+              "kind": "act_closed",
+              "step_id": "extract_structured_json"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

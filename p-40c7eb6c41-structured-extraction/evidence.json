@@ -1,0 +1,132 @@
+﻿{
+    "schema":  "frantic.delivery.evidence.v1",
+    "bounty":  "p-40c7eb6c41",
+    "title":  "runx skill: structured extraction",
+    "claim_ref":  "frantic:claim:b2ba428c-8a2f-416f-8593-1a44fa50fe2a",
+    "runx_pr":  "https://github.com/runxhq/runx/pull/80",
+    "skill_repo":  "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-40c7eb6c41-structured-extraction",
+    "artifact_urls":  {
+                          "x_yaml":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/X.yaml",
+                          "skill_md":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/SKILL.md",
+                          "tool":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/tools/structured/extract/run.mjs",
+                          "schema":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/schemas/extraction.schema.json",
+                          "input_fixture":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/fixtures/rfc9110-http-semantics.html",
+                          "direct_output":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json",
+                          "harness_output":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/harness-signed-output.json",
+                          "receipt_verify":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipt-verify-output.json",
+                          "receipt_index":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
+                          "report":  "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/report.md"
+                      },
+    "source":  {
+                   "url":  "https://www.rfc-editor.org/rfc/rfc9110.html",
+                   "content_type":  "text/html",
+                   "input_sha256":  "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                   "input_bytes":  1192867
+               },
+    "output":  {
+                   "packet":  "runx.structured_extraction.result.v1",
+                   "title":  "RFC 9110: HTTP Semantics",
+                   "item_count":  18,
+                   "heading_count":  9,
+                   "term_count":  6,
+                   "output_payload_sha256":  "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+               },
+    "schema_validation":  {
+                              "schema_id":  "runx.structured_extraction.result.v1",
+                              "schema_sha256":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0",
+                              "valid":  true,
+                              "checks":  [
+                                             {
+                                                 "name":  "required_top_level_fields",
+                                                 "passed":  true,
+                                                 "detail":  "present"
+                                             },
+                                             {
+                                                 "name":  "has_source_digest",
+                                                 "passed":  true,
+                                                 "detail":  "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6"
+                                             },
+                                             {
+                                                 "name":  "has_schema_digest",
+                                                 "passed":  true,
+                                                 "detail":  "sha256:8ecea2595c1054e5d5d6143fb337d6f13ee94871d15db0414789e0f4d68cf0f0"
+                                             },
+                                             {
+                                                 "name":  "has_items",
+                                                 "passed":  true,
+                                                 "detail":  "18"
+                                             }
+                                         ]
+                          },
+    "receipt":  {
+                    "root_receipt_id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                    "verify_valid":  true,
+                    "receipt_count":  2,
+                    "trees":  [
+                                  {
+                                      "root_receipt_id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                                      "receipt_count":  2,
+                                      "parent_missing":  null,
+                                      "valid":  true,
+                                      "findings":  [
+
+                                                   ]
+                                  }
+                              ],
+                    "receipts":  [
+                                     {
+                                         "id":  "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                                         "subject":  "graph",
+                                         "file":  "sha256_4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb.json",
+                                         "artifact_refs":  0,
+                                         "source_refs":  0
+                                     },
+                                     {
+                                         "id":  "sha256:8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820",
+                                         "subject":  "skill",
+                                         "file":  "sha256_8f253a832a781b1924ddeef29b34cc63b36726c0cb598c375ce09ba5c16d7820.json",
+                                         "artifact_refs":  6,
+                                         "source_refs":  1
+                                     }
+                                 ]
+                },
+    "acceptance_mapping":  [
+                               {
+                                   "criterion":  "complete X.yaml with typed inputs/outputs, scopes, policy, emits",
+                                   "evidence":  [
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/X.yaml",
+                                                    "https://github.com/runxhq/runx/pull/80"
+                                                ]
+                               },
+                               {
+                                   "criterion":  "real messy input, not toy data",
+                                   "evidence":  [
+                                                    "https://www.rfc-editor.org/rfc/rfc9110.html",
+                                                    "sha256:6a83e5a8f145d7aaaf253b80735ee0b9bc7ed650261f016dcc87b6b72e55b4e6",
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/fixtures/rfc9110-http-semantics.html"
+                                                ]
+                               },
+                               {
+                                   "criterion":  "schema-validated JSON output",
+                                   "evidence":  [
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/schemas/extraction.schema.json",
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/direct-tool-output.json",
+                                                    "sha256:6ce0d51540510d6642d99d4b2bc72ddeddbc66b1c05af226ac363632375fd05e"
+                                                ]
+                               },
+                               {
+                                   "criterion":  "sealed receipt binds input/schema/output artifact refs",
+                                   "evidence":  [
+                                                    "sha256:4a32de862b9b536fe133f3e355ec89048d152e611a893c085cd7b7903f4f6feb",
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipts/index.json",
+                                                    "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-40c7eb6c41-structured-extraction/receipt-verify-output.json"
+                                                ]
+                               },
+                               {
+                                   "criterion":  "submitted to runx as real skill via PR",
+                                   "evidence":  [
+                                                    "https://github.com/runxhq/runx/pull/80"
+                                                ]
+                               }
+                           ]
+}
