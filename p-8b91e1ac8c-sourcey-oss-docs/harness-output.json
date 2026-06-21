@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "case_count": 1,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "go-chi-sourcey-pages"
+  ],
+  "receipt_ids": [
+    "sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf"
+  ],
+  "graph_case_count": 1
+}

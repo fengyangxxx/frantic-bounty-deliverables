@@ -1,0 +1,104 @@
+skill: sourcey-docs-validation
+version: "0.1.0"
+
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+  runtime_path: local
+
+policy:
+  allow:
+    - provider: public-web
+      method: GET
+      scope: public:http:read
+    - provider: local-evidence
+      method: READ
+      scope: runx:evidence:read
+  deny:
+    - network_mutation
+    - credential_material
+    - private_user_data
+
+emits:
+  - name: sourcey_docs_validation_result
+    packet: runx.sourcey_docs.validation_result.v1
+
+harness:
+  cases:
+    - name: go-chi-sourcey-pages
+      runner: validate
+      inputs:
+        public_url: "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+        repo_url: "https://github.com/go-chi/chi"
+        module: "github.com/go-chi/chi/v5"
+        pinned_commit: "2b9fca258f92830fc8232582e9e05a4d4a572a5d"
+        sourcey_version: "3.6.3"
+        godoc_path: "godoc.json"
+        search_index_path: "dist/search-index.json"
+        page_paths:
+          - ""
+          - "go-api.html"
+          - "go-api/package-root.html"
+          - "go-api/pkg-middleware.html"
+          - "llms.txt"
+      expect:
+        status: sealed
+        outputs:
+          sourcey_docs_validation_result:
+            matches_packet: runx.sourcey_docs.validation_result.v1
+        receipt:
+          schema: runx.receipt.v1
+
+runners:
+  validate:
+    default: true
+    type: graph
+    inputs:
+      public_url:
+        type: string
+        required: true
+        description: "Published Sourcey site root URL."
+      repo_url:
+        type: string
+        required: true
+        description: "Target OSS repository URL."
+      module:
+        type: string
+        required: true
+        description: "Target module or package identity."
+      pinned_commit:
+        type: string
+        required: true
+        description: "Pinned target repository commit."
+      sourcey_version:
+        type: string
+        required: true
+        description: "Sourcey version used to generate the site."
+      godoc_path:
+        type: string
+        required: true
+        description: "Package-relative godoc snapshot path."
+      search_index_path:
+        type: string
+        required: true
+        description: "Package-relative Sourcey search index path."
+      page_paths:
+        type: array
+        required: true
+        description: "Public page paths to fetch and verify."
+    graph:
+      name: sourcey-docs-validation
+      steps:
+        - id: validate_sourcey_docs
+          tool: sourcey_docs.validate
+          inputs:
+            public_url: "$input.public_url"
+            repo_url: "$input.repo_url"
+            module: "$input.module"
+            pinned_commit: "$input.pinned_commit"
+            sourcey_version: "$input.sourcey_version"
+            godoc_path: "$input.godoc_path"
+            search_index_path: "$input.search_index_path"
+            page_paths: "$input.page_paths"

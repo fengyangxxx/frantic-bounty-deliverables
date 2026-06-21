@@ -1,0 +1,1972 @@
+{
+  "schema": "runx.graph_skill_state.v1",
+  "run_id": "run_validate_b94d345fdb5d",
+  "runner_name": "validate",
+  "graph_inputs": {
+    "godoc_path": "godoc.json",
+    "module": "github.com/go-chi/chi/v5",
+    "page_paths": [
+      "",
+      "go-api.html",
+      "go-api/package-root.html",
+      "go-api/pkg-middleware.html",
+      "llms.txt"
+    ],
+    "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+    "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+    "repo_url": "https://github.com/go-chi/chi",
+    "search_index_path": "dist/search-index.json",
+    "sourcey_version": "3.6.3"
+  },
+  "checkpoint": {
+    "graph_name": "sourcey-docs-validation",
+    "state": {
+      "graphId": "sourcey-docs-validation",
+      "status": "running",
+      "steps": [
+        {
+          "stepId": "validate_sourcey_docs",
+          "status": "succeeded",
+          "attempts": 1,
+          "startedAt": "2026-06-21T18:17:00.366Z",
+          "completedAt": "2026-06-21T18:17:00.366Z",
+          "receiptId": "sha256:ccd18d75e156b883f39d368848c79fa8726fc34f483a11a7b7509c4c6f86501d",
+          "outputs": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "artifact_type": "sourcey_config",
+                "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "label": "sourcey.config.ts",
+                "type": "sourcey_config"
+              },
+              {
+                "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "artifact_type": "godoc_snapshot",
+                "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "label": "godoc.json",
+                "type": "godoc_snapshot"
+              },
+              {
+                "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "artifact_type": "search_index",
+                "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "label": "dist/search-index.json",
+                "type": "search_index"
+              }
+            ],
+            "checks": [
+              {
+                "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                "name": "public_url_https",
+                "passed": true
+              },
+              {
+                "detail": "5 pages returned HTTP 200",
+                "name": "public_pages_load",
+                "passed": true
+              },
+              {
+                "detail": "Sourcey marker found in fetched HTML",
+                "name": "sourcey_generator_visible",
+                "passed": true
+              },
+              {
+                "detail": "go-chi target text found on root page",
+                "name": "target_project_visible",
+                "passed": true
+              },
+              {
+                "detail": "root package page includes router symbols",
+                "name": "root_package_symbols",
+                "passed": true
+              },
+              {
+                "detail": "middleware page includes middleware symbols",
+                "name": "middleware_symbols",
+                "passed": true
+              },
+              {
+                "detail": "10 candidate public symbols found",
+                "name": "godoc_symbol_coverage",
+                "passed": true
+              },
+              {
+                "detail": "215 search index entries",
+                "name": "search_index_coverage",
+                "passed": true
+              }
+            ],
+            "evidence": {
+              "approximate_public_item_count": 186,
+              "candidate_symbol_hits": [
+                "NewRouter",
+                "URLParam",
+                "Walk",
+                "Router",
+                "Routes",
+                "BasicAuth",
+                "Compress",
+                "RequestID",
+                "ThrottleWithOpts",
+                "WrapResponseWriter"
+              ],
+              "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+              "search_index_entries": 215,
+              "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+            },
+            "provenance": {
+              "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+            },
+            "publication": {
+              "pages": [
+                {
+                  "byte_count": 20119,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "index.html",
+                  "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                },
+                {
+                  "byte_count": 19012,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api.html",
+                  "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                },
+                {
+                  "byte_count": 109778,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": true,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api/package-root.html",
+                  "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                },
+                {
+                  "byte_count": 142753,
+                  "contains_middleware_symbol": true,
+                  "contains_router_symbol": true,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api/pkg-middleware.html",
+                  "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                },
+                {
+                  "byte_count": 841,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "llms.txt",
+                  "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                }
+              ],
+              "parent_domain": "fengyangxxx.github.io",
+              "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+              "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+            },
+            "raw": "{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"sourcey_docs_validation_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}}},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}",
+            "schema": "runx.sourcey_docs.validation_result.v1",
+            "signal": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "artifact_type": "sourcey_config",
+                  "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey.config.ts",
+                  "type": "sourcey_config"
+                },
+                {
+                  "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "artifact_type": "godoc_snapshot",
+                  "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc.json",
+                  "type": "godoc_snapshot"
+                },
+                {
+                  "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "artifact_type": "search_index",
+                  "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "dist/search-index.json",
+                  "type": "search_index"
+                }
+              ],
+              "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "source_events": [
+                {
+                  "provider": "github-pages",
+                  "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "title": "Published go-chi Sourcey documentation site"
+                },
+                {
+                  "provider": "github",
+                  "source_locator": "https://github.com/go-chi/chi",
+                  "title": "Target go-chi/chi repository"
+                }
+              ]
+            },
+            "skill_claim": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "artifact_type": "sourcey_config",
+                  "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey.config.ts",
+                  "type": "sourcey_config"
+                },
+                {
+                  "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "artifact_type": "godoc_snapshot",
+                  "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc.json",
+                  "type": "godoc_snapshot"
+                },
+                {
+                  "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "artifact_type": "search_index",
+                  "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "dist/search-index.json",
+                  "type": "search_index"
+                }
+              ],
+              "checks": [
+                {
+                  "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "name": "public_url_https",
+                  "passed": true
+                },
+                {
+                  "detail": "5 pages returned HTTP 200",
+                  "name": "public_pages_load",
+                  "passed": true
+                },
+                {
+                  "detail": "Sourcey marker found in fetched HTML",
+                  "name": "sourcey_generator_visible",
+                  "passed": true
+                },
+                {
+                  "detail": "go-chi target text found on root page",
+                  "name": "target_project_visible",
+                  "passed": true
+                },
+                {
+                  "detail": "root package page includes router symbols",
+                  "name": "root_package_symbols",
+                  "passed": true
+                },
+                {
+                  "detail": "middleware page includes middleware symbols",
+                  "name": "middleware_symbols",
+                  "passed": true
+                },
+                {
+                  "detail": "10 candidate public symbols found",
+                  "name": "godoc_symbol_coverage",
+                  "passed": true
+                },
+                {
+                  "detail": "215 search index entries",
+                  "name": "search_index_coverage",
+                  "passed": true
+                }
+              ],
+              "evidence": {
+                "approximate_public_item_count": 186,
+                "candidate_symbol_hits": [
+                  "NewRouter",
+                  "URLParam",
+                  "Walk",
+                  "Router",
+                  "Routes",
+                  "BasicAuth",
+                  "Compress",
+                  "RequestID",
+                  "ThrottleWithOpts",
+                  "WrapResponseWriter"
+                ],
+                "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "search_index_entries": 215,
+                "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+              },
+              "provenance": {
+                "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+              },
+              "publication": {
+                "pages": [
+                  {
+                    "byte_count": 20119,
+                    "contains_middleware_symbol": false,
+                    "contains_router_symbol": false,
+                    "contains_sourcey": true,
+                    "contains_target": true,
+                    "ok": true,
+                    "path": "index.html",
+                    "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                    "status": 200,
+                    "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                  },
+                  {
+                    "byte_count": 19012,
+                    "contains_middleware_symbol": false,
+                    "contains_router_symbol": false,
+                    "contains_sourcey": true,
+                    "contains_target": true,
+                    "ok": true,
+                    "path": "go-api.html",
+                    "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                    "status": 200,
+                    "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                  },
+                  {
+                    "byte_count": 109778,
+                    "contains_middleware_symbol": false,
+                    "contains_router_symbol": true,
+                    "contains_sourcey": true,
+                    "contains_target": true,
+                    "ok": true,
+                    "path": "go-api/package-root.html",
+                    "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                    "status": 200,
+                    "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                  },
+                  {
+                    "byte_count": 142753,
+                    "contains_middleware_symbol": true,
+                    "contains_router_symbol": true,
+                    "contains_sourcey": true,
+                    "contains_target": true,
+                    "ok": true,
+                    "path": "go-api/pkg-middleware.html",
+                    "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                    "status": 200,
+                    "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                  },
+                  {
+                    "byte_count": 841,
+                    "contains_middleware_symbol": false,
+                    "contains_router_symbol": false,
+                    "contains_sourcey": true,
+                    "contains_target": true,
+                    "ok": true,
+                    "path": "llms.txt",
+                    "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                    "status": 200,
+                    "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                  }
+                ],
+                "parent_domain": "fengyangxxx.github.io",
+                "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+              },
+              "schema": "runx.sourcey_docs.validation_result.v1",
+              "signal": {
+                "artifacts": [
+                  {
+                    "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                    "artifact_type": "sourcey_config",
+                    "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                    "label": "sourcey.config.ts",
+                    "type": "sourcey_config"
+                  },
+                  {
+                    "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "artifact_type": "godoc_snapshot",
+                    "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "label": "godoc.json",
+                    "type": "godoc_snapshot"
+                  },
+                  {
+                    "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "artifact_type": "search_index",
+                    "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "label": "dist/search-index.json",
+                    "type": "search_index"
+                  }
+                ],
+                "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "source_events": [
+                  {
+                    "provider": "github-pages",
+                    "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                    "title": "Published go-chi Sourcey documentation site"
+                  },
+                  {
+                    "provider": "github",
+                    "source_locator": "https://github.com/go-chi/chi",
+                    "title": "Target go-chi/chi repository"
+                  }
+                ]
+              },
+              "sourcey_docs_validation_result": {
+                "data": {
+                  "data": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "artifact_type": "sourcey_config",
+                        "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "label": "sourcey.config.ts",
+                        "type": "sourcey_config"
+                      },
+                      {
+                        "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "artifact_type": "godoc_snapshot",
+                        "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "label": "godoc.json",
+                        "type": "godoc_snapshot"
+                      },
+                      {
+                        "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "artifact_type": "search_index",
+                        "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "label": "dist/search-index.json",
+                        "type": "search_index"
+                      }
+                    ],
+                    "checks": [
+                      {
+                        "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                        "name": "public_url_https",
+                        "passed": true
+                      },
+                      {
+                        "detail": "5 pages returned HTTP 200",
+                        "name": "public_pages_load",
+                        "passed": true
+                      },
+                      {
+                        "detail": "Sourcey marker found in fetched HTML",
+                        "name": "sourcey_generator_visible",
+                        "passed": true
+                      },
+                      {
+                        "detail": "go-chi target text found on root page",
+                        "name": "target_project_visible",
+                        "passed": true
+                      },
+                      {
+                        "detail": "root package page includes router symbols",
+                        "name": "root_package_symbols",
+                        "passed": true
+                      },
+                      {
+                        "detail": "middleware page includes middleware symbols",
+                        "name": "middleware_symbols",
+                        "passed": true
+                      },
+                      {
+                        "detail": "10 candidate public symbols found",
+                        "name": "godoc_symbol_coverage",
+                        "passed": true
+                      },
+                      {
+                        "detail": "215 search index entries",
+                        "name": "search_index_coverage",
+                        "passed": true
+                      }
+                    ],
+                    "evidence": {
+                      "approximate_public_item_count": 186,
+                      "candidate_symbol_hits": [
+                        "NewRouter",
+                        "URLParam",
+                        "Walk",
+                        "Router",
+                        "Routes",
+                        "BasicAuth",
+                        "Compress",
+                        "RequestID",
+                        "ThrottleWithOpts",
+                        "WrapResponseWriter"
+                      ],
+                      "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "search_index_entries": 215,
+                      "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+                    },
+                    "provenance": {
+                      "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+                    },
+                    "publication": {
+                      "pages": [
+                        {
+                          "byte_count": 20119,
+                          "contains_middleware_symbol": false,
+                          "contains_router_symbol": false,
+                          "contains_sourcey": true,
+                          "contains_target": true,
+                          "ok": true,
+                          "path": "index.html",
+                          "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                          "status": 200,
+                          "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                        },
+                        {
+                          "byte_count": 19012,
+                          "contains_middleware_symbol": false,
+                          "contains_router_symbol": false,
+                          "contains_sourcey": true,
+                          "contains_target": true,
+                          "ok": true,
+                          "path": "go-api.html",
+                          "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                          "status": 200,
+                          "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                        },
+                        {
+                          "byte_count": 109778,
+                          "contains_middleware_symbol": false,
+                          "contains_router_symbol": true,
+                          "contains_sourcey": true,
+                          "contains_target": true,
+                          "ok": true,
+                          "path": "go-api/package-root.html",
+                          "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                          "status": 200,
+                          "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                        },
+                        {
+                          "byte_count": 142753,
+                          "contains_middleware_symbol": true,
+                          "contains_router_symbol": true,
+                          "contains_sourcey": true,
+                          "contains_target": true,
+                          "ok": true,
+                          "path": "go-api/pkg-middleware.html",
+                          "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                          "status": 200,
+                          "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                        },
+                        {
+                          "byte_count": 841,
+                          "contains_middleware_symbol": false,
+                          "contains_router_symbol": false,
+                          "contains_sourcey": true,
+                          "contains_target": true,
+                          "ok": true,
+                          "path": "llms.txt",
+                          "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                          "status": 200,
+                          "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                        }
+                      ],
+                      "parent_domain": "fengyangxxx.github.io",
+                      "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                      "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+                    },
+                    "schema": "runx.sourcey_docs.validation_result.v1",
+                    "signal": {
+                      "artifacts": [
+                        {
+                          "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                          "artifact_type": "sourcey_config",
+                          "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                          "label": "sourcey.config.ts",
+                          "type": "sourcey_config"
+                        },
+                        {
+                          "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                          "artifact_type": "godoc_snapshot",
+                          "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                          "label": "godoc.json",
+                          "type": "godoc_snapshot"
+                        },
+                        {
+                          "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                          "artifact_type": "search_index",
+                          "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                          "label": "dist/search-index.json",
+                          "type": "search_index"
+                        }
+                      ],
+                      "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "source_events": [
+                        {
+                          "provider": "github-pages",
+                          "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                          "title": "Published go-chi Sourcey documentation site"
+                        },
+                        {
+                          "provider": "github",
+                          "source_locator": "https://github.com/go-chi/chi",
+                          "title": "Target go-chi/chi repository"
+                        }
+                      ]
+                    },
+                    "status": "sealed",
+                    "target": {
+                      "module": "github.com/go-chi/chi/v5",
+                      "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+                      "repo_url": "https://github.com/go-chi/chi",
+                      "sourcey_version": "3.6.3"
+                    },
+                    "tool_version": "0.1.0"
+                  }
+                }
+              },
+              "status": "sealed",
+              "target": {
+                "module": "github.com/go-chi/chi/v5",
+                "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+                "repo_url": "https://github.com/go-chi/chi",
+                "sourcey_version": "3.6.3"
+              },
+              "tool_version": "0.1.0"
+            },
+            "sourcey_docs_validation_result": {
+              "data": {
+                "data": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "artifact_type": "sourcey_config",
+                      "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "label": "sourcey.config.ts",
+                      "type": "sourcey_config"
+                    },
+                    {
+                      "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "artifact_type": "godoc_snapshot",
+                      "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "label": "godoc.json",
+                      "type": "godoc_snapshot"
+                    },
+                    {
+                      "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "artifact_type": "search_index",
+                      "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "label": "dist/search-index.json",
+                      "type": "search_index"
+                    }
+                  ],
+                  "checks": [
+                    {
+                      "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                      "name": "public_url_https",
+                      "passed": true
+                    },
+                    {
+                      "detail": "5 pages returned HTTP 200",
+                      "name": "public_pages_load",
+                      "passed": true
+                    },
+                    {
+                      "detail": "Sourcey marker found in fetched HTML",
+                      "name": "sourcey_generator_visible",
+                      "passed": true
+                    },
+                    {
+                      "detail": "go-chi target text found on root page",
+                      "name": "target_project_visible",
+                      "passed": true
+                    },
+                    {
+                      "detail": "root package page includes router symbols",
+                      "name": "root_package_symbols",
+                      "passed": true
+                    },
+                    {
+                      "detail": "middleware page includes middleware symbols",
+                      "name": "middleware_symbols",
+                      "passed": true
+                    },
+                    {
+                      "detail": "10 candidate public symbols found",
+                      "name": "godoc_symbol_coverage",
+                      "passed": true
+                    },
+                    {
+                      "detail": "215 search index entries",
+                      "name": "search_index_coverage",
+                      "passed": true
+                    }
+                  ],
+                  "evidence": {
+                    "approximate_public_item_count": 186,
+                    "candidate_symbol_hits": [
+                      "NewRouter",
+                      "URLParam",
+                      "Walk",
+                      "Router",
+                      "Routes",
+                      "BasicAuth",
+                      "Compress",
+                      "RequestID",
+                      "ThrottleWithOpts",
+                      "WrapResponseWriter"
+                    ],
+                    "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "search_index_entries": 215,
+                    "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+                  },
+                  "provenance": {
+                    "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+                  },
+                  "publication": {
+                    "pages": [
+                      {
+                        "byte_count": 20119,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "index.html",
+                        "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                      },
+                      {
+                        "byte_count": 19012,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api.html",
+                        "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                      },
+                      {
+                        "byte_count": 109778,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": true,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api/package-root.html",
+                        "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                      },
+                      {
+                        "byte_count": 142753,
+                        "contains_middleware_symbol": true,
+                        "contains_router_symbol": true,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api/pkg-middleware.html",
+                        "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                      },
+                      {
+                        "byte_count": 841,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "llms.txt",
+                        "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                      }
+                    ],
+                    "parent_domain": "fengyangxxx.github.io",
+                    "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                    "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+                  },
+                  "schema": "runx.sourcey_docs.validation_result.v1",
+                  "signal": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "artifact_type": "sourcey_config",
+                        "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "label": "sourcey.config.ts",
+                        "type": "sourcey_config"
+                      },
+                      {
+                        "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "artifact_type": "godoc_snapshot",
+                        "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "label": "godoc.json",
+                        "type": "godoc_snapshot"
+                      },
+                      {
+                        "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "artifact_type": "search_index",
+                        "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "label": "dist/search-index.json",
+                        "type": "search_index"
+                      }
+                    ],
+                    "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "source_events": [
+                      {
+                        "provider": "github-pages",
+                        "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                        "title": "Published go-chi Sourcey documentation site"
+                      },
+                      {
+                        "provider": "github",
+                        "source_locator": "https://github.com/go-chi/chi",
+                        "title": "Target go-chi/chi repository"
+                      }
+                    ]
+                  },
+                  "status": "sealed",
+                  "target": {
+                    "module": "github.com/go-chi/chi/v5",
+                    "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+                    "repo_url": "https://github.com/go-chi/chi",
+                    "sourcey_version": "3.6.3"
+                  },
+                  "tool_version": "0.1.0"
+                }
+              }
+            },
+            "status": "success",
+            "stderr": "",
+            "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"sourcey_docs_validation_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}}},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}",
+            "target": {
+              "module": "github.com/go-chi/chi/v5",
+              "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+              "repo_url": "https://github.com/go-chi/chi",
+              "sourcey_version": "3.6.3"
+            },
+            "tool_version": "0.1.0"
+          }
+        }
+      ]
+    },
+    "steps": [
+      {
+        "step_id": "validate_sourcey_docs",
+        "attempt": 1,
+        "skill": "tool:sourcey_docs.validate",
+        "runner": null,
+        "fanout_group": null,
+        "output": {
+          "status": "Success",
+          "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"sourcey_docs_validation_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}}},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}",
+          "stderr": "",
+          "exit_code": 0,
+          "duration_ms": 2297,
+          "metadata": {}
+        },
+        "outputs": {
+          "artifacts": [
+            {
+              "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+              "artifact_type": "sourcey_config",
+              "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+              "label": "sourcey.config.ts",
+              "type": "sourcey_config"
+            },
+            {
+              "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+              "artifact_type": "godoc_snapshot",
+              "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+              "label": "godoc.json",
+              "type": "godoc_snapshot"
+            },
+            {
+              "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "artifact_type": "search_index",
+              "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "label": "dist/search-index.json",
+              "type": "search_index"
+            }
+          ],
+          "checks": [
+            {
+              "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+              "name": "public_url_https",
+              "passed": true
+            },
+            {
+              "detail": "5 pages returned HTTP 200",
+              "name": "public_pages_load",
+              "passed": true
+            },
+            {
+              "detail": "Sourcey marker found in fetched HTML",
+              "name": "sourcey_generator_visible",
+              "passed": true
+            },
+            {
+              "detail": "go-chi target text found on root page",
+              "name": "target_project_visible",
+              "passed": true
+            },
+            {
+              "detail": "root package page includes router symbols",
+              "name": "root_package_symbols",
+              "passed": true
+            },
+            {
+              "detail": "middleware page includes middleware symbols",
+              "name": "middleware_symbols",
+              "passed": true
+            },
+            {
+              "detail": "10 candidate public symbols found",
+              "name": "godoc_symbol_coverage",
+              "passed": true
+            },
+            {
+              "detail": "215 search index entries",
+              "name": "search_index_coverage",
+              "passed": true
+            }
+          ],
+          "evidence": {
+            "approximate_public_item_count": 186,
+            "candidate_symbol_hits": [
+              "NewRouter",
+              "URLParam",
+              "Walk",
+              "Router",
+              "Routes",
+              "BasicAuth",
+              "Compress",
+              "RequestID",
+              "ThrottleWithOpts",
+              "WrapResponseWriter"
+            ],
+            "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+            "search_index_entries": 215,
+            "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+            "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+          },
+          "provenance": {
+            "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+          },
+          "publication": {
+            "pages": [
+              {
+                "byte_count": 20119,
+                "contains_middleware_symbol": false,
+                "contains_router_symbol": false,
+                "contains_sourcey": true,
+                "contains_target": true,
+                "ok": true,
+                "path": "index.html",
+                "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                "status": 200,
+                "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+              },
+              {
+                "byte_count": 19012,
+                "contains_middleware_symbol": false,
+                "contains_router_symbol": false,
+                "contains_sourcey": true,
+                "contains_target": true,
+                "ok": true,
+                "path": "go-api.html",
+                "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                "status": 200,
+                "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+              },
+              {
+                "byte_count": 109778,
+                "contains_middleware_symbol": false,
+                "contains_router_symbol": true,
+                "contains_sourcey": true,
+                "contains_target": true,
+                "ok": true,
+                "path": "go-api/package-root.html",
+                "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                "status": 200,
+                "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+              },
+              {
+                "byte_count": 142753,
+                "contains_middleware_symbol": true,
+                "contains_router_symbol": true,
+                "contains_sourcey": true,
+                "contains_target": true,
+                "ok": true,
+                "path": "go-api/pkg-middleware.html",
+                "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                "status": 200,
+                "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+              },
+              {
+                "byte_count": 841,
+                "contains_middleware_symbol": false,
+                "contains_router_symbol": false,
+                "contains_sourcey": true,
+                "contains_target": true,
+                "ok": true,
+                "path": "llms.txt",
+                "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                "status": 200,
+                "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+              }
+            ],
+            "parent_domain": "fengyangxxx.github.io",
+            "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+            "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+          },
+          "raw": "{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"sourcey_docs_validation_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}}},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}",
+          "schema": "runx.sourcey_docs.validation_result.v1",
+          "signal": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "artifact_type": "sourcey_config",
+                "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "label": "sourcey.config.ts",
+                "type": "sourcey_config"
+              },
+              {
+                "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "artifact_type": "godoc_snapshot",
+                "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "label": "godoc.json",
+                "type": "godoc_snapshot"
+              },
+              {
+                "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "artifact_type": "search_index",
+                "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "label": "dist/search-index.json",
+                "type": "search_index"
+              }
+            ],
+            "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+            "source_events": [
+              {
+                "provider": "github-pages",
+                "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                "title": "Published go-chi Sourcey documentation site"
+              },
+              {
+                "provider": "github",
+                "source_locator": "https://github.com/go-chi/chi",
+                "title": "Target go-chi/chi repository"
+              }
+            ]
+          },
+          "skill_claim": {
+            "artifacts": [
+              {
+                "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "artifact_type": "sourcey_config",
+                "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                "label": "sourcey.config.ts",
+                "type": "sourcey_config"
+              },
+              {
+                "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "artifact_type": "godoc_snapshot",
+                "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                "label": "godoc.json",
+                "type": "godoc_snapshot"
+              },
+              {
+                "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "artifact_type": "search_index",
+                "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                "label": "dist/search-index.json",
+                "type": "search_index"
+              }
+            ],
+            "checks": [
+              {
+                "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                "name": "public_url_https",
+                "passed": true
+              },
+              {
+                "detail": "5 pages returned HTTP 200",
+                "name": "public_pages_load",
+                "passed": true
+              },
+              {
+                "detail": "Sourcey marker found in fetched HTML",
+                "name": "sourcey_generator_visible",
+                "passed": true
+              },
+              {
+                "detail": "go-chi target text found on root page",
+                "name": "target_project_visible",
+                "passed": true
+              },
+              {
+                "detail": "root package page includes router symbols",
+                "name": "root_package_symbols",
+                "passed": true
+              },
+              {
+                "detail": "middleware page includes middleware symbols",
+                "name": "middleware_symbols",
+                "passed": true
+              },
+              {
+                "detail": "10 candidate public symbols found",
+                "name": "godoc_symbol_coverage",
+                "passed": true
+              },
+              {
+                "detail": "215 search index entries",
+                "name": "search_index_coverage",
+                "passed": true
+              }
+            ],
+            "evidence": {
+              "approximate_public_item_count": 186,
+              "candidate_symbol_hits": [
+                "NewRouter",
+                "URLParam",
+                "Walk",
+                "Router",
+                "Routes",
+                "BasicAuth",
+                "Compress",
+                "RequestID",
+                "ThrottleWithOpts",
+                "WrapResponseWriter"
+              ],
+              "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+              "search_index_entries": 215,
+              "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+            },
+            "provenance": {
+              "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+            },
+            "publication": {
+              "pages": [
+                {
+                  "byte_count": 20119,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "index.html",
+                  "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                },
+                {
+                  "byte_count": 19012,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api.html",
+                  "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                },
+                {
+                  "byte_count": 109778,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": true,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api/package-root.html",
+                  "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                },
+                {
+                  "byte_count": 142753,
+                  "contains_middleware_symbol": true,
+                  "contains_router_symbol": true,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "go-api/pkg-middleware.html",
+                  "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                },
+                {
+                  "byte_count": 841,
+                  "contains_middleware_symbol": false,
+                  "contains_router_symbol": false,
+                  "contains_sourcey": true,
+                  "contains_target": true,
+                  "ok": true,
+                  "path": "llms.txt",
+                  "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                  "status": 200,
+                  "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                }
+              ],
+              "parent_domain": "fengyangxxx.github.io",
+              "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+              "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+            },
+            "schema": "runx.sourcey_docs.validation_result.v1",
+            "signal": {
+              "artifacts": [
+                {
+                  "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "artifact_type": "sourcey_config",
+                  "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey.config.ts",
+                  "type": "sourcey_config"
+                },
+                {
+                  "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "artifact_type": "godoc_snapshot",
+                  "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc.json",
+                  "type": "godoc_snapshot"
+                },
+                {
+                  "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "artifact_type": "search_index",
+                  "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "dist/search-index.json",
+                  "type": "search_index"
+                }
+              ],
+              "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+              "source_events": [
+                {
+                  "provider": "github-pages",
+                  "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "title": "Published go-chi Sourcey documentation site"
+                },
+                {
+                  "provider": "github",
+                  "source_locator": "https://github.com/go-chi/chi",
+                  "title": "Target go-chi/chi repository"
+                }
+              ]
+            },
+            "sourcey_docs_validation_result": {
+              "data": {
+                "data": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "artifact_type": "sourcey_config",
+                      "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "label": "sourcey.config.ts",
+                      "type": "sourcey_config"
+                    },
+                    {
+                      "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "artifact_type": "godoc_snapshot",
+                      "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "label": "godoc.json",
+                      "type": "godoc_snapshot"
+                    },
+                    {
+                      "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "artifact_type": "search_index",
+                      "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "label": "dist/search-index.json",
+                      "type": "search_index"
+                    }
+                  ],
+                  "checks": [
+                    {
+                      "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                      "name": "public_url_https",
+                      "passed": true
+                    },
+                    {
+                      "detail": "5 pages returned HTTP 200",
+                      "name": "public_pages_load",
+                      "passed": true
+                    },
+                    {
+                      "detail": "Sourcey marker found in fetched HTML",
+                      "name": "sourcey_generator_visible",
+                      "passed": true
+                    },
+                    {
+                      "detail": "go-chi target text found on root page",
+                      "name": "target_project_visible",
+                      "passed": true
+                    },
+                    {
+                      "detail": "root package page includes router symbols",
+                      "name": "root_package_symbols",
+                      "passed": true
+                    },
+                    {
+                      "detail": "middleware page includes middleware symbols",
+                      "name": "middleware_symbols",
+                      "passed": true
+                    },
+                    {
+                      "detail": "10 candidate public symbols found",
+                      "name": "godoc_symbol_coverage",
+                      "passed": true
+                    },
+                    {
+                      "detail": "215 search index entries",
+                      "name": "search_index_coverage",
+                      "passed": true
+                    }
+                  ],
+                  "evidence": {
+                    "approximate_public_item_count": 186,
+                    "candidate_symbol_hits": [
+                      "NewRouter",
+                      "URLParam",
+                      "Walk",
+                      "Router",
+                      "Routes",
+                      "BasicAuth",
+                      "Compress",
+                      "RequestID",
+                      "ThrottleWithOpts",
+                      "WrapResponseWriter"
+                    ],
+                    "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "search_index_entries": 215,
+                    "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+                  },
+                  "provenance": {
+                    "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+                  },
+                  "publication": {
+                    "pages": [
+                      {
+                        "byte_count": 20119,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "index.html",
+                        "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                      },
+                      {
+                        "byte_count": 19012,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api.html",
+                        "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                      },
+                      {
+                        "byte_count": 109778,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": true,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api/package-root.html",
+                        "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                      },
+                      {
+                        "byte_count": 142753,
+                        "contains_middleware_symbol": true,
+                        "contains_router_symbol": true,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "go-api/pkg-middleware.html",
+                        "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                      },
+                      {
+                        "byte_count": 841,
+                        "contains_middleware_symbol": false,
+                        "contains_router_symbol": false,
+                        "contains_sourcey": true,
+                        "contains_target": true,
+                        "ok": true,
+                        "path": "llms.txt",
+                        "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                        "status": 200,
+                        "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                      }
+                    ],
+                    "parent_domain": "fengyangxxx.github.io",
+                    "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                    "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+                  },
+                  "schema": "runx.sourcey_docs.validation_result.v1",
+                  "signal": {
+                    "artifacts": [
+                      {
+                        "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "artifact_type": "sourcey_config",
+                        "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                        "label": "sourcey.config.ts",
+                        "type": "sourcey_config"
+                      },
+                      {
+                        "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "artifact_type": "godoc_snapshot",
+                        "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                        "label": "godoc.json",
+                        "type": "godoc_snapshot"
+                      },
+                      {
+                        "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "artifact_type": "search_index",
+                        "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                        "label": "dist/search-index.json",
+                        "type": "search_index"
+                      }
+                    ],
+                    "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "source_events": [
+                      {
+                        "provider": "github-pages",
+                        "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                        "title": "Published go-chi Sourcey documentation site"
+                      },
+                      {
+                        "provider": "github",
+                        "source_locator": "https://github.com/go-chi/chi",
+                        "title": "Target go-chi/chi repository"
+                      }
+                    ]
+                  },
+                  "status": "sealed",
+                  "target": {
+                    "module": "github.com/go-chi/chi/v5",
+                    "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+                    "repo_url": "https://github.com/go-chi/chi",
+                    "sourcey_version": "3.6.3"
+                  },
+                  "tool_version": "0.1.0"
+                }
+              }
+            },
+            "status": "sealed",
+            "target": {
+              "module": "github.com/go-chi/chi/v5",
+              "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+              "repo_url": "https://github.com/go-chi/chi",
+              "sourcey_version": "3.6.3"
+            },
+            "tool_version": "0.1.0"
+          },
+          "sourcey_docs_validation_result": {
+            "data": {
+              "data": {
+                "artifacts": [
+                  {
+                    "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                    "artifact_type": "sourcey_config",
+                    "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                    "label": "sourcey.config.ts",
+                    "type": "sourcey_config"
+                  },
+                  {
+                    "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "artifact_type": "godoc_snapshot",
+                    "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                    "label": "godoc.json",
+                    "type": "godoc_snapshot"
+                  },
+                  {
+                    "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "artifact_type": "search_index",
+                    "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                    "label": "dist/search-index.json",
+                    "type": "search_index"
+                  }
+                ],
+                "checks": [
+                  {
+                    "detail": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                    "name": "public_url_https",
+                    "passed": true
+                  },
+                  {
+                    "detail": "5 pages returned HTTP 200",
+                    "name": "public_pages_load",
+                    "passed": true
+                  },
+                  {
+                    "detail": "Sourcey marker found in fetched HTML",
+                    "name": "sourcey_generator_visible",
+                    "passed": true
+                  },
+                  {
+                    "detail": "go-chi target text found on root page",
+                    "name": "target_project_visible",
+                    "passed": true
+                  },
+                  {
+                    "detail": "root package page includes router symbols",
+                    "name": "root_package_symbols",
+                    "passed": true
+                  },
+                  {
+                    "detail": "middleware page includes middleware symbols",
+                    "name": "middleware_symbols",
+                    "passed": true
+                  },
+                  {
+                    "detail": "10 candidate public symbols found",
+                    "name": "godoc_symbol_coverage",
+                    "passed": true
+                  },
+                  {
+                    "detail": "215 search index entries",
+                    "name": "search_index_coverage",
+                    "passed": true
+                  }
+                ],
+                "evidence": {
+                  "approximate_public_item_count": 186,
+                  "candidate_symbol_hits": [
+                    "NewRouter",
+                    "URLParam",
+                    "Walk",
+                    "Router",
+                    "Routes",
+                    "BasicAuth",
+                    "Compress",
+                    "RequestID",
+                    "ThrottleWithOpts",
+                    "WrapResponseWriter"
+                  ],
+                  "godoc_sha256": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "search_index_entries": 215,
+                  "search_index_sha256": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "sourcey_config_sha256": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c"
+                },
+                "provenance": {
+                  "output_payload_sha256": "sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d"
+                },
+                "publication": {
+                  "pages": [
+                    {
+                      "byte_count": 20119,
+                      "contains_middleware_symbol": false,
+                      "contains_router_symbol": false,
+                      "contains_sourcey": true,
+                      "contains_target": true,
+                      "ok": true,
+                      "path": "index.html",
+                      "sha256": "sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab",
+                      "status": 200,
+                      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+                    },
+                    {
+                      "byte_count": 19012,
+                      "contains_middleware_symbol": false,
+                      "contains_router_symbol": false,
+                      "contains_sourcey": true,
+                      "contains_target": true,
+                      "ok": true,
+                      "path": "go-api.html",
+                      "sha256": "sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1",
+                      "status": 200,
+                      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html"
+                    },
+                    {
+                      "byte_count": 109778,
+                      "contains_middleware_symbol": false,
+                      "contains_router_symbol": true,
+                      "contains_sourcey": true,
+                      "contains_target": true,
+                      "ok": true,
+                      "path": "go-api/package-root.html",
+                      "sha256": "sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a",
+                      "status": 200,
+                      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html"
+                    },
+                    {
+                      "byte_count": 142753,
+                      "contains_middleware_symbol": true,
+                      "contains_router_symbol": true,
+                      "contains_sourcey": true,
+                      "contains_target": true,
+                      "ok": true,
+                      "path": "go-api/pkg-middleware.html",
+                      "sha256": "sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d",
+                      "status": 200,
+                      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+                    },
+                    {
+                      "byte_count": 841,
+                      "contains_middleware_symbol": false,
+                      "contains_router_symbol": false,
+                      "contains_sourcey": true,
+                      "contains_target": true,
+                      "ok": true,
+                      "path": "llms.txt",
+                      "sha256": "sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c",
+                      "status": 200,
+                      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt"
+                    }
+                  ],
+                  "parent_domain": "fengyangxxx.github.io",
+                  "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "repository": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+                },
+                "schema": "runx.sourcey_docs.validation_result.v1",
+                "signal": {
+                  "artifacts": [
+                    {
+                      "artifact_id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "artifact_type": "sourcey_config",
+                      "id": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                      "label": "sourcey.config.ts",
+                      "type": "sourcey_config"
+                    },
+                    {
+                      "artifact_id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "artifact_type": "godoc_snapshot",
+                      "id": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                      "label": "godoc.json",
+                      "type": "godoc_snapshot"
+                    },
+                    {
+                      "artifact_id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "artifact_type": "search_index",
+                      "id": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                      "label": "dist/search-index.json",
+                      "type": "search_index"
+                    }
+                  ],
+                  "signal_id": "sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "source_events": [
+                    {
+                      "provider": "github-pages",
+                      "source_locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                      "title": "Published go-chi Sourcey documentation site"
+                    },
+                    {
+                      "provider": "github",
+                      "source_locator": "https://github.com/go-chi/chi",
+                      "title": "Target go-chi/chi repository"
+                    }
+                  ]
+                },
+                "status": "sealed",
+                "target": {
+                  "module": "github.com/go-chi/chi/v5",
+                  "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+                  "repo_url": "https://github.com/go-chi/chi",
+                  "sourcey_version": "3.6.3"
+                },
+                "tool_version": "0.1.0"
+              }
+            }
+          },
+          "status": "success",
+          "stderr": "",
+          "stdout": "{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"sourcey_docs_validation_result\":{\"data\":{\"data\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"checks\":[{\"detail\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"name\":\"public_url_https\",\"passed\":true},{\"detail\":\"5 pages returned HTTP 200\",\"name\":\"public_pages_load\",\"passed\":true},{\"detail\":\"Sourcey marker found in fetched HTML\",\"name\":\"sourcey_generator_visible\",\"passed\":true},{\"detail\":\"go-chi target text found on root page\",\"name\":\"target_project_visible\",\"passed\":true},{\"detail\":\"root package page includes router symbols\",\"name\":\"root_package_symbols\",\"passed\":true},{\"detail\":\"middleware page includes middleware symbols\",\"name\":\"middleware_symbols\",\"passed\":true},{\"detail\":\"10 candidate public symbols found\",\"name\":\"godoc_symbol_coverage\",\"passed\":true},{\"detail\":\"215 search index entries\",\"name\":\"search_index_coverage\",\"passed\":true}],\"evidence\":{\"approximate_public_item_count\":186,\"candidate_symbol_hits\":[\"NewRouter\",\"URLParam\",\"Walk\",\"Router\",\"Routes\",\"BasicAuth\",\"Compress\",\"RequestID\",\"ThrottleWithOpts\",\"WrapResponseWriter\"],\"godoc_sha256\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"search_index_entries\":215,\"search_index_sha256\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"sourcey_config_sha256\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\"},\"provenance\":{\"output_payload_sha256\":\"sha256:9988268c4cbe7efb60695344801932e4718f6f3894cd5db68098a56247541d7d\"},\"publication\":{\"pages\":[{\"byte_count\":20119,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"index.html\",\"sha256\":\"sha256:f4fe7ee081b3b6aaed3227f3aa9fe1ee4bfd1aa1449ed58c2f6ecd4ec4baaeab\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\"},{\"byte_count\":19012,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api.html\",\"sha256\":\"sha256:27184d31fc34cd6cc08183ced6180b03ea50661379778e80d8b3be2de186eda1\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html\"},{\"byte_count\":109778,\"contains_middleware_symbol\":false,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/package-root.html\",\"sha256\":\"sha256:c8835b00b8c013f922bfcdf6095a095be2a2e4a26bcbda2108513f8a53ff0c8a\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html\"},{\"byte_count\":142753,\"contains_middleware_symbol\":true,\"contains_router_symbol\":true,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"go-api/pkg-middleware.html\",\"sha256\":\"sha256:2df0d464cf9e30550d89aeacfa933bc690a42f97ff5705c34f9ccacb9d87464d\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html\"},{\"byte_count\":841,\"contains_middleware_symbol\":false,\"contains_router_symbol\":false,\"contains_sourcey\":true,\"contains_target\":true,\"ok\":true,\"path\":\"llms.txt\",\"sha256\":\"sha256:724474ee4a9c7436d73eaa29174c99006fa9a2d59a042113cc371e51b4ae2b7c\",\"status\":200,\"url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt\"}],\"parent_domain\":\"fengyangxxx.github.io\",\"public_url\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"repository\":\"https://github.com/fengyangxxx/go-chi-sourcey-docs\"},\"schema\":\"runx.sourcey_docs.validation_result.v1\",\"signal\":{\"artifacts\":[{\"artifact_id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"artifact_type\":\"sourcey_config\",\"id\":\"sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c\",\"label\":\"sourcey.config.ts\",\"type\":\"sourcey_config\"},{\"artifact_id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"artifact_type\":\"godoc_snapshot\",\"id\":\"sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636\",\"label\":\"godoc.json\",\"type\":\"godoc_snapshot\"},{\"artifact_id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"artifact_type\":\"search_index\",\"id\":\"sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"label\":\"dist/search-index.json\",\"type\":\"search_index\"}],\"signal_id\":\"sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990\",\"source_events\":[{\"provider\":\"github-pages\",\"source_locator\":\"https://fengyangxxx.github.io/go-chi-sourcey-docs/\",\"title\":\"Published go-chi Sourcey documentation site\"},{\"provider\":\"github\",\"source_locator\":\"https://github.com/go-chi/chi\",\"title\":\"Target go-chi/chi repository\"}]},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}}},\"status\":\"sealed\",\"target\":{\"module\":\"github.com/go-chi/chi/v5\",\"pinned_commit\":\"2b9fca258f92830fc8232582e9e05a4d4a572a5d\",\"repo_url\":\"https://github.com/go-chi/chi\",\"sourcey_version\":\"3.6.3\"},\"tool_version\":\"0.1.0\"}",
+          "target": {
+            "module": "github.com/go-chi/chi/v5",
+            "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+            "repo_url": "https://github.com/go-chi/chi",
+            "sourcey_version": "3.6.3"
+          },
+          "tool_version": "0.1.0"
+        },
+        "receipt": {
+          "schema": "runx.receipt.v1",
+          "id": "sha256:ccd18d75e156b883f39d368848c79fa8726fc34f483a11a7b7509c4c6f86501d",
+          "created_at": "2026-06-21T18:17:00.366Z",
+          "canonicalization": "runx.receipt.c14n.v1",
+          "issuer": {
+            "type": "hosted",
+            "kid": "sourcey-docs-validation-test-key",
+            "public_key_sha256": "sha256:93f7b6649c627f89b7206d3739231689dcb9a6db7fe278614de66a0c6e9d4390"
+          },
+          "signature": {
+            "alg": "Ed25519",
+            "value": "base64:PrIqZShubNnCBAAinzh19qrb3nWc9_w4HWSr50tBI2z046FMPBOoSRSdh1KR8a_MT0y26O2MOCBDUf9ePJQ4Aw"
+          },
+          "digest": "sha256:e3ecae1c772a012ad8b0f5bae3c831a15c5f3d2b3ff24d603b66a2aeda207463",
+          "idempotency": {
+            "intent_key": "sha256:sourcey-docs-validation-validate_sourcey_docs-intent",
+            "trigger_fingerprint": "sha256:sourcey-docs-validation-validate_sourcey_docs-trigger",
+            "content_hash": "sha256:sourcey-docs-validation-validate_sourcey_docs-content"
+          },
+          "subject": {
+            "kind": "skill",
+            "ref": {
+              "type": "harness",
+              "uri": "hrn_sourcey-docs-validation_validate_sourcey_docs"
+            },
+            "commitments": []
+          },
+          "authority": {
+            "actor_ref": {
+              "type": "principal",
+              "uri": "runx:principal:local_runtime"
+            },
+            "grant_refs": [],
+            "scope_refs": [],
+            "authority_proof_refs": [],
+            "attenuation": {
+              "parent_authority_ref": null,
+              "subset_proof": null
+            },
+            "terms": [],
+            "enforcement": {
+              "profile_hash": "sha256:runtime-skeleton-enforcement",
+              "redaction_refs": [],
+              "setup_refs": [],
+              "teardown_refs": []
+            }
+          },
+          "signals": [
+            {
+              "type": "signal",
+              "uri": "runx:signal:sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990"
+            }
+          ],
+          "decisions": [
+            {
+              "decision_id": "dec_validate_sourcey_docs",
+              "choice": "open",
+              "inputs": {
+                "signal_refs": [
+                  {
+                    "type": "signal",
+                    "uri": "runx:signal:sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990"
+                  }
+                ],
+                "target_ref": null,
+                "opportunity_refs": [],
+                "selection_ref": null
+              },
+              "proposed_intent": {
+                "purpose": "Open runtime node validate_sourcey_docs",
+                "legitimacy": "Local graph execution requested this node",
+                "success_criteria": [],
+                "constraints": [],
+                "derived_from": []
+              },
+              "selected_act_id": "act_validate_sourcey_docs",
+              "selected_harness_ref": null,
+              "justification": {
+                "summary": "runtime graph planner selected this node",
+                "evidence_refs": [
+                  {
+                    "type": "signal",
+                    "uri": "runx:signal:sourcey-docs-validation:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990"
+                  }
+                ]
+              },
+              "closure": null,
+              "artifact_refs": [
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "locator": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey_config"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "locator": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc_snapshot"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "locator": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "search_index"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "locator": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey_config"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "locator": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc_snapshot"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "locator": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "search_index"
+                }
+              ]
+            }
+          ],
+          "acts": [
+            {
+              "id": "act_validate_sourcey_docs",
+              "form": "observation",
+              "intent": {
+                "purpose": "Run graph step validate_sourcey_docs",
+                "legitimacy": "Runtime graph execution was admitted by the local harness",
+                "success_criteria": [
+                  {
+                    "criterion_id": "process_exit",
+                    "statement": "cli-tool exits successfully",
+                    "required": true
+                  }
+                ],
+                "constraints": [],
+                "derived_from": []
+              },
+              "summary": "Executed graph step validate_sourcey_docs",
+              "criterion_bindings": [
+                {
+                  "criterion_id": "process_exit",
+                  "status": "verified",
+                  "evidence_refs": [],
+                  "verification_refs": [],
+                  "summary": "cli-tool exited successfully"
+                }
+              ],
+              "source_refs": [
+                {
+                  "type": "external_url",
+                  "uri": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "provider": "github-pages",
+                  "locator": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+                  "label": "Published go-chi Sourcey documentation site"
+                },
+                {
+                  "type": "github_issue",
+                  "uri": "https://github.com/go-chi/chi",
+                  "provider": "github",
+                  "locator": "https://github.com/go-chi/chi",
+                  "label": "Target go-chi/chi repository"
+                }
+              ],
+              "target_refs": [],
+              "artifact_refs": [
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "locator": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey_config"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "locator": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc_snapshot"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "locator": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "search_index"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "locator": "sha256:22ea5b585ee35af49b736a5bcfbc3048547087708e635287e03f8cb82886e46c",
+                  "label": "sourcey_config"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "locator": "sha256:1fc98d8de862ffda0d520c534ba0623e98c28829fafd31849b933784e77cc636",
+                  "label": "godoc_snapshot"
+                },
+                {
+                  "type": "artifact",
+                  "uri": "runx:artifact:sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "locator": "sha256:ba1ff636c584ef82ae3bbf9d004a9782620a0263f778de3d564a03e75da17990",
+                  "label": "search_index"
+                }
+              ],
+              "closure": {
+                "disposition": "closed",
+                "reason_code": "process_exit",
+                "summary": "cli-tool exited successfully",
+                "closed_at": "2026-06-21T18:17:00.366Z"
+              }
+            }
+          ],
+          "seal": {
+            "disposition": "closed",
+            "reason_code": "process_closed",
+            "summary": "step validate_sourcey_docs completed",
+            "closed_at": "2026-06-21T18:17:00.366Z",
+            "last_observed_at": "2026-06-21T18:17:00.366Z",
+            "criteria": [
+              {
+                "criterion_id": "process_exit",
+                "status": "verified",
+                "evidence_refs": [],
+                "verification_refs": [],
+                "summary": "cli-tool exited successfully"
+              }
+            ]
+          },
+          "lineage": {
+            "children": [],
+            "sync": []
+          }
+        },
+        "admission_witness": {
+          "stepId": "validate_sourcey_docs",
+          "receiptId": "sha256:ccd18d75e156b883f39d368848c79fa8726fc34f483a11a7b7509c4c6f86501d"
+        }
+      }
+    ],
+    "sync_points": [],
+    "journal": {
+      "entries": [
+        {
+          "event": {
+            "type": "step_started",
+            "message": "step validate_sourcey_docs started",
+            "data": {
+              "act_id": "act_validate_sourcey_docs",
+              "kind": "act_started",
+              "step_id": "validate_sourcey_docs"
+            }
+          }
+        },
+        {
+          "event": {
+            "type": "step_completed",
+            "message": "step validate_sourcey_docs completed",
+            "data": {
+              "act_id": "act_validate_sourcey_docs",
+              "disposition": "closed",
+              "kind": "act_closed",
+              "step_id": "validate_sourcey_docs"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

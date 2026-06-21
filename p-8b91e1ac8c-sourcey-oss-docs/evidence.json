@@ -1,0 +1,273 @@
+{
+  "schema": "frantic.sourcey_docs.evidence.v1",
+  "bounty": {
+    "platform": "Frantic",
+    "number": 33,
+    "posting_id": "p-8b91e1ac8c",
+    "title": "Publish Sourcey docs for a maintained OSS library",
+    "claim_id": "6117fa63-e5dc-457f-ad4c-e370b6d37678",
+    "claim_ref": "frantic:claim:6117fa63-e5dc-457f-ad4c-e370b6d37678"
+  },
+  "summary": "Published Sourcey-generated documentation for go-chi/chi at a public GitHub Pages project site. The evidence binds a pinned upstream commit, Sourcey 3.6.3 godoc output, live navigable pages, 76 documented public API items, 215 Sourcey search entries, and a runx 0.6.6 governed validation receipt.",
+  "generated_at": "2026-06-22T02:25:00+08:00",
+  "target": {
+    "name": "go-chi/chi",
+    "repo_url": "https://github.com/go-chi/chi",
+    "module": "github.com/go-chi/chi/v5",
+    "pinned_commit": "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+    "commit_date": "2026-06-14T12:07:26+02:00",
+    "commit_subject": "Honor Discard() in httpFancyWriter.ReadFrom (#1110)",
+    "license": "MIT",
+    "source_file_count": 78,
+    "public_packages": [
+      "github.com/go-chi/chi/v5",
+      "github.com/go-chi/chi/v5/middleware"
+    ]
+  },
+  "sourcey": {
+    "version": "3.6.3",
+    "adapter": "godoc()",
+    "config": "sourcey.config.ts",
+    "snapshot_command": "npm run godoc:snapshot",
+    "build_command": "npm run build",
+    "output_dir": "dist/",
+    "generated_pages": 6
+  },
+  "public_site": {
+    "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+    "parent_domain": "fengyangxxx.github.io",
+    "backing_repo": "https://github.com/fengyangxxx/go-chi-sourcey-docs",
+    "host_notes": "This is a public GitHub Pages project site backed by a public, version-controlled repository named for the go-chi Sourcey docs packet. It is not a private preview, sandbox, screenshot, raw file URL, or empty stub page. The generated site, Sourcey config, evidence snapshot, and reproduction notes are all public and stranger-loadable over HTTPS."
+  },
+  "receipt": {
+    "receipt_ref": "runx:receipt:sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf",
+    "root_receipt_id": "sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf",
+    "runx_cli_version_output": "runx-cli 0.6.6",
+    "harness_status": "passed",
+    "case_count": 1,
+    "case_names": [
+      "go-chi-sourcey-pages"
+    ],
+    "receipt_index": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/receipts/index.json",
+    "root_receipt": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/receipts/sha256_5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf.json",
+    "harness_output": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/harness-output.json"
+  },
+  "artifact_urls": {
+    "public_url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+    "evidence_json": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/evidence.json",
+    "report": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/report.md",
+    "sourcey_config": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/sourcey.config.ts",
+    "godoc_snapshot": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/godoc.json",
+    "receipt_index": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/receipts/index.json",
+    "root_receipt": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/receipts/sha256_5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf.json",
+    "pages_repo": "https://github.com/fengyangxxx/go-chi-sourcey-docs"
+  },
+  "page_list": [
+    {
+      "path": "/",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+      "purpose": "Sourcey docs home and navigation entry."
+    },
+    {
+      "path": "/go-api.html",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html",
+      "purpose": "Generated go-chi API reference index."
+    },
+    {
+      "path": "/go-api/package-root.html",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html",
+      "purpose": "Root package API docs for Router, Routes, Context, URLParam, Walk, and related public concepts."
+    },
+    {
+      "path": "/go-api/pkg-middleware.html",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html",
+      "purpose": "Middleware package API docs for auth, compression, request lifecycle, throttling, logging, and response wrappers."
+    },
+    {
+      "path": "/llms.txt",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/llms.txt",
+      "purpose": "Sourcey context export for agents and search consumers."
+    },
+    {
+      "path": "/search-index.json",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/search-index.json",
+      "purpose": "Sourcey generated search index."
+    }
+  ],
+  "coverage": {
+    "documented_public_api_items": 76,
+    "search_index_entries": 215,
+    "minimum_required_items": 20,
+    "sample_items": [
+      "chi.NewRouter",
+      "chi.URLParam",
+      "chi.URLParamFromCtx",
+      "chi.Walk",
+      "chi.Router",
+      "chi.Routes",
+      "chi.Middlewares",
+      "middleware.BasicAuth",
+      "middleware.Compress",
+      "middleware.RequestID",
+      "middleware.ThrottleWithOpts",
+      "middleware.WrapResponseWriter"
+    ]
+  },
+  "commands": [
+    "git clone --depth 1 --branch master https://github.com/go-chi/chi.git source/chi",
+    "git -C source/chi rev-parse HEAD",
+    "git -C source/chi log -1 --date=iso --pretty=fuller",
+    "go list -json ./...",
+    "npm install",
+    "npx -y @runxhq/cli@0.6.6 --version",
+    "npm run godoc:snapshot",
+    "npm run build",
+    "docker run --rm -e RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64 -e RUNX_RECEIPT_SIGN_KID -e RUNX_RECEIPT_SIGN_ISSUER_TYPE -v <package>:/work -w /work node:20-bookworm sh -lc 'npx -y @runxhq/cli@0.6.6 harness . --receipt-dir ./receipts --json'"
+  ],
+  "observations": [
+    {
+      "id": "runx_cli_version",
+      "status": "pass",
+      "evidence": "The governed validation harness used npx -y @runxhq/cli@0.6.6. Version check output: runx-cli 0.6.6.",
+      "artifact": "harness-output.json"
+    },
+    {
+      "id": "target_repository",
+      "status": "pass",
+      "evidence": "The target is go-chi/chi, a maintained third-party OSS library at pinned commit 2b9fca258f92830fc8232582e9e05a4d4a572a5d from 2026-06-14.",
+      "artifact": "https://github.com/go-chi/chi/tree/2b9fca258f92830fc8232582e9e05a4d4a572a5d"
+    },
+    {
+      "id": "license",
+      "status": "pass",
+      "evidence": "The target repository includes an MIT license, a permissive public OSS license.",
+      "artifact": "https://github.com/go-chi/chi/blob/2b9fca258f92830fc8232582e9e05a4d4a572a5d/LICENSE"
+    },
+    {
+      "id": "source_shape",
+      "status": "pass",
+      "evidence": "The pinned checkout has 78 Go source files and two public packages documented by the Sourcey godoc adapter.",
+      "artifact": "godoc.json"
+    },
+    {
+      "id": "sourcey_adapter_config",
+      "status": "pass",
+      "evidence": "Sourcey 3.6.3 generated the docs through sourcey.config.ts using godoc() and the commands npm run godoc:snapshot and npm run build.",
+      "artifact": "sourcey.config.ts"
+    },
+    {
+      "id": "public_url_live",
+      "status": "pass",
+      "evidence": "The public URL is a stranger-loadable HTTPS GitHub Pages site with a navigable Sourcey docs home and generated API pages.",
+      "artifact": "https://fengyangxxx.github.io/go-chi-sourcey-docs/"
+    },
+    {
+      "id": "page_list",
+      "status": "pass",
+      "evidence": "The live site exposes index.html, go-api.html, go-api/package-root.html, go-api/pkg-middleware.html, llms.txt, llms-full.txt, search-index.json, and sitemap.xml.",
+      "artifact": "https://fengyangxxx.github.io/go-chi-sourcey-docs/sitemap.xml"
+    },
+    {
+      "id": "coverage_notes",
+      "status": "pass",
+      "evidence": "godoc.json documents 76 public API items and dist/search-index.json contains 215 Sourcey search entries, exceeding the 20-item requirement.",
+      "artifact": "godoc.json"
+    },
+    {
+      "id": "receipt_ref",
+      "status": "pass",
+      "evidence": "The runx receipt reference is runx:receipt:sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf for the governed validation harness.",
+      "artifact": "receipts/index.json"
+    },
+    {
+      "id": "maintainer_audience",
+      "status": "pass",
+      "evidence": "The report identifies maintainer-facing gaps: route pattern examples, middleware grouping, security guidance, CI rebuild guidance, Sourcey search/navigation review, and stable docs handoff.",
+      "artifact": "report.md"
+    }
+  ],
+  "evidence_items": [
+    {
+      "name": "public_url",
+      "url": "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+      "proves": "Published stranger-loadable Sourcey documentation site."
+    },
+    {
+      "name": "target_commit",
+      "url": "https://github.com/go-chi/chi/tree/2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+      "proves": "Maintained third-party OSS library pinned to a public commit."
+    },
+    {
+      "name": "sourcey_config",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/sourcey.config.ts",
+      "proves": "Sourcey 3.6.3 godoc configuration used to build the site."
+    },
+    {
+      "name": "godoc_snapshot",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/godoc.json",
+      "proves": "Coverage source for 76 documented public API items."
+    },
+    {
+      "name": "receipt_index",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/receipts/index.json",
+      "receipt_ref": "runx:receipt:sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf",
+      "proves": "Governed runx validation receipt exists for the final Sourcey docs packet."
+    },
+    {
+      "name": "report",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-8b91e1ac8c-sourcey-oss-docs/report.md",
+      "proves": "Maintainer-facing gap analysis and acceptance mapping."
+    }
+  ],
+  "acceptance_mapping": [
+    {
+      "criterion": "runx CLI 0.6.6 or newer used for governed validation",
+      "evidence": [
+        "runx-cli 0.6.6",
+        "harness-output.json",
+        "runx:receipt:sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf"
+      ]
+    },
+    {
+      "criterion": "maintained third-party OSS library at pinned public commit with permissive license",
+      "evidence": [
+        "https://github.com/go-chi/chi",
+        "2b9fca258f92830fc8232582e9e05a4d4a572a5d",
+        "MIT"
+      ]
+    },
+    {
+      "criterion": "at least 20 public APIs, endpoints, modules, examples, or configuration concepts documented from source",
+      "evidence": [
+        "documented_public_api_items=76",
+        "search_index_entries=215",
+        "godoc.json"
+      ]
+    },
+    {
+      "criterion": "public_url loads for strangers and shows a navigable Sourcey site",
+      "evidence": [
+        "https://fengyangxxx.github.io/go-chi-sourcey-docs/",
+        "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api.html",
+        "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/package-root.html",
+        "https://fengyangxxx.github.io/go-chi-sourcey-docs/go-api/pkg-middleware.html"
+      ]
+    },
+    {
+      "criterion": "evidence_json includes repo URL, commit, license, adapter, Sourcey command/config, page list, and coverage notes",
+      "evidence": [
+        "target",
+        "sourcey",
+        "page_list",
+        "coverage",
+        "observations"
+      ]
+    },
+    {
+      "criterion": "report explains useful maintainer-facing gaps",
+      "evidence": [
+        "report.md"
+      ]
+    }
+  ]
+}

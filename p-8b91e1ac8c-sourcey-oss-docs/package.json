@@ -1,0 +1,14 @@
+{
+  "name": "frantic-33-sourcey-chi-docs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "sourcey build",
+    "godoc:snapshot": "sourcey godoc --module ./source/chi --packages ./... --out godoc.json",
+    "verify:runx-version": "npx -y @runxhq/cli@0.6.6 --version"
+  },
+  "devDependencies": {
+    "sourcey": "3.6.3"
+  }
+}

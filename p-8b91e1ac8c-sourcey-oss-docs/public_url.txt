@@ -1,0 +1,6 @@
+https://fengyangxxx.github.io/go-chi-sourcey-docs/
+
+No public_url should be submitted for this packet yet. The generated Sourcey
+site exists locally under dist/, but Frantic #33 requires a stranger-loadable
+site whose parent domain is a credible durable project, maintainer,
+organization, product, or documentation home.

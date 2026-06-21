@@ -1,0 +1,7 @@
+runx:receipt:sha256:5a6d4a05fdba03bb2cbd0fcb24a3409ba5833b57ff93a4aa392774477a05eadf
+
+The package verifies that npx -y @runxhq/cli@0.6.6 --version returns
+runx-cli 0.6.6. A final receipt_ref still needs to be produced after an
+acceptable public_url exists, using a governed Sourcey run or validation run
+that records the final URL, target repo, pinned commit, Sourcey config, page
+list, and coverage evidence.

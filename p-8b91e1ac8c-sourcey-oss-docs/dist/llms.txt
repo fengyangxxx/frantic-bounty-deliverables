@@ -1,0 +1,15 @@
+# go-chi/chi Sourcey API Notes
+
+> This Sourcey build targets `github.com/go-chi/chi/v5`, a maintained third-party Go HTTP router released under the MIT license. The generated static site is published at:
+
+## Overview
+
+- [go-chi/chi Sourcey API Notes](/introduction.html): This Sourcey build targets `github.com/go-chi/chi/v5`, a maintained third-party Go HTTP router released under the MIT license. The generated static site is published at:
+- [Hosting Decision](/hosting-decision.html): Status: `PUBLISHED`
+- [Reproduce](/reproduce.html): From `F:\work\ai_work\get_money\frantic-deliverables-public\p-8b91e1ac8c-sourcey-oss-docs`:
+
+## Go API
+
+- [github.com/go-chi/chi/v5](/go-api/package-root.html): Package chi is a small, idiomatic and composable router for building HTTP services.
+- [middleware](/go-api/pkg-middleware.html): github.com/go-chi/chi/v5/middleware
+- [Go API](/go-api.html): github.com/go-chi/chi/v5

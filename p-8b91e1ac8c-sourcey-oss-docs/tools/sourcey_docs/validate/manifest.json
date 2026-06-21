@@ -1,0 +1,78 @@
+{
+  "schema": "runx.tool.manifest.v1",
+  "name": "sourcey_docs.validate",
+  "version": "0.1.0",
+  "description": "Validate a published Sourcey docs site and emit receipt-bound coverage evidence.",
+  "source": {
+    "type": "cli-tool",
+    "command": "node",
+    "args": [
+      "./run.mjs"
+    ]
+  },
+  "inputs": {
+    "public_url": {
+      "type": "string",
+      "required": true,
+      "description": "Published Sourcey site root URL."
+    },
+    "repo_url": {
+      "type": "string",
+      "required": true,
+      "description": "Target OSS repository URL."
+    },
+    "module": {
+      "type": "string",
+      "required": true,
+      "description": "Target module or package identity."
+    },
+    "pinned_commit": {
+      "type": "string",
+      "required": true,
+      "description": "Pinned target repository commit."
+    },
+    "sourcey_version": {
+      "type": "string",
+      "required": true,
+      "description": "Sourcey version used to generate the site."
+    },
+    "godoc_path": {
+      "type": "string",
+      "required": true,
+      "description": "Package-relative godoc snapshot path."
+    },
+    "search_index_path": {
+      "type": "string",
+      "required": true,
+      "description": "Package-relative Sourcey search index path."
+    },
+    "page_paths": {
+      "type": "array",
+      "required": true,
+      "description": "Public page paths to fetch and verify."
+    }
+  },
+  "scopes": [
+    "public:http:read",
+    "runx:evidence:read"
+  ],
+  "runx": {
+    "artifacts": {
+      "named_emits": {
+        "sourcey_docs_validation_result": "runx.sourcey_docs.validation_result.v1"
+      },
+      "wrap_as": "sourcey_docs_validation_result"
+    }
+  },
+  "runtime": {
+    "command": "node",
+    "args": [
+      "./run.mjs"
+    ]
+  },
+  "output": {
+    "packet": "runx.sourcey_docs.validation_result.v1",
+    "wrap_as": "sourcey_docs_validation_result"
+  },
+  "toolkit_version": "0.1.4"
+}
