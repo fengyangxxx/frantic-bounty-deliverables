@@ -1,0 +1,518 @@
+{
+  "closure": {
+    "closed_at": "2026-06-23T00:59:10.936Z",
+    "disposition": "closed",
+    "reason_code": "process_closed",
+    "summary": "cli-tool default completed"
+  },
+  "execution": {
+    "exit_code": 0,
+    "skill_claim": {
+      "advisory_id": "GHSA-vh95-rmgr-6w4m",
+      "advisory_source": "OSV.dev / GitHub Advisory Database",
+      "clean_packages": [
+        {
+          "confidence": "high",
+          "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+          "installed_version": "1.0.0",
+          "package": "fixture-vulnerable-app"
+        },
+        {
+          "confidence": "high",
+          "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+          "installed_version": "1.3.0",
+          "package": "left-pad"
+        }
+      ],
+      "confidence": "high",
+      "ecosystem": "npm",
+      "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+      "exact_version_match": true,
+      "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+      "false_positive_guards": [
+        {
+          "advisory_id": "GHSA-left-pad-version-guard",
+          "affected_versions": [
+            "0.0.3"
+          ],
+          "guard": "package name matched but the exact installed version did not match the advisory record",
+          "installed_version": "1.3.0",
+          "package": "left-pad",
+          "vulnerable_range": null
+        },
+        {
+          "advisory_id": "GHSA-minimist-name-only-guard",
+          "affected_versions": [
+            "1.2.8"
+          ],
+          "guard": "package name matched but the exact installed version did not match the advisory record",
+          "installed_version": "0.0.8",
+          "package": "minimist",
+          "vulnerable_range": null
+        }
+      ],
+      "findings": [
+        {
+          "advisory_id": "GHSA-vh95-rmgr-6w4m",
+          "advisory_source": "OSV.dev / GitHub Advisory Database",
+          "affected_versions": [
+            "0.0.8"
+          ],
+          "confidence": "high",
+          "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+          "exact_version_match": true,
+          "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+          "fix_version": "0.2.1",
+          "installed_version": "0.0.8",
+          "package": "minimist",
+          "retrieved_at": "2026-06-23T02:45:00Z",
+          "severity": "critical"
+        }
+      ],
+      "fix_version": "0.2.1",
+      "graph": {
+        "edges": [
+          {
+            "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+            "from": "pkg:npm/minimist@0.0.8",
+            "relationship": "exact_version_matches_advisory_range",
+            "to": "adv:GHSA-vh95-rmgr-6w4m"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "pkg:npm/fixture-vulnerable-app@1.0.0",
+            "installed_version": "1.0.0",
+            "package": "fixture-vulnerable-app",
+            "type": "dependency"
+          },
+          {
+            "id": "pkg:npm/left-pad@1.3.0",
+            "installed_version": "1.3.0",
+            "package": "left-pad",
+            "type": "dependency"
+          },
+          {
+            "id": "pkg:npm/minimist@0.0.8",
+            "installed_version": "0.0.8",
+            "package": "minimist",
+            "type": "dependency"
+          },
+          {
+            "advisory_id": "GHSA-vh95-rmgr-6w4m",
+            "fix_version": "0.2.1",
+            "id": "adv:GHSA-vh95-rmgr-6w4m",
+            "severity": "critical",
+            "type": "advisory"
+          }
+        ]
+      },
+      "installed_version": "0.0.8",
+      "operator_next_steps": [
+        "Upgrade or pin each affected dependency to the listed fix_version.",
+        "Re-run this skill against the updated lockfile before publishing an advisory.",
+        "Attach this packet and the runx receipt to the dependency review record."
+      ],
+      "package": "minimist",
+      "retrieved_at": "2026-06-23T02:45:00Z",
+      "schema": "runx.dependency_advisory_graph.v1",
+      "severity": "critical",
+      "validation": {
+        "exact_version_match": true,
+        "no_package_name_only_false_positives": true,
+        "package_name_only_guard_count": 2,
+        "target_code_executed": false,
+        "target_packages_installed": false
+      }
+    },
+    "stderr": "",
+    "stdout": "{\n  \"schema\": \"runx.dependency_advisory_graph.v1\",\n  \"ecosystem\": \"npm\",\n  \"package\": \"minimist\",\n  \"installed_version\": \"0.0.8\",\n  \"advisory_id\": \"GHSA-vh95-rmgr-6w4m\",\n  \"evidence_url\": \"https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m\",\n  \"advisory_source\": \"OSV.dev / GitHub Advisory Database\",\n  \"retrieved_at\": \"2026-06-23T02:45:00Z\",\n  \"severity\": \"critical\",\n  \"fix_version\": \"0.2.1\",\n  \"confidence\": \"high\",\n  \"exact_version_match\": true,\n  \"false_positive_guard\": \"Finding emitted only after package name matched and installed_version matched the advisory version evidence.\",\n  \"findings\": [\n    {\n      \"package\": \"minimist\",\n      \"installed_version\": \"0.0.8\",\n      \"advisory_id\": \"GHSA-vh95-rmgr-6w4m\",\n      \"evidence_url\": \"https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m\",\n      \"advisory_source\": \"OSV.dev / GitHub Advisory Database\",\n      \"retrieved_at\": \"2026-06-23T02:45:00Z\",\n      \"severity\": \"critical\",\n      \"fix_version\": \"0.2.1\",\n      \"confidence\": \"high\",\n      \"exact_version_match\": true,\n      \"affected_versions\": [\n        \"0.0.8\"\n      ],\n      \"false_positive_guard\": \"Finding emitted only after package name matched and installed_version matched the advisory version evidence.\"\n    }\n  ],\n  \"clean_packages\": [\n    {\n      \"package\": \"fixture-vulnerable-app\",\n      \"installed_version\": \"1.0.0\",\n      \"confidence\": \"high\",\n      \"false_positive_guard\": \"No advisory was emitted because no advisory matched both package name and exact installed version range.\"\n    },\n    {\n      \"package\": \"left-pad\",\n      \"installed_version\": \"1.3.0\",\n      \"confidence\": \"high\",\n      \"false_positive_guard\": \"No advisory was emitted because no advisory matched both package name and exact installed version range.\"\n    }\n  ],\n  \"graph\": {\n    \"nodes\": [\n      {\n        \"id\": \"pkg:npm/fixture-vulnerable-app@1.0.0\",\n        \"type\": \"dependency\",\n        \"package\": \"fixture-vulnerable-app\",\n        \"installed_version\": \"1.0.0\"\n      },\n      {\n        \"id\": \"pkg:npm/left-pad@1.3.0\",\n        \"type\": \"dependency\",\n        \"package\": \"left-pad\",\n        \"installed_version\": \"1.3.0\"\n      },\n      {\n        \"id\": \"pkg:npm/minimist@0.0.8\",\n        \"type\": \"dependency\",\n        \"package\": \"minimist\",\n        \"installed_version\": \"0.0.8\"\n      },\n      {\n        \"id\": \"adv:GHSA-vh95-rmgr-6w4m\",\n        \"type\": \"advisory\",\n        \"advisory_id\": \"GHSA-vh95-rmgr-6w4m\",\n        \"severity\": \"critical\",\n        \"fix_version\": \"0.2.1\"\n      }\n    ],\n    \"edges\": [\n      {\n        \"from\": \"pkg:npm/minimist@0.0.8\",\n        \"to\": \"adv:GHSA-vh95-rmgr-6w4m\",\n        \"relationship\": \"exact_version_matches_advisory_range\",\n        \"evidence_url\": \"https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m\"\n      }\n    ]\n  },\n  \"false_positive_guards\": [\n    {\n      \"package\": \"left-pad\",\n      \"installed_version\": \"1.3.0\",\n      \"advisory_id\": \"GHSA-left-pad-version-guard\",\n      \"vulnerable_range\": null,\n      \"affected_versions\": [\n        \"0.0.3\"\n      ],\n      \"guard\": \"package name matched but the exact installed version did not match the advisory record\"\n    },\n    {\n      \"package\": \"minimist\",\n      \"installed_version\": \"0.0.8\",\n      \"advisory_id\": \"GHSA-minimist-name-only-guard\",\n      \"vulnerable_range\": null,\n      \"affected_versions\": [\n        \"1.2.8\"\n      ],\n      \"guard\": \"package name matched but the exact installed version did not match the advisory record\"\n    }\n  ],\n  \"validation\": {\n    \"exact_version_match\": true,\n    \"no_package_name_only_false_positives\": true,\n    \"package_name_only_guard_count\": 2,\n    \"target_code_executed\": false,\n    \"target_packages_installed\": false\n  },\n  \"operator_next_steps\": [\n    \"Upgrade or pin each affected dependency to the listed fix_version.\",\n    \"Re-run this skill against the updated lockfile before publishing an advisory.\",\n    \"Attach this packet and the runx receipt to the dependency review record.\"\n  ]\n}\n",
+    "structured_output": {
+      "advisory_id": "GHSA-vh95-rmgr-6w4m",
+      "advisory_source": "OSV.dev / GitHub Advisory Database",
+      "clean_packages": [
+        {
+          "confidence": "high",
+          "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+          "installed_version": "1.0.0",
+          "package": "fixture-vulnerable-app"
+        },
+        {
+          "confidence": "high",
+          "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+          "installed_version": "1.3.0",
+          "package": "left-pad"
+        }
+      ],
+      "confidence": "high",
+      "ecosystem": "npm",
+      "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+      "exact_version_match": true,
+      "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+      "false_positive_guards": [
+        {
+          "advisory_id": "GHSA-left-pad-version-guard",
+          "affected_versions": [
+            "0.0.3"
+          ],
+          "guard": "package name matched but the exact installed version did not match the advisory record",
+          "installed_version": "1.3.0",
+          "package": "left-pad",
+          "vulnerable_range": null
+        },
+        {
+          "advisory_id": "GHSA-minimist-name-only-guard",
+          "affected_versions": [
+            "1.2.8"
+          ],
+          "guard": "package name matched but the exact installed version did not match the advisory record",
+          "installed_version": "0.0.8",
+          "package": "minimist",
+          "vulnerable_range": null
+        }
+      ],
+      "findings": [
+        {
+          "advisory_id": "GHSA-vh95-rmgr-6w4m",
+          "advisory_source": "OSV.dev / GitHub Advisory Database",
+          "affected_versions": [
+            "0.0.8"
+          ],
+          "confidence": "high",
+          "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+          "exact_version_match": true,
+          "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+          "fix_version": "0.2.1",
+          "installed_version": "0.0.8",
+          "package": "minimist",
+          "retrieved_at": "2026-06-23T02:45:00Z",
+          "severity": "critical"
+        }
+      ],
+      "fix_version": "0.2.1",
+      "graph": {
+        "edges": [
+          {
+            "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+            "from": "pkg:npm/minimist@0.0.8",
+            "relationship": "exact_version_matches_advisory_range",
+            "to": "adv:GHSA-vh95-rmgr-6w4m"
+          }
+        ],
+        "nodes": [
+          {
+            "id": "pkg:npm/fixture-vulnerable-app@1.0.0",
+            "installed_version": "1.0.0",
+            "package": "fixture-vulnerable-app",
+            "type": "dependency"
+          },
+          {
+            "id": "pkg:npm/left-pad@1.3.0",
+            "installed_version": "1.3.0",
+            "package": "left-pad",
+            "type": "dependency"
+          },
+          {
+            "id": "pkg:npm/minimist@0.0.8",
+            "installed_version": "0.0.8",
+            "package": "minimist",
+            "type": "dependency"
+          },
+          {
+            "advisory_id": "GHSA-vh95-rmgr-6w4m",
+            "fix_version": "0.2.1",
+            "id": "adv:GHSA-vh95-rmgr-6w4m",
+            "severity": "critical",
+            "type": "advisory"
+          }
+        ]
+      },
+      "installed_version": "0.0.8",
+      "operator_next_steps": [
+        "Upgrade or pin each affected dependency to the listed fix_version.",
+        "Re-run this skill against the updated lockfile before publishing an advisory.",
+        "Attach this packet and the runx receipt to the dependency review record."
+      ],
+      "package": "minimist",
+      "retrieved_at": "2026-06-23T02:45:00Z",
+      "schema": "runx.dependency_advisory_graph.v1",
+      "severity": "critical",
+      "validation": {
+        "exact_version_match": true,
+        "no_package_name_only_false_positives": true,
+        "package_name_only_guard_count": 2,
+        "target_code_executed": false,
+        "target_packages_installed": false
+      }
+    }
+  },
+  "payload": {
+    "advisory_id": "GHSA-vh95-rmgr-6w4m",
+    "advisory_source": "OSV.dev / GitHub Advisory Database",
+    "clean_packages": [
+      {
+        "confidence": "high",
+        "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+        "installed_version": "1.0.0",
+        "package": "fixture-vulnerable-app"
+      },
+      {
+        "confidence": "high",
+        "false_positive_guard": "No advisory was emitted because no advisory matched both package name and exact installed version range.",
+        "installed_version": "1.3.0",
+        "package": "left-pad"
+      }
+    ],
+    "confidence": "high",
+    "ecosystem": "npm",
+    "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+    "exact_version_match": true,
+    "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+    "false_positive_guards": [
+      {
+        "advisory_id": "GHSA-left-pad-version-guard",
+        "affected_versions": [
+          "0.0.3"
+        ],
+        "guard": "package name matched but the exact installed version did not match the advisory record",
+        "installed_version": "1.3.0",
+        "package": "left-pad",
+        "vulnerable_range": null
+      },
+      {
+        "advisory_id": "GHSA-minimist-name-only-guard",
+        "affected_versions": [
+          "1.2.8"
+        ],
+        "guard": "package name matched but the exact installed version did not match the advisory record",
+        "installed_version": "0.0.8",
+        "package": "minimist",
+        "vulnerable_range": null
+      }
+    ],
+    "findings": [
+      {
+        "advisory_id": "GHSA-vh95-rmgr-6w4m",
+        "advisory_source": "OSV.dev / GitHub Advisory Database",
+        "affected_versions": [
+          "0.0.8"
+        ],
+        "confidence": "high",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+        "exact_version_match": true,
+        "false_positive_guard": "Finding emitted only after package name matched and installed_version matched the advisory version evidence.",
+        "fix_version": "0.2.1",
+        "installed_version": "0.0.8",
+        "package": "minimist",
+        "retrieved_at": "2026-06-23T02:45:00Z",
+        "severity": "critical"
+      }
+    ],
+    "fix_version": "0.2.1",
+    "graph": {
+      "edges": [
+        {
+          "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+          "from": "pkg:npm/minimist@0.0.8",
+          "relationship": "exact_version_matches_advisory_range",
+          "to": "adv:GHSA-vh95-rmgr-6w4m"
+        }
+      ],
+      "nodes": [
+        {
+          "id": "pkg:npm/fixture-vulnerable-app@1.0.0",
+          "installed_version": "1.0.0",
+          "package": "fixture-vulnerable-app",
+          "type": "dependency"
+        },
+        {
+          "id": "pkg:npm/left-pad@1.3.0",
+          "installed_version": "1.3.0",
+          "package": "left-pad",
+          "type": "dependency"
+        },
+        {
+          "id": "pkg:npm/minimist@0.0.8",
+          "installed_version": "0.0.8",
+          "package": "minimist",
+          "type": "dependency"
+        },
+        {
+          "advisory_id": "GHSA-vh95-rmgr-6w4m",
+          "fix_version": "0.2.1",
+          "id": "adv:GHSA-vh95-rmgr-6w4m",
+          "severity": "critical",
+          "type": "advisory"
+        }
+      ]
+    },
+    "installed_version": "0.0.8",
+    "operator_next_steps": [
+      "Upgrade or pin each affected dependency to the listed fix_version.",
+      "Re-run this skill against the updated lockfile before publishing an advisory.",
+      "Attach this packet and the runx receipt to the dependency review record."
+    ],
+    "package": "minimist",
+    "retrieved_at": "2026-06-23T02:45:00Z",
+    "schema": "runx.dependency_advisory_graph.v1",
+    "severity": "critical",
+    "validation": {
+      "exact_version_match": true,
+      "no_package_name_only_false_positives": true,
+      "package_name_only_guard_count": 2,
+      "target_code_executed": false,
+      "target_packages_installed": false
+    }
+  },
+  "receipt": {
+    "acts": [
+      {
+        "artifact_refs": [],
+        "closure": {
+          "closed_at": "2026-06-23T00:59:10.936Z",
+          "disposition": "closed",
+          "reason_code": "process_exit",
+          "summary": "cli-tool exited successfully"
+        },
+        "criterion_bindings": [
+          {
+            "criterion_id": "process_exit",
+            "evidence_refs": [],
+            "status": "verified",
+            "summary": "cli-tool exited successfully",
+            "verification_refs": []
+          }
+        ],
+        "form": "observation",
+        "id": "act_default",
+        "intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Runtime graph execution was admitted by the local harness",
+          "purpose": "Run graph step default",
+          "success_criteria": [
+            {
+              "criterion_id": "process_exit",
+              "required": true,
+              "statement": "cli-tool exits successfully"
+            }
+          ]
+        },
+        "source_refs": [],
+        "summary": "Executed graph step default",
+        "target_refs": []
+      }
+    ],
+    "authority": {
+      "actor_ref": {
+        "type": "principal",
+        "uri": "runx:principal:local_runtime"
+      },
+      "attenuation": {
+        "parent_authority_ref": null,
+        "subset_proof": null
+      },
+      "authority_proof_refs": [],
+      "enforcement": {
+        "profile_hash": "sha256:runtime-skeleton-enforcement",
+        "redaction_refs": [],
+        "setup_refs": [],
+        "teardown_refs": []
+      },
+      "grant_refs": [],
+      "scope_refs": [],
+      "terms": []
+    },
+    "canonicalization": "runx.receipt.c14n.v1",
+    "created_at": "2026-06-23T00:59:10.936Z",
+    "decisions": [
+      {
+        "artifact_refs": [],
+        "choice": "open",
+        "closure": null,
+        "decision_id": "dec_default",
+        "inputs": {
+          "opportunity_refs": [],
+          "selection_ref": null,
+          "signal_refs": [],
+          "target_ref": null
+        },
+        "justification": {
+          "evidence_refs": [],
+          "summary": "runtime graph planner selected this node"
+        },
+        "proposed_intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Local graph execution requested this node",
+          "purpose": "Open runtime node default",
+          "success_criteria": []
+        },
+        "selected_act_id": "act_default",
+        "selected_harness_ref": null
+      }
+    ],
+    "digest": "sha256:f4e3b4f251fbae60954a509d14bd11a47542d13fcc5a43a0eeb6d9784d0cb013",
+    "id": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
+    "idempotency": {
+      "content_hash": "sha256:run_default_0d507a0d167f-default-content",
+      "intent_key": "sha256:run_default_0d507a0d167f-default-intent",
+      "trigger_fingerprint": "sha256:run_default_0d507a0d167f-default-trigger"
+    },
+    "issuer": {
+      "kid": "dependency-advisory-graph-local-key",
+      "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f",
+      "type": "hosted"
+    },
+    "lineage": {
+      "children": [],
+      "sync": []
+    },
+    "schema": "runx.receipt.v1",
+    "seal": {
+      "closed_at": "2026-06-23T00:59:10.936Z",
+      "criteria": [
+        {
+          "criterion_id": "process_exit",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "cli-tool exited successfully",
+          "verification_refs": []
+        }
+      ],
+      "disposition": "closed",
+      "last_observed_at": "2026-06-23T00:59:10.936Z",
+      "reason_code": "process_closed",
+      "summary": "cli-tool default completed"
+    },
+    "signals": [],
+    "signature": {
+      "alg": "Ed25519",
+      "value": "base64:DbjZsM3J6Pm4A2ca3lQv3UDQyE5HfbZkWPN40JrtWyUNRxTbzEGJ18Ttkpjxlk5C3vfiMNqxIp-YgipnfVyMCQ"
+    },
+    "subject": {
+      "commitments": [],
+      "kind": "skill",
+      "ref": {
+        "type": "harness",
+        "uri": "hrn_run_default_0d507a0d167f_default"
+      }
+    }
+  },
+  "receipt_id": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
+  "registry_provenance": {
+    "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
+    "profile_digest": "sha256:a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "fengyangxxx/dependency-advisory-graph",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "0.1.1"
+  },
+  "run_id": "run_default_0d507a0d167f",
+  "schema": "runx.skill_run.v1",
+  "skill_name": "dependency-advisory-graph",
+  "status": "sealed"
+}

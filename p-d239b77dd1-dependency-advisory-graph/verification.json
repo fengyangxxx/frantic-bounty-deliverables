@@ -1,0 +1,81 @@
+{
+  "schema": "frantic.delivery.verification.v1",
+  "generated_at": "2026-06-23T01:03:00Z",
+  "posting_id": "p-d239b77dd1",
+  "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
+  "status": "pass",
+  "commands": [
+    {
+      "id": "official_catalog_tests",
+      "command": "pnpm exec vitest packages/cli/src/skill-refs.test.ts tests/official-skill-catalog.test.ts --run",
+      "status": "pass",
+      "summary": "12 tests passed across 2 files."
+    },
+    {
+      "id": "standalone_fixture_harness",
+      "command": "npx -y @runxhq/cli@0.6.13 harness ./skills/dependency-advisory-graph/fixtures/*.yaml -R ./.runx-linux-receipts/dependency-advisory-graph-fixtures-final --json",
+      "status": "pass",
+      "summary": "Three standalone fixtures sealed or failed exactly as expected."
+    },
+    {
+      "id": "registry_publish",
+      "command": "npx -y @runxhq/cli@0.6.13 registry publish ./skills/dependency-advisory-graph/SKILL.md --registry https://api.runx.ai --version 0.1.1 --profile ./skills/dependency-advisory-graph/X.yaml --json",
+      "status": "pass",
+      "summary": "Published fengyangxxx/dependency-advisory-graph@0.1.1."
+    },
+    {
+      "id": "clean_install",
+      "command": "npx -y @runxhq/cli@0.6.13 add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai --to ./.runx-install-test/dependency-advisory-graph-0.1.1 --json",
+      "status": "pass",
+      "summary": "Remote install succeeded from a clean destination."
+    },
+    {
+      "id": "hosted_registry_harness",
+      "command": "npx -y @runxhq/cli@0.6.13 harness ./.runx-install-test/dependency-advisory-graph-0.1.1/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md -R ./.runx-linux-receipts/dependency-advisory-graph-hosted-harness-0.1.1 --json",
+      "status": "pass",
+      "summary": "Harness passed all three registry package cases."
+    },
+    {
+      "id": "registry_dogfood",
+      "command": "runx skill fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai --json",
+      "status": "pass",
+      "summary": "Dogfood run produced a sealed dependency advisory graph receipt."
+    },
+    {
+      "id": "receipt_verify",
+      "command": "npx -y @runxhq/cli@0.6.13 verify --receipt dogfood-receipt-only.json --json",
+      "status": "pass",
+      "summary": "Receipt signature, digest, and content address are valid."
+    }
+  ],
+  "public_urls": [
+    {
+      "url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+      "status": "expected_public_listing"
+    },
+    {
+      "url": "https://github.com/runxhq/runx/pull/120",
+      "status": "expected_public_pr"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
+      "status": "expected_raw_pr_head_file"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md",
+      "status": "expected_raw_pr_head_file"
+    }
+  ],
+  "machine_contract": {
+    "required_package_name": "dependency-advisory-graph",
+    "runx_cli_minimum": "0.6.13",
+    "published_version": "0.1.1",
+    "typed_fields_present": true,
+    "exact_version_match_guard": true,
+    "false_positive_guard_count": 2,
+    "target_code_executed": false,
+    "target_packages_installed": false,
+    "receipt_valid": true
+  },
+  "receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
+}

@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "install",
+    "source": "remote",
+    "ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+    "install": {
+      "status": "installed",
+      "destination": "/work/./.runx-install-test/dependency-advisory-graph-0.1.1/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md",
+      "skill_name": "dependency-advisory-graph",
+      "source": "runx-registry",
+      "source_label": "runx registry",
+      "skill_id": "fengyangxxx/dependency-advisory-graph",
+      "version": "0.1.1",
+      "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
+      "profile_digest": "sha256:a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
+      "profile_state_path": "/work/./.runx-install-test/dependency-advisory-graph-0.1.1/fengyangxxx/dependency-advisory-graph/0.1.1/.runx/profile.json",
+      "runner_names": [
+        "default"
+      ],
+      "trust_tier": "community"
+    },
+    "receipt_metadata": {
+      "destination": "/work/./.runx-install-test/dependency-advisory-graph-0.1.1/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md",
+      "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
+      "install_count": 3,
+      "package_digest": "01a1e98e0718f9f06f15b8f69b915d4162870d2200b5fd8c0209e4783d0f0a37",
+      "profile_digest": "sha256:a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
+      "publisher": {
+        "display_name": "fy",
+        "handle": "fengyangxxx",
+        "id": "user_69446dfb22822d5fdc22562d",
+        "kind": "user"
+      },
+      "ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "skill_id": "fengyangxxx/dependency-advisory-graph",
+      "source_label": "runx registry",
+      "status": "installed",
+      "trust_tier": "community",
+      "version": "0.1.1"
+    }
+  }
+}

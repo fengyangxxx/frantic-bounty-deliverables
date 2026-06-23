@@ -1,0 +1,195 @@
+{
+  "schema": "frantic.delivery.evidence.v1",
+  "generated_at": "2026-06-23T01:03:00Z",
+  "platform": "Frantic",
+  "posting_id": "p-d239b77dd1",
+  "title": "runx skill: dependency advisory graph",
+  "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
+  "claim_deadline": "2026-06-23T03:17:43.295Z",
+  "package": {
+    "name": "dependency-advisory-graph",
+    "registry_id": "fengyangxxx/dependency-advisory-graph",
+    "version": "0.1.1",
+    "registry_ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+    "registry": "https://api.runx.ai",
+    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+    "install_command": "runx add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
+    "run_command": "runx skill fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
+    "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
+    "profile_digest": "sha256:a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
+    "trust_tier": "community"
+  },
+  "source": {
+    "repo": "https://github.com/fengyangxxx/runx",
+    "pull_request": "https://github.com/runxhq/runx/pull/120",
+    "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
+    "source_url": "https://github.com/fengyangxxx/runx/tree/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph",
+    "x_yaml": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md"
+  },
+  "receipt": {
+    "receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
+    "receipt_id": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
+    "verify_verdict": "valid",
+    "verify_digest": "sha256:f4e3b4f251fbae60954a509d14bd11a47542d13fcc5a43a0eeb6d9784d0cb013",
+    "verify_kid": "dependency-advisory-graph-local-key"
+  },
+  "advisory_case": {
+    "ecosystem": "npm",
+    "package": "minimist",
+    "installed_version": "0.0.8",
+    "advisory_id": "GHSA-vh95-rmgr-6w4m",
+    "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
+    "advisory_source": "OSV.dev / GitHub Advisory Database",
+    "retrieved_at": "2026-06-23T02:45:00Z",
+    "severity": "critical",
+    "fix_version": "0.2.1",
+    "confidence": "high",
+    "exact_version_match": true
+  },
+  "evidence_items": [
+    {
+      "id": "github_star",
+      "status": "pass",
+      "summary": "The claimant account starred runxhq/runx before final delivery."
+    },
+    {
+      "id": "registry_publish",
+      "status": "pass",
+      "summary": "Published fengyangxxx/dependency-advisory-graph@0.1.1 to the hosted runx registry.",
+      "artifact": "publish-output.json"
+    },
+    {
+      "id": "clean_install",
+      "status": "pass",
+      "summary": "Clean install from https://api.runx.ai succeeded with runx-cli 0.6.13.",
+      "artifact": "install-output.json"
+    },
+    {
+      "id": "standalone_fixture_harness",
+      "status": "pass",
+      "summary": "Three standalone skill fixtures passed: advisory hit, clean manifest, and invalid manifest stop/error.",
+      "artifact": "harness-output.json"
+    },
+    {
+      "id": "hosted_registry_harness",
+      "status": "pass",
+      "summary": "Harness against the clean installed registry package passed all three cases.",
+      "artifact": "hosted-harness-output.json"
+    },
+    {
+      "id": "registry_dogfood_run",
+      "status": "pass",
+      "summary": "Dogfood run used the registry ref and produced a sealed receipt.",
+      "artifact": "dogfood-output.json"
+    },
+    {
+      "id": "receipt_verify",
+      "status": "pass",
+      "summary": "runx verify accepted the dogfood receipt as valid.",
+      "artifact": "receipt-verify-output.json"
+    },
+    {
+      "id": "official_catalog_tests",
+      "status": "pass",
+      "summary": "The targeted official catalog tests passed after moving concrete scenarios into standalone fixtures."
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-01",
+      "claim": "The exact package name required by the bounty is implemented.",
+      "value": "dependency-advisory-graph"
+    },
+    {
+      "id": "obs-02",
+      "claim": "The published registry ref is installable from a clean directory.",
+      "value": "fengyangxxx/dependency-advisory-graph@0.1.1"
+    },
+    {
+      "id": "obs-03",
+      "claim": "The registry public listing is live.",
+      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
+    },
+    {
+      "id": "obs-04",
+      "claim": "The pull request is public and points at runxhq/runx.",
+      "value": "https://github.com/runxhq/runx/pull/120"
+    },
+    {
+      "id": "obs-05",
+      "claim": "The raw X.yaml URL is pinned to the PR head commit.",
+      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml"
+    },
+    {
+      "id": "obs-06",
+      "claim": "The raw SKILL.md URL is pinned to the PR head commit.",
+      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md"
+    },
+    {
+      "id": "obs-07",
+      "claim": "The skill emits all required typed advisory fields.",
+      "value": [
+        "package",
+        "installed_version",
+        "advisory_id",
+        "evidence_url",
+        "advisory_source",
+        "retrieved_at",
+        "severity",
+        "fix_version",
+        "confidence"
+      ]
+    },
+    {
+      "id": "obs-08",
+      "claim": "The dogfood advisory finding is exact-version matched.",
+      "value": "minimist@0.0.8 -> GHSA-vh95-rmgr-6w4m"
+    },
+    {
+      "id": "obs-09",
+      "claim": "The advisory evidence URL is stable and public.",
+      "value": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m"
+    },
+    {
+      "id": "obs-10",
+      "claim": "The false-positive guard rejected package-name-only matches.",
+      "value": "package_name_only_guard_count=2"
+    },
+    {
+      "id": "obs-11",
+      "claim": "The skill does not install target packages.",
+      "value": false
+    },
+    {
+      "id": "obs-12",
+      "claim": "The skill does not execute target project code.",
+      "value": false
+    },
+    {
+      "id": "obs-13",
+      "claim": "Standalone fixtures include an advisory hit case.",
+      "value": "sealed-advisory-minimist-008"
+    },
+    {
+      "id": "obs-14",
+      "claim": "Standalone fixtures include a clean/no-finding case.",
+      "value": "clean-manifest-no-finding"
+    },
+    {
+      "id": "obs-15",
+      "claim": "Standalone fixtures include a stop/error case.",
+      "value": "invalid-manifest-fails"
+    },
+    {
+      "id": "obs-16",
+      "claim": "The dogfood receipt verifies successfully.",
+      "value": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
+    },
+    {
+      "id": "obs-17",
+      "claim": "runx-cli 0.6.13 was used for publish, install, harness, dogfood, and verify commands.",
+      "value": "0.6.13"
+    }
+  ]
+}
