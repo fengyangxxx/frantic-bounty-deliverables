@@ -10,7 +10,7 @@ Deadline: `2026-06-23T03:17:43.295Z`
 
 - Package: `dependency-advisory-graph`
 - Registry ref: `fengyangxxx/dependency-advisory-graph@0.1.1`
-- Public listing: <https://runx.ai/x/fengyangxxx/dependency-advisory-graph>
+- Public listing: <https://runx.ai/x/fengyangxxx/dependency-advisory-graph@0.1.1>
 - Pull request: <https://github.com/runxhq/runx/pull/120>
 - Source commit: `83c5c574fe635a6c23473f6649f2948dcfa3080d`
 - Raw `X.yaml`: <https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml>

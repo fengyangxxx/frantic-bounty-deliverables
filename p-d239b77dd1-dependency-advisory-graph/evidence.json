@@ -4,6 +4,7 @@
   "platform": "Frantic",
   "posting_id": "p-d239b77dd1",
   "title": "runx skill: dependency advisory graph",
+  "summary": "Published dependency-advisory-graph@0.1.1 to the runx registry with clean install, hosted harness, exact-version advisory dogfood, false-positive guards, and a verified sealed runx receipt.",
   "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
   "claim_deadline": "2026-06-23T03:17:43.295Z",
   "package": {
@@ -12,7 +13,7 @@
     "version": "0.1.1",
     "registry_ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
     "registry": "https://api.runx.ai",
-    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@0.1.1",
     "install_command": "runx add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
     "run_command": "runx skill fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
     "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
@@ -109,7 +110,7 @@
     {
       "id": "obs-03",
       "claim": "The registry public listing is live.",
-      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
+      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@0.1.1"
     },
     {
       "id": "obs-04",
@@ -189,7 +190,7 @@
     {
       "id": "obs-17",
       "claim": "runx-cli 0.6.13 was used for publish, install, harness, dogfood, and verify commands.",
-      "value": "0.6.13"
+      "value": "runx-cli 0.6.13"
     }
   ]
 }
