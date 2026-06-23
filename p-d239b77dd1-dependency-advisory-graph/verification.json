@@ -4,7 +4,14 @@
   "posting_id": "p-d239b77dd1",
   "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
   "status": "pass",
+  "runx_version_raw_output": "runx-cli 0.6.13",
   "commands": [
+    {
+      "id": "runx_version",
+      "command": "runx --version",
+      "status": "pass",
+      "summary": "Raw output: runx-cli 0.6.13"
+    },
     {
       "id": "official_catalog_tests",
       "command": "pnpm exec vitest packages/cli/src/skill-refs.test.ts tests/official-skill-catalog.test.ts --run",
@@ -59,23 +66,132 @@
     },
     {
       "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
-      "status": "expected_raw_pr_head_file"
+      "status": "http_200",
+      "status_code": 200,
+      "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
+      "path": "skills/dependency-advisory-graph/X.yaml",
+      "sha256": "sha256:afa769aedb6bc3e0f7325ba8a572a42aad3c232de26e838ee1661f952b73a4f2",
+      "summary": "skill=dependency-advisory-graph; version=0.1.1; catalog.visibility=public; runner.default.type=cli-tool; runner.default.command=node run.mjs"
     },
     {
       "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md",
       "status": "expected_raw_pr_head_file"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/install-output.json",
+      "status": "http_200",
+      "status_code": 200,
+      "sha256": "sha256:6c6181c4c888df31a5c6af589eba3d7f4b3758062f4ff152198b340093c01cbd",
+      "summary": "status=success; install.status=installed; ref=fengyangxxx/dependency-advisory-graph@0.1.1; version=0.1.1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/harness-output.json",
+      "status": "http_200",
+      "status_code": 200,
+      "sha256": "sha256:d8fb1dad25b5b1f0f346cb949313bba0085263be11db60cbed2ef0c6d894d7c4",
+      "summary": "receipt_count=3; advisory hit closed; clean manifest closed; invalid manifest failed as expected"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json",
+      "status": "http_200",
+      "status_code": 200,
+      "sha256": "sha256:7560e80a4fa885bb4c3bbca2c82763468359855cc59f160a238e0416ff81196d",
+      "summary": "status=passed; case_count=3; assertion_error_count=0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json",
+      "status": "http_200",
+      "status_code": 200,
+      "sha256": "sha256:19ba3057392dd6d05adeca228bcb31675564d6ccfd3c3e1d510b09fa4d3883bc",
+      "summary": "status=sealed; receipt_id=sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61; package=minimist; installed_version=0.0.8; advisory_id=GHSA-vh95-rmgr-6w4m"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json",
+      "status": "http_200",
+      "status_code": 200,
+      "sha256": "sha256:ccb72d318fda054e5ed044189ad76d98dc6ff5fa16941c51ed20d48d91cf3973",
+      "summary": "valid=true; digest_status=valid; signature_status=valid; signature_kid=dependency-advisory-graph-local-key"
+    }
+  ],
+  "x_yaml_verification": {
+    "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
+    "fetched": true,
+    "status_code": 200,
+    "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
+    "path": "skills/dependency-advisory-graph/X.yaml",
+    "length_bytes": 1010,
+    "sha256": "sha256:afa769aedb6bc3e0f7325ba8a572a42aad3c232de26e838ee1661f952b73a4f2",
+    "key_fields": {
+      "skill": "dependency-advisory-graph",
+      "version": "0.1.1",
+      "catalog.visibility": "public",
+      "catalog.audience": "public",
+      "runner.default.type": "cli-tool",
+      "runner.default.command": "node run.mjs",
+      "outputs": [
+        "dependency_advisory_graph",
+        "evidence_json",
+        "verification_json",
+        "report_md"
+      ]
+    }
+  },
+  "artifact_output_verification": [
+    {
+      "file": "install-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/install-output.json",
+      "status_code": 200,
+      "sha256": "sha256:6c6181c4c888df31a5c6af589eba3d7f4b3758062f4ff152198b340093c01cbd",
+      "summary": "status=success; install.status=installed; ref=fengyangxxx/dependency-advisory-graph@0.1.1; version=0.1.1; digest=sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3"
+    },
+    {
+      "file": "harness-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/harness-output.json",
+      "status_code": 200,
+      "sha256": "sha256:d8fb1dad25b5b1f0f346cb949313bba0085263be11db60cbed2ef0c6d894d7c4",
+      "summary": "receipt_count=3; cases=hrn_clean-manifest-no-finding_default:closed, hrn_invalid-manifest-fails_default:failed, hrn_sealed-advisory-minimist-008_default:closed"
+    },
+    {
+      "file": "hosted-harness-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json",
+      "status_code": 200,
+      "sha256": "sha256:7560e80a4fa885bb4c3bbca2c82763468359855cc59f160a238e0416ff81196d",
+      "summary": "status=passed; case_count=3; assertion_error_count=0; graph_case_count=0"
+    },
+    {
+      "file": "dogfood-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json",
+      "status_code": 200,
+      "sha256": "sha256:19ba3057392dd6d05adeca228bcb31675564d6ccfd3c3e1d510b09fa4d3883bc",
+      "summary": "status=sealed; skill=dependency-advisory-graph; receipt_id=sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61; package=minimist; installed_version=0.0.8; advisory_id=GHSA-vh95-rmgr-6w4m; false_positive_guard_count=2"
+    },
+    {
+      "file": "receipt-verify-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json",
+      "status_code": 200,
+      "sha256": "sha256:ccb72d318fda054e5ed044189ad76d98dc6ff5fa16941c51ed20d48d91cf3973",
+      "summary": "valid=true; receipt_id=sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61; digest_status=valid; signature_status=valid; signature_kid=dependency-advisory-graph-local-key"
     }
   ],
   "machine_contract": {
     "required_package_name": "dependency-advisory-graph",
     "runx_cli_minimum": "0.6.13",
+    "runx_cli_raw_output": "runx-cli 0.6.13",
     "published_version": "0.1.1",
     "typed_fields_present": true,
     "exact_version_match_guard": true,
     "false_positive_guard_count": 2,
     "target_code_executed": false,
     "target_packages_installed": false,
-    "receipt_valid": true
+    "receipt_valid": true,
+    "raw_x_yaml_http_200": true,
+    "public_artifact_outputs_http_200": true,
+    "graph_receipt_status": "not_applicable_standalone_cli_tool"
+  },
+  "graph_receipt": {
+    "status": "not_applicable",
+    "receipt_ref": null,
+    "reason": "The skill does not compose existing runx skills; it is a standalone cli-tool runner. The dogfood skill run has the sealed receipt_ref below."
   },
   "receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
 }
