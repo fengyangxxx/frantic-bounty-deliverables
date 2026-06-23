@@ -1,0 +1,53 @@
+{
+  "schema": "runx.tool.manifest.v1",
+  "name": "smoke_matrix.validate",
+  "version": "0.1.0",
+  "description": "Validate captured runx registry smoke-test command transcripts.",
+  "source": {
+    "type": "cli-tool",
+    "command": "node",
+    "args": [
+      "./run.mjs"
+    ]
+  },
+  "inputs": {
+    "command_summary_path": {
+      "type": "string",
+      "required": true,
+      "description": "Package-relative path to command-summary.json."
+    },
+    "artifact_dir": {
+      "type": "string",
+      "required": true,
+      "description": "Package-relative artifact directory."
+    },
+    "runx_home_path": {
+      "type": "string",
+      "required": true,
+      "description": "Package-relative isolated RUNX_HOME path."
+    }
+  },
+  "scopes": [
+    "runx:evidence:read"
+  ],
+  "runx": {
+    "artifacts": {
+      "named_emits": {
+        "smoke_matrix_validation_result": "runx.registry_smoke_matrix.validation_result.v1"
+      },
+      "wrap_as": "smoke_matrix_validation_result"
+    }
+  },
+  "runtime": {
+    "command": "node",
+    "args": [
+      "./run.mjs"
+    ]
+  },
+  "output": {
+    "packet": "runx.registry_smoke_matrix.validation_result.v1",
+    "wrap_as": "smoke_matrix_validation_result"
+  },
+  "toolkit_version": "0.1.4"
+}
+

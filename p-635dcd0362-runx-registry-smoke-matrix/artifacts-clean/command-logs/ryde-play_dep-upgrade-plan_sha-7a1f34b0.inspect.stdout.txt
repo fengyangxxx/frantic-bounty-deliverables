@@ -1,0 +1,22 @@
+{
+  "description": "Build a ranked dependency upgrade plan from a lockfile, advisory facts, and release constraints without changing project files.",
+  "name": "dep-upgrade-plan",
+  "registry_provenance": {
+    "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+    "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+    "registry_key_id": "runx-registry-ed25519-v1",
+    "registry_source": "remote https://api.runx.ai",
+    "registry_source_fingerprint": "ba1ac16b631195fd",
+    "skill_id": "ryde-play/dep-upgrade-plan",
+    "trust_state": "trusted",
+    "trust_tier": "community",
+    "version": "sha-7a1f34b0"
+  },
+  "runners": [
+    "default"
+  ],
+  "schema": "runx.skill.inspect.v1",
+  "skill_path": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\runx-home\\registry-skills\\ba1ac16b631195fd\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0\\8515ed49a88597ca\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0",
+  "status": "ok",
+  "version": "0.1.0"
+}

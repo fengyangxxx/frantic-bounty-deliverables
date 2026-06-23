@@ -1,0 +1,326 @@
+{
+  "schema": "frantic.delivery.evidence.v1",
+  "bounty": 47,
+  "posting_id": "p-635dcd0362",
+  "title": "Run a public runx registry install smoke matrix",
+  "summary": "Reproducible runx registry smoke matrix using runx-cli 0.6.13 against two public registry packages, with captured registry read, install, inspect, run-path diagnostics, Docker governed harness receipt, receipt verification output, and public follow-up issues for verifier/runtime failures.",
+  "public_url": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix",
+  "receipt_ref": "runx:receipt:sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
+  "runx_cli_version": "runx-cli 0.6.13",
+  "environment": {
+    "os": "win32",
+    "node": "v24.14.0",
+    "shell": "PowerShell",
+    "runx_version_output": "runx-cli 0.6.13",
+    "runx_home": "artifacts-clean/runx-home",
+    "registry": "https://api.runx.ai",
+    "command_summary_path": "artifacts-clean/command-summary.json"
+  },
+  "packages": [
+    {
+      "ref": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "owner": "runx",
+      "trust_tier": "first_party",
+      "registry_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
+      "installed_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
+      "inspect_version": "0.1.1",
+      "registry_read_command": "runx registry read runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+      "install_command": "runx add runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\runx_dependency-cve-audit_sha-e11c90bbeb16 --json",
+      "inspect_command": "runx skill inspect runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+      "registry_read_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+      "install_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+      "inspect_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+      "checks": [
+        {
+          "name": "registry_read_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "registry_read_success",
+          "passed": true,
+          "detail": "success runx/dependency-cve-audit"
+        },
+        {
+          "name": "install_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "install_success",
+          "passed": true,
+          "detail": "installed sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249"
+        },
+        {
+          "name": "inspect_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "inspect_success",
+          "passed": true,
+          "detail": "ok 0.1.1"
+        },
+        {
+          "name": "trust_tier_matches",
+          "passed": true,
+          "detail": "first_party / first_party"
+        }
+      ]
+    },
+    {
+      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "owner": "ryde-play",
+      "trust_tier": "community",
+      "registry_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "installed_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "inspect_version": "0.1.0",
+      "registry_read_command": "runx registry read ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+      "install_command": "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0 --json",
+      "inspect_command": "runx skill inspect ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+      "registry_read_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+      "install_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+      "inspect_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+      "checks": [
+        {
+          "name": "registry_read_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "registry_read_success",
+          "passed": true,
+          "detail": "success ryde-play/dep-upgrade-plan"
+        },
+        {
+          "name": "install_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "install_success",
+          "passed": true,
+          "detail": "installed sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db"
+        },
+        {
+          "name": "inspect_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "inspect_success",
+          "passed": true,
+          "detail": "ok 0.1.0"
+        },
+        {
+          "name": "trust_tier_matches",
+          "passed": true,
+          "detail": "community / community"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-01-runx-version",
+      "claim": "The governed run used runx CLI 0.6.6 or newer and captured the exact version string.",
+      "value": "runx-cli 0.6.13",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx-version.stdout.txt"
+    },
+    {
+      "id": "obs-02-environment",
+      "claim": "The smoke matrix recorded OS, shell, Node version, registry, and isolated runx home.",
+      "value": "OS=win32; shell=PowerShell; node=v24.14.0; registry=https://api.runx.ai; runx_home=artifacts-clean/runx-home",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
+    },
+    {
+      "id": "obs-03-package-count",
+      "claim": "The matrix covered two public runx registry packages.",
+      "value": "runx/dependency-cve-audit@sha-e11c90bbeb16; ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
+    },
+    {
+      "id": "obs-04-cve-registry-install-inspect",
+      "claim": "runx/dependency-cve-audit registry read, clean add, and inspect completed with exit code 0.",
+      "value": "registry_read_exit_zero=true; install_exit_zero=true; inspect_exit_zero=true",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt"
+    },
+    {
+      "id": "obs-05-dep-upgrade-registry-install-inspect",
+      "claim": "ryde-play/dep-upgrade-plan registry read, clean add, and inspect completed with exit code 0.",
+      "value": "registry_read_exit_zero=true; install_exit_zero=true; inspect_exit_zero=true",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt"
+    },
+    {
+      "id": "obs-06-command-transcripts",
+      "claim": "Every registry read, install, and inspect action has captured stdout/stderr transcript paths.",
+      "value": "9 command records in artifacts-clean/command-summary.json",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-summary.json"
+    },
+    {
+      "id": "obs-07-docker-harness",
+      "claim": "The local validation package ran in Docker and produced a governed receipt.",
+      "value": "status=passed; case_count=1; receipt_id=sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/docker-validation-harness.stdout.json"
+    },
+    {
+      "id": "obs-08-receipt-ref",
+      "claim": "The delivery includes a runx receipt reference with valid digest and content address verification.",
+      "value": "runx:receipt:sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3; digest=valid; content_address=valid; signature=invalid",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/receipt-verify-727b1310.json"
+    },
+    {
+      "id": "obs-09-verify-failure-tracked",
+      "claim": "The exact receipt verification failure is recorded and tracked publicly.",
+      "value": "runx verify returned valid=false because signature_malformed; follow-up https://github.com/runxhq/runx/issues/134",
+      "artifact": "https://github.com/runxhq/runx/issues/134"
+    },
+    {
+      "id": "obs-10-dogfood-diagnostic",
+      "claim": "A published package run path was attempted and the exact blocking error was captured.",
+      "value": "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run exit=1; skill run failed: governed runtime receipt signing requires RUNX_RECEIPT_SIGN_KID, RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64, and RUNX_RECEIPT_SIGN_ISSUER_TYPE",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt"
+    },
+    {
+      "id": "obs-11-windows-runner-diagnostic",
+      "claim": "A second run with receipt flags and quoted inputs reached a Windows runner-path failure and was tracked publicly.",
+      "value": "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed exit=1; issue https://github.com/runxhq/runx/issues/135",
+      "artifact": "https://github.com/runxhq/runx/issues/135"
+    },
+    {
+      "id": "obs-12-no-secrets",
+      "claim": "The public package contains no agent token or private credential material.",
+      "value": "No credential file is included; command transcripts include only public registry/package commands and redacted or absent signing material.",
+      "artifact": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "command-summary",
+      "kind": "json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-summary.json"
+    },
+    {
+      "id": "validation-packet",
+      "kind": "json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
+    },
+    {
+      "id": "docker-harness-output",
+      "kind": "json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/docker-validation-harness.stdout.json"
+    },
+    {
+      "id": "receipt-json",
+      "kind": "runx_receipt",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/receipts/sha256_727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3.json"
+    },
+    {
+      "id": "receipt-verify-output",
+      "kind": "json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/receipt-verify-727b1310.json"
+    },
+    {
+      "id": "runx-version-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx-version.stdout.txt"
+    },
+    {
+      "id": "cve-registry-read",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt"
+    },
+    {
+      "id": "cve-install",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt"
+    },
+    {
+      "id": "cve-inspect",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt"
+    },
+    {
+      "id": "dep-upgrade-registry-read",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt"
+    },
+    {
+      "id": "dep-upgrade-install",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt"
+    },
+    {
+      "id": "dep-upgrade-inspect",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt"
+    },
+    {
+      "id": "dogfood-missing-signing-env",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt"
+    },
+    {
+      "id": "dogfood-windows-env-failure",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed.stdout.txt"
+    }
+  ],
+  "validation": {
+    "packet": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json",
+    "docker_harness": {
+      "status": "passed",
+      "case_count": 1,
+      "assertion_error_count": 0,
+      "assertion_errors": [],
+      "case_names": [
+        "two-package-public-registry-smoke"
+      ],
+      "receipt_ids": [
+        "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3"
+      ],
+      "graph_case_count": 1
+    },
+    "receipt_verify": {
+      "schema": "runx.verify_verdict.v1",
+      "receipt_id": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
+      "valid": false,
+      "digest": {
+        "status": "valid",
+        "expected": "sha256:1de9b1f6cc256179be2c09b7db9afab9999fe87268232ccddf21c1708c498c68",
+        "actual": "sha256:1de9b1f6cc256179be2c09b7db9afab9999fe87268232ccddf21c1708c498c68"
+      },
+      "content_address": {
+        "status": "valid",
+        "expected": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
+        "actual": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3"
+      },
+      "signature": {
+        "mode": "local-development",
+        "status": "invalid",
+        "kid": "runx-registry-smoke-matrix-test-key"
+      },
+      "lineage": {
+        "status": "unverified",
+        "message": "single receipt verification cannot prove receipt-tree lineage"
+      },
+      "findings": [
+        {
+          "code": "signature_malformed",
+          "path": "signature.value",
+          "message": "signature value is malformed"
+        }
+      ]
+    }
+  },
+  "follow_up_issues": [
+    {
+      "issue": "https://github.com/runxhq/runx/issues/134",
+      "reason": "runx verify reports signature_malformed although digest and content address are valid"
+    },
+    {
+      "issue": "https://github.com/runxhq/runx/issues/135",
+      "reason": "Windows runx skill path cannot spawn registry skills using /usr/bin/env"
+    }
+  ]
+}

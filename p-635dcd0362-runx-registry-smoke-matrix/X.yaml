@@ -1,0 +1,66 @@
+skill: runx-registry-smoke-matrix-validation
+version: "0.1.0"
+
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+  runtime_path: local
+
+policy:
+  allow:
+    - provider: local-evidence
+      method: READ
+      scope: runx:evidence:read
+  deny:
+    - network_mutation
+    - credential_material
+    - private_user_data
+
+emits:
+  - name: smoke_matrix_validation_result
+    packet: runx.registry_smoke_matrix.validation_result.v1
+
+harness:
+  cases:
+    - name: two-package-public-registry-smoke
+      runner: validate
+      inputs:
+        command_summary_path: "artifacts-clean/command-summary.json"
+        artifact_dir: "artifacts-clean"
+        runx_home_path: "artifacts-clean/runx-home"
+      expect:
+        status: sealed
+        outputs:
+          smoke_matrix_validation_result:
+            matches_packet: runx.registry_smoke_matrix.validation_result.v1
+        receipt:
+          schema: runx.receipt.v1
+
+runners:
+  validate:
+    default: true
+    type: graph
+    inputs:
+      command_summary_path:
+        type: string
+        required: true
+        description: "Package-relative command summary JSON path."
+      artifact_dir:
+        type: string
+        required: true
+        description: "Package-relative directory with captured stdout/stderr files."
+      runx_home_path:
+        type: string
+        required: true
+        description: "Package-relative isolated RUNX_HOME used by the smoke run."
+    graph:
+      name: runx-registry-smoke-matrix-validation
+      steps:
+        - id: validate_smoke_matrix
+          tool: smoke_matrix.validate
+          inputs:
+            command_summary_path: "$input.command_summary_path"
+            artifact_dir: "$input.artifact_dir"
+            runx_home_path: "$input.runx_home_path"

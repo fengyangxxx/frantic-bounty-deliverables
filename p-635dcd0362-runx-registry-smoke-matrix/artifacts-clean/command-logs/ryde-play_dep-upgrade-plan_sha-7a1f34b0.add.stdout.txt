@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "install",
+    "source": "remote",
+    "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+    "install": {
+      "status": "installed",
+      "destination": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0\\SKILL.md",
+      "skill_name": "dep-upgrade-plan",
+      "source": "runx-registry",
+      "source_label": "runx registry",
+      "skill_id": "ryde-play/dep-upgrade-plan",
+      "version": "sha-7a1f34b0",
+      "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+      "profile_state_path": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0\\.runx\\profile.json",
+      "runner_names": [
+        "default"
+      ],
+      "trust_tier": "community"
+    },
+    "receipt_metadata": {
+      "destination": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0\\SKILL.md",
+      "digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "install_count": 3,
+      "package_digest": "30ac134940583980e47bd6ab40fa65e06ccef9aeb866fa7cd5bdfa9e90172657",
+      "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+      "publisher": {
+        "display_name": "RYDE",
+        "handle": "ryde-play",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "kind": "user"
+      },
+      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "skill_id": "ryde-play/dep-upgrade-plan",
+      "source_label": "runx registry",
+      "status": "installed",
+      "trust_tier": "community",
+      "version": "sha-7a1f34b0"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+﻿[
+    {
+        "name":  "runx-version",
+        "command":  "runx --version",
+        "stdout":  "artifacts-clean/command-logs/runx-version.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx-version.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:26.5493966+08:00",
+        "endedAt":  "2026-06-23T15:26:27.5872627+08:00"
+    },
+    {
+        "name":  "runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read",
+        "command":  "runx registry read runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+        "stdout":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:27.5980279+08:00",
+        "endedAt":  "2026-06-23T15:26:30.6723541+08:00"
+    },
+    {
+        "name":  "runx_dependency-cve-audit_sha-e11c90bbeb16.add",
+        "command":  "runx add runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\runx_dependency-cve-audit_sha-e11c90bbeb16 --json",
+        "stdout":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:30.6729003+08:00",
+        "endedAt":  "2026-06-23T15:26:33.7171149+08:00"
+    },
+    {
+        "name":  "runx_dependency-cve-audit_sha-e11c90bbeb16.inspect",
+        "command":  "runx skill inspect runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+        "stdout":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:33.7176209+08:00",
+        "endedAt":  "2026-06-23T15:26:35.7705283+08:00"
+    },
+    {
+        "name":  "ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read",
+        "command":  "runx registry read ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+        "stdout":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:35.7710317+08:00",
+        "endedAt":  "2026-06-23T15:26:38.8325350+08:00"
+    },
+    {
+        "name":  "ryde-play_dep-upgrade-plan_sha-7a1f34b0.add",
+        "command":  "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0 --json",
+        "stdout":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:38.8330789+08:00",
+        "endedAt":  "2026-06-23T15:26:40.8804243+08:00"
+    },
+    {
+        "name":  "ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect",
+        "command":  "runx skill inspect ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+        "stdout":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stderr.txt",
+        "exitCode":  0,
+        "startedAt":  "2026-06-23T15:26:40.8824257+08:00",
+        "endedAt":  "2026-06-23T15:26:42.9272634+08:00"
+    },
+    {
+        "name":  "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run",
+        "command":  "runx skill runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai -i \"target_name=OWASP NodeGoat\" -i target_repo=https://github.com/OWASP/NodeGoat -i target_ref=c5cb68a7084e4ae7dcc60e6a98768720a81841e8 -i package_lock_url=https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json -i scan_scope=direct -i include_dev=false -j",
+        "stdout":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+        "exitCode":  1,
+        "startedAt":  "2026-06-23T15:26:42.9277695+08:00",
+        "endedAt":  "2026-06-23T15:26:44.9764532+08:00"
+    },
+    {
+        "name":  "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed",
+        "command":  "runx skill runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai -i target_name=OWASP_NodeGoat -i target_repo=https://github.com/OWASP/NodeGoat -i target_ref=c5cb68a7084e4ae7dcc60e6a98768720a81841e8 -i package_lock_url=https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json -i scan_scope=direct -i include_dev=false -R F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\receipts\\runx_dependency-cve-audit_sha-e11c90bbeb16_dogfood_fixed -j",
+        "stdout":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed.stdout.txt",
+        "stderr":  "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed.stderr.txt",
+        "exitCode":  1,
+        "startedAt":  "2026-06-23T15:29:28.8899296+08:00",
+        "endedAt":  "2026-06-23T15:29:31.9436920+08:00"
+    }
+]

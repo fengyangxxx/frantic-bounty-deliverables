@@ -1,0 +1,516 @@
+{
+  "schema": "runx.registry_smoke_matrix.validation_result.v1",
+  "tool_version": "0.1.0",
+  "status": "sealed",
+  "environment": {
+    "os": "win32",
+    "node": "v24.14.0",
+    "shell": "PowerShell",
+    "runx_version_output": "runx-cli 0.6.13",
+    "runx_home": "artifacts-clean/runx-home",
+    "registry": "https://api.runx.ai",
+    "command_summary_path": "artifacts-clean/command-summary.json"
+  },
+  "summary": {
+    "package_count": 2,
+    "command_count": 9,
+    "registry_commands_exit_zero": true,
+    "dogfood_run_exit_code": 1
+  },
+  "packages": [
+    {
+      "ref": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "skill_id": "runx/dependency-cve-audit",
+      "owner": "runx",
+      "trust_tier": "first_party",
+      "registry_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
+      "profile_digest": "sha256:a619ed818e98dd63e08938d9b8a640c8db65ee7f12bd9fb2b8b5093fa17325a6",
+      "installed_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
+      "install_status": "installed",
+      "inspect_version": "0.1.1",
+      "install_destination": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\runx_dependency-cve-audit_sha-e11c90bbeb16\\runx\\dependency-cve-audit\\sha-e11c90bbeb16\\SKILL.md",
+      "registry_read_command": "runx registry read runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+      "install_command": "runx add runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\runx_dependency-cve-audit_sha-e11c90bbeb16 --json",
+      "inspect_command": "runx skill inspect runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+      "checks": [
+        {
+          "name": "registry_read_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "registry_read_success",
+          "passed": true,
+          "detail": "success runx/dependency-cve-audit"
+        },
+        {
+          "name": "install_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "install_success",
+          "passed": true,
+          "detail": "installed sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249"
+        },
+        {
+          "name": "inspect_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "inspect_success",
+          "passed": true,
+          "detail": "ok 0.1.1"
+        },
+        {
+          "name": "trust_tier_matches",
+          "passed": true,
+          "detail": "first_party / first_party"
+        }
+      ]
+    },
+    {
+      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+      "skill_id": "ryde-play/dep-upgrade-plan",
+      "owner": "ryde-play",
+      "trust_tier": "community",
+      "registry_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "profile_digest": "sha256:de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+      "installed_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "install_status": "installed",
+      "inspect_version": "0.1.0",
+      "install_destination": "F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0\\ryde-play\\dep-upgrade-plan\\sha-7a1f34b0\\SKILL.md",
+      "registry_read_command": "runx registry read ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+      "install_command": "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0 --json",
+      "inspect_command": "runx skill inspect ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
+      "checks": [
+        {
+          "name": "registry_read_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "registry_read_success",
+          "passed": true,
+          "detail": "success ryde-play/dep-upgrade-plan"
+        },
+        {
+          "name": "install_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "install_success",
+          "passed": true,
+          "detail": "installed sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db"
+        },
+        {
+          "name": "inspect_exit_zero",
+          "passed": true,
+          "detail": "0"
+        },
+        {
+          "name": "inspect_success",
+          "passed": true,
+          "detail": "ok 0.1.0"
+        },
+        {
+          "name": "trust_tier_matches",
+          "passed": true,
+          "detail": "community / community"
+        }
+      ]
+    }
+  ],
+  "dogfood_diagnostic": {
+    "command": "runx skill runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai -i \"target_name=OWASP NodeGoat\" -i target_repo=https://github.com/OWASP/NodeGoat -i target_ref=c5cb68a7084e4ae7dcc60e6a98768720a81841e8 -i package_lock_url=https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json -i scan_scope=direct -i include_dev=false -j",
+    "exit_code": 1,
+    "stdout": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+    "stderr": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+    "status": "failure",
+    "error_code": "skill_error",
+    "error_message": "skill run failed: governed runtime receipt signing requires RUNX_RECEIPT_SIGN_KID, RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64, and RUNX_RECEIPT_SIGN_ISSUER_TYPE",
+    "registry_provenance": {
+      "digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
+      "profile_digest": "sha256:a619ed818e98dd63e08938d9b8a640c8db65ee7f12bd9fb2b8b5093fa17325a6",
+      "registry_key_id": "runx-registry-ed25519-v1",
+      "registry_source": "remote https://api.runx.ai",
+      "registry_source_fingerprint": "ba1ac16b631195fd",
+      "skill_id": "runx/dependency-cve-audit",
+      "trust_state": "trusted",
+      "trust_tier": "first_party",
+      "version": "sha-e11c90bbeb16"
+    }
+  },
+  "checks": [
+    {
+      "name": "runx_version_captured",
+      "passed": true,
+      "detail": "runx-cli 0.6.13"
+    },
+    {
+      "name": "runx_version_minimum",
+      "passed": true,
+      "detail": "minimum required: runx-cli 0.6.6"
+    },
+    {
+      "name": "two_registry_packages_covered",
+      "passed": true,
+      "detail": "runx/dependency-cve-audit@sha-e11c90bbeb16, ryde-play/dep-upgrade-plan@sha-7a1f34b0"
+    },
+    {
+      "name": "all_required_registry_commands_succeeded",
+      "passed": true,
+      "detail": "all registry read/add/inspect checks passed"
+    },
+    {
+      "name": "isolated_runx_home_recorded",
+      "passed": true,
+      "detail": "artifacts-clean/runx-home"
+    },
+    {
+      "name": "published_run_path_attempt_recorded",
+      "passed": true,
+      "detail": "skill run failed: governed runtime receipt signing requires RUNX_RECEIPT_SIGN_KID, RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64, and RUNX_RECEIPT_SIGN_ISSUER_TYPE"
+    }
+  ],
+  "observations": [
+    "runx --version output: runx-cli 0.6.13",
+    "OS: win32; Node: v24.14.0; shell: PowerShell via runx.cmd",
+    "Install method: runx add <ref> --registry https://api.runx.ai --to <isolated package dir> --json",
+    "Fresh runx home/isolation: artifacts-clean/runx-home",
+    "Packages covered: runx/dependency-cve-audit@sha-e11c90bbeb16; ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+    "Each package has captured registry read, install, and skill inspect stdout/stderr transcripts.",
+    "Published run path diagnostic: skill run failed: governed runtime receipt signing requires RUNX_RECEIPT_SIGN_KID, RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64, and RUNX_RECEIPT_SIGN_ISSUER_TYPE",
+    "No blocking registry read/install/inspect failure was observed, so no public follow-up issue was required."
+  ],
+  "artifacts": [
+    {
+      "id": "sha256:df2104fbbd3aa37bd3442805d1c27caaa1ebbc312e651f5c043fe722ea168f94",
+      "artifact_id": "sha256:df2104fbbd3aa37bd3442805d1c27caaa1ebbc312e651f5c043fe722ea168f94",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-summary.json",
+      "path": "artifacts-clean/command-summary.json",
+      "byte_count": 6184
+    },
+    {
+      "id": "sha256:d94b55358a5b088e26a9ce46ebe03e8cf357546bec93ef64f0cd31a034b7e1be",
+      "artifact_id": "sha256:d94b55358a5b088e26a9ce46ebe03e8cf357546bec93ef64f0cd31a034b7e1be",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx-version.stdout.txt",
+      "path": "artifacts-clean/command-logs/runx-version.stdout.txt",
+      "byte_count": 16
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx-version.stderr.txt",
+      "path": "artifacts-clean/command-logs/runx-version.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:9704561536deaf8544638e46a43b31c05913dbbdf785470163d18afc14fe11e9",
+      "artifact_id": "sha256:9704561536deaf8544638e46a43b31c05913dbbdf785470163d18afc14fe11e9",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+      "byte_count": 763
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:51c5bf0d76dbc96a3eb167f057351fa638c13ecae658779f2aac9bb99f7ed10f",
+      "artifact_id": "sha256:51c5bf0d76dbc96a3eb167f057351fa638c13ecae658779f2aac9bb99f7ed10f",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+      "byte_count": 9108
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stderr.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:a42c1831947ab4903529ece37d11d4fa8b89cfc7b2d7d29284deb780c3c4f01c",
+      "artifact_id": "sha256:a42c1831947ab4903529ece37d11d4fa8b89cfc7b2d7d29284deb780c3c4f01c",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+      "byte_count": 2063
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stderr.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:3135c001513c8ed237aaea4242e293493ce828f883c16e591a7f5cfa05f58033",
+      "artifact_id": "sha256:3135c001513c8ed237aaea4242e293493ce828f883c16e591a7f5cfa05f58033",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+      "byte_count": 1068
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stderr.txt",
+      "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:ec56a0c65f3abfa09b579aa1e85828c230c68c46288c29aaa6fb229af46e079d",
+      "artifact_id": "sha256:ec56a0c65f3abfa09b579aa1e85828c230c68c46288c29aaa6fb229af46e079d",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+      "byte_count": 6801
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stderr.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:12ccc1a0c15ce618f980db4118d3f2181894b1b18228234b80b4ab8ffd44f0fc",
+      "artifact_id": "sha256:12ccc1a0c15ce618f980db4118d3f2181894b1b18228234b80b4ab8ffd44f0fc",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+      "byte_count": 2171
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stderr.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stderr.txt",
+      "byte_count": 0
+    },
+    {
+      "id": "sha256:4dfd2968ca66a82aed4610dffc7476a0f41eafbc090c6afbc755f840e7f0e1ee",
+      "artifact_id": "sha256:4dfd2968ca66a82aed4610dffc7476a0f41eafbc090c6afbc755f840e7f0e1ee",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+      "byte_count": 1091
+    },
+    {
+      "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "command_transcript",
+      "artifact_type": "command_transcript",
+      "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stderr.txt",
+      "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stderr.txt",
+      "byte_count": 0
+    }
+  ],
+  "signal": {
+    "signal_id": "runx-registry-smoke-matrix:sha256:0836a4e031e3fff3838afbd82eac063a6fa0dc3e53a78adb9dacfdd11053f7bb",
+    "source_events": [
+      {
+        "provider": "runx-registry",
+        "source_locator": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+        "title": "Smoke-tested registry package runx/dependency-cve-audit@sha-e11c90bbeb16"
+      },
+      {
+        "provider": "runx-registry",
+        "source_locator": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+        "title": "Smoke-tested registry package ryde-play/dep-upgrade-plan@sha-7a1f34b0"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "sha256:df2104fbbd3aa37bd3442805d1c27caaa1ebbc312e651f5c043fe722ea168f94",
+        "artifact_id": "sha256:df2104fbbd3aa37bd3442805d1c27caaa1ebbc312e651f5c043fe722ea168f94",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-summary.json",
+        "path": "artifacts-clean/command-summary.json",
+        "byte_count": 6184
+      },
+      {
+        "id": "sha256:d94b55358a5b088e26a9ce46ebe03e8cf357546bec93ef64f0cd31a034b7e1be",
+        "artifact_id": "sha256:d94b55358a5b088e26a9ce46ebe03e8cf357546bec93ef64f0cd31a034b7e1be",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx-version.stdout.txt",
+        "path": "artifacts-clean/command-logs/runx-version.stdout.txt",
+        "byte_count": 16
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx-version.stderr.txt",
+        "path": "artifacts-clean/command-logs/runx-version.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:9704561536deaf8544638e46a43b31c05913dbbdf785470163d18afc14fe11e9",
+        "artifact_id": "sha256:9704561536deaf8544638e46a43b31c05913dbbdf785470163d18afc14fe11e9",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt",
+        "byte_count": 763
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:51c5bf0d76dbc96a3eb167f057351fa638c13ecae658779f2aac9bb99f7ed10f",
+        "artifact_id": "sha256:51c5bf0d76dbc96a3eb167f057351fa638c13ecae658779f2aac9bb99f7ed10f",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
+        "byte_count": 9108
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stderr.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:a42c1831947ab4903529ece37d11d4fa8b89cfc7b2d7d29284deb780c3c4f01c",
+        "artifact_id": "sha256:a42c1831947ab4903529ece37d11d4fa8b89cfc7b2d7d29284deb780c3c4f01c",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
+        "byte_count": 2063
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stderr.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:3135c001513c8ed237aaea4242e293493ce828f883c16e591a7f5cfa05f58033",
+        "artifact_id": "sha256:3135c001513c8ed237aaea4242e293493ce828f883c16e591a7f5cfa05f58033",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
+        "byte_count": 1068
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stderr.txt",
+        "path": "artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:ec56a0c65f3abfa09b579aa1e85828c230c68c46288c29aaa6fb229af46e079d",
+        "artifact_id": "sha256:ec56a0c65f3abfa09b579aa1e85828c230c68c46288c29aaa6fb229af46e079d",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
+        "byte_count": 6801
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stderr.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:12ccc1a0c15ce618f980db4118d3f2181894b1b18228234b80b4ab8ffd44f0fc",
+        "artifact_id": "sha256:12ccc1a0c15ce618f980db4118d3f2181894b1b18228234b80b4ab8ffd44f0fc",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
+        "byte_count": 2171
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stderr.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stderr.txt",
+        "byte_count": 0
+      },
+      {
+        "id": "sha256:4dfd2968ca66a82aed4610dffc7476a0f41eafbc090c6afbc755f840e7f0e1ee",
+        "artifact_id": "sha256:4dfd2968ca66a82aed4610dffc7476a0f41eafbc090c6afbc755f840e7f0e1ee",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
+        "byte_count": 1091
+      },
+      {
+        "id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "artifact_id": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "type": "command_transcript",
+        "artifact_type": "command_transcript",
+        "label": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stderr.txt",
+        "path": "artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stderr.txt",
+        "byte_count": 0
+      }
+    ]
+  },
+  "provenance": {
+    "output_payload_sha256": "sha256:47dc85ac98a6f4bcb4dc2491581d32b48d5a3e41443f012fee22609ac512fad9"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "read",
+    "source": "remote",
+    "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
+    "skill": {
+      "skill_id": "ryde-play/dep-upgrade-plan",
+      "owner": "ryde-play",
+      "name": "dep-upgrade-plan",
+      "description": "Build a ranked dependency upgrade plan from a lockfile, advisory facts, and release constraints without changing project files.",
+      "category": "security",
+      "version": "sha-7a1f34b0",
+      "digest": "953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
+      "markdown": "---\nname: dep-upgrade-plan\ndescription: Build a ranked dependency upgrade plan from a lockfile, advisory facts, and release constraints without changing project files.\nsource:\n  type: cli-tool\n  command: node\n  args:\n    - run.mjs\nrunx:\n  tags:\n    - dependencies\n    - upgrades\n    - release-planning\nlinks:\n  source: https://github.com/RYDE-PLAY/runx/tree/ryde-play/dep-upgrade-plan/skills/dep-upgrade-plan\n---\n\n## What this skill does\n\n`dep-upgrade-plan` reads a public npm `package-lock.json`, advisory facts, and\nrelease constraints, then emits a ranked upgrade plan. Each plan entry includes\nthe package name, exact `from` version, exact `to` version, risk level, and a\nbreaking-change note. The skill also writes a changelog-style reviewer summary\nwhen `output_dir` is provided.\n\nThis is a planning skill. It does not edit manifests, install packages, run\ntarget project code, open pull requests, or perform package bumps. The proposed\nplan is meant to be consumed by release catalog or remediation workflows after a\nhuman reviews the evidence.\n\n## When to use this skill\n\nUse this skill after an advisory or dependency audit has identified candidate\npackages and a release operator needs a reproducible upgrade queue. It is useful\nfor triage because it preserves the lockfile hash, advisory source, constraints,\nselected target versions, ranking reasons, and refusal reasons.\n\n## Inputs\n\n- `target_name`: human-readable project name.\n- `target_repo`: public source repository URL.\n- `target_ref`: immutable commit, tag, or release reference.\n- `lockfile_path`: local path to a `package-lock.json` inside the skill directory.\n- `lockfile_url`: public HTTPS URL for a `package-lock.json`.\n- `lockfile_json`: package-lock contents as a JSON string.\n- `advisories_path`: local JSON file containing advisory upgrade facts.\n- `advisories_url`: public HTTPS URL containing advisory upgrade facts.\n- `advisories_json`: advisory facts as a JSON string.\n- `constraints_path`: local JSON file containing package constraints.\n- `constraints_url`: public HTTPS URL containing package constraints.\n- `constraints_json`: constraints as a JSON string.\n- `output_dir`: optional directory inside the skill directory for `evidence.json`\n  and `report.md`.\n\nAdvisories may include package records with `package`, `current`, `fixed`,\n`severity`, `advisory`, `source`, and `breaking` fields. Constraints may include\npackage-specific `allowed`, `blocked`, `max_major`, `notes`, or `require_note`\nfields.\n\n## Outputs\n\nThe primary output is `dependency_upgrade_plan` with schema\n`dep.upgrade.plan.v1`:\n\n```json\n{\n  \"schema\": \"dep.upgrade.plan.v1\",\n  \"target\": {},\n  \"source\": {},\n  \"summary\": {},\n  \"plan\": [\n    {\n      \"pkg\": \"express\",\n      \"from\": \"4.16.4\",\n      \"to\": \"4.20.0\",\n      \"risk\": \"medium\",\n      \"breaking\": \"No known breaking change in supplied notes.\"\n    }\n  ],\n  \"changelog\": [],\n  \"refused\": false\n}\n```\n\nWhen `output_dir` is supplied, the runner writes `evidence.json` and `report.md`\ninside that directory and returns their relative paths.\n\n## Ranking rules\n\n1. Read package versions from the lockfile and record the lockfile SHA-256.\n2. Match advisory records to exact locked package names.\n3. Ignore advisory records where `current` disagrees with the lockfile.\n4. Refuse a target version blocked by constraints.\n5. Refuse a target major above a configured `max_major`.\n6. Rank by severity, then whether a breaking note exists, then package name.\n7. Emit exact `from` and `to` versions for every plan entry.\n\n## Refusal behavior\n\nThe skill refuses to seal when no upgrade can be recommended, when every\ncandidate violates constraints, when required inputs are missing, when a URL is\nnot HTTPS, when JSON is invalid, or when a package cannot be found in the\nlockfile. The refusal is intentional evidence for reviewers: it prevents silent\nor unsafe upgrade advice.\n\n## Worked example\n\n```bash\nrunx skill ./skills/dep-upgrade-plan \\\n  --input target_name=\"Fixture Shop\" \\\n  --input target_repo=https://github.com/example/fixture-shop \\\n  --input target_ref=fixture-lock-v1 \\\n  --input lockfile_url=https://raw.githubusercontent.com/RYDE-PLAY/runx/ryde-play/dep-upgrade-plan/skills/dep-upgrade-plan/fixtures/package-lock.json \\\n  --input advisories_url=https://raw.githubusercontent.com/RYDE-PLAY/runx/ryde-play/dep-upgrade-plan/skills/dep-upgrade-plan/fixtures/advisories.json \\\n  --input constraints_url=https://raw.githubusercontent.com/RYDE-PLAY/runx/ryde-play/dep-upgrade-plan/skills/dep-upgrade-plan/fixtures/constraints.json \\\n  --input output_dir=artifacts/fixture \\\n  --json\n```\n\nThe sealed fixture produces a ranked plan for vulnerable direct dependencies.\nThe refused fixture uses constraints that block every available upgrade and\ntherefore exits non-zero without mutating project files.",
+      "profile_digest": "de20a78f58b79dd4006f098f2be28afaf313f1ee02778f2f3df447439c37e1bf",
+      "runner_names": [
+        "default"
+      ],
+      "source_type": "cli-tool",
+      "trust_tier": "community",
+      "required_scopes": [],
+      "tags": [
+        "dependencies",
+        "upgrades",
+        "release-planning"
+      ],
+      "publisher": {
+        "kind": "user",
+        "id": "user_0e65bd23969ab1dea100a77c",
+        "handle": "ryde-play",
+        "display_name": "RYDE"
+      },
+      "attestations": [
+        {
+          "kind": "publisher",
+          "id": "publisher:user_0e65bd23969ab1dea100a77c",
+          "status": "declared",
+          "summary": "RYDE",
+          "issued_at": "2026-06-23T05:24:32.973Z",
+          "metadata": {
+            "publisher_display_name": "RYDE",
+            "publisher_handle": "ryde-play",
+            "publisher_id": "user_0e65bd23969ab1dea100a77c",
+            "publisher_kind": "user",
+            "trust_tier": "community"
+          }
+        }
+      ],
+      "install_command": "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai",
+      "run_command": "runx skill ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai"
+    }
+  }
+}
