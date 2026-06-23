@@ -1,0 +1,20 @@
+{
+  "id": "01-runx-version",
+  "command": "runx --version",
+  "cwd": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix",
+  "env": {
+    "RUNX_HOME": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-runx-home",
+    "RUNX_RECEIPT_SIGN_KID": "cli-package-test-key",
+    "RUNX_RECEIPT_SIGN_ISSUER_TYPE": "hosted",
+    "RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64": "present_redacted",
+    "RUNX_RECEIPT_VERIFY_KID": "cli-package-test-key",
+    "RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64": "present_public_fixture_key"
+  },
+  "started_at": "2026-06-23T07:47:53Z",
+  "finished_at": "2026-06-23T07:47:53Z",
+  "exit_code": 0,
+  "stdout_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/01-runx-version.stdout.txt",
+  "stderr_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/01-runx-version.stderr.txt",
+  "stdout": "runx-cli 0.6.13\n",
+  "stderr": ""
+}

@@ -2,45 +2,103 @@
   "schema": "runx.registry_smoke_matrix.delivery_verification.v1",
   "bounty": 47,
   "posting_id": "p-635dcd0362",
-  "generated_at": "2026-06-23T07:41:28.599Z",
+  "generated_at": "2026-06-23T07:55:43.445Z",
   "public_url": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix",
   "evidence_json": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/evidence.json",
   "report": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/report.md",
-  "receipt_ref": "runx:receipt:sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
-  "runx_cli_version": "runx-cli 0.6.13",
-  "validation_packet_sha256": "sha256:358081cd7d2ff29cb30e8b1d85fa7ef889af48b07c059f5b14e496871d41d155",
-  "evidence_sha256": "sha256:55175936568f47e496742900d015f80cf48de4433226ea9711772533eb12b861",
-  "command_summary_count": 9,
-  "observations_count": 12,
+  "receipt_ref": "runx:receipt:sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+  "runx_cli_version_raw_output": "runx-cli 0.6.13",
+  "command_count": 20,
+  "observations_count": 13,
   "packages_tested": [
-    "runx/dependency-cve-audit@sha-e11c90bbeb16",
-    "ryde-play/dep-upgrade-plan@sha-7a1f34b0"
+    "fengyangxxx/dependency-advisory-graph@0.1.1",
+    "runx/dependency-cve-audit@sha-e11c90bbeb16"
   ],
-  "docker_harness_status": "passed",
-  "docker_harness_receipts": [
-    "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3"
-  ],
-  "verify_result": {
-    "valid": false,
-    "digest": "valid",
-    "content_address": "valid",
-    "signature": "invalid",
-    "findings": [
-      {
-        "code": "signature_malformed",
-        "path": "signature.value",
-        "message": "signature value is malformed"
-      }
-    ]
-  },
-  "follow_up_issues": [
+  "package_checks": [
     {
-      "issue": "https://github.com/runxhq/runx/issues/134",
-      "reason": "runx verify reports signature_malformed although digest and content address are valid"
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "registry_read_exit_zero",
+      "passed": true
     },
     {
-      "issue": "https://github.com/runxhq/runx/issues/135",
-      "reason": "Windows runx skill path cannot spawn registry skills using /usr/bin/env"
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "install_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "inspect_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "harness_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "run_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "run_receipt_recorded",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "verify_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "verify_valid",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "registry_read_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "install_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "inspect_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "harness_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "run_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "run_receipt_recorded",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "verify_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "verify_valid",
+      "passed": true
     }
-  ]
+  ],
+  "matrix_harness_status": "passed",
+  "matrix_verify_valid": true,
+  "matrix_verify_output": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stdout.txt",
+  "evidence_sha256": "sha256:2356ebccf5ec142885a6f8726f755800f4e32b5cf84cdd64d9a522f7aea2b85e",
+  "all_required_checks_passed": true
 }

@@ -1,0 +1,70 @@
+{
+  "schema": "runx.receipt.v1",
+  "id": "sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+  "created_at": "2026-06-23T07:48:06.823Z",
+  "canonicalization": "runx.receipt.c14n.v1",
+  "issuer": {
+    "type": "hosted",
+    "kid": "cli-package-test-key",
+    "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f"
+  },
+  "signature": {
+    "alg": "Ed25519",
+    "value": "base64:amr5r8cAhV4Pq8pbEIbNiXWjwfng98u4yxMYVFgQBpbY3T_81veg8uQYr-6XCzW41xd-DD7XHC37ecHGAsotBQ"
+  },
+  "digest": "sha256:e389bfd1973c1263d129b786b7c770bd7432b8b8292fa92436fc88d01087e674",
+  "idempotency": {
+    "intent_key": "sha256:runx-registry-smoke-matrix-validation-graph-intent",
+    "trigger_fingerprint": "sha256:runx-registry-smoke-matrix-validation-graph-trigger",
+    "content_hash": "sha256:runx-registry-smoke-matrix-validation-graph-content"
+  },
+  "subject": {
+    "kind": "graph",
+    "ref": {
+      "type": "harness",
+      "uri": "hrn_runx-registry-smoke-matrix-validation_graph"
+    },
+    "commitments": []
+  },
+  "authority": {
+    "actor_ref": {
+      "type": "principal",
+      "uri": "runx:principal:local_runtime"
+    },
+    "grant_refs": [],
+    "scope_refs": [],
+    "authority_proof_refs": [],
+    "attenuation": {
+      "parent_authority_ref": null,
+      "subset_proof": null
+    },
+    "terms": [],
+    "enforcement": {
+      "profile_hash": "sha256:runtime-skeleton-enforcement",
+      "redaction_refs": [],
+      "setup_refs": [],
+      "teardown_refs": []
+    }
+  },
+  "signals": [],
+  "decisions": [],
+  "acts": [],
+  "seal": {
+    "disposition": "closed",
+    "reason_code": "graph_closed",
+    "summary": "graph runx-registry-smoke-matrix-validation completed",
+    "closed_at": "2026-06-23T07:48:06.823Z",
+    "last_observed_at": "2026-06-23T07:48:06.823Z",
+    "criteria": []
+  },
+  "lineage": {
+    "children": [
+      {
+        "type": "receipt",
+        "uri": "runx:receipt:sha256:5f5e58b45fcc0d6c113d74bb94cf0c0f4e2481f8f13dd1b1734081ad1306900e",
+        "locator": "sha256:2cab226e76854ec69624e754e8d150a4a459220322fba3cfac16341207dd8616"
+      }
+    ],
+    "sync": []
+  }
+}

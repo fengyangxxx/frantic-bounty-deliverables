@@ -27,9 +27,9 @@ harness:
     - name: two-package-public-registry-smoke
       runner: validate
       inputs:
-        command_summary_path: "artifacts-clean/command-summary.json"
-        artifact_dir: "artifacts-clean"
-        runx_home_path: "artifacts-clean/runx-home"
+        command_summary_path: "artifacts-docker/docker-command-index.json"
+        artifact_dir: "artifacts-docker"
+        runx_home_path: "artifacts-docker/docker-runx-home"
       expect:
         status: sealed
         outputs:

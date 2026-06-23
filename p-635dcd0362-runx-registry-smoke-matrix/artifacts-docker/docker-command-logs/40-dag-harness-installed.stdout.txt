@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "case_count": 3,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "sealed-advisory-minimist-008",
+    "clean-manifest-no-finding",
+    "invalid-manifest-fails"
+  ],
+  "receipt_ids": [
+    "sha256:170c775489ffaf99efb271664264ead7baf0f24ede08d5fbbc471822456cdb10",
+    "sha256:54c5adf636db4b1d7423c7c60ffc471d043610442413661c4eb2b430a687f333",
+    "sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77"
+  ],
+  "graph_case_count": 0
+}

@@ -3,324 +3,402 @@
   "bounty": 47,
   "posting_id": "p-635dcd0362",
   "title": "Run a public runx registry install smoke matrix",
-  "summary": "Reproducible runx registry smoke matrix using runx-cli 0.6.13 against two public registry packages, with captured registry read, install, inspect, run-path diagnostics, Docker governed harness receipt, receipt verification output, and public follow-up issues for verifier/runtime failures.",
+  "summary": "Docker-isolated public runx registry smoke matrix using captured runx-cli 0.6.13 command transcripts for two public packages, package run receipts, per-package verify outputs, and a matrix validation receipt.",
   "public_url": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix",
-  "receipt_ref": "runx:receipt:sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
-  "runx_cli_version": "runx-cli 0.6.13",
+  "receipt_ref": "runx:receipt:sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+  "runx_cli_version_raw_output": "runx-cli 0.6.13",
   "environment": {
-    "os": "win32",
-    "node": "v24.14.0",
-    "shell": "PowerShell",
-    "runx_version_output": "runx-cli 0.6.13",
-    "runx_home": "artifacts-clean/runx-home",
+    "os_shell_stdout": "os=Linux ea60ed76aea3 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 GNU/Linux\nshell=/bin/bash\nnode=v24.17.0\nnpm=11.13.0",
+    "shell": "/bin/bash",
+    "container": "node:24-bookworm",
+    "install_method": "npm install -g @runxhq/cli@0.6.13",
     "registry": "https://api.runx.ai",
-    "command_summary_path": "artifacts-clean/command-summary.json"
+    "runx_home": "artifacts-docker/docker-runx-home",
+    "isolation_method": "fresh Docker container with package-local RUNX_HOME and receipt dirs"
   },
   "packages": [
     {
-      "ref": "runx/dependency-cve-audit@sha-e11c90bbeb16",
-      "owner": "runx",
-      "trust_tier": "first_party",
-      "registry_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
-      "installed_digest": "sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249",
-      "inspect_version": "0.1.1",
-      "registry_read_command": "runx registry read runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
-      "install_command": "runx add runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\runx_dependency-cve-audit_sha-e11c90bbeb16 --json",
-      "inspect_command": "runx skill inspect runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
-      "registry_read_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt",
-      "install_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt",
-      "inspect_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt",
-      "checks": [
-        {
-          "name": "registry_read_exit_zero",
-          "passed": true,
-          "detail": "0"
+      "ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "registry_read": {
+        "id": "10-dag-registry-read",
+        "command": "runx registry read fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/10-dag-registry-read.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/10-dag-registry-read.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/10-dag-registry-read.transcript.json"
+      },
+      "install": {
+        "id": "20-dag-add-install",
+        "command": "runx add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai --to /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-advisory-graph --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/20-dag-add-install.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/20-dag-add-install.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/20-dag-add-install.transcript.json"
+      },
+      "inspect": {
+        "id": "30-dag-skill-inspect-installed",
+        "command": "runx skill inspect /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-advisory-graph/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/30-dag-skill-inspect-installed.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/30-dag-skill-inspect-installed.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/30-dag-skill-inspect-installed.transcript.json"
+      },
+      "harness_or_usage": {
+        "harness": {
+          "id": "40-dag-harness-installed",
+          "command": "runx harness /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-advisory-graph/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md -R /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-harness --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.transcript.json"
         },
-        {
-          "name": "registry_read_success",
-          "passed": true,
-          "detail": "success runx/dependency-cve-audit"
-        },
-        {
-          "name": "install_exit_zero",
-          "passed": true,
-          "detail": "0"
-        },
-        {
-          "name": "install_success",
-          "passed": true,
-          "detail": "installed sha256:427c964bccd3f5f41c71a90905dd74225547e8b7af11015978e4550db3c27249"
-        },
-        {
-          "name": "inspect_exit_zero",
-          "passed": true,
-          "detail": "0"
-        },
-        {
-          "name": "inspect_success",
-          "passed": true,
-          "detail": "ok 0.1.1"
-        },
-        {
-          "name": "trust_tier_matches",
-          "passed": true,
-          "detail": "first_party / first_party"
+        "run": {
+          "id": "50-dag-skill-run",
+          "command": "runx skill /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-advisory-graph/fengyangxxx/dependency-advisory-graph/0.1.1/SKILL.md -i ecosystem=npm -i manifest={\"packages\":[{\"name\":\"fixture-app\",\"version\":\"1.0.0\",\"path\":\"\"},{\"name\":\"minimist\",\"version\":\"0.0.8\",\"path\":\"node_modules/minimist\"},{\"name\":\"left-pad\",\"version\":\"1.3.0\",\"path\":\"node_modules/left-pad\"}]} -i advisory_database={\"retrieved_at\":\"2026-06-23T07:30:00Z\",\"advisories\":[{\"id\":\"GHSA-vh95-rmgr-6w4m\",\"package\":\"minimist\",\"ecosystem\":\"npm\",\"vulnerable_range\":\"<0.2.1\",\"severity\":\"critical\",\"fix_version\":\"0.2.1\",\"evidence_url\":\"https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m\",\"source\":\"OSV.dev / GitHub Advisory Database\"}]} -i output_dir=artifacts-docker/docker-smoke-dag -R /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-skill-run --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/50-dag-skill-run.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/50-dag-skill-run.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/50-dag-skill-run.transcript.json"
         }
-      ]
+      },
+      "registry_status": "success",
+      "install_status": "success",
+      "inspect_status": "ok",
+      "harness_status": "passed",
+      "run_status": "sealed",
+      "run_receipt_ref": "runx:receipt:sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
+      "run_receipt_id": "sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
+      "run_receipt_json_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/dag-skill-run-receipt.json",
+      "verify": {
+        "command": {
+          "id": "90-verify-50-dag-skill-run-282a35d6a49c4c3f",
+          "command": "runx verify sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a --receipt-dir /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-skill-run --allow-local-development-signatures --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-50-dag-skill-run-282a35d6a49c4c3f.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-50-dag-skill-run-282a35d6a49c4c3f.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-50-dag-skill-run-282a35d6a49c4c3f.transcript.json"
+        },
+        "valid": true,
+        "signature_mode": "production",
+        "receipt_dir": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-skill-run",
+        "tree_count": 1,
+        "findings": []
+      },
+      "checks": {
+        "registry_read_exit_zero": true,
+        "install_exit_zero": true,
+        "inspect_exit_zero": true,
+        "harness_exit_zero": true,
+        "run_exit_zero": true,
+        "run_receipt_recorded": true,
+        "verify_exit_zero": true,
+        "verify_valid": true
+      }
     },
     {
-      "ref": "ryde-play/dep-upgrade-plan@sha-7a1f34b0",
-      "owner": "ryde-play",
-      "trust_tier": "community",
-      "registry_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
-      "installed_digest": "sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db",
-      "inspect_version": "0.1.0",
-      "registry_read_command": "runx registry read ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
-      "install_command": "runx add ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --to F:\\work\\ai_work\\get_money\\frantic-deliverables-public\\p-635dcd0362-runx-registry-smoke-matrix\\artifacts-clean\\install-root\\ryde-play_dep-upgrade-plan_sha-7a1f34b0 --json",
-      "inspect_command": "runx skill inspect ryde-play/dep-upgrade-plan@sha-7a1f34b0 --registry https://api.runx.ai --json",
-      "registry_read_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt",
-      "install_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt",
-      "inspect_stdout": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt",
-      "checks": [
-        {
-          "name": "registry_read_exit_zero",
-          "passed": true,
-          "detail": "0"
+      "ref": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "registry_read": {
+        "id": "11-cve-registry-read",
+        "command": "runx registry read runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/11-cve-registry-read.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/11-cve-registry-read.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/11-cve-registry-read.transcript.json"
+      },
+      "install": {
+        "id": "21-cve-add-install",
+        "command": "runx add runx/dependency-cve-audit@sha-e11c90bbeb16 --registry https://api.runx.ai --to /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-cve-audit --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/21-cve-add-install.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/21-cve-add-install.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/21-cve-add-install.transcript.json"
+      },
+      "inspect": {
+        "id": "31-cve-skill-inspect-installed",
+        "command": "runx skill inspect /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-cve-audit/runx/dependency-cve-audit/sha-e11c90bbeb16/SKILL.md --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/31-cve-skill-inspect-installed.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/31-cve-skill-inspect-installed.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/31-cve-skill-inspect-installed.transcript.json"
+      },
+      "harness_or_usage": {
+        "harness": {
+          "id": "41-cve-harness-installed",
+          "command": "runx harness /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-cve-audit/runx/dependency-cve-audit/sha-e11c90bbeb16/SKILL.md -R /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/cve-harness --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/41-cve-harness-installed.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/41-cve-harness-installed.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/41-cve-harness-installed.transcript.json"
         },
-        {
-          "name": "registry_read_success",
-          "passed": true,
-          "detail": "success ryde-play/dep-upgrade-plan"
-        },
-        {
-          "name": "install_exit_zero",
-          "passed": true,
-          "detail": "0"
-        },
-        {
-          "name": "install_success",
-          "passed": true,
-          "detail": "installed sha256:953984dff9360fdce690b32d14d841e4e296462cdc6e8e16d4995deb6abbe6db"
-        },
-        {
-          "name": "inspect_exit_zero",
-          "passed": true,
-          "detail": "0"
-        },
-        {
-          "name": "inspect_success",
-          "passed": true,
-          "detail": "ok 0.1.0"
-        },
-        {
-          "name": "trust_tier_matches",
-          "passed": true,
-          "detail": "community / community"
+        "run": {
+          "id": "51-cve-skill-run",
+          "command": "runx skill /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-cve-audit/runx/dependency-cve-audit/sha-e11c90bbeb16/SKILL.md -i target_name=OWASP NodeGoat -i target_repo=https://github.com/OWASP/NodeGoat -i target_ref=c5cb68a7084e4ae7dcc60e6a98768720a81841e8 -i package_lock_url=https://raw.githubusercontent.com/OWASP/NodeGoat/c5cb68a7084e4ae7dcc60e6a98768720a81841e8/package-lock.json -i scan_scope=direct -i include_dev=false -i output_dir=artifacts-docker/docker-smoke-cve -R /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/cve-skill-run --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/51-cve-skill-run.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/51-cve-skill-run.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/51-cve-skill-run.transcript.json"
         }
-      ]
+      },
+      "registry_status": "success",
+      "install_status": "success",
+      "inspect_status": "ok",
+      "harness_status": "not_declared",
+      "run_status": "sealed",
+      "run_receipt_ref": "runx:receipt:sha256:ddc174164b6f52dc036f389c6c678cdc258ad1f72721e9d462bfd0020cb3c31e",
+      "run_receipt_id": "sha256:ddc174164b6f52dc036f389c6c678cdc258ad1f72721e9d462bfd0020cb3c31e",
+      "run_receipt_json_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/cve-skill-run-receipt.json",
+      "verify": {
+        "command": {
+          "id": "90-verify-51-cve-skill-run-ddc174164b6f52dc",
+          "command": "runx verify sha256:ddc174164b6f52dc036f389c6c678cdc258ad1f72721e9d462bfd0020cb3c31e --receipt-dir /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/cve-skill-run --allow-local-development-signatures --json",
+          "exit_code": 0,
+          "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-51-cve-skill-run-ddc174164b6f52dc.stdout.txt",
+          "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-51-cve-skill-run-ddc174164b6f52dc.stderr.txt",
+          "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-51-cve-skill-run-ddc174164b6f52dc.transcript.json"
+        },
+        "valid": true,
+        "signature_mode": "production",
+        "receipt_dir": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/cve-skill-run",
+        "tree_count": 1,
+        "findings": []
+      },
+      "checks": {
+        "registry_read_exit_zero": true,
+        "install_exit_zero": true,
+        "inspect_exit_zero": true,
+        "harness_exit_zero": true,
+        "run_exit_zero": true,
+        "run_receipt_recorded": true,
+        "verify_exit_zero": true,
+        "verify_valid": true
+      }
     }
   ],
+  "validation": {
+    "matrix_harness": {
+      "command": {
+        "id": "99-matrix-validation-harness",
+        "command": "runx harness /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/SKILL.md -R /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/matrix-validation --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/99-matrix-validation-harness.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/99-matrix-validation-harness.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/99-matrix-validation-harness.transcript.json"
+      },
+      "status": "passed",
+      "receipt_ids": [
+        "sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d"
+      ],
+      "receipt_json_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/matrix-validation-root-receipt.json"
+    },
+    "matrix_verify": {
+      "command": {
+        "id": "90-verify-99-matrix-validation-harness-4679e1c90125c1eb",
+        "command": "runx verify sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d --receipt-dir /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/matrix-validation --allow-local-development-signatures --json",
+        "exit_code": 0,
+        "stdout_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stdout.txt",
+        "stderr_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stderr.txt",
+        "transcript_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.transcript.json"
+      },
+      "valid": true,
+      "signature_mode": "production",
+      "trees": [
+        {
+          "root_receipt_id": "sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+          "receipt_count": 2,
+          "parent_missing": null,
+          "valid": true,
+          "findings": []
+        }
+      ],
+      "unreadable_files": []
+    }
+  },
   "observations": [
     {
       "id": "obs-01-runx-version",
-      "claim": "The governed run used runx CLI 0.6.6 or newer and captured the exact version string.",
+      "claim": "The governed validation used runx CLI 0.6.6 or newer and captured the raw version command output.",
       "value": "runx-cli 0.6.13",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx-version.stdout.txt"
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/01-runx-version.stdout.txt"
     },
     {
       "id": "obs-02-environment",
-      "claim": "The smoke matrix recorded OS, shell, Node version, registry, and isolated runx home.",
-      "value": "OS=win32; shell=PowerShell; node=v24.14.0; registry=https://api.runx.ai; runx_home=artifacts-clean/runx-home",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
+      "claim": "The smoke run recorded OS, shell, Node/npm versions, Docker isolation, and fresh RUNX_HOME.",
+      "value": "os=Linux ea60ed76aea3 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 GNU/Linux; shell=/bin/bash; node=v24.17.0; npm=11.13.0; RUNX_HOME=artifacts-docker/docker-runx-home; container=node:24-bookworm",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/02-os-shell.stdout.txt"
     },
     {
-      "id": "obs-03-package-count",
-      "claim": "The matrix covered two public runx registry packages.",
-      "value": "runx/dependency-cve-audit@sha-e11c90bbeb16; ryde-play/dep-upgrade-plan@sha-7a1f34b0",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
+      "id": "obs-03-install-method",
+      "claim": "The run installed runx CLI and public registry packages with captured commands.",
+      "value": "npm install -g @runxhq/cli@0.6.13; runx add <ref> --registry https://api.runx.ai --to <isolated package dir> --json",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-index.json"
     },
     {
-      "id": "obs-04-cve-registry-install-inspect",
-      "claim": "runx/dependency-cve-audit registry read, clean add, and inspect completed with exit code 0.",
-      "value": "registry_read_exit_zero=true; install_exit_zero=true; inspect_exit_zero=true",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt"
+      "id": "obs-04-package-refs",
+      "claim": "The matrix covered at least two public runx registry packages.",
+      "value": "fengyangxxx/dependency-advisory-graph@0.1.1; runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-index.json"
     },
     {
-      "id": "obs-05-dep-upgrade-registry-install-inspect",
-      "claim": "ryde-play/dep-upgrade-plan registry read, clean add, and inspect completed with exit code 0.",
-      "value": "registry_read_exit_zero=true; install_exit_zero=true; inspect_exit_zero=true",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt"
+      "id": "obs-05-dag-registry-install-inspect",
+      "claim": "fengyangxxx/dependency-advisory-graph@0.1.1 registry read, install, and inspect outputs were captured.",
+      "value": "registry_exit=0; install_exit=0; inspect_exit=0",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/10-dag-registry-read.stdout.txt"
     },
     {
-      "id": "obs-06-command-transcripts",
-      "claim": "Every registry read, install, and inspect action has captured stdout/stderr transcript paths.",
-      "value": "9 command records in artifacts-clean/command-summary.json",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-summary.json"
+      "id": "obs-06-dag-harness-run",
+      "claim": "fengyangxxx/dependency-advisory-graph@0.1.1 harness or published usage path was executed/inspected.",
+      "value": "harness_exit=0; run_exit=0; run_receipt=runx:receipt:sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/50-dag-skill-run.stdout.txt"
     },
     {
-      "id": "obs-07-docker-harness",
-      "claim": "The local validation package ran in Docker and produced a governed receipt.",
-      "value": "status=passed; case_count=1; receipt_id=sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/docker-validation-harness.stdout.json"
+      "id": "obs-07-dag-verify",
+      "claim": "fengyangxxx/dependency-advisory-graph@0.1.1 run receipt was verified.",
+      "value": "verify_exit=0; valid=true; signature_mode=production",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-50-dag-skill-run-282a35d6a49c4c3f.stdout.txt"
     },
     {
-      "id": "obs-08-receipt-ref",
-      "claim": "The delivery includes a runx receipt reference with valid digest and content address verification.",
-      "value": "runx:receipt:sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3; digest=valid; content_address=valid; signature=invalid",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/receipt-verify-727b1310.json"
+      "id": "obs-08-cve-registry-install-inspect",
+      "claim": "runx/dependency-cve-audit@sha-e11c90bbeb16 registry read, install, and inspect outputs were captured.",
+      "value": "registry_exit=0; install_exit=0; inspect_exit=0",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/11-cve-registry-read.stdout.txt"
     },
     {
-      "id": "obs-09-verify-failure-tracked",
-      "claim": "The exact receipt verification failure is recorded and tracked publicly.",
-      "value": "runx verify returned valid=false because signature_malformed; follow-up https://github.com/runxhq/runx/issues/134",
-      "artifact": "https://github.com/runxhq/runx/issues/134"
+      "id": "obs-09-cve-harness-run",
+      "claim": "runx/dependency-cve-audit@sha-e11c90bbeb16 harness or published usage path was executed/inspected.",
+      "value": "harness_exit=0; run_exit=0; run_receipt=runx:receipt:sha256:ddc174164b6f52dc036f389c6c678cdc258ad1f72721e9d462bfd0020cb3c31e",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/51-cve-skill-run.stdout.txt"
     },
     {
-      "id": "obs-10-dogfood-diagnostic",
-      "claim": "A published package run path was attempted and the exact blocking error was captured.",
-      "value": "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run exit=1; skill run failed: governed runtime receipt signing requires RUNX_RECEIPT_SIGN_KID, RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64, and RUNX_RECEIPT_SIGN_ISSUER_TYPE",
-      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt"
+      "id": "obs-10-cve-verify",
+      "claim": "runx/dependency-cve-audit@sha-e11c90bbeb16 run receipt was verified.",
+      "value": "verify_exit=0; valid=true; signature_mode=production",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-51-cve-skill-run-ddc174164b6f52dc.stdout.txt"
     },
     {
-      "id": "obs-11-windows-runner-diagnostic",
-      "claim": "A second run with receipt flags and quoted inputs reached a Windows runner-path failure and was tracked publicly.",
-      "value": "runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed exit=1; issue https://github.com/runxhq/runx/issues/135",
-      "artifact": "https://github.com/runxhq/runx/issues/135"
+      "id": "obs-11-matrix-validation-receipt",
+      "claim": "A governed matrix validation harness receipt covers the two-package smoke matrix.",
+      "value": "runx:receipt:sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d; harness_status=passed; verify_valid=true",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/99-matrix-validation-harness.stdout.txt"
     },
     {
-      "id": "obs-12-no-secrets",
-      "claim": "The public package contains no agent token or private credential material.",
-      "value": "No credential file is included; command transcripts include only public registry/package commands and redacted or absent signing material.",
+      "id": "obs-12-follow-ups",
+      "claim": "Blocking install, registry, run, or verify failures must have public follow-up links.",
+      "value": "No blocking registry/install/run/verify failure was observed in the Docker smoke run; no new public issue is required for this pass.",
+      "artifact": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stdout.txt"
+    },
+    {
+      "id": "obs-13-no-secrets",
+      "claim": "The package contains no Frantic token, browser storage, cookie, password, or private credential material.",
+      "value": "Command transcripts contain public registry/package commands and a public local-development receipt fixture key only; no .secrets path was read or included.",
       "artifact": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix"
     }
   ],
   "artifacts": [
     {
-      "id": "command-summary",
-      "kind": "json",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-summary.json"
-    },
-    {
-      "id": "validation-packet",
-      "kind": "json",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json"
-    },
-    {
-      "id": "docker-harness-output",
-      "kind": "json",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/docker-validation-harness.stdout.json"
-    },
-    {
-      "id": "receipt-json",
-      "kind": "runx_receipt",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/receipts/sha256_727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3.json"
-    },
-    {
-      "id": "receipt-verify-output",
-      "kind": "json",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/receipt-verify-727b1310.json"
+      "id": "runx-cli-install-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/00-install-runx-cli.stdout.txt"
     },
     {
       "id": "runx-version-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx-version.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/01-runx-version.stdout.txt"
     },
     {
-      "id": "cve-registry-read",
+      "id": "environment-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.registry-read.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/02-os-shell.stdout.txt"
     },
     {
-      "id": "cve-install",
-      "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.add.stdout.txt"
+      "id": "docker-command-index",
+      "kind": "json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-index.json"
     },
     {
-      "id": "cve-inspect",
+      "id": "matrix-harness-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.inspect.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/99-matrix-validation-harness.stdout.txt"
     },
     {
-      "id": "dep-upgrade-registry-read",
+      "id": "matrix-verify-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.registry-read.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stdout.txt"
     },
     {
-      "id": "dep-upgrade-install",
-      "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.add.stdout.txt"
+      "id": "matrix-receipt-json",
+      "kind": "runx_receipt",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/matrix-validation-root-receipt.json"
     },
     {
-      "id": "dep-upgrade-inspect",
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-registry-read-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/ryde-play_dep-upgrade-plan_sha-7a1f34b0.inspect.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/10-dag-registry-read.stdout.txt"
     },
     {
-      "id": "dogfood-missing-signing-env",
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-install-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/20-dag-add-install.stdout.txt"
     },
     {
-      "id": "dogfood-windows-env-failure",
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-inspect-stdout",
       "kind": "command_stdout",
-      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/command-logs/runx_dependency-cve-audit_sha-e11c90bbeb16.dogfood-run-signed-fixed.stdout.txt"
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/30-dag-skill-inspect-installed.stdout.txt"
+    },
+    {
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-harness-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.stdout.txt"
+    },
+    {
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-run-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/50-dag-skill-run.stdout.txt"
+    },
+    {
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-verify-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-50-dag-skill-run-282a35d6a49c4c3f.stdout.txt"
+    },
+    {
+      "id": "fengyangxxx/dependency-advisory-graph@0.1.1-receipt-json",
+      "kind": "runx_receipt",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/dag-skill-run-receipt.json"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-registry-read-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/11-cve-registry-read.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-install-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/21-cve-add-install.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-inspect-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/31-cve-skill-inspect-installed.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-harness-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/41-cve-harness-installed.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-run-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/51-cve-skill-run.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-verify-stdout",
+      "kind": "command_stdout",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-51-cve-skill-run-ddc174164b6f52dc.stdout.txt"
+    },
+    {
+      "id": "runx/dependency-cve-audit@sha-e11c90bbeb16-receipt-json",
+      "kind": "runx_receipt",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/public-receipts/cve-skill-run-receipt.json"
     }
   ],
-  "validation": {
-    "packet": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-clean/validation-packet.json",
-    "docker_harness": {
-      "status": "passed",
-      "case_count": 1,
-      "assertion_error_count": 0,
-      "assertion_errors": [],
-      "case_names": [
-        "two-package-public-registry-smoke"
-      ],
-      "receipt_ids": [
-        "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3"
-      ],
-      "graph_case_count": 1
-    },
-    "receipt_verify": {
-      "schema": "runx.verify_verdict.v1",
-      "receipt_id": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
-      "valid": false,
-      "digest": {
-        "status": "valid",
-        "expected": "sha256:1de9b1f6cc256179be2c09b7db9afab9999fe87268232ccddf21c1708c498c68",
-        "actual": "sha256:1de9b1f6cc256179be2c09b7db9afab9999fe87268232ccddf21c1708c498c68"
-      },
-      "content_address": {
-        "status": "valid",
-        "expected": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3",
-        "actual": "sha256:727b1310aae6da8a1db1996040f09f980260f159f4c85c954a31774fe40535e3"
-      },
-      "signature": {
-        "mode": "local-development",
-        "status": "invalid",
-        "kid": "runx-registry-smoke-matrix-test-key"
-      },
-      "lineage": {
-        "status": "unverified",
-        "message": "single receipt verification cannot prove receipt-tree lineage"
-      },
-      "findings": [
-        {
-          "code": "signature_malformed",
-          "path": "signature.value",
-          "message": "signature value is malformed"
-        }
-      ]
-    }
-  },
-  "follow_up_issues": [
-    {
-      "issue": "https://github.com/runxhq/runx/issues/134",
-      "reason": "runx verify reports signature_malformed although digest and content address are valid"
-    },
-    {
-      "issue": "https://github.com/runxhq/runx/issues/135",
-      "reason": "Windows runx skill path cannot spawn registry skills using /usr/bin/env"
-    }
-  ]
+  "follow_up_links": []
 }

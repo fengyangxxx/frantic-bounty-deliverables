@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/matrix-validation",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+      "receipt_count": 2,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

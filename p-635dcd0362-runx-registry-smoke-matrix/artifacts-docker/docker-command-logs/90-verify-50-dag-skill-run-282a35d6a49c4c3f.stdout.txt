@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-skill-run",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

@@ -1,0 +1,50 @@
+{
+  "status": "success",
+  "registry": {
+    "action": "read",
+    "source": "remote",
+    "ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+    "skill": {
+      "skill_id": "fengyangxxx/dependency-advisory-graph",
+      "owner": "fengyangxxx",
+      "name": "dependency-advisory-graph",
+      "description": "Build an exact-version dependency advisory graph from a dependency manifest and advisory facts.",
+      "category": "security",
+      "version": "0.1.1",
+      "digest": "b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
+      "markdown": "---\nname: dependency-advisory-graph\ndescription: Build an exact-version dependency advisory graph from a dependency manifest and advisory facts.\nsource:\n  type: cli-tool\n  command: node\n  args:\n    - run.mjs\n  timeout_seconds: 30\n  sandbox:\n    profile: readonly\n    cwd_policy: skill-directory\ninputs:\n  manifest:\n    type: json\n    required: true\n    description: Dependency manifest data with package names and installed versions.\n  advisory_database:\n    type: json\n    required: true\n    description: Advisory records with package, vulnerable range, evidence URL, severity, and fix version.\n  ecosystem:\n    type: string\n    required: false\n    description: Dependency ecosystem label. Defaults to npm.\nrunx:\n  category: security\n  input_resolution:\n    required:\n      - manifest\n      - advisory_database\n---\n\n## What this skill does\n\nThis skill builds a checkable dependency advisory graph for one dependency\nmanifest and one supplied advisory fact set. It parses installed package\nversions, matches advisory records by package name and exact installed version\nrange, and returns a graph-shaped JSON packet that separates confirmed advisory\nmatches from clean or unknown packages.\n\nThe runner is intentionally conservative. It requires installed versions from\nthe provided manifest, evaluates advisory ranges against the exact installed\nversion, never reports a package-name-only finding, and emits a false-positive\nguard for every package-name match that did not satisfy the advisory version\nevidence.\n\n## When to use this skill\n\nUse this skill when an agent needs a reproducible dependency advisory packet for\na public project, security handoff, Frantic delivery, runx receipt, or review\nfixture where the advisory facts have already been selected. It is appropriate\nwhen the caller needs exact-version proof fields such as `package`,\n`installed_version`, `advisory_id`, `evidence_url`, `advisory_source`,\n`retrieved_at`, `severity`, `fix_version`, and `confidence`.\n\nUse it to turn a dependency manifest plus advisory database into evidence JSON,\nverification JSON, and a concise Markdown report. The output can support later\nupgrade planning, receipt review, or human triage, but it is not by itself an\nauthority to publish an advisory or mutate a target repository.\n\n## When not to use this skill\n\nDo not use this skill as a package installer, exploitability assessment, full\napplication security review, SBOM generator, or automated remediation tool. Do\nnot use it for private manifests unless the package names, installed versions,\nand advisory facts have an explicit disclosure grant.\n\nDo not treat a zero-finding packet as proof that the project is vulnerability\nfree. It only means no supplied advisory matched both the package name and exact\ninstalled version evidence. If the manifest is missing installed versions,\nreturn `needs_input` or stop instead of guessing from broad semver\ndeclarations.\n\n## Procedure\n\n1. Read `manifest`, `advisory_database`, and optional `ecosystem`.\n2. Extract installed package names and exact installed versions.\n3. Normalize advisory facts from `advisory_database.advisories`.\n4. Compare each advisory only against matching package names in the same\n   ecosystem.\n5. Emit a finding only when the installed version satisfies the advisory range\n   or appears in `affected_versions`.\n6. Record false-positive guards for package-name matches where the version does\n   not match.\n7. Build graph nodes for scanned packages and matched advisories.\n8. Write `evidence.json`, `verification.json`, and `report.md` when `output_dir`\n   is provided.\n\n## Edge cases and stop conditions\n\nReturn `needs_input` or stop when the caller omits `manifest` or\n`advisory_database`. Stop when the manifest is not valid JSON-like data, when it\ndoes not contain `packages` or `dependencies`, or when\n`advisory_database.advisories` is not an array.\n\nReturn `needs_more_evidence` when a finding would rely only on package name,\nwhen the advisory record lacks a stable evidence URL, or when the caller cannot\nshow the authority or scope grant for publishing the result. Return `refused`\nwhen asked to install packages, execute target project code, read private\nrepositories without approval, submit a vulnerability report, or mutate a\nrepository.\n\nFor `output_dir`, the resolved path must stay inside the skill directory. This\nkeeps artifacts bounded to the package and prevents accidental writes outside\nthe current receipt proof surface.\n\n## Output schema\n\nThe primary output is `runx.dependency_advisory_graph.v1`:\n\n```json\n{\n  \"schema\": \"runx.dependency_advisory_graph.v1\",\n  \"ecosystem\": \"npm\",\n  \"package\": \"minimist\",\n  \"installed_version\": \"0.0.8\",\n  \"advisory_id\": \"GHSA-vh95-rmgr-6w4m\",\n  \"evidence_url\": \"https://github.com/advisories/GHSA-vh95-rmgr-6w4m\",\n  \"advisory_source\": \"GitHub Advisory Database\",\n  \"retrieved_at\": \"2026-06-23T00:00:00.000Z\",\n  \"severity\": \"critical\",\n  \"fix_version\": \"0.2.1\",\n  \"confidence\": \"high\",\n  \"exact_version_match\": true,\n  \"false_positive_guard\": \"Finding emitted only after package name matched and installed_version matched the advisory version evidence.\",\n  \"findings\": [],\n  \"clean_packages\": [],\n  \"graph\": {\n    \"nodes\": [],\n    \"edges\": []\n  },\n  \"false_positive_guards\": [],\n  \"validation\": {\n    \"exact_version_match\": true,\n    \"no_package_name_only_false_positives\": true,\n    \"package_name_only_guard_count\": 0,\n    \"target_code_executed\": false,\n    \"target_packages_installed\": false\n  }\n}\n```\n\nWhen `output_dir` is provided, the runner also writes `evidence.json`,\n`verification.json`, and `report.md` inside that directory.\n\n## Worked example\n\nRun the skill against a small npm manifest and an advisory database that includes\nboth a real vulnerable range and a package-name-only false-positive guard:\n\n```bash\nrunx skill ./skills/dependency-advisory-graph \\\n  --input ecosystem=npm \\\n  --input manifest='{\"packages\":[{\"name\":\"minimist\",\"version\":\"0.0.8\",\"path\":\"node_modules/minimist\"}]}' \\\n  --input advisory_database='{\"retrieved_at\":\"2026-06-23T00:00:00.000Z\",\"advisories\":[{\"id\":\"GHSA-vh95-rmgr-6w4m\",\"package\":\"minimist\",\"ecosystem\":\"npm\",\"vulnerable_range\":\"<0.2.1\",\"severity\":\"critical\",\"fix_version\":\"0.2.1\",\"evidence_url\":\"https://github.com/advisories/GHSA-vh95-rmgr-6w4m\",\"source\":\"GitHub Advisory Database\"}]}' \\\n  --input output_dir=artifacts/sealed-advisory-minimist-008 \\\n  --json\n```\n\nThe receipt should include a high-confidence finding for\n`minimist@0.0.8`, graph edges from the dependency node to the advisory node,\nand a validation block proving exact-version matching.\n\n## Inputs\n\n- `manifest`: JSON object with either `packages` entries or dependency\n  declarations that resolve to installed versions.\n- `advisory_database`: JSON object with an `advisories` array. Each advisory\n  should include package, ecosystem, vulnerable range or affected versions,\n  evidence URL, severity, fix version, and source.\n- `ecosystem`: optional ecosystem label. Defaults to `npm`.\n- `output_dir`: optional directory inside the skill package for generated\n  artifacts.",
+      "profile_digest": "a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
+      "runner_names": [
+        "default"
+      ],
+      "source_type": "cli-tool",
+      "trust_tier": "community",
+      "required_scopes": [],
+      "tags": [],
+      "publisher": {
+        "kind": "user",
+        "id": "user_69446dfb22822d5fdc22562d",
+        "handle": "fengyangxxx",
+        "display_name": "fy"
+      },
+      "attestations": [
+        {
+          "kind": "publisher",
+          "id": "publisher:user_69446dfb22822d5fdc22562d",
+          "status": "declared",
+          "summary": "fy",
+          "issued_at": "2026-06-23T00:57:51.356Z",
+          "metadata": {
+            "publisher_display_name": "fy",
+            "publisher_handle": "fengyangxxx",
+            "publisher_id": "user_69446dfb22822d5fdc22562d",
+            "publisher_kind": "user",
+            "trust_tier": "community"
+          }
+        }
+      ],
+      "install_command": "runx add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
+      "run_command": "runx skill fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai"
+    }
+  }
+}

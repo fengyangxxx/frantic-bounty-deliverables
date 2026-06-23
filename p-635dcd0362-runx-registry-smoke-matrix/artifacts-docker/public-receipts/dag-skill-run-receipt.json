@@ -1,0 +1,135 @@
+{
+  "schema": "runx.receipt.v1",
+  "id": "sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
+  "created_at": "2026-06-23T07:47:59.938Z",
+  "canonicalization": "runx.receipt.c14n.v1",
+  "issuer": {
+    "type": "hosted",
+    "kid": "cli-package-test-key",
+    "public_key_sha256": "sha256:3097e2dee2cb4a34b53840cdb705aed71067c36f68db0e0f559c3f3fa043315f"
+  },
+  "signature": {
+    "alg": "Ed25519",
+    "value": "base64:kvuKKmede3OciSBT7mhK0Zi5mg5vM6iC0-bjEd7Lemk7O5ZYUzR5vSVwjetrH_hKdgu4UeK-9qd6Vl7RmllbAg"
+  },
+  "digest": "sha256:14f610b0c829d5ba9223f6b00a0fb14d44dc3f50e1dcb78cedfa4fa5614111b3",
+  "idempotency": {
+    "intent_key": "sha256:run_default_49c99ac7b0be-default-intent",
+    "trigger_fingerprint": "sha256:run_default_49c99ac7b0be-default-trigger",
+    "content_hash": "sha256:run_default_49c99ac7b0be-default-content"
+  },
+  "subject": {
+    "kind": "skill",
+    "ref": {
+      "type": "harness",
+      "uri": "hrn_run_default_49c99ac7b0be_default"
+    },
+    "commitments": []
+  },
+  "authority": {
+    "actor_ref": {
+      "type": "principal",
+      "uri": "runx:principal:local_runtime"
+    },
+    "grant_refs": [],
+    "scope_refs": [],
+    "authority_proof_refs": [],
+    "attenuation": {
+      "parent_authority_ref": null,
+      "subset_proof": null
+    },
+    "terms": [],
+    "enforcement": {
+      "profile_hash": "sha256:runtime-skeleton-enforcement",
+      "redaction_refs": [],
+      "setup_refs": [],
+      "teardown_refs": []
+    }
+  },
+  "signals": [],
+  "decisions": [
+    {
+      "decision_id": "dec_default",
+      "choice": "open",
+      "inputs": {
+        "signal_refs": [],
+        "target_ref": null,
+        "opportunity_refs": [],
+        "selection_ref": null
+      },
+      "proposed_intent": {
+        "purpose": "Open runtime node default",
+        "legitimacy": "Local graph execution requested this node",
+        "success_criteria": [],
+        "constraints": [],
+        "derived_from": []
+      },
+      "selected_act_id": "act_default",
+      "selected_harness_ref": null,
+      "justification": {
+        "summary": "runtime graph planner selected this node",
+        "evidence_refs": []
+      },
+      "closure": null,
+      "artifact_refs": []
+    }
+  ],
+  "acts": [
+    {
+      "id": "act_default",
+      "form": "observation",
+      "intent": {
+        "purpose": "Run graph step default",
+        "legitimacy": "Runtime graph execution was admitted by the local harness",
+        "success_criteria": [
+          {
+            "criterion_id": "process_exit",
+            "statement": "cli-tool exits successfully",
+            "required": true
+          }
+        ],
+        "constraints": [],
+        "derived_from": []
+      },
+      "summary": "Executed graph step default",
+      "criterion_bindings": [
+        {
+          "criterion_id": "process_exit",
+          "status": "verified",
+          "evidence_refs": [],
+          "verification_refs": [],
+          "summary": "cli-tool exited successfully"
+        }
+      ],
+      "source_refs": [],
+      "target_refs": [],
+      "artifact_refs": [],
+      "closure": {
+        "disposition": "closed",
+        "reason_code": "process_exit",
+        "summary": "cli-tool exited successfully",
+        "closed_at": "2026-06-23T07:47:59.938Z"
+      }
+    }
+  ],
+  "seal": {
+    "disposition": "closed",
+    "reason_code": "process_closed",
+    "summary": "cli-tool default completed",
+    "closed_at": "2026-06-23T07:47:59.938Z",
+    "last_observed_at": "2026-06-23T07:47:59.938Z",
+    "criteria": [
+      {
+        "criterion_id": "process_exit",
+        "status": "verified",
+        "evidence_refs": [],
+        "verification_refs": [],
+        "summary": "cli-tool exited successfully"
+      }
+    ]
+  },
+  "lineage": {
+    "children": [],
+    "sync": []
+  }
+}

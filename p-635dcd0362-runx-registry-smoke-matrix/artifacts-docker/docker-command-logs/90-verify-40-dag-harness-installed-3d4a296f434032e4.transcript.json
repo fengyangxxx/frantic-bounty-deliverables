@@ -1,0 +1,20 @@
+{
+  "id": "90-verify-40-dag-harness-installed-3d4a296f434032e4",
+  "command": "runx verify sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77 --receipt-dir /work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-harness --allow-local-development-signatures --json",
+  "cwd": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix",
+  "env": {
+    "RUNX_HOME": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-runx-home",
+    "RUNX_RECEIPT_SIGN_KID": "cli-package-test-key",
+    "RUNX_RECEIPT_SIGN_ISSUER_TYPE": "hosted",
+    "RUNX_RECEIPT_SIGN_ED25519_SEED_BASE64": "present_redacted",
+    "RUNX_RECEIPT_VERIFY_KID": "cli-package-test-key",
+    "RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64": "present_public_fixture_key"
+  },
+  "started_at": "2026-06-23T07:48:01Z",
+  "finished_at": "2026-06-23T07:48:01Z",
+  "exit_code": 0,
+  "stdout_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-40-dag-harness-installed-3d4a296f434032e4.stdout.txt",
+  "stderr_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-40-dag-harness-installed-3d4a296f434032e4.stderr.txt",
+  "stdout": "{\n  \"receipt_dir\": \"/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-harness\",\n  \"signature_mode\": \"production\",\n  \"trees\": [\n    {\n      \"root_receipt_id\": \"sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77\",\n      \"receipt_count\": 1,\n      \"parent_missing\": null,\n      \"valid\": true,\n      \"findings\": []\n    }\n  ],\n  \"unreadable_files\": [],\n  \"valid\": true\n}\n",
+  "stderr": ""
+}

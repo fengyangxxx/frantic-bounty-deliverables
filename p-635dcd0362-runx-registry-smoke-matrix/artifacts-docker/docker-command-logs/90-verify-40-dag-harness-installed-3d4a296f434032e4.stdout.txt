@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-receipts/dag-harness",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

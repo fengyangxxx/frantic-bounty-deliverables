@@ -1,0 +1,11 @@
+{
+  "description": "Build an exact-version dependency advisory graph from a dependency manifest and advisory facts.",
+  "name": "dependency-advisory-graph",
+  "runners": [
+    "default"
+  ],
+  "schema": "runx.skill.inspect.v1",
+  "skill_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-advisory-graph/fengyangxxx/dependency-advisory-graph/0.1.1",
+  "status": "ok",
+  "version": "0.1.1"
+}

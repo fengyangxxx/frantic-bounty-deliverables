@@ -1,5 +1,10 @@
 .runx/
 artifacts/
+artifacts-clean/
+artifacts-docker/docker-install-root/
+artifacts-docker/docker-receipts/
+artifacts-docker/docker-runx-home/
 fresh-runx-home/
 installed/
+receipts/
 receipts-skill/
