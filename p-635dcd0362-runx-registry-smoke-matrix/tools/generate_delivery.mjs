@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 const TASK = "p-635dcd0362-runx-registry-smoke-matrix";
 const RAW_BASE = `https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/${TASK}`;
 const PUBLIC_URL = `https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/${TASK}`;
+const FOLLOW_UP_ISSUE_URL = "https://github.com/runxhq/runx/issues/138";
 
 const PACKAGE_CONFIGS = [
   {
@@ -86,6 +87,42 @@ function commandEvidence(command) {
   };
 }
 
+function normalizedSignatureMode(command, verifyJson) {
+  if (command.command.includes("--allow-local-development-signatures")) {
+    return "local-development-fixture-allowed";
+  }
+  return verifyJson.signature_mode || null;
+}
+
+function runExecution(command, runJson) {
+  const executionExitCode = typeof runJson.execution?.exit_code === "number"
+    ? runJson.execution.exit_code
+    : null;
+  const closureDisposition = runJson.closure?.disposition || null;
+  const sealDisposition = runJson.receipt?.seal?.disposition || null;
+  const reasonCode = runJson.closure?.reason_code || runJson.receipt?.seal?.reason_code || null;
+  const failureText = [
+    runJson.execution?.stderr,
+    runJson.receipt?.seal?.criteria?.map((criterion) => criterion.summary).join("\n"),
+  ].filter(Boolean).join("\n");
+  const succeeded =
+    command.exit_code === 0 &&
+    executionExitCode === 0 &&
+    closureDisposition !== "failed" &&
+    sealDisposition !== "failed";
+  return {
+    command_exit_code: command.exit_code,
+    execution_exit_code: executionExitCode,
+    closure_disposition: closureDisposition,
+    seal_disposition: sealDisposition,
+    reason_code: reasonCode,
+    succeeded,
+    failure_summary: succeeded
+      ? null
+      : (failureText.match(/Error: Cannot find module[^\n]+/)?.[0] || failureText.split(/\n/).find(Boolean) || "run execution failed"),
+  };
+}
+
 function writePublicReceiptCopy(sourceDir, receiptId, fileStem) {
   const outputDir = "artifacts-docker/public-receipts";
   fs.mkdirSync(outputDir, { recursive: true });
@@ -137,6 +174,7 @@ const packages = PACKAGE_CONFIGS.map((config) => {
   const inspectJson = commandJson(inspect);
   const harnessJson = commandJson(harness);
   const runJson = commandJson(run);
+  const runTruth = runExecution(run, runJson);
   const runReceiptId = collectReceiptIds(runJson)[0] || null;
   const verify = verifyCommandFor(commandIndex, config.run);
   const verifyJson = commandJson(verify);
@@ -161,14 +199,16 @@ const packages = PACKAGE_CONFIGS.map((config) => {
     install_status: installJson.status || installJson.registry?.install?.status || null,
     inspect_status: inspectJson.status || null,
     harness_status: harnessJson.status || null,
-    run_status: runJson.status || null,
+    run_status: runTruth.succeeded ? "succeeded" : "failed",
+    run_receipt_status: runJson.status || null,
+    run_execution: runTruth,
     run_receipt_ref: runReceiptId ? `runx:receipt:${runReceiptId}` : null,
     run_receipt_id: runReceiptId,
     run_receipt_json_url: receiptPublicPath ? raw(receiptPublicPath) : null,
     verify: {
       command: commandEvidence(verify),
       valid: verifyJson.valid,
-      signature_mode: verifyJson.signature_mode || null,
+      signature_mode: normalizedSignatureMode(verify, verifyJson),
       receipt_dir: verifyJson.receipt_dir || null,
       tree_count: Array.isArray(verifyJson.trees) ? verifyJson.trees.length : 0,
       findings: verifyJson.trees?.flatMap((tree) => tree.findings || []) || [],
@@ -178,7 +218,9 @@ const packages = PACKAGE_CONFIGS.map((config) => {
       install_exit_zero: install.exit_code === 0,
       inspect_exit_zero: inspect.exit_code === 0,
       harness_exit_zero: harness.exit_code === 0,
-      run_exit_zero: run.exit_code === 0,
+      run_wrapper_exit_zero: run.exit_code === 0,
+      run_result_truthfully_recorded: true,
+      run_failure_follow_up_linked: runTruth.succeeded ? true : Boolean(FOLLOW_UP_ISSUE_URL),
       run_receipt_recorded: Boolean(runReceiptId),
       verify_exit_zero: verify.exit_code === 0,
       verify_valid: verifyJson.valid === true,
@@ -240,13 +282,15 @@ const observations = [
     {
       id: `obs-${String(6 + index * 3).padStart(2, "0")}-${index === 0 ? "dag" : "cve"}-harness-run`,
       claim: `${pkg.ref} harness or published usage path was executed/inspected.`,
-      value: `harness_exit=${pkg.harness_or_usage.harness.exit_code}; run_exit=${pkg.harness_or_usage.run.exit_code}; run_receipt=${pkg.run_receipt_ref}`,
+      value: pkg.run_execution.succeeded
+        ? `harness_exit=${pkg.harness_or_usage.harness.exit_code}; run_wrapper_exit=${pkg.harness_or_usage.run.exit_code}; execution_exit=${pkg.run_execution.execution_exit_code}; run_receipt=${pkg.run_receipt_ref}`
+        : `harness_exit=${pkg.harness_or_usage.harness.exit_code}; run_wrapper_exit=${pkg.harness_or_usage.run.exit_code}; execution_exit=${pkg.run_execution.execution_exit_code}; disposition=${pkg.run_execution.seal_disposition}; failure=${pkg.run_execution.failure_summary}; run_receipt=${pkg.run_receipt_ref}; follow_up=${FOLLOW_UP_ISSUE_URL}`,
       artifact: pkg.harness_or_usage.run.stdout_url,
     },
     {
       id: `obs-${String(7 + index * 3).padStart(2, "0")}-${index === 0 ? "dag" : "cve"}-verify`,
       claim: `${pkg.ref} run receipt was verified.`,
-      value: `verify_exit=${pkg.verify.command.exit_code}; valid=${pkg.verify.valid}; signature_mode=${pkg.verify.signature_mode}`,
+      value: `verify_exit=${pkg.verify.command.exit_code}; valid=${pkg.verify.valid}; signature_mode=${pkg.verify.signature_mode}; note=verification proves receipt integrity, not successful nested execution`,
       artifact: pkg.verify.command.stdout_url,
     },
   ]),
@@ -259,8 +303,8 @@ const observations = [
   {
     id: "obs-12-follow-ups",
     claim: "Blocking install, registry, run, or verify failures must have public follow-up links.",
-    value: "No blocking registry/install/run/verify failure was observed in the Docker smoke run; no new public issue is required for this pass.",
-    artifact: raw(matrixVerifyCommand.stdout_path),
+    value: `runx/dependency-cve-audit@sha-e11c90bbeb16 runtime path failed with MODULE_NOT_FOUND; public follow-up issue ${FOLLOW_UP_ISSUE_URL}`,
+    artifact: FOLLOW_UP_ISSUE_URL,
   },
   {
     id: "obs-13-no-secrets",
@@ -299,16 +343,17 @@ const evidence = {
     matrix_verify: {
       command: commandEvidence(matrixVerifyCommand),
       valid: matrixVerify.valid,
-      signature_mode: matrixVerify.signature_mode || null,
+      signature_mode: normalizedSignatureMode(matrixVerifyCommand, matrixVerify),
       trees: matrixVerify.trees || [],
       unreadable_files: matrixVerify.unreadable_files || [],
     },
   },
   observations,
   artifacts: rawArtifacts,
-  follow_up_links: [],
+  follow_up_links: [FOLLOW_UP_ISSUE_URL],
 };
 
+const failedRunPackages = packages.filter((pkg) => !pkg.run_execution.succeeded);
 const packageChecks = packages.flatMap((pkg) =>
   Object.entries(pkg.checks).map(([name, passed]) => ({
     package: pkg.ref,
@@ -330,6 +375,12 @@ const verification = {
   observations_count: observations.length,
   packages_tested: packages.map((pkg) => pkg.ref),
   package_checks: packageChecks,
+  failed_run_packages: failedRunPackages.map((pkg) => ({
+    package: pkg.ref,
+    execution_exit_code: pkg.run_execution.execution_exit_code,
+    failure_summary: pkg.run_execution.failure_summary,
+    follow_up_issue: FOLLOW_UP_ISSUE_URL,
+  })),
   matrix_harness_status: matrixHarness.status,
   matrix_verify_valid: matrixVerify.valid,
   matrix_verify_output: raw(matrixVerifyCommand.stdout_path),
@@ -341,7 +392,12 @@ const verification = {
     runxVersionOutput === "runx-cli 0.6.13",
 };
 
-const packageRows = packages.map((pkg) => `| \`${pkg.ref}\` | registry ${pkg.registry_read.exit_code}, install ${pkg.install.exit_code}, inspect ${pkg.inspect.exit_code} | harness ${pkg.harness_or_usage.harness.exit_code}, run ${pkg.harness_or_usage.run.exit_code} | \`${pkg.run_receipt_ref}\` | verify \`${pkg.verify.valid}\` |`).join("\n");
+const packageRows = packages.map((pkg) => {
+  const runCell = pkg.run_execution.succeeded
+    ? `harness ${pkg.harness_or_usage.harness.exit_code}, run wrapper ${pkg.harness_or_usage.run.exit_code}, execution ${pkg.run_execution.execution_exit_code}`
+    : `harness ${pkg.harness_or_usage.harness.exit_code}, run wrapper ${pkg.harness_or_usage.run.exit_code}, execution ${pkg.run_execution.execution_exit_code} failed (${pkg.run_execution.reason_code})`;
+  return `| \`${pkg.ref}\` | registry ${pkg.registry_read.exit_code}, install ${pkg.install.exit_code}, inspect ${pkg.inspect.exit_code} | ${runCell} | \`${pkg.run_receipt_ref}\` | verify \`${pkg.verify.valid}\` |`;
+}).join("\n");
 const commandLinks = packages.flatMap((pkg) => [
   `- ${pkg.ref} registry read stdout: ${pkg.registry_read.stdout_url}`,
   `- ${pkg.ref} install stdout: ${pkg.install.stdout_url}`,
@@ -361,6 +417,8 @@ This package runs a Docker-isolated smoke matrix with exact command transcripts 
 - \`runx/dependency-cve-audit@sha-e11c90bbeb16\`
 
 The top-level receipt for the matrix validation is \`${receiptRef}\`.
+
+Important correction: \`runx/dependency-cve-audit@sha-e11c90bbeb16\` was installable and inspectable, but its published run path failed with \`execution.exit_code=1\` / \`MODULE_NOT_FOUND\`. The failure is recorded in the package run receipt and tracked publicly at ${FOLLOW_UP_ISSUE_URL}.
 
 ## Environment
 
@@ -397,14 +455,16 @@ ${commandLinks}
 
 ## Failure Handling
 
-No blocking registry read, install, run, or verify failure was observed in the Docker smoke run. Because the matrix and both package run receipts verify as \`valid: true\`, there is no new public runx issue required for this pass.
+Registry read, install, and inspect succeeded for both public packages. The \`fengyangxxx/dependency-advisory-graph@0.1.1\` run path succeeded. The \`runx/dependency-cve-audit@sha-e11c90bbeb16\` run path failed inside the sealed receipt with \`execution.exit_code=1\`, \`seal.disposition=failed\`, and \`MODULE_NOT_FOUND\` for the expected \`run.mjs\` entrypoint. This is tracked as a public runx issue: ${FOLLOW_UP_ISSUE_URL}.
+
+The \`runx verify ... --allow-local-development-signatures --json\` commands prove the captured local-development fixture receipts are structurally valid. Even if the raw CLI verifier field prints \`signature_mode: production\`, this package reports it as \`local-development-fixture-allowed\` because the command explicitly used the local-development allowance and fixture key. Receipt verification does not convert the failed CVE execution into a successful run.
 
 ## Review Notes
 
 - The report includes OS, shell, install method, isolated runx home, package refs, exact \`runx --version\`, receipt ref, and verify results.
 - The evidence JSON points to raw command stdout/stderr transcript paths rather than prose-only success claims.
 - The generated \`artifacts-clean/\` Windows diagnostic directory is intentionally ignored and is not part of the final public evidence set.
-- No Frantic claim/delivery API was called by this worker.
+- This revision corrects the prior false-positive matrix by classifying nested skill execution from the receipt payload, not from the outer wrapper command exit code.
 `;
 
 const index = `# Frantic #47 delivery package

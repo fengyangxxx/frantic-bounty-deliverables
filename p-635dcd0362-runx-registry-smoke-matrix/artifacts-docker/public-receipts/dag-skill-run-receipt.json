@@ -1,7 +1,7 @@
 {
   "schema": "runx.receipt.v1",
-  "id": "sha256:282a35d6a49c4c3fa6e5256f810e31488917e2ebbe07beb164d8ce912b3dc06a",
-  "created_at": "2026-06-23T07:47:59.938Z",
+  "id": "sha256:8decbb55fd16ede3e94b0f4969585a41739f216fc79e94a5935938953101f0ad",
+  "created_at": "2026-06-23T20:11:46.427Z",
   "canonicalization": "runx.receipt.c14n.v1",
   "issuer": {
     "type": "hosted",
@@ -10,9 +10,9 @@
   },
   "signature": {
     "alg": "Ed25519",
-    "value": "base64:kvuKKmede3OciSBT7mhK0Zi5mg5vM6iC0-bjEd7Lemk7O5ZYUzR5vSVwjetrH_hKdgu4UeK-9qd6Vl7RmllbAg"
+    "value": "base64:c6kbs8gUbT_Ifr1Hmj10SlPwAukM6AxMgoCgN3-wz5GxOaCfVS0hnDV-StRZWOrpIb61Hw05p26hI5C5ULM8BA"
   },
-  "digest": "sha256:14f610b0c829d5ba9223f6b00a0fb14d44dc3f50e1dcb78cedfa4fa5614111b3",
+  "digest": "sha256:4a207921b30d5f4c4b4fbe818f78eae17b849e68c95565ae29ebfce91102ef15",
   "idempotency": {
     "intent_key": "sha256:run_default_49c99ac7b0be-default-intent",
     "trigger_fingerprint": "sha256:run_default_49c99ac7b0be-default-trigger",
@@ -108,7 +108,7 @@
         "disposition": "closed",
         "reason_code": "process_exit",
         "summary": "cli-tool exited successfully",
-        "closed_at": "2026-06-23T07:47:59.938Z"
+        "closed_at": "2026-06-23T20:11:46.427Z"
       }
     }
   ],
@@ -116,8 +116,8 @@
     "disposition": "closed",
     "reason_code": "process_closed",
     "summary": "cli-tool default completed",
-    "closed_at": "2026-06-23T07:47:59.938Z",
-    "last_observed_at": "2026-06-23T07:47:59.938Z",
+    "closed_at": "2026-06-23T20:11:46.427Z",
+    "last_observed_at": "2026-06-23T20:11:46.427Z",
     "criteria": [
       {
         "criterion_id": "process_exit",

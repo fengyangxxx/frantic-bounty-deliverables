@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const TOOL_VERSION = "0.2.0";
+const DEFAULT_FOLLOW_UP_ISSUE_URL = "https://github.com/runxhq/runx/issues/138";
 
 const PACKAGES = [
   {
@@ -167,7 +168,44 @@ function verifyRows(index, sourceId) {
     .sort((a, b) => a.id.localeCompare(b.id));
 }
 
-function validatePackage(index, pkg) {
+function normalizeFollowUpIssueUrl(value) {
+  const url = String(value || DEFAULT_FOLLOW_UP_ISSUE_URL);
+  if (!/^https:\/\/github\.com\/runxhq\/runx\/issues\/\d+$/.test(url)) {
+    throw new Error(`follow_up_issue_url must be a public runxhq/runx issue URL: ${url}`);
+  }
+  return url;
+}
+
+function runResult(runCommand, runJson) {
+  const executionExitCode = typeof runJson.execution?.exit_code === "number"
+    ? runJson.execution.exit_code
+    : null;
+  const closureDisposition = runJson.closure?.disposition || null;
+  const sealDisposition = runJson.receipt?.seal?.disposition || null;
+  const reasonCode = runJson.closure?.reason_code || runJson.receipt?.seal?.reason_code || null;
+  const failureText = [
+    runJson.execution?.stderr,
+    runJson.receipt?.seal?.criteria?.map((criterion) => criterion.summary).join("\n"),
+  ].filter(Boolean).join("\n");
+  const succeeded =
+    runCommand.exit_code === 0 &&
+    executionExitCode === 0 &&
+    closureDisposition !== "failed" &&
+    sealDisposition !== "failed";
+  return {
+    command_exit_code: runCommand.exit_code,
+    execution_exit_code: executionExitCode,
+    closure_disposition: closureDisposition,
+    seal_disposition: sealDisposition,
+    reason_code: reasonCode,
+    succeeded,
+    failure_summary: succeeded
+      ? null
+      : (failureText.match(/Error: Cannot find module[^\n]+/)?.[0] || failureText.split(/\n/).find(Boolean) || "run execution failed"),
+  };
+}
+
+function validatePackage(index, pkg, context) {
   const registryCommand = commandById(index, pkg.registry_read);
   const installCommand = commandById(index, pkg.install);
   const inspectCommand = commandById(index, pkg.inspect);
@@ -185,6 +223,8 @@ function validatePackage(index, pkg) {
     command: commandSummary(command),
     verdict: parseStdoutJson(command, `${pkg.ref} receipt verify`),
   }));
+  const runTruth = runResult(runCommand, run);
+  const needsFollowUp = !runTruth.succeeded;
 
   const registryText = JSON.stringify(registry);
   const installText = JSON.stringify(install);
@@ -221,14 +261,26 @@ function validatePackage(index, pkg) {
       detail: inspect.status || inspect.schema || "inspect output parsed",
     },
     {
-      name: "harness_or_usage_path_exit_zero",
-      passed: harnessCommand.exit_code === 0 || runCommand.exit_code === 0,
-      detail: `harness=${harnessCommand.exit_code}; run=${runCommand.exit_code}`,
+      name: "harness_or_usage_path_captured",
+      passed: harnessCommand.exit_code === 0 || runReceipts.length > 0,
+      detail: `harness=${harnessCommand.exit_code}; run_wrapper=${runCommand.exit_code}; run_receipts=${runReceipts.length}`,
     },
     {
       name: "run_path_receipt_recorded",
-      passed: runCommand.exit_code === 0 && runReceipts.length > 0,
+      passed: runReceipts.length > 0,
       detail: runReceipts.join(", ") || "missing receipt",
+    },
+    {
+      name: "run_result_truthfully_classified",
+      passed: runTruth.succeeded || needsFollowUp,
+      detail: runTruth.succeeded
+        ? "execution succeeded"
+        : `execution failed: ${runTruth.failure_summary}`,
+    },
+    {
+      name: "run_failure_has_public_follow_up_when_needed",
+      passed: runTruth.succeeded || Boolean(context.followUpIssueUrl),
+      detail: runTruth.succeeded ? "not applicable" : context.followUpIssueUrl,
     },
     {
       name: "run_receipt_verify_valid",
@@ -262,6 +314,7 @@ function validatePackage(index, pkg) {
     inspect_command: commandSummary(inspectCommand),
     harness_command: commandSummary(harnessCommand),
     run_command: commandSummary(runCommand),
+    run_result: runTruth,
     run_receipt_ids: runReceipts,
     harness_receipt_ids: harnessReceipts,
     verify_results: verifyResults,
@@ -275,6 +328,7 @@ function main() {
   const summaryPath = resolveInsidePackage(inputs.command_summary_path, "command_summary_path");
   const artifactDir = resolveInsidePackage(inputs.artifact_dir, "artifact_dir");
   const runxHomePath = String(inputs.runx_home_path || "");
+  const followUpIssueUrl = normalizeFollowUpIssueUrl(inputs.follow_up_issue_url);
   if (!fs.statSync(artifactDir).isDirectory()) {
     throw new Error("artifact_dir is not a directory");
   }
@@ -285,7 +339,8 @@ function main() {
   const environmentCommand = commandById(index, "02-os-shell");
   const versionOutput = readStream(versionCommand, "stdout").trim();
   const environmentOutput = readStream(environmentCommand, "stdout").trim();
-  const packages = PACKAGES.map((pkg) => validatePackage(index, pkg));
+  const packages = PACKAGES.map((pkg) => validatePackage(index, pkg, { followUpIssueUrl }));
+  const failedRunPackages = packages.filter((pkg) => !pkg.run_result.succeeded);
   const checks = [
     {
       name: "runx_version_captured",
@@ -317,6 +372,13 @@ function main() {
       passed: runxHomePath === "artifacts-docker/docker-runx-home",
       detail: runxHomePath,
     },
+    {
+      name: "run_failures_have_public_follow_up",
+      passed: failedRunPackages.length === 0 || Boolean(followUpIssueUrl),
+      detail: failedRunPackages.length === 0
+        ? "not applicable"
+        : `${failedRunPackages.map((pkg) => pkg.ref).join(", ")} -> ${followUpIssueUrl}`,
+    },
   ];
 
   const artifacts = [
@@ -343,7 +405,9 @@ function main() {
     `Fresh isolation path: ${runxHomePath}; Docker workdir: ${packageRoot()}`,
     `Packages covered: ${packages.map((pkg) => pkg.ref).join("; ")}`,
     "Each package includes captured registry read, install, inspect, harness or published usage path, run receipt, and runx verify output.",
-    "No blocking registry, install, run, or verify failure was observed in the Docker smoke run, so no new follow-up issue is required for this pass.",
+    failedRunPackages.length === 0
+      ? "No blocking registry, install, run, or verify failure was observed in the Docker smoke run."
+      : `Run failure captured for ${failedRunPackages.map((pkg) => pkg.ref).join("; ")}; public follow-up issue: ${followUpIssueUrl}.`,
   ];
 
   const payloadForHash = {
@@ -370,8 +434,10 @@ function main() {
       command_count: index.length,
       package_refs: packages.map((pkg) => pkg.ref),
       run_receipt_ids: packages.flatMap((pkg) => pkg.run_receipt_ids),
+      failed_run_package_refs: failedRunPackages.map((pkg) => pkg.ref),
       verify_valid_count: packages.flatMap((pkg) => pkg.verify_results).filter((item) => item.verdict.valid === true).length,
     },
+    follow_up_links: failedRunPackages.length ? [followUpIssueUrl] : [],
     packages: packages.map(({ artifacts: _artifacts, ...pkg }) => pkg),
     checks,
     observations,

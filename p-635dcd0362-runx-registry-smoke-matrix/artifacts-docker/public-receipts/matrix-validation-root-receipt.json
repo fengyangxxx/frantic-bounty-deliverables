@@ -1,7 +1,7 @@
 {
   "schema": "runx.receipt.v1",
-  "id": "sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
-  "created_at": "2026-06-23T07:48:06.823Z",
+  "id": "sha256:82251304640295337fe3b135feb8d08c7fa133fed3c9a1935401433cb5fb01f7",
+  "created_at": "2026-06-23T20:11:53.037Z",
   "canonicalization": "runx.receipt.c14n.v1",
   "issuer": {
     "type": "hosted",
@@ -10,9 +10,9 @@
   },
   "signature": {
     "alg": "Ed25519",
-    "value": "base64:amr5r8cAhV4Pq8pbEIbNiXWjwfng98u4yxMYVFgQBpbY3T_81veg8uQYr-6XCzW41xd-DD7XHC37ecHGAsotBQ"
+    "value": "base64:zlxp1LXuV5RddpC9kYhgNs4ALhwLkC9850zVdAjJWc0lr6wigBpmzaiuHtv1QnoBscBugaD5T1D2IV6tlX_XBA"
   },
-  "digest": "sha256:e389bfd1973c1263d129b786b7c770bd7432b8b8292fa92436fc88d01087e674",
+  "digest": "sha256:1601c3c0135c020682fdcb712437c10d2e54993eb30264493527287cbb5c128c",
   "idempotency": {
     "intent_key": "sha256:runx-registry-smoke-matrix-validation-graph-intent",
     "trigger_fingerprint": "sha256:runx-registry-smoke-matrix-validation-graph-trigger",
@@ -53,16 +53,16 @@
     "disposition": "closed",
     "reason_code": "graph_closed",
     "summary": "graph runx-registry-smoke-matrix-validation completed",
-    "closed_at": "2026-06-23T07:48:06.823Z",
-    "last_observed_at": "2026-06-23T07:48:06.823Z",
+    "closed_at": "2026-06-23T20:11:53.037Z",
+    "last_observed_at": "2026-06-23T20:11:53.037Z",
     "criteria": []
   },
   "lineage": {
     "children": [
       {
         "type": "receipt",
-        "uri": "runx:receipt:sha256:5f5e58b45fcc0d6c113d74bb94cf0c0f4e2481f8f13dd1b1734081ad1306900e",
-        "locator": "sha256:2cab226e76854ec69624e754e8d150a4a459220322fba3cfac16341207dd8616"
+        "uri": "runx:receipt:sha256:06b25359cafb90abe6286d1c1c0b8a6a3796935b77abc74e3e1b4e0e117c3d98",
+        "locator": "sha256:f50f278ee5c0c57ad4834d317a731e6bef17c3e4339dabea79f33e8205440d3d"
       }
     ],
     "sync": []

@@ -10,11 +10,11 @@
     "RUNX_RECEIPT_VERIFY_KID": "cli-package-test-key",
     "RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64": "present_public_fixture_key"
   },
-  "started_at": "2026-06-23T07:47:54Z",
-  "finished_at": "2026-06-23T07:47:54Z",
+  "started_at": "2026-06-23T20:11:41Z",
+  "finished_at": "2026-06-23T20:11:41Z",
   "exit_code": 0,
   "stdout_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/02-os-shell.stdout.txt",
   "stderr_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/02-os-shell.stderr.txt",
-  "stdout": "os=Linux ea60ed76aea3 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 GNU/Linux\nshell=/bin/bash\nnode=v24.17.0\nnpm=11.13.0\n",
+  "stdout": "os=Linux 66693dea4477 6.18.33.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jun  5 01:12:21 UTC 2026 x86_64 GNU/Linux\nshell=/bin/bash\nnode=v24.17.0\nnpm=11.13.0\n",
   "stderr": ""
 }

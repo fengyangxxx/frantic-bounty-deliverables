@@ -30,6 +30,7 @@ harness:
         command_summary_path: "artifacts-docker/docker-command-index.json"
         artifact_dir: "artifacts-docker"
         runx_home_path: "artifacts-docker/docker-runx-home"
+        follow_up_issue_url: "https://github.com/runxhq/runx/issues/138"
       expect:
         status: sealed
         outputs:
@@ -55,6 +56,10 @@ runners:
         type: string
         required: true
         description: "Package-relative isolated RUNX_HOME used by the smoke run."
+      follow_up_issue_url:
+        type: string
+        required: true
+        description: "Public runx issue tracking any captured blocking run/install/verify failure."
     graph:
       name: runx-registry-smoke-matrix-validation
       steps:
@@ -64,3 +69,4 @@ runners:
             command_summary_path: "$input.command_summary_path"
             artifact_dir: "$input.artifact_dir"
             runx_home_path: "$input.runx_home_path"
+            follow_up_issue_url: "$input.follow_up_issue_url"

@@ -40,9 +40,10 @@ validates files already captured in this package.
 - `artifact_dir`: package-relative path to the directory containing stdout and
   stderr captures.
 - `runx_home_path`: package-relative isolated runx home used for the test.
+- `follow_up_issue_url`: public `runxhq/runx` issue URL for any captured
+  blocking run/install/verify failure.
 
 ## Output
 
 The primary output is `smoke_matrix_validation_result` with schema
 `runx.registry_smoke_matrix.validation_result.v1`.
-

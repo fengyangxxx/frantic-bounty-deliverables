@@ -9,9 +9,9 @@
     "invalid-manifest-fails"
   ],
   "receipt_ids": [
-    "sha256:170c775489ffaf99efb271664264ead7baf0f24ede08d5fbbc471822456cdb10",
-    "sha256:54c5adf636db4b1d7423c7c60ffc471d043610442413661c4eb2b430a687f333",
-    "sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77"
+    "sha256:3c85e4ce08fb48e1ee62ea47fdbe88d95f73051cead9479510e6b5a902b83cdc",
+    "sha256:7db18a27551948d1d866f406f6a80afcf62d235c554a6b4ac7ed756b938d14cd",
+    "sha256:57db7621b1282bad489bbd4a69f0c5bdf9d418ffc366d2cc054dbd3ae9e2636e"
   ],
   "graph_case_count": 0
 }

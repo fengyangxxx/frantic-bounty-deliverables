@@ -2,11 +2,11 @@
   "schema": "runx.registry_smoke_matrix.delivery_verification.v1",
   "bounty": 47,
   "posting_id": "p-635dcd0362",
-  "generated_at": "2026-06-23T07:55:43.445Z",
+  "generated_at": "2026-06-23T20:13:05.680Z",
   "public_url": "https://github.com/fengyangxxx/frantic-bounty-deliverables/tree/main/p-635dcd0362-runx-registry-smoke-matrix",
   "evidence_json": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/evidence.json",
   "report": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/report.md",
-  "receipt_ref": "runx:receipt:sha256:4679e1c90125c1eb4af3024c09a36769201ebdb554f254238a89ad59a1aec90d",
+  "receipt_ref": "runx:receipt:sha256:82251304640295337fe3b135feb8d08c7fa133fed3c9a1935401433cb5fb01f7",
   "runx_cli_version_raw_output": "runx-cli 0.6.13",
   "command_count": 20,
   "observations_count": 13,
@@ -37,7 +37,17 @@
     },
     {
       "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
-      "check": "run_exit_zero",
+      "check": "run_wrapper_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "run_result_truthfully_recorded",
+      "passed": true
+    },
+    {
+      "package": "fengyangxxx/dependency-advisory-graph@0.1.1",
+      "check": "run_failure_follow_up_linked",
       "passed": true
     },
     {
@@ -77,7 +87,17 @@
     },
     {
       "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
-      "check": "run_exit_zero",
+      "check": "run_wrapper_exit_zero",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "run_result_truthfully_recorded",
+      "passed": true
+    },
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "check": "run_failure_follow_up_linked",
       "passed": true
     },
     {
@@ -96,9 +116,17 @@
       "passed": true
     }
   ],
+  "failed_run_packages": [
+    {
+      "package": "runx/dependency-cve-audit@sha-e11c90bbeb16",
+      "execution_exit_code": 1,
+      "failure_summary": "Error: Cannot find module '/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-install-root/dependency-cve-audit/runx/dependency-cve-audit/sha-e11c90bbeb16/run.mjs'",
+      "follow_up_issue": "https://github.com/runxhq/runx/issues/138"
+    }
+  ],
   "matrix_harness_status": "passed",
   "matrix_verify_valid": true,
-  "matrix_verify_output": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-4679e1c90125c1eb.stdout.txt",
-  "evidence_sha256": "sha256:2356ebccf5ec142885a6f8726f755800f4e32b5cf84cdd64d9a522f7aea2b85e",
+  "matrix_verify_output": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/90-verify-99-matrix-validation-harness-8225130464029533.stdout.txt",
+  "evidence_sha256": "sha256:36fe0c4c0752b1368afb0c4f00ab35596d9879586c90edcf4f5fe40fcb543e9e",
   "all_required_checks_passed": true
 }

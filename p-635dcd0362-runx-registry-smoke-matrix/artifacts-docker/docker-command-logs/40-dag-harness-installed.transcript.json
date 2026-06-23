@@ -10,11 +10,11 @@
     "RUNX_RECEIPT_VERIFY_KID": "cli-package-test-key",
     "RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64": "present_public_fixture_key"
   },
-  "started_at": "2026-06-23T07:47:58Z",
-  "finished_at": "2026-06-23T07:47:59Z",
+  "started_at": "2026-06-23T20:11:45Z",
+  "finished_at": "2026-06-23T20:11:46Z",
   "exit_code": 0,
   "stdout_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.stdout.txt",
   "stderr_path": "/work/frantic-deliverables-public/p-635dcd0362-runx-registry-smoke-matrix/artifacts-docker/docker-command-logs/40-dag-harness-installed.stderr.txt",
-  "stdout": "{\n  \"status\": \"passed\",\n  \"case_count\": 3,\n  \"assertion_error_count\": 0,\n  \"assertion_errors\": [],\n  \"case_names\": [\n    \"sealed-advisory-minimist-008\",\n    \"clean-manifest-no-finding\",\n    \"invalid-manifest-fails\"\n  ],\n  \"receipt_ids\": [\n    \"sha256:170c775489ffaf99efb271664264ead7baf0f24ede08d5fbbc471822456cdb10\",\n    \"sha256:54c5adf636db4b1d7423c7c60ffc471d043610442413661c4eb2b430a687f333\",\n    \"sha256:3d4a296f434032e4b39c75d28220cc45abea06a455082a4c45facc883d33de77\"\n  ],\n  \"graph_case_count\": 0\n}\n",
+  "stdout": "{\n  \"status\": \"passed\",\n  \"case_count\": 3,\n  \"assertion_error_count\": 0,\n  \"assertion_errors\": [],\n  \"case_names\": [\n    \"sealed-advisory-minimist-008\",\n    \"clean-manifest-no-finding\",\n    \"invalid-manifest-fails\"\n  ],\n  \"receipt_ids\": [\n    \"sha256:3c85e4ce08fb48e1ee62ea47fdbe88d95f73051cead9479510e6b5a902b83cdc\",\n    \"sha256:7db18a27551948d1d866f406f6a80afcf62d235c554a6b4ac7ed756b938d14cd\",\n    \"sha256:57db7621b1282bad489bbd4a69f0c5bdf9d418ffc366d2cc054dbd3ae9e2636e\"\n  ],\n  \"graph_case_count\": 0\n}\n",
   "stderr": ""
 }
