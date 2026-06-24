@@ -16,7 +16,7 @@
       "id": "registry_publish",
       "command": "npx -y @runxhq/cli@0.6.13 registry publish ./skills/dependency-advisory-graph/SKILL.md --registry https://api.runx.ai --json",
       "status": "pass",
-      "summary": "Published fengyangxxx/dependency-advisory-graph@sha-63b664648ad6; public_url=https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
+      "summary": "Published fengyangxxx/dependency-advisory-graph@sha-63b664648ad6; public_url=https://runx.ai/x/fengyangxxx/dependency-advisory-graph@sha-63b664648ad6"
     },
     {
       "id": "registry_read",
@@ -57,7 +57,7 @@
   ],
   "public_urls": [
     {
-      "url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+      "url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@sha-63b664648ad6",
       "status": "live_public_listing"
     },
     {

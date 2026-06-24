@@ -13,7 +13,7 @@
     "version": "sha-63b664648ad6",
     "registry_ref": "fengyangxxx/dependency-advisory-graph@sha-63b664648ad6",
     "registry": "https://api.runx.ai",
-    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@sha-63b664648ad6",
     "install_command": "runx add fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
     "run_command": "runx skill fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
     "digest": "sha256:e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8",
@@ -291,7 +291,7 @@
     {
       "id": "obs-01",
       "claim": "The registry public listing is live.",
-      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
+      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@sha-63b664648ad6"
     },
     {
       "id": "obs-02",

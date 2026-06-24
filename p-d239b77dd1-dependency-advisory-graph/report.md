@@ -8,7 +8,7 @@ Claim: `frantic:claim:89f66400-885f-4322-979f-797a3249d317`
 
 - Package: `dependency-advisory-graph`
 - Registry ref: `fengyangxxx/dependency-advisory-graph@sha-63b664648ad6`
-- Public listing: <https://runx.ai/x/fengyangxxx/dependency-advisory-graph>
+- Public listing: <https://runx.ai/x/fengyangxxx/dependency-advisory-graph@sha-63b664648ad6>
 - Pull request: <https://github.com/runxhq/runx/pull/120>
 - Source commit: `e2e43eec3a95621a27b4b015dd81081b20f19baa`
 - Source URL: <https://github.com/fengyangxxx/runx/tree/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph>
