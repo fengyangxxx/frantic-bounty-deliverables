@@ -1,6 +1,7 @@
 {
   "schema": "frantic.delivery.evidence.v1",
   "generated_at": "2026-06-24T01:31:10.554Z",
+  "summary": "Revision evidence for Frantic #29: dependency-advisory-graph is published to runx, installs cleanly, passes source and hosted harnesses, scans a real public project lockfile, queries live OSV at run time, emits direct dependency fix paths, and has a verified sealed dogfood receipt.",
   "platform": "Frantic",
   "posting_id": "p-d239b77dd1",
   "bounty_number": 29,

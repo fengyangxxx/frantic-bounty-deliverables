@@ -1,6 +1,7 @@
 {
   "schema": "frantic.delivery.verification.v1",
   "generated_at": "2026-06-24T01:31:10.554Z",
+  "summary": "Verification packet for Frantic #29: confirms runx-cli 0.6.13 usage, hosted registry publication, clean install, source and hosted harness passes, real lockfile dogfood with live OSV querybatch, direct fix-path output, and successful production receipt verification.",
   "posting_id": "p-d239b77dd1",
   "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
   "status": "pass",
