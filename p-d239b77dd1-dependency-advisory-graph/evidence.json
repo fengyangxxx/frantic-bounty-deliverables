@@ -184,8 +184,8 @@
       "file": "publish-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/publish-output.json",
       "status_code": 200,
-      "length_bytes": 1343,
-      "sha256": "sha256:2e406a36067f80c965fba5e875003061dbf43630912f004a50fe8dc997f8f4b4",
+      "length_bytes": 850,
+      "sha256": "sha256:8aa4cca2083248d6e59cbcaf8a2d0b9fe48054e6fa70911d35b719d38b5253f6",
       "summary": "Registry publish returned status=published for the hosted runx listing."
     },
     {

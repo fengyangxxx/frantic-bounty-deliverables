@@ -1,20 +1,20 @@
-﻿{
-    "status":  "success",
-    "registry":  {
-                     "action":  "publish",
-                     "publish":  {
-                                     "target":  "hosted",
-                                     "status":  "published",
-                                     "skill_id":  "fengyangxxx/dependency-advisory-graph",
-                                     "owner":  "fengyangxxx",
-                                     "name":  "dependency-advisory-graph",
-                                     "version":  "sha-63b664648ad6",
-                                     "digest":  "e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8",
-                                     "profile_digest":  "7aad428d2a6b93446be44a605fae55792ad1c19880bc30f07e809be1333a248a",
-                                     "trust_tier":  "community",
-                                     "install_command":  "runx add fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
-                                     "run_command":  "runx skill fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
-                                     "public_url":  "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
-                                 }
-                 }
+{
+  "status": "success",
+  "registry": {
+    "action": "publish",
+    "publish": {
+      "target": "hosted",
+      "status": "published",
+      "skill_id": "fengyangxxx/dependency-advisory-graph",
+      "owner": "fengyangxxx",
+      "name": "dependency-advisory-graph",
+      "version": "sha-63b664648ad6",
+      "digest": "e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8",
+      "profile_digest": "7aad428d2a6b93446be44a605fae55792ad1c19880bc30f07e809be1333a248a",
+      "trust_tier": "community",
+      "install_command": "runx add fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
+      "run_command": "runx skill fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
+      "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
+    }
+  }
 }
