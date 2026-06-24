@@ -54,13 +54,13 @@ Example findings:
 
 ## Public Artifacts
 
-- `publish-output.json`: HTTP 200, `sha256:2e406a36067f80c965fba5e875003061dbf43630912f004a50fe8dc997f8f4b4`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/publish-output.json>
-- `registry-read-output.json`: HTTP 200, `sha256:e5a5ce6453ef9961dc09bd43898c036a2e27ed409792851438e32610541a4b01`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/registry-read-output.json>
-- `install-output.json`: HTTP 200, `sha256:8482e8505db91219a4e27014f4b4ba6a910ad90a3cb1a00ec037b8ee2b505023`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/install-output.json>
-- `harness-output.json`: HTTP 200, `sha256:0cb1d70620196a24aa8bda053b6291c283b799c894380909c5a7dadffb74cea6`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/harness-output.json>
-- `hosted-harness-output.json`: HTTP 200, `sha256:0b967512871aae03fb2ded8ae65af61e637b8df5b6f53d3092914f1658303876`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json>
-- `dogfood-output.json`: HTTP 200, `sha256:dfbccf29af6a23b0d272bf3c0135f784c2dab0d02c82e5cc832360347b02d723`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json>
-- `receipt-verify-output.json`: HTTP 200, `sha256:09fbe3c267143d60f30b69e964883f05ad63e88073654a23fe14587313577ee2`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json>
+- `publish-output.json`: HTTP 200, `sha256:8aa4cca2083248d6e59cbcaf8a2d0b9fe48054e6fa70911d35b719d38b5253f6`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/publish-output.json>
+- `registry-read-output.json`: HTTP 200, `sha256:e5a5ce6453ef9961dc09bd43898c036a2e27ed409792851438e32610541a4b01`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/registry-read-output.json>
+- `install-output.json`: HTTP 200, `sha256:8482e8505db91219a4e27014f4b4ba6a910ad90a3cb1a00ec037b8ee2b505023`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/install-output.json>
+- `harness-output.json`: HTTP 200, `sha256:0cb1d70620196a24aa8bda053b6291c283b799c894380909c5a7dadffb74cea6`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/harness-output.json>
+- `hosted-harness-output.json`: HTTP 200, `sha256:0b967512871aae03fb2ded8ae65af61e637b8df5b6f53d3092914f1658303876`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json>
+- `dogfood-output.json`: HTTP 200, `sha256:dfbccf29af6a23b0d272bf3c0135f784c2dab0d02c82e5cc832360347b02d723`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json>
+- `receipt-verify-output.json`: HTTP 200, `sha256:09fbe3c267143d60f30b69e964883f05ad63e88073654a23fe14587313577ee2`, <https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/d7da7f916e177aba08481228d0e251857a9f9284/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json>
 
 ## Graph Receipt Scope
 
