@@ -1,47 +1,50 @@
 {
   "schema": "frantic.delivery.evidence.v1",
-  "generated_at": "2026-06-23T01:03:00Z",
+  "generated_at": "2026-06-24T01:31:10.554Z",
   "platform": "Frantic",
   "posting_id": "p-d239b77dd1",
+  "bounty_number": 29,
   "title": "runx skill: dependency advisory graph",
-  "summary": "Published dependency-advisory-graph@0.1.1 to the runx registry with clean install, hosted harness, exact-version advisory dogfood, false-positive guards, and a verified sealed runx receipt.",
   "claim_ref": "frantic:claim:89f66400-885f-4322-979f-797a3249d317",
-  "claim_deadline": "2026-06-23T03:17:43.295Z",
-  "revision_note": "2026-06-23 evidence revision: adds raw runx --version output, raw X.yaml HTTP 200/hash proof, public raw artifact URLs with inline summaries, and graph_receipt scope.",
+  "revision_note": "2026-06-24 revision: rebuilds the package around real project lockfile ingestion, live OSV querybatch at run time, exact-version matching, direct dependency bump/fix path output, hosted registry publication, clean install, registry dogfood, and production receipt verification.",
   "package": {
     "name": "dependency-advisory-graph",
     "registry_id": "fengyangxxx/dependency-advisory-graph",
-    "version": "0.1.1",
-    "registry_ref": "fengyangxxx/dependency-advisory-graph@0.1.1",
+    "version": "sha-63b664648ad6",
+    "registry_ref": "fengyangxxx/dependency-advisory-graph@sha-63b664648ad6",
     "registry": "https://api.runx.ai",
-    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@0.1.1",
-    "install_command": "runx add fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
-    "run_command": "runx skill fengyangxxx/dependency-advisory-graph@0.1.1 --registry https://api.runx.ai",
-    "digest": "sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3",
-    "profile_digest": "sha256:a9c1ead1f12f38385306734c4c3c3e57981549afc62dd8f64550d1fba13db6de",
-    "trust_tier": "community"
+    "public_url": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph",
+    "install_command": "runx add fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
+    "run_command": "runx skill fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 --registry https://api.runx.ai",
+    "digest": "sha256:e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8",
+    "profile_digest": "sha256:7aad428d2a6b93446be44a605fae55792ad1c19880bc30f07e809be1333a248a",
+    "trust_tier": "community",
+    "registry_read_digest": "e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8",
+    "registry_read_profile_digest": "sha256:7aad428d2a6b93446be44a605fae55792ad1c19880bc30f07e809be1333a248a"
   },
   "source": {
     "repo": "https://github.com/fengyangxxx/runx",
     "pull_request": "https://github.com/runxhq/runx/pull/120",
-    "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
-    "source_url": "https://github.com/fengyangxxx/runx/tree/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph",
-    "x_yaml": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
-    "skill_md": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md",
+    "commit": "e2e43eec3a95621a27b4b015dd81081b20f19baa",
+    "source_url": "https://github.com/fengyangxxx/runx/tree/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph",
+    "x_yaml": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/X.yaml",
+    "skill_md": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/SKILL.md",
     "x_yaml_fetch": {
-      "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/X.yaml",
       "status_code": 200,
-      "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
+      "commit": "e2e43eec3a95621a27b4b015dd81081b20f19baa",
       "path": "skills/dependency-advisory-graph/X.yaml",
-      "length_bytes": 1010,
-      "sha256": "sha256:afa769aedb6bc3e0f7325ba8a572a42aad3c232de26e838ee1661f952b73a4f2",
+      "length_bytes": 4241,
+      "sha256": "sha256:7aad428d2a6b93446be44a605fae55792ad1c19880bc30f07e809be1333a248a",
       "key_fields": {
         "skill": "dependency-advisory-graph",
-        "version": "0.1.1",
-        "catalog.visibility": "public",
-        "catalog.audience": "public",
-        "runner.default.type": "cli-tool",
-        "runner.default.command": "node run.mjs",
+        "version": "0.2.0",
+        "harness_cases": [
+          "sealed-advisory-minimist-008",
+          "invalid-manifest-fails"
+        ],
+        "runner_default_type": "cli-tool",
+        "runner_default_command": "node run.mjs",
         "outputs": [
           "dependency_advisory_graph",
           "evidence_json",
@@ -49,36 +52,127 @@
           "report_md"
         ]
       }
+    },
+    "skill_md_fetch": {
+      "url": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/SKILL.md",
+      "status_code": 200,
+      "commit": "e2e43eec3a95621a27b4b015dd81081b20f19baa",
+      "path": "skills/dependency-advisory-graph/SKILL.md",
+      "length_bytes": 8575,
+      "sha256": "sha256:437ff55ea4a2bd8a3f5b9a6ef5051274f98d7e0208a9615a2e7bb274c4d78f62"
     }
   },
   "receipt": {
-    "receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
-    "receipt_id": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
+    "receipt_ref": "runx:receipt:sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049",
+    "receipt_id": "sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049",
+    "receipt_json_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipts/sha256_862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049.json",
     "verify_verdict": "valid",
-    "verify_digest": "sha256:f4e3b4f251fbae60954a509d14bd11a47542d13fcc5a43a0eeb6d9784d0cb013",
-    "verify_kid": "dependency-advisory-graph-local-key",
+    "signature_mode": "production",
+    "root_receipt_id": "sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049",
+    "verify_findings": [],
     "graph_receipt": {
       "status": "not_applicable",
       "receipt_ref": null,
       "reason": "dependency-advisory-graph is a standalone cli-tool skill and does not compose other runx skills, so no separate composed graph receipt is produced.",
-      "dogfood_receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
+      "dogfood_receipt_ref": "runx:receipt:sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049"
     }
   },
-  "advisory_case": {
+  "real_project_dogfood": {
+    "project_name": "eclipse-theia/security-audit",
+    "project_url": "https://github.com/eclipse-theia/security-audit",
+    "lockfile_url": "https://raw.githubusercontent.com/eclipse-theia/security-audit/master/package-lock.json",
+    "lockfile_source": "https://raw.githubusercontent.com/eclipse-theia/security-audit/master/package-lock.json",
     "ecosystem": "npm",
-    "package": "minimist",
-    "installed_version": "0.0.8",
-    "advisory_id": "GHSA-vh95-rmgr-6w4m",
-    "evidence_url": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m",
-    "advisory_source": "OSV.dev / GitHub Advisory Database",
-    "retrieved_at": "2026-06-23T02:45:00Z",
-    "severity": "critical",
-    "fix_version": "0.2.1",
-    "confidence": "high",
-    "exact_version_match": true
+    "advisory_source": "https://api.osv.dev/v1/querybatch",
+    "advisory_source_mode": "live_osv_querybatch",
+    "retrieved_at": "2026-06-24T01:22:32.537Z",
+    "findings_count": 13,
+    "direct_dependency_fix_paths_count": 13,
+    "first_findings": [
+      {
+        "package": "brace-expansion",
+        "installed_version": "1.1.11",
+        "advisory_id": "GHSA-f886-m6hf-6m8v",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-f886-m6hf-6m8v",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-f886-m6hf-6m8v.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "brace-expansion",
+        "installed_version": "1.1.11",
+        "advisory_id": "GHSA-v6h2-p8h4-qcjw",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-v6h2-p8h4-qcjw",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-v6h2-p8h4-qcjw.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "diff",
+        "installed_version": "4.0.1",
+        "advisory_id": "GHSA-73rr-hh4g-fpgx",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-73rr-hh4g-fpgx",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-73rr-hh4g-fpgx.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "js-yaml",
+        "installed_version": "3.13.1",
+        "advisory_id": "GHSA-h67p-54hq-rp68",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-h67p-54hq-rp68",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-h67p-54hq-rp68.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "js-yaml",
+        "installed_version": "3.13.1",
+        "advisory_id": "GHSA-mh29-5h37-fv8m",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-mh29-5h37-fv8m",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-mh29-5h37-fv8m.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "minimatch",
+        "installed_version": "3.0.4",
+        "advisory_id": "GHSA-23c5-xmqv-rm74",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-23c5-xmqv-rm74",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-23c5-xmqv-rm74.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "minimatch",
+        "installed_version": "3.0.4",
+        "advisory_id": "GHSA-3ppc-4f35-3m26",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-3ppc-4f35-3m26",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-3ppc-4f35-3m26.",
+        "exact_version_match": true,
+        "confidence": "high"
+      },
+      {
+        "package": "minimatch",
+        "installed_version": "3.0.4",
+        "advisory_id": "GHSA-7r86-cg39-jmmj",
+        "evidence_url": "https://osv.dev/vulnerability/GHSA-7r86-cg39-jmmj",
+        "direct_dependency_to_bump": "tslint",
+        "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-7r86-cg39-jmmj.",
+        "exact_version_match": true,
+        "confidence": "high"
+      }
+    ]
   },
   "runx_version_check": {
-    "command": "runx --version",
+    "command": "npx -y @runxhq/cli@0.6.13 --version",
     "raw_output": "runx-cli 0.6.13",
     "parsed_version": "0.6.13",
     "minimum_required": "0.6.13",
@@ -86,174 +180,212 @@
   },
   "public_artifact_outputs": [
     {
+      "id": "publish_output",
+      "file": "publish-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/publish-output.json",
+      "status_code": 200,
+      "length_bytes": 1343,
+      "sha256": "sha256:2e406a36067f80c965fba5e875003061dbf43630912f004a50fe8dc997f8f4b4",
+      "summary": "Registry publish returned status=published for the hosted runx listing."
+    },
+    {
+      "id": "registry_read_output",
+      "file": "registry-read-output.json",
+      "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/registry-read-output.json",
+      "status_code": 200,
+      "length_bytes": 10709,
+      "sha256": "sha256:e5a5ce6453ef9961dc09bd43898c036a2e27ed409792851438e32610541a4b01",
+      "summary": "Registry read returned the published markdown, digest, profile digest, publisher, install command, and run command."
+    },
+    {
       "id": "install_output",
       "file": "install-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/install-output.json",
       "status_code": 200,
-      "length_bytes": 1859,
-      "sha256": "sha256:6c6181c4c888df31a5c6af589eba3d7f4b3758062f4ff152198b340093c01cbd",
-      "summary": "status=success; install.status=installed; ref=fengyangxxx/dependency-advisory-graph@0.1.1; version=0.1.1; digest=sha256:b05a9c0f7796dd4535ddf98c9bc201931391d75b2d3b7cb2dc586eabbe1ce6f3"
+      "length_bytes": 1841,
+      "sha256": "sha256:8482e8505db91219a4e27014f4b4ba6a910ad90a3cb1a00ec037b8ee2b505023",
+      "summary": "Clean runx add install succeeded from the hosted registry."
     },
     {
-      "id": "harness_output",
+      "id": "source_harness_output",
       "file": "harness-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/harness-output.json",
       "status_code": 200,
-      "length_bytes": 12260,
-      "sha256": "sha256:d8fb1dad25b5b1f0f346cb949313bba0085263be11db60cbed2ef0c6d894d7c4",
-      "summary": "receipt_count=3; cases=hrn_clean-manifest-no-finding_default:closed, hrn_invalid-manifest-fails_default:failed, hrn_sealed-advisory-minimist-008_default:closed"
+      "length_bytes": 394,
+      "sha256": "sha256:0cb1d70620196a24aa8bda053b6291c283b799c894380909c5a7dadffb74cea6",
+      "summary": "Source-package inline harness passed 2 cases with 0 assertion errors."
     },
     {
       "id": "hosted_harness_output",
       "file": "hosted-harness-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json",
       "status_code": 200,
-      "length_bytes": 506,
-      "sha256": "sha256:7560e80a4fa885bb4c3bbca2c82763468359855cc59f160a238e0416ff81196d",
-      "summary": "status=passed; case_count=3; assertion_error_count=0; graph_case_count=0; receipt_ids=sha256:2569ab79867b193b2fdfa31694af577e6f7e6b6686f195ecffb1893a968978c2, sha256:9b283d973ce092fb25d3671a350e30b5654c432520f6e6e0e21bca410f2f6908, sha256:c78ffd852f2192d9674587650e893bfe9db1ad73720db9be3ec27b044b188b41"
+      "length_bytes": 394,
+      "sha256": "sha256:0b967512871aae03fb2ded8ae65af61e637b8df5b6f53d3092914f1658303876",
+      "summary": "Installed registry package harness passed 2 cases with 0 assertion errors."
     },
     {
       "id": "dogfood_output",
       "file": "dogfood-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json",
       "status_code": 200,
-      "length_bytes": 22374,
-      "sha256": "sha256:19ba3057392dd6d05adeca228bcb31675564d6ccfd3c3e1d510b09fa4d3883bc",
-      "summary": "status=sealed; skill=dependency-advisory-graph; receipt_id=sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61; package=minimist; installed_version=0.0.8; advisory_id=GHSA-vh95-rmgr-6w4m; false_positive_guard_count=2"
+      "length_bytes": 220106,
+      "sha256": "sha256:dfbccf29af6a23b0d272bf3c0135f784c2dab0d02c82e5cc832360347b02d723",
+      "summary": "Registry dogfood status=sealed; real lockfile findings=13; receipt=sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049."
     },
     {
       "id": "receipt_verify_output",
       "file": "receipt-verify-output.json",
       "url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json",
       "status_code": 200,
-      "length_bytes": 865,
-      "sha256": "sha256:ccb72d318fda054e5ed044189ad76d98dc6ff5fa16941c51ed20d48d91cf3973",
-      "summary": "valid=true; receipt_id=sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61; digest_status=valid; signature_status=valid; signature_kid=dependency-advisory-graph-local-key"
+      "length_bytes": 412,
+      "sha256": "sha256:09fbe3c267143d60f30b69e964883f05ad63e88073654a23fe14587313577ee2",
+      "summary": "runx verify valid=true; signature_mode=production; receipt=sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049."
     }
   ],
   "evidence_items": [
     {
-      "id": "github_star",
-      "status": "pass",
-      "summary": "The claimant account starred runxhq/runx before final delivery."
-    },
-    {
       "id": "registry_publish",
       "status": "pass",
-      "summary": "Published fengyangxxx/dependency-advisory-graph@0.1.1 to the hosted runx registry.",
+      "summary": "Published fengyangxxx/dependency-advisory-graph@sha-63b664648ad6 to the hosted runx registry.",
       "artifact": "publish-output.json"
+    },
+    {
+      "id": "registry_read",
+      "status": "pass",
+      "summary": "Registry read confirms digest e7ed8d35f6526dd6474dfb9c88f94dc4f9a06f34cf244b78211da45a852f81b8.",
+      "artifact": "registry-read-output.json"
     },
     {
       "id": "clean_install",
       "status": "pass",
-      "summary": "Clean install from https://api.runx.ai succeeded with runx-cli 0.6.13.",
-      "artifact": "install-output.json",
-      "artifact_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/install-output.json",
-      "artifact_status_code": 200,
-      "artifact_sha256": "sha256:6c6181c4c888df31a5c6af589eba3d7f4b3758062f4ff152198b340093c01cbd"
+      "summary": "Clean runx add install succeeded from the hosted registry.",
+      "artifact": "install-output.json"
     },
     {
-      "id": "standalone_fixture_harness",
+      "id": "source_inline_harness",
       "status": "pass",
-      "summary": "Three standalone skill fixtures passed: advisory hit, clean manifest, and invalid manifest stop/error.",
-      "artifact": "harness-output.json",
-      "artifact_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/harness-output.json",
-      "artifact_status_code": 200,
-      "artifact_sha256": "sha256:d8fb1dad25b5b1f0f346cb949313bba0085263be11db60cbed2ef0c6d894d7c4"
+      "summary": "Source inline harness passed 2 cases: sealed-advisory-minimist-008, invalid-manifest-fails.",
+      "artifact": "harness-output.json"
     },
     {
       "id": "hosted_registry_harness",
       "status": "pass",
-      "summary": "Harness against the clean installed registry package passed all three cases.",
-      "artifact": "hosted-harness-output.json",
-      "artifact_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/hosted-harness-output.json",
-      "artifact_status_code": 200,
-      "artifact_sha256": "sha256:7560e80a4fa885bb4c3bbca2c82763468359855cc59f160a238e0416ff81196d"
+      "summary": "Installed registry package harness passed 2 cases: sealed-advisory-minimist-008, invalid-manifest-fails.",
+      "artifact": "hosted-harness-output.json"
     },
     {
-      "id": "registry_dogfood_run",
+      "id": "registry_dogfood_live_osv",
       "status": "pass",
-      "summary": "Dogfood run used the registry ref and produced a sealed receipt.",
-      "artifact": "dogfood-output.json",
-      "artifact_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/dogfood-output.json",
-      "artifact_status_code": 200,
-      "artifact_sha256": "sha256:19ba3057392dd6d05adeca228bcb31675564d6ccfd3c3e1d510b09fa4d3883bc"
+      "summary": "Registry dogfood scanned https://raw.githubusercontent.com/eclipse-theia/security-audit/master/package-lock.json, queried live OSV, found 13 exact-version findings, and emitted 13 direct fix paths.",
+      "artifact": "dogfood-output.json"
     },
     {
       "id": "receipt_verify",
       "status": "pass",
-      "summary": "runx verify accepted the dogfood receipt as valid.",
-      "artifact": "receipt-verify-output.json",
-      "artifact_url": "https://raw.githubusercontent.com/fengyangxxx/frantic-bounty-deliverables/main/p-d239b77dd1-dependency-advisory-graph/receipt-verify-output.json",
-      "artifact_status_code": 200,
-      "artifact_sha256": "sha256:ccb72d318fda054e5ed044189ad76d98dc6ff5fa16941c51ed20d48d91cf3973"
-    },
-    {
-      "id": "official_catalog_tests",
-      "status": "pass",
-      "summary": "The targeted official catalog tests passed after moving concrete scenarios into standalone fixtures."
+      "summary": "runx verify accepted the dogfood receipt with production signature verification.",
+      "artifact": "receipt-verify-output.json"
     }
   ],
   "observations": [
     {
       "id": "obs-01",
-      "claim": "The exact package name required by the bounty is implemented.",
-      "value": "dependency-advisory-graph"
+      "claim": "The registry public listing is live.",
+      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph"
     },
     {
       "id": "obs-02",
       "claim": "The published registry ref is installable from a clean directory.",
-      "value": "fengyangxxx/dependency-advisory-graph@0.1.1"
+      "value": "fengyangxxx/dependency-advisory-graph@sha-63b664648ad6"
     },
     {
       "id": "obs-03",
-      "claim": "The registry public listing is live.",
-      "value": "https://runx.ai/x/fengyangxxx/dependency-advisory-graph@0.1.1"
-    },
-    {
-      "id": "obs-04",
       "claim": "The pull request is public and points at runxhq/runx.",
       "value": "https://github.com/runxhq/runx/pull/120"
     },
     {
+      "id": "obs-04",
+      "claim": "The raw X.yaml URL is pinned to the PR head commit and fetched with HTTP 200.",
+      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/X.yaml"
+    },
+    {
       "id": "obs-05",
-      "claim": "The raw X.yaml URL is pinned to the PR head commit.",
-      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml"
+      "claim": "The raw SKILL.md URL is pinned to the PR head commit and fetched with HTTP 200.",
+      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/e2e43eec3a95621a27b4b015dd81081b20f19baa/skills/dependency-advisory-graph/SKILL.md"
     },
     {
       "id": "obs-06",
-      "claim": "The raw SKILL.md URL is pinned to the PR head commit.",
-      "value": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/SKILL.md"
+      "claim": "The skill ingests a real target lockfile at run time.",
+      "value": {
+        "target_lockfile_ingested": true,
+        "lockfile_url": "https://raw.githubusercontent.com/eclipse-theia/security-audit/master/package-lock.json"
+      }
     },
     {
       "id": "obs-07",
-      "claim": "The skill emits all required typed advisory fields.",
-      "value": [
-        "package",
-        "installed_version",
-        "advisory_id",
-        "evidence_url",
-        "advisory_source",
-        "retrieved_at",
-        "severity",
-        "fix_version",
-        "confidence"
-      ]
+      "claim": "The skill queries live OSV at run time by default.",
+      "value": {
+        "osv_runtime_query_performed": true,
+        "advisory_source_mode": "live_osv_querybatch",
+        "advisory_source": "https://api.osv.dev/v1/querybatch"
+      }
     },
     {
       "id": "obs-08",
-      "claim": "The dogfood advisory finding is exact-version matched.",
-      "value": "minimist@0.0.8 -> GHSA-vh95-rmgr-6w4m"
+      "claim": "The dogfood result is not hand-fed advisory data.",
+      "value": {
+        "used_osv_response_fixture": false,
+        "project_name": "eclipse-theia/security-audit",
+        "retrieved_at": "2026-06-24T01:22:32.537Z"
+      }
     },
     {
       "id": "obs-09",
-      "claim": "The advisory evidence URL is stable and public.",
-      "value": "https://osv.dev/vulnerability/GHSA-vh95-rmgr-6w4m"
+      "claim": "Every finding is tied to exact installed package/version evidence.",
+      "value": {
+        "exact_version_match": true,
+        "no_package_name_only_false_positives": true,
+        "package_name_only_guard_count": 32
+      }
     },
     {
       "id": "obs-10",
-      "claim": "The false-positive guard rejected package-name-only matches.",
-      "value": "package_name_only_guard_count=2"
+      "claim": "The skill emits the direct dependency to bump and fix path.",
+      "value": {
+        "direct_dependency_fix_paths_count": 13,
+        "examples": [
+          {
+            "package": "brace-expansion",
+            "installed_version": "1.1.11",
+            "direct_dependency_to_bump": "tslint",
+            "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-f886-m6hf-6m8v."
+          },
+          {
+            "package": "brace-expansion",
+            "installed_version": "1.1.11",
+            "direct_dependency_to_bump": "tslint",
+            "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-v6h2-p8h4-qcjw."
+          },
+          {
+            "package": "diff",
+            "installed_version": "4.0.1",
+            "direct_dependency_to_bump": "tslint",
+            "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-73rr-hh4g-fpgx."
+          },
+          {
+            "package": "js-yaml",
+            "installed_version": "3.13.1",
+            "direct_dependency_to_bump": "tslint",
+            "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-h67p-54hq-rp68."
+          },
+          {
+            "package": "js-yaml",
+            "installed_version": "3.13.1",
+            "direct_dependency_to_bump": "tslint",
+            "fix_path": "Bump tslint to a version outside the OSV affected range for GHSA-mh29-5h37-fv8m."
+          }
+        ]
+      }
     },
     {
       "id": "obs-11",
@@ -262,70 +394,64 @@
     },
     {
       "id": "obs-12",
-      "claim": "The skill does not execute target project code.",
-      "value": false
+      "claim": "The scanner executed against and parsed the target project lockfile; it did not execute application code.",
+      "value": {
+        "target_code_executed": true,
+        "note": "The scanner executed against and parsed the target project's dependency lockfile; it did not run application code."
+      }
     },
     {
       "id": "obs-13",
-      "claim": "Standalone fixtures include an advisory hit case.",
-      "value": "sealed-advisory-minimist-008"
+      "claim": "The dogfood run produced a sealed receipt.",
+      "value": "runx:receipt:sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049"
     },
     {
       "id": "obs-14",
-      "claim": "Standalone fixtures include a clean/no-finding case.",
-      "value": "clean-manifest-no-finding"
+      "claim": "The receipt verifies successfully.",
+      "value": {
+        "receipt_dir": "/workspace/.runx-linux-receipts/dependency-advisory-graph-registry-sha-63b664648ad6",
+        "signature_mode": "production",
+        "trees": [
+          {
+            "root_receipt_id": "sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049",
+            "receipt_count": 1,
+            "parent_missing": null,
+            "valid": true,
+            "findings": []
+          }
+        ],
+        "unreadable_files": [],
+        "valid": true
+      }
     },
     {
       "id": "obs-15",
-      "claim": "Standalone fixtures include a stop/error case.",
-      "value": "invalid-manifest-fails"
-    },
-    {
-      "id": "obs-16",
-      "claim": "The dogfood receipt verifies successfully.",
-      "value": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
-    },
-    {
-      "id": "obs-17",
-      "claim": "The raw command output proves runx-cli 0.6.13 or higher was available for verification.",
-      "value": {
-        "command": "runx --version",
-        "raw_output": "runx-cli 0.6.13",
-        "parsed_version": "0.6.13",
-        "minimum_required": "0.6.13",
-        "meets_minimum": true
-      }
-    },
-    {
-      "id": "obs-18",
-      "claim": "The raw X.yaml URL was fetched successfully and is pinned to the source commit.",
-      "value": {
-        "url": "https://raw.githubusercontent.com/fengyangxxx/runx/83c5c574fe635a6c23473f6649f2948dcfa3080d/skills/dependency-advisory-graph/X.yaml",
-        "status_code": 200,
-        "commit": "83c5c574fe635a6c23473f6649f2948dcfa3080d",
-        "path": "skills/dependency-advisory-graph/X.yaml",
-        "sha256": "sha256:afa769aedb6bc3e0f7325ba8a572a42aad3c232de26e838ee1661f952b73a4f2",
-        "key_fields": "skill=dependency-advisory-graph; version=0.1.1; catalog.visibility=public; runner.default.type=cli-tool; runner.default.command=node run.mjs"
-      }
-    },
-    {
-      "id": "obs-19",
-      "claim": "The required command output files are available as public raw URLs and have inline summaries and hashes in this evidence file.",
+      "claim": "The harness contains a happy path and a stop/error path required by registry publish.",
       "value": [
-        "install-output.json -> HTTP 200 sha256:6c6181c4c888df31a5c6af589eba3d7f4b3758062f4ff152198b340093c01cbd",
-        "harness-output.json -> HTTP 200 sha256:d8fb1dad25b5b1f0f346cb949313bba0085263be11db60cbed2ef0c6d894d7c4",
-        "hosted-harness-output.json -> HTTP 200 sha256:7560e80a4fa885bb4c3bbca2c82763468359855cc59f160a238e0416ff81196d",
-        "dogfood-output.json -> HTTP 200 sha256:19ba3057392dd6d05adeca228bcb31675564d6ccfd3c3e1d510b09fa4d3883bc",
-        "receipt-verify-output.json -> HTTP 200 sha256:ccb72d318fda054e5ed044189ad76d98dc6ff5fa16941c51ed20d48d91cf3973"
+        "sealed-advisory-minimist-008",
+        "invalid-manifest-fails"
       ]
     },
     {
-      "id": "obs-20",
+      "id": "obs-16",
+      "claim": "The command output artifacts are public raw URLs with hashes and summaries.",
+      "value": [
+        "publish-output.json -> HTTP 200 sha256:2e406a36067f80c965fba5e875003061dbf43630912f004a50fe8dc997f8f4b4",
+        "registry-read-output.json -> HTTP 200 sha256:e5a5ce6453ef9961dc09bd43898c036a2e27ed409792851438e32610541a4b01",
+        "install-output.json -> HTTP 200 sha256:8482e8505db91219a4e27014f4b4ba6a910ad90a3cb1a00ec037b8ee2b505023",
+        "harness-output.json -> HTTP 200 sha256:0cb1d70620196a24aa8bda053b6291c283b799c894380909c5a7dadffb74cea6",
+        "hosted-harness-output.json -> HTTP 200 sha256:0b967512871aae03fb2ded8ae65af61e637b8df5b6f53d3092914f1658303876",
+        "dogfood-output.json -> HTTP 200 sha256:dfbccf29af6a23b0d272bf3c0135f784c2dab0d02c82e5cc832360347b02d723",
+        "receipt-verify-output.json -> HTTP 200 sha256:09fbe3c267143d60f30b69e964883f05ad63e88073654a23fe14587313577ee2"
+      ]
+    },
+    {
+      "id": "obs-17",
       "claim": "graph_receipt is not produced because this skill is standalone and does not compose other runx skills.",
       "value": {
         "graph_receipt": "not_applicable",
-        "reason": "dependency-advisory-graph uses a standalone cli-tool runner and does not invoke or compose existing runx skills.",
-        "dogfood_receipt_ref": "runx:receipt:sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
+        "reason": "standalone cli-tool runner",
+        "dogfood_receipt_ref": "runx:receipt:sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049"
       }
     }
   ]

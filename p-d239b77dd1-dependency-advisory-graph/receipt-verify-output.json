@@ -1,25 +1,15 @@
 {
-  "schema": "runx.verify_verdict.v1",
-  "receipt_id": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
-  "valid": true,
-  "digest": {
-    "status": "valid",
-    "expected": "sha256:f4e3b4f251fbae60954a509d14bd11a47542d13fcc5a43a0eeb6d9784d0cb013",
-    "actual": "sha256:f4e3b4f251fbae60954a509d14bd11a47542d13fcc5a43a0eeb6d9784d0cb013"
-  },
-  "content_address": {
-    "status": "valid",
-    "expected": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61",
-    "actual": "sha256:a1b3feddc1dadeb88cf239e8ce1f31035ecc6aa0fa2526e883faac5c92f54a61"
-  },
-  "signature": {
-    "mode": "production",
-    "status": "valid",
-    "kid": "dependency-advisory-graph-local-key"
-  },
-  "lineage": {
-    "status": "unverified",
-    "message": "single receipt verification cannot prove receipt-tree lineage"
-  },
-  "findings": []
+  "receipt_dir": "/workspace/.runx-linux-receipts/dependency-advisory-graph-registry-sha-63b664648ad6",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
 }
