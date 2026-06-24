@@ -454,6 +454,16 @@
         "reason": "standalone cli-tool runner",
         "dogfood_receipt_ref": "runx:receipt:sha256:862f84e9797b9bd9e898f31c8a203620ca21c4f6aee889f53f5efd0ea77ca049"
       }
+    },
+    {
+      "id": "obs-18",
+      "claim": "The exact runx CLI version output used for publish, install, harness, dogfood, and verify is recorded in observations.",
+      "value": {
+        "command": "npx -y @runxhq/cli@0.6.13 --version",
+        "raw_output": "runx-cli 0.6.13",
+        "minimum_required": "0.6.13",
+        "meets_minimum": true
+      }
     }
   ]
 }
