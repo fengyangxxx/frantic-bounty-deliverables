@@ -1,0 +1,54 @@
+{
+  "schema": "frantic.delivery.verification.v1",
+  "generated_at": "2026-06-30T09:26:04.433Z",
+  "posting_id": "p-aa9de6d1a9",
+  "claim_ref": "frantic:claim:dbcb7788-4f29-4be3-832a-6149229e4a4c",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "runx_version_raw_output_present",
+      "passed": true,
+      "detail": "runx --version -> runx-cli 0.6.13"
+    },
+    {
+      "name": "public_board_captured",
+      "passed": true,
+      "detail": "https://gofrantic.com/v1/board"
+    },
+    {
+      "name": "public_ledger_captured",
+      "passed": true,
+      "detail": "https://gofrantic.com/v1/ledger"
+    },
+    {
+      "name": "five_or_more_bounty_api_pages",
+      "passed": true,
+      "detail": "69"
+    },
+    {
+      "name": "five_or_more_bounty_html_pages",
+      "passed": true,
+      "detail": "12"
+    },
+    {
+      "name": "required_representative_html_pages",
+      "passed": true,
+      "detail": "#49, #63, #64, #65, #66, #67, #43, #62, #11, #33, #39, #1"
+    },
+    {
+      "name": "required_status_counts_present",
+      "passed": true,
+      "detail": "{\"open\":6,\"delivered\":14,\"accepted\":1,\"paid\":46,\"claimed\":2,\"other\":0,\"total\":69}"
+    },
+    {
+      "name": "required_inventory_categories_checked",
+      "passed": true,
+      "detail": "stale:issue, stale:issue, over-crowded:issue, duplicated:issue, confusing:issue, superseded:clean"
+    },
+    {
+      "name": "recommendations_bind_to_exact_bounties",
+      "passed": true,
+      "detail": "All affected rows carry number, postingId, URL, api_url, recommendation, and next operator action."
+    }
+  ]
+}

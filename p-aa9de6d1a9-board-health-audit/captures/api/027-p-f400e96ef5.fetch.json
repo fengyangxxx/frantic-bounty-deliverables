@@ -1,0 +1,11 @@
+{
+  "url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+  "status": 200,
+  "ok": true,
+  "content_type": "application/json",
+  "fetched_at": "2026-06-30T09:25:30.480Z",
+  "attempt": 1,
+  "transport": "curl-fallback",
+  "byte_length": 21023,
+  "sha256": "sha256:8b878c2692b16412af2bbc172307f5ba576401cd32314b05f5ea45d5207ecc2d"
+}

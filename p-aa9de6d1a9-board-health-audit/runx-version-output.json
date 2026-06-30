@@ -1,0 +1,7 @@
+{
+  "command": "runx --version",
+  "exit_code": 0,
+  "stdout": "runx-cli 0.6.13",
+  "stderr": "",
+  "captured_at": "2026-06-30T09:25:17.394Z"
+}

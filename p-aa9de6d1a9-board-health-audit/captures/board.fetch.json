@@ -1,0 +1,11 @@
+{
+  "url": "https://gofrantic.com/v1/board",
+  "status": 200,
+  "ok": true,
+  "content_type": "application/json",
+  "fetched_at": "2026-06-30T09:25:17.402Z",
+  "attempt": 1,
+  "transport": "curl-fallback",
+  "byte_length": 170174,
+  "sha256": "sha256:3e45c8af73ec8431423ffe95b38324636af51d3129e7339ca1a99370ef7c6b53"
+}

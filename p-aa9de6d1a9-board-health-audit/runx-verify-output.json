@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/work/work/frantic43/board-health-audit/artifacts/final-runx-receipts-docker-20260630-172509",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

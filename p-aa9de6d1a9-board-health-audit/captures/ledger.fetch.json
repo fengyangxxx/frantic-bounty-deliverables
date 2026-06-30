@@ -1,0 +1,11 @@
+{
+  "url": "https://gofrantic.com/v1/ledger",
+  "status": 200,
+  "ok": true,
+  "content_type": "application/json",
+  "fetched_at": "2026-06-30T09:25:21.546Z",
+  "attempt": 1,
+  "transport": "curl-fallback",
+  "byte_length": 11033,
+  "sha256": "sha256:798f1e77577619654e6043a582fb91f21efff42da31c3832b0ab659ba90b3752"
+}
