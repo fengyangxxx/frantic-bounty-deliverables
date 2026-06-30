@@ -1,0 +1,15 @@
+{
+  "receipt_dir": "/work/receipts",
+  "signature_mode": "production",
+  "trees": [
+    {
+      "root_receipt_id": "sha256:c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9",
+      "receipt_count": 1,
+      "parent_missing": null,
+      "valid": true,
+      "findings": []
+    }
+  ],
+  "unreadable_files": [],
+  "valid": true
+}

@@ -1,0 +1,156 @@
+{
+  "schema": "frantic.sourcey_docs.evidence.v1",
+  "bounty": {
+    "platform": "Frantic",
+    "number": 33,
+    "posting_id": "p-8b91e1ac8c",
+    "title": "Publish Sourcey docs for a maintained OSS library",
+    "claim_id": "5da4da42-072e-4b07-b3d3-9f3cc167c8fb"
+  },
+  "summary": "Validated a live Sourcey-generated Go API documentation site for nilstate/scafld on the project-owned 0state.com domain. The target is a maintained MIT-licensed third-party OSS library pinned to commit ce26b0c0637a0f0acd1c6be4397bda14668844ec. The live docs expose 74 package/API pages under /scafld/docs/go-api and were validated with runx-cli 0.6.13.",
+  "public_url": "https://0state.com/scafld/docs/go-api",
+  "parent_url": "https://0state.com/scafld",
+  "target": {
+    "repo_url": "https://github.com/nilstate/scafld",
+    "pinned_commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+    "commit_date": "2026-06-30T05:49:41Z",
+    "commit_message": "ci: limit receipt verification push scope",
+    "license": "MIT",
+    "source_file_count_go": 251,
+    "recent_activity": {
+      "repo_pushed_at": "2026-06-30T05:49:43Z",
+      "repo_updated_at": "2026-06-30T05:49:47Z"
+    },
+    "source_refs": {
+      "repo_tree": "https://github.com/nilstate/scafld/tree/ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+      "license": "https://raw.githubusercontent.com/nilstate/scafld/ce26b0c0637a0f0acd1c6be4397bda14668844ec/LICENSE",
+      "sourcey_config": "https://raw.githubusercontent.com/nilstate/scafld/ce26b0c0637a0f0acd1c6be4397bda14668844ec/docs/sourcey.config.ts",
+      "docs_package": "https://raw.githubusercontent.com/nilstate/scafld/ce26b0c0637a0f0acd1c6be4397bda14668844ec/docs/package.json"
+    }
+  },
+  "sourcey": {
+    "live_generator": "Sourcey 3.6.0",
+    "adapter": "Sourcey godoc adapter configured in docs/sourcey.config.ts",
+    "build_command": "sourcey build -o ../dist",
+    "config_summary": "docs/sourcey.config.ts sets name=scafld, repo=https://github.com/nilstate/scafld, markdown documentation tab, and a Go API tab using godoc({ module: '..', packages: ['./cmd/scafld', './internal/core/...', './internal/app/...', './internal/adapters/...', './internal/platform/...'], mode: 'live', includeTests: true, includeUnexported: false, hideUndocumented: false }).",
+    "page_count_observed": 74,
+    "minimum_required_pages": 20,
+    "sample_pages": [
+      "https://0state.com/scafld/docs/go-api/pkg-cmd-scafld",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-adapter",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalize",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalizestdio",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-harden",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-hardensubmit",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-help",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-initcmd",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-output",
+      "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-providerinfo"
+    ],
+    "spot_checks": [
+      {
+        "url": "https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt",
+        "status": 200,
+        "title": "internal/core/receipt - scafld",
+        "generator": "Sourcey 3.6.0",
+        "byte_length": 110013
+      },
+      {
+        "url": "https://0state.com/scafld/docs/go-api/pkg-internal-app-validate",
+        "status": 200,
+        "title": "internal/app/validate - scafld",
+        "generator": "Sourcey 3.6.0",
+        "byte_length": 54967
+      },
+      {
+        "url": "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config",
+        "status": 200,
+        "title": "internal/adapters/cli/config - scafld",
+        "generator": "Sourcey 3.6.0",
+        "byte_length": 51449
+      }
+    ]
+  },
+  "validation": {
+    "runx_version_command": "npx -y @runxhq/cli@0.6.13 --version",
+    "runx_cli_version_output": "runx-cli 0.6.13",
+    "docker_reproduction_script": "validation/run-docker-validation.sh",
+    "skill_command": "npx -y @runxhq/cli@0.6.13 skill . --input public_url=https://0state.com/scafld/docs/go-api --input parent_url=https://0state.com/scafld --input repo_url=https://github.com/nilstate/scafld --input commit=ce26b0c0637a0f0acd1c6be4397bda14668844ec --input min_pages=20 --json",
+    "harness_command": "npx -y @runxhq/cli@0.6.13 harness . --receipt-dir ./receipts --json",
+    "verify_command": "RUNX_RECEIPT_VERIFY_KID=frantic33-scafld-validation-key RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<receipt-public-key-base64.txt> npx -y @runxhq/cli@0.6.13 verify sha256:c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9 --receipt-dir ./receipts --json",
+    "harness_status": "passed",
+    "harness_case_count": 2,
+    "harness_cases": [
+      "scafld-sourcey-live-proof",
+      "invalid-sourcey-url-fails"
+    ],
+    "receipt_ref": "runx:receipt:sha256:c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9",
+    "receipt_file": "receipts/receipt-success-sha256-c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9.json",
+    "receipt_public_key_file": "receipt-public-key-base64.txt",
+    "receipt_verify_output": {
+      "signature_mode": "production",
+      "valid": true,
+      "findings": []
+    }
+  },
+  "observations": [
+    {
+      "id": "runx_cli_version",
+      "evidence": "runx --version equivalent command was npx -y @runxhq/cli@0.6.13 --version and output was exactly: runx-cli 0.6.13."
+    },
+    {
+      "id": "project_domain",
+      "evidence": "https://0state.com/scafld returned HTTP 200 with title scafld. 0state, linked to https://github.com/nilstate/scafld, and linked into the docs area."
+    },
+    {
+      "id": "public_url_live",
+      "evidence": "https://0state.com/scafld/docs/go-api returned HTTP 200, title Go API - scafld, and meta generator Sourcey 3.6.0."
+    },
+    {
+      "id": "target_repo",
+      "evidence": "GitHub API for nilstate/scafld returned MIT license, pushed_at 2026-06-30T05:49:43Z, and description Deterministic protocol for multi-phase agent work."
+    },
+    {
+      "id": "pinned_commit",
+      "evidence": "GitHub API verified pinned commit ce26b0c0637a0f0acd1c6be4397bda14668844ec with commit date 2026-06-30T05:49:41Z."
+    },
+    {
+      "id": "source_depth",
+      "evidence": "Local shallow checkout at the pinned commit contained 251 Go source files."
+    },
+    {
+      "id": "sourcey_config",
+      "evidence": "docs/sourcey.config.ts at the pinned commit uses Sourcey godoc over cmd/scafld, internal/core, internal/app, internal/adapters, and internal/platform package globs."
+    },
+    {
+      "id": "sourcey_command",
+      "evidence": "docs/package.json at the pinned commit defines site:build as sourcey build -o ../dist and depends on sourcey ^3.6.0."
+    },
+    {
+      "id": "coverage",
+      "evidence": "The live Go API index exposed 74 unique /scafld/docs/go-api/pkg-* package pages, exceeding the 20-concept minimum."
+    },
+    {
+      "id": "spot_check_core_receipt",
+      "evidence": "https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt returned HTTP 200, title internal/core/receipt - scafld, generator Sourcey 3.6.0, and 110013 bytes."
+    },
+    {
+      "id": "spot_check_app_validate",
+      "evidence": "https://0state.com/scafld/docs/go-api/pkg-internal-app-validate returned HTTP 200, title internal/app/validate - scafld, generator Sourcey 3.6.0, and 54967 bytes."
+    },
+    {
+      "id": "spot_check_cli_config",
+      "evidence": "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config returned HTTP 200, title internal/adapters/cli/config - scafld, generator Sourcey 3.6.0, and 51449 bytes."
+    },
+    {
+      "id": "receipt_verified",
+      "evidence": "runx verify for sha256:c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9 returned valid=true with signature_mode=production when using receipt-public-key-base64.txt."
+    }
+  ],
+  "risk_notes": [
+    "This packet intentionally uses a live project-owned Sourcey documentation URL on 0state.com instead of re-hosting under a personal, preview, raw, or throwaway domain.",
+    "The work is framed as governed validation and evidence packaging for an already project-owned Sourcey publication. Final QA must decide whether this satisfies the bounty's publish wording."
+  ]
+}

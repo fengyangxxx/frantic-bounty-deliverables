@@ -1,0 +1,408 @@
+{
+  "closure": {
+    "closed_at": "2026-06-30T08:15:32.700Z",
+    "disposition": "closed",
+    "reason_code": "process_closed",
+    "summary": "cli-tool default completed"
+  },
+  "execution": {
+    "exit_code": 0,
+    "skill_claim": {
+      "checked_at": "2026-06-30T08:15:32.687904Z",
+      "failures": [],
+      "inputs": {
+        "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+        "min_pages": 20,
+        "parent_url": "https://0state.com/scafld",
+        "public_url": "https://0state.com/scafld/docs/go-api",
+        "repo_url": "https://github.com/nilstate/scafld"
+      },
+      "observations": [
+        {
+          "generator": "Sourcey 3.6.0",
+          "id": "public_url_sourcey_site",
+          "package_page_count": 74,
+          "sample_pages": [
+            "https://0state.com/scafld/docs/go-api/pkg-cmd-scafld",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-adapter",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalize",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalizestdio",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-harden",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-hardensubmit",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-help",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-initcmd",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-output",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-providerinfo"
+          ],
+          "status": 200,
+          "title": "Go API — scafld",
+          "url": "https://0state.com/scafld/docs/go-api"
+        },
+        {
+          "id": "parent_domain_project_home",
+          "links_docs_area": true,
+          "links_target_repo": true,
+          "status": 200,
+          "title": "scafld. 0state",
+          "url": "https://0state.com/scafld"
+        },
+        {
+          "description": "Deterministic protocol for multi-phase agent work.",
+          "full_name": "nilstate/scafld",
+          "id": "target_repo_metadata",
+          "license": "MIT",
+          "pushed_at": "2026-06-30T05:49:43Z",
+          "repo_url": "https://github.com/nilstate/scafld"
+        },
+        {
+          "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+          "commit_date": "2026-06-30T05:49:41Z",
+          "commit_message": "ci: limit receipt verification push scope",
+          "id": "pinned_commit",
+          "repo_url": "https://github.com/nilstate/scafld"
+        },
+        {
+          "id": "live_docs_spot_checks",
+          "pages": [
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 110013,
+              "status": 200,
+              "title": "internal/core/receipt — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt"
+            },
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 54967,
+              "status": 200,
+              "title": "internal/app/validate — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-app-validate"
+            },
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 51449,
+              "status": 200,
+              "title": "internal/adapters/cli/config — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config"
+            }
+          ]
+        }
+      ],
+      "ok": true
+    },
+    "stderr": "",
+    "stdout": "{\n  \"ok\": true,\n  \"checked_at\": \"2026-06-30T08:15:32.687904Z\",\n  \"inputs\": {\n    \"public_url\": \"https://0state.com/scafld/docs/go-api\",\n    \"parent_url\": \"https://0state.com/scafld\",\n    \"repo_url\": \"https://github.com/nilstate/scafld\",\n    \"commit\": \"ce26b0c0637a0f0acd1c6be4397bda14668844ec\",\n    \"min_pages\": 20\n  },\n  \"observations\": [\n    {\n      \"id\": \"public_url_sourcey_site\",\n      \"url\": \"https://0state.com/scafld/docs/go-api\",\n      \"status\": 200,\n      \"title\": \"Go API — scafld\",\n      \"generator\": \"Sourcey 3.6.0\",\n      \"package_page_count\": 74,\n      \"sample_pages\": [\n        \"https://0state.com/scafld/docs/go-api/pkg-cmd-scafld\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-adapter\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalize\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalizestdio\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-harden\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-hardensubmit\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-help\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-initcmd\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-output\",\n        \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-providerinfo\"\n      ]\n    },\n    {\n      \"id\": \"parent_domain_project_home\",\n      \"url\": \"https://0state.com/scafld\",\n      \"status\": 200,\n      \"title\": \"scafld. 0state\",\n      \"links_target_repo\": true,\n      \"links_docs_area\": true\n    },\n    {\n      \"id\": \"target_repo_metadata\",\n      \"repo_url\": \"https://github.com/nilstate/scafld\",\n      \"full_name\": \"nilstate/scafld\",\n      \"license\": \"MIT\",\n      \"pushed_at\": \"2026-06-30T05:49:43Z\",\n      \"description\": \"Deterministic protocol for multi-phase agent work.\"\n    },\n    {\n      \"id\": \"pinned_commit\",\n      \"repo_url\": \"https://github.com/nilstate/scafld\",\n      \"commit\": \"ce26b0c0637a0f0acd1c6be4397bda14668844ec\",\n      \"commit_date\": \"2026-06-30T05:49:41Z\",\n      \"commit_message\": \"ci: limit receipt verification push scope\"\n    },\n    {\n      \"id\": \"live_docs_spot_checks\",\n      \"pages\": [\n        {\n          \"url\": \"https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt\",\n          \"status\": 200,\n          \"title\": \"internal/core/receipt — scafld\",\n          \"generator\": \"Sourcey 3.6.0\",\n          \"length\": 110013\n        },\n        {\n          \"url\": \"https://0state.com/scafld/docs/go-api/pkg-internal-app-validate\",\n          \"status\": 200,\n          \"title\": \"internal/app/validate — scafld\",\n          \"generator\": \"Sourcey 3.6.0\",\n          \"length\": 54967\n        },\n        {\n          \"url\": \"https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config\",\n          \"status\": 200,\n          \"title\": \"internal/adapters/cli/config — scafld\",\n          \"generator\": \"Sourcey 3.6.0\",\n          \"length\": 51449\n        }\n      ]\n    }\n  ],\n  \"failures\": []\n}\n",
+    "structured_output": {
+      "checked_at": "2026-06-30T08:15:32.687904Z",
+      "failures": [],
+      "inputs": {
+        "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+        "min_pages": 20,
+        "parent_url": "https://0state.com/scafld",
+        "public_url": "https://0state.com/scafld/docs/go-api",
+        "repo_url": "https://github.com/nilstate/scafld"
+      },
+      "observations": [
+        {
+          "generator": "Sourcey 3.6.0",
+          "id": "public_url_sourcey_site",
+          "package_page_count": 74,
+          "sample_pages": [
+            "https://0state.com/scafld/docs/go-api/pkg-cmd-scafld",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-adapter",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalize",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalizestdio",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-harden",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-hardensubmit",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-help",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-initcmd",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-output",
+            "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-providerinfo"
+          ],
+          "status": 200,
+          "title": "Go API — scafld",
+          "url": "https://0state.com/scafld/docs/go-api"
+        },
+        {
+          "id": "parent_domain_project_home",
+          "links_docs_area": true,
+          "links_target_repo": true,
+          "status": 200,
+          "title": "scafld. 0state",
+          "url": "https://0state.com/scafld"
+        },
+        {
+          "description": "Deterministic protocol for multi-phase agent work.",
+          "full_name": "nilstate/scafld",
+          "id": "target_repo_metadata",
+          "license": "MIT",
+          "pushed_at": "2026-06-30T05:49:43Z",
+          "repo_url": "https://github.com/nilstate/scafld"
+        },
+        {
+          "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+          "commit_date": "2026-06-30T05:49:41Z",
+          "commit_message": "ci: limit receipt verification push scope",
+          "id": "pinned_commit",
+          "repo_url": "https://github.com/nilstate/scafld"
+        },
+        {
+          "id": "live_docs_spot_checks",
+          "pages": [
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 110013,
+              "status": 200,
+              "title": "internal/core/receipt — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt"
+            },
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 54967,
+              "status": 200,
+              "title": "internal/app/validate — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-app-validate"
+            },
+            {
+              "generator": "Sourcey 3.6.0",
+              "length": 51449,
+              "status": 200,
+              "title": "internal/adapters/cli/config — scafld",
+              "url": "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config"
+            }
+          ]
+        }
+      ],
+      "ok": true
+    }
+  },
+  "payload": {
+    "checked_at": "2026-06-30T08:15:32.687904Z",
+    "failures": [],
+    "inputs": {
+      "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+      "min_pages": 20,
+      "parent_url": "https://0state.com/scafld",
+      "public_url": "https://0state.com/scafld/docs/go-api",
+      "repo_url": "https://github.com/nilstate/scafld"
+    },
+    "observations": [
+      {
+        "generator": "Sourcey 3.6.0",
+        "id": "public_url_sourcey_site",
+        "package_page_count": 74,
+        "sample_pages": [
+          "https://0state.com/scafld/docs/go-api/pkg-cmd-scafld",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-adapter",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalize",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-finalizestdio",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-harden",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-hardensubmit",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-help",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-initcmd",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-output",
+          "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-providerinfo"
+        ],
+        "status": 200,
+        "title": "Go API — scafld",
+        "url": "https://0state.com/scafld/docs/go-api"
+      },
+      {
+        "id": "parent_domain_project_home",
+        "links_docs_area": true,
+        "links_target_repo": true,
+        "status": 200,
+        "title": "scafld. 0state",
+        "url": "https://0state.com/scafld"
+      },
+      {
+        "description": "Deterministic protocol for multi-phase agent work.",
+        "full_name": "nilstate/scafld",
+        "id": "target_repo_metadata",
+        "license": "MIT",
+        "pushed_at": "2026-06-30T05:49:43Z",
+        "repo_url": "https://github.com/nilstate/scafld"
+      },
+      {
+        "commit": "ce26b0c0637a0f0acd1c6be4397bda14668844ec",
+        "commit_date": "2026-06-30T05:49:41Z",
+        "commit_message": "ci: limit receipt verification push scope",
+        "id": "pinned_commit",
+        "repo_url": "https://github.com/nilstate/scafld"
+      },
+      {
+        "id": "live_docs_spot_checks",
+        "pages": [
+          {
+            "generator": "Sourcey 3.6.0",
+            "length": 110013,
+            "status": 200,
+            "title": "internal/core/receipt — scafld",
+            "url": "https://0state.com/scafld/docs/go-api/pkg-internal-core-receipt"
+          },
+          {
+            "generator": "Sourcey 3.6.0",
+            "length": 54967,
+            "status": 200,
+            "title": "internal/app/validate — scafld",
+            "url": "https://0state.com/scafld/docs/go-api/pkg-internal-app-validate"
+          },
+          {
+            "generator": "Sourcey 3.6.0",
+            "length": 51449,
+            "status": 200,
+            "title": "internal/adapters/cli/config — scafld",
+            "url": "https://0state.com/scafld/docs/go-api/pkg-internal-adapters-cli-config"
+          }
+        ]
+      }
+    ],
+    "ok": true
+  },
+  "receipt": {
+    "acts": [
+      {
+        "artifact_refs": [],
+        "closure": {
+          "closed_at": "2026-06-30T08:15:32.700Z",
+          "disposition": "closed",
+          "reason_code": "process_exit",
+          "summary": "cli-tool exited successfully"
+        },
+        "criterion_bindings": [
+          {
+            "criterion_id": "process_exit",
+            "evidence_refs": [],
+            "status": "verified",
+            "summary": "cli-tool exited successfully",
+            "verification_refs": []
+          }
+        ],
+        "form": "observation",
+        "id": "act_default",
+        "intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Runtime graph execution was admitted by the local harness",
+          "purpose": "Run graph step default",
+          "success_criteria": [
+            {
+              "criterion_id": "process_exit",
+              "required": true,
+              "statement": "cli-tool exits successfully"
+            }
+          ]
+        },
+        "source_refs": [],
+        "summary": "Executed graph step default",
+        "target_refs": []
+      }
+    ],
+    "authority": {
+      "actor_ref": {
+        "type": "principal",
+        "uri": "runx:principal:local_runtime"
+      },
+      "attenuation": {
+        "parent_authority_ref": null,
+        "subset_proof": null
+      },
+      "authority_proof_refs": [],
+      "enforcement": {
+        "profile_hash": "sha256:runtime-skeleton-enforcement",
+        "redaction_refs": [],
+        "setup_refs": [],
+        "teardown_refs": []
+      },
+      "grant_refs": [],
+      "scope_refs": [],
+      "terms": []
+    },
+    "canonicalization": "runx.receipt.c14n.v1",
+    "created_at": "2026-06-30T08:15:32.700Z",
+    "decisions": [
+      {
+        "artifact_refs": [],
+        "choice": "open",
+        "closure": null,
+        "decision_id": "dec_default",
+        "inputs": {
+          "opportunity_refs": [],
+          "selection_ref": null,
+          "signal_refs": [],
+          "target_ref": null
+        },
+        "justification": {
+          "evidence_refs": [],
+          "summary": "runtime graph planner selected this node"
+        },
+        "proposed_intent": {
+          "constraints": [],
+          "derived_from": [],
+          "legitimacy": "Local graph execution requested this node",
+          "purpose": "Open runtime node default",
+          "success_criteria": []
+        },
+        "selected_act_id": "act_default",
+        "selected_harness_ref": null
+      }
+    ],
+    "digest": "sha256:9993f150e71d7f127c8613819042b3cfdc3c902632e0066ce6dc08e43b2f1947",
+    "id": "sha256:b16dd7077df6c8a30901fbc27e92c784cbd5fd3575fd8039a0f8bc35865dc48c",
+    "idempotency": {
+      "content_hash": "sha256:run_default_dd816a518164-default-content",
+      "intent_key": "sha256:run_default_dd816a518164-default-intent",
+      "trigger_fingerprint": "sha256:run_default_dd816a518164-default-trigger"
+    },
+    "issuer": {
+      "kid": "frantic33-scafld-validation-key",
+      "public_key_sha256": "sha256:af2d375de1e0ea14f2584ef1bbff3de942875ffd72a9827a37e2287220692b9a",
+      "type": "hosted"
+    },
+    "lineage": {
+      "children": [],
+      "sync": []
+    },
+    "schema": "runx.receipt.v1",
+    "seal": {
+      "closed_at": "2026-06-30T08:15:32.700Z",
+      "criteria": [
+        {
+          "criterion_id": "process_exit",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "cli-tool exited successfully",
+          "verification_refs": []
+        }
+      ],
+      "disposition": "closed",
+      "last_observed_at": "2026-06-30T08:15:32.700Z",
+      "reason_code": "process_closed",
+      "summary": "cli-tool default completed"
+    },
+    "signals": [],
+    "signature": {
+      "alg": "Ed25519",
+      "value": "base64:gYpnabh8zwsXUfbC5jt-s_7XgIVgy57UO3OScoijZiH7ZTtAQhDiGZzhpJzQ3eEICytLW1FZpD59AD-TykDyDg"
+    },
+    "subject": {
+      "commitments": [],
+      "kind": "skill",
+      "ref": {
+        "type": "harness",
+        "uri": "hrn_run_default_dd816a518164_default"
+      }
+    }
+  },
+  "receipt_id": "sha256:b16dd7077df6c8a30901fbc27e92c784cbd5fd3575fd8039a0f8bc35865dc48c",
+  "run_id": "run_default_dd816a518164",
+  "schema": "runx.skill_run.v1",
+  "skill_name": "sourcey-docs-validation",
+  "status": "sealed"
+}

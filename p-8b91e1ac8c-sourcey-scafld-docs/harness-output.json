@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "case_count": 2,
+  "assertion_error_count": 0,
+  "assertion_errors": [],
+  "case_names": [
+    "scafld-sourcey-live-proof",
+    "invalid-sourcey-url-fails"
+  ],
+  "receipt_ids": [
+    "sha256:c6cf4e6c449453a94f55c08303088ae4e7551046910faa232e5e14a45b5484b9",
+    "sha256:598eefb78042b3afde039fbc103238036a2921bcc01526e8d9009b6bd07eca08"
+  ],
+  "graph_case_count": 0
+}

@@ -1,0 +1,71 @@
+skill: sourcey-docs-validation
+version: "0.1.0"
+
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+
+harness:
+  cases:
+    - name: scafld-sourcey-live-proof
+      runner: default
+      inputs:
+        public_url: https://0state.com/scafld/docs/go-api
+        parent_url: https://0state.com/scafld
+        repo_url: https://github.com/nilstate/scafld
+        commit: ce26b0c0637a0f0acd1c6be4397bda14668844ec
+        min_pages: "20"
+      expect:
+        status: sealed
+        receipt:
+          schema: runx.receipt.v1
+          state: sealed
+          disposition: closed
+          reason_code: process_closed
+    - name: invalid-sourcey-url-fails
+      runner: default
+      inputs:
+        public_url: https://0state.com/scafld/not-a-sourcey-page
+        parent_url: https://0state.com/scafld
+        repo_url: https://github.com/nilstate/scafld
+        commit: ce26b0c0637a0f0acd1c6be4397bda14668844ec
+        min_pages: "20"
+      expect:
+        status: failure
+        receipt:
+          schema: runx.receipt.v1
+          state: sealed
+          disposition: closed
+          reason_code: process_failed
+
+runners:
+  default:
+    default: true
+    type: cli-tool
+    command: python3
+    cwd: /work
+    args:
+      - run.py
+    inputs:
+      public_url:
+        type: string
+        required: true
+        description: Live Sourcey documentation URL to validate.
+      parent_url:
+        type: string
+        required: true
+        description: Parent project or documentation domain URL.
+      repo_url:
+        type: string
+        required: true
+        description: Public source repository URL.
+      commit:
+        type: string
+        required: true
+        description: Pinned public source commit.
+      min_pages:
+        type: string
+        required: true
+        description: Minimum Sourcey package/page count.
