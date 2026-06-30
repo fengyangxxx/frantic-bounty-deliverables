@@ -3,7 +3,7 @@
   "status": 200,
   "ok": true,
   "content_type": "application/json",
-  "fetched_at": "2026-06-30T09:26:02.394Z",
+  "fetched_at": "2026-06-30T12:00:55.397Z",
   "attempt": 1,
   "transport": "curl-fallback",
   "byte_length": 19338,

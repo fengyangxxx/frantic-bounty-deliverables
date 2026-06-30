@@ -1,6 +1,6 @@
 {
   "schema": "frantic.delivery.verification.v1",
-  "generated_at": "2026-06-30T09:26:04.433Z",
+  "generated_at": "2026-06-30T12:00:57.525Z",
   "posting_id": "p-aa9de6d1a9",
   "claim_ref": "frantic:claim:dbcb7788-4f29-4be3-832a-6149229e4a4c",
   "status": "pass",
@@ -33,12 +33,12 @@
     {
       "name": "required_representative_html_pages",
       "passed": true,
-      "detail": "#49, #63, #64, #65, #66, #67, #43, #62, #11, #33, #39, #1"
+      "detail": "#11, #27, #49, #62, #63, #64, #65, #66, #33, #43, #39, #1"
     },
     {
       "name": "required_status_counts_present",
       "passed": true,
-      "detail": "{\"open\":6,\"delivered\":14,\"accepted\":1,\"paid\":46,\"claimed\":2,\"other\":0,\"total\":69}"
+      "detail": "{\"open\":12,\"delivered\":8,\"accepted\":1,\"paid\":46,\"claimed\":2,\"other\":0,\"total\":69}"
     },
     {
       "name": "required_inventory_categories_checked",
@@ -49,6 +49,11 @@
       "name": "recommendations_bind_to_exact_bounties",
       "passed": true,
       "detail": "All affected rows carry number, postingId, URL, api_url, recommendation, and next operator action."
+    },
+    {
+      "name": "recommendations_use_allowed_vocabulary",
+      "passed": true,
+      "detail": "Every affected row uses one of keep, close, or rewrite."
     }
   ]
 }

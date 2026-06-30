@@ -1,20 +1,21 @@
-# Frantic #43 Board Health Audit
+﻿# Frantic #43 Board Health Audit
 
-Final public artifacts for Frantic bounty #43 / `p-aa9de6d1a9`.
+Final public artifacts for Frantic bounty #43 / p-aa9de6d1a9.
 
-- Receipt ref: `runx:receipt:sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee`
-- Receipt verify result: `runx-verify-output.json` reports `valid: true` with `signature_mode: production`.
-- runx CLI evidence: `runx-cli 0.6.13` from `evidence.json.observations[0]`.
-- Captured public counts: open {"open":6,"delivered":14,"accepted":1,"paid":46,"claimed":2,"other":0,"total":69}.
+- Receipt ref: $receiptRef
+- Receipt verify result: unx-verify-output.json reports alid: true.
+- runx CLI evidence: unx-cli 0.6.13 from evidence.json.observations[0].
+- Captured public counts: {"accepted":1,"claimed":2,"delivered":8,"open":12,"other":0,"paid":46,"total":69}.
 - API detail pages captured: 69.
 - HTML bounty pages captured: 12.
+- Auto-review fix: report now has an explicit Acceptance Bullet 4 inventory matrix for stale, superseded, duplicated, confusing, and over-crowded; every affected bounty uses only keep, close, or ewrite.
 
 ## Required Delivery Artifacts
 
-- `public_url`: this directory / README.
-- `evidence_json`: [evidence.json](./evidence.json)
-- `receipt_ref`: `runx:receipt:sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee`
-- `report`: [report.md](./report.md)
+- public_url: this directory / README.
+- evidence_json: [evidence.json](./evidence.json)
+- eceipt_ref: $receiptRef
+- eport: [report.md](./report.md)
 
 ## Supporting Artifacts
 

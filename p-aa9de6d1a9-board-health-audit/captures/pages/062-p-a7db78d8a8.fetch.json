@@ -3,9 +3,9 @@
   "status": 200,
   "ok": true,
   "content_type": "text/html",
-  "fetched_at": "2026-06-30T09:25:29.822Z",
+  "fetched_at": "2026-06-30T12:00:16.364Z",
   "attempt": 1,
   "transport": "curl-fallback",
-  "byte_length": 39368,
-  "sha256": "sha256:a999cb3385acb9d76123f3b3b9281a855c2e512862bc8d1d37101b75b7ffce81"
+  "byte_length": 50766,
+  "sha256": "sha256:229ef46aaf3747109c2a4b4d8a27e6c1b1a56135274f26d3e569caae6167f783"
 }

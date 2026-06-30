@@ -1,12 +1,13 @@
-{
-  "schema": "frantic43.receipt_public_key.v1",
-  "generatedAt": "2026-06-30T09:26:05.0804494Z",
-  "kid": "frantic43-board-health-docker-20260630-172509",
-  "publicKeyBase64": "zW9bT75/DN4PUhBadFS0h6d8sivZQy4lA7pZ44/0Pl8=",
-  "issuerType": "hosted",
-  "receipt_ref": "runx:receipt:sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee",
-  "receipt_id": "sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee",
-  "receipt_public_key_sha256": "sha256:bbce0d317f6041cb55c5a38b65b8608b67ae8a90f911d6efea2424faa0a988a4",
-  "run_command": "docker run --rm -e <runx signing env vars present, values redacted/not published> -v <workspace>:/work -w /work/work/frantic43/board-health-audit node:24-bookworm bash -lc 'npx -y @runxhq/cli@0.6.13 skill . -i output_dir=artifacts/final-runx-board-audit-docker-20260630-172509 --json -R artifacts/final-runx-receipts-docker-20260630-172509'",
-  "verify_command": "RUNX_RECEIPT_VERIFY_KID=frantic43-board-health-docker-20260630-172509 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=<publicKeyBase64> npx -y @runxhq/cli@0.6.13 verify sha256:99491adb9df590ba3cf66a6d351562ae2ae0d54f005ac5511db4bb6de71100ee --receipt-dir ./receipts --json"
+﻿{
+    "schema":  "frantic43.receipt_public_key.v1",
+    "generatedAt":  "2026-06-30T12:02:39.6051052Z",
+    "kid":  "frantic43-board-health-fix-20260630-2001",
+    "publicKeyBase64":  "Hrr5wB5c7aJfYHFdkpHLVvMXz23i5O54vI23qV0a/tE=",
+    "issuerType":  "hosted",
+    "receipt_ref":  "runx:receipt:sha256:ee7c826e41d7af11970584edfc9767f8d2f32343a9e87262c1ac51c11b94ee40",
+    "receipt_id":  "sha256:ee7c826e41d7af11970584edfc9767f8d2f32343a9e87262c1ac51c11b94ee40",
+    "receipt_public_key_sha256":  "sha256:a19041b30ca333a036608efbb8a291e62c9edcb6701f2b427895684c6e77d60a",
+    "signature_material_note":  "Signing seed was generated in-process for this governed run and is not published.",
+    "run_command":  "docker run --rm -e \u003crunx signing env vars present, values redacted/not published\u003e -v \u003cworkspace\u003e:/work -w /work/work/frantic43/board-health-audit node:24-bookworm bash -lc \u0027npx -y @runxhq/cli@0.6.13 skill . -i output_dir=artifacts/final-runx-board-audit-fix-20260630-2001 --json -R artifacts/final-runx-receipts-fix-20260630-2001\u0027",
+    "verify_command":  "RUNX_RECEIPT_VERIFY_KID=frantic43-board-health-fix-20260630-2001 RUNX_RECEIPT_VERIFY_ED25519_PUBLIC_KEY_BASE64=\u003cpublicKeyBase64\u003e npx -y @runxhq/cli@0.6.13 verify sha256:ee7c826e41d7af11970584edfc9767f8d2f32343a9e87262c1ac51c11b94ee40 --receipt-dir ./receipts --json"
 }

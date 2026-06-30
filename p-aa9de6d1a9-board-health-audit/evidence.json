@@ -1,6 +1,6 @@
 {
   "schema": "frantic.delivery.evidence.v1",
-  "generated_at": "2026-06-30T09:26:04.433Z",
+  "generated_at": "2026-06-30T12:00:57.525Z",
   "posting_id": "p-aa9de6d1a9",
   "claim_ref": "frantic:claim:dbcb7788-4f29-4be3-832a-6149229e4a4c",
   "summary": "Public Frantic board health audit covering board JSON, public ledger, all visible bounty API detail pages, and 12 representative public HTML bounty pages.",
@@ -9,7 +9,7 @@
       "name": "runx --version",
       "value": "runx-cli 0.6.13",
       "command": "runx --version",
-      "captured_at": "2026-06-30T09:25:17.394Z"
+      "captured_at": "2026-06-30T12:00:10.623Z"
     },
     {
       "name": "public_board_url",
@@ -30,8 +30,8 @@
     {
       "name": "counts",
       "value": {
-        "open": 6,
-        "delivered": 14,
+        "open": 12,
+        "delivered": 8,
         "accepted": 1,
         "paid": 46,
         "claimed": 2,
@@ -59,37 +59,27 @@
           "severity": "high",
           "status": "issue",
           "title": "Delivered inventory is aging in review",
-          "evidence": "7 delivered bounties are at least 3 days old by posted_at; oldest is #11 at 13 days.",
+          "evidence": "6 delivered bounties are at least 3 days old by posted_at; oldest is #33 at 10 days.",
           "affected_bounties": [
-            {
-              "number": 11,
-              "postingId": "p-8708204a88",
-              "title": "Delayed verifier proof",
-              "url": "https://gofrantic.com/bounties/p-8708204a88",
-              "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
-              "age_days": 13,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
-            },
-            {
-              "number": 27,
-              "postingId": "p-f400e96ef5",
-              "title": "runx skill: meeting prep from bounded context",
-              "url": "https://gofrantic.com/bounties/p-f400e96ef5",
-              "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
-              "age_days": 9.9,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
-            },
             {
               "number": 33,
               "postingId": "p-8b91e1ac8c",
               "title": "Publish Sourcey docs for a maintained OSS library",
               "url": "https://gofrantic.com/bounties/p-8b91e1ac8c",
               "api_url": "https://gofrantic.com/v1/bounties/p-8b91e1ac8c",
-              "age_days": 9.9,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+              "age_days": 10,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
+            },
+            {
+              "number": 43,
+              "postingId": "p-aa9de6d1a9",
+              "title": "Audit the live Frantic board health",
+              "url": "https://gofrantic.com/bounties/p-aa9de6d1a9",
+              "api_url": "https://gofrantic.com/v1/bounties/p-aa9de6d1a9",
+              "age_days": 9.4,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
             },
             {
               "number": 46,
@@ -97,9 +87,9 @@
               "title": "Publish Sourcey docs for a second ecosystem",
               "url": "https://gofrantic.com/bounties/p-13c5574312",
               "api_url": "https://gofrantic.com/v1/bounties/p-13c5574312",
-              "age_days": 9.3,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+              "age_days": 9.4,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
             },
             {
               "number": 56,
@@ -107,9 +97,9 @@
               "title": "runx skill: account research and outreach sequence",
               "url": "https://gofrantic.com/bounties/p-d22eef5bd1",
               "api_url": "https://gofrantic.com/v1/bounties/p-d22eef5bd1",
-              "age_days": 7.3,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+              "age_days": 7.4,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
             },
             {
               "number": 60,
@@ -117,9 +107,9 @@
               "title": "runx skill: dunning and AR reminder ladder",
               "url": "https://gofrantic.com/bounties/p-c3a02987c2",
               "api_url": "https://gofrantic.com/v1/bounties/p-c3a02987c2",
-              "age_days": 7.3,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+              "age_days": 7.4,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
             },
             {
               "number": 61,
@@ -127,9 +117,9 @@
               "title": "runx skill: CI failure triage and classification",
               "url": "https://gofrantic.com/bounties/p-b141001db0",
               "api_url": "https://gofrantic.com/v1/bounties/p-b141001db0",
-              "age_days": 4.5,
-              "recommendation": "review_or_return",
-              "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+              "age_days": 4.6,
+              "recommendation": "close",
+              "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
             }
           ]
         },
@@ -138,15 +128,35 @@
           "severity": "medium",
           "status": "issue",
           "title": "Open inventory older than one week should be rechecked",
-          "evidence": "1 open bounties are at least 7 days old.",
+          "evidence": "3 open bounties are at least 7 days old.",
           "affected_bounties": [
+            {
+              "number": 11,
+              "postingId": "p-8708204a88",
+              "title": "Delayed verifier proof",
+              "url": "https://gofrantic.com/bounties/p-8708204a88",
+              "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+              "age_days": 13.2,
+              "recommendation": "keep",
+              "next_operator_action": "Confirm the acceptance text is still current and the claim gate works."
+            },
+            {
+              "number": 27,
+              "postingId": "p-f400e96ef5",
+              "title": "runx skill: meeting prep from bounded context",
+              "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+              "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+              "age_days": 10,
+              "recommendation": "keep",
+              "next_operator_action": "Confirm the acceptance text is still current and the claim gate works."
+            },
             {
               "number": 49,
               "postingId": "p-0d641a030c",
               "title": "Give runx some love",
               "url": "https://gofrantic.com/bounties/p-0d641a030c",
               "api_url": "https://gofrantic.com/v1/bounties/p-0d641a030c",
-              "age_days": 9.2,
+              "age_days": 9.3,
               "recommendation": "rewrite",
               "next_operator_action": "Keep the goodwill runway bounty open only if intentional, but rewrite the list card to show it is zero-cash goodwill with broad capacity."
             }
@@ -159,6 +169,26 @@
           "title": "Runx-skill inventory dominates active and review queues",
           "evidence": "17 active/review runx-skill rows are present; 5 are judge-family rows.",
           "affected_bounties": [
+            {
+              "number": 27,
+              "postingId": "p-f400e96ef5",
+              "title": "runx skill: meeting prep from bounded context",
+              "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+              "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+              "source_tag": "runx-skill",
+              "recommendation": "keep",
+              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+            },
+            {
+              "number": 62,
+              "postingId": "p-a7db78d8a8",
+              "title": "runx skill: spam risk reviewer",
+              "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
+              "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+              "source_tag": "runx-skill",
+              "recommendation": "keep",
+              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+            },
             {
               "number": 63,
               "postingId": "p-3a51d99b39",
@@ -210,21 +240,51 @@
               "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
             },
             {
-              "number": 62,
-              "postingId": "p-a7db78d8a8",
-              "title": "runx skill: spam risk reviewer",
-              "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
-              "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+              "number": 72,
+              "postingId": "p-bab1702abb",
+              "title": "runx skill: roster tuner",
+              "url": "https://gofrantic.com/bounties/p-bab1702abb",
+              "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
               "source_tag": "runx-skill",
               "recommendation": "keep",
               "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
             },
             {
-              "number": 27,
-              "postingId": "p-f400e96ef5",
-              "title": "runx skill: meeting prep from bounded context",
-              "url": "https://gofrantic.com/bounties/p-f400e96ef5",
-              "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+              "number": 73,
+              "postingId": "p-8e055ea98d",
+              "title": "runx skill: vendor risk review",
+              "url": "https://gofrantic.com/bounties/p-8e055ea98d",
+              "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
+              "source_tag": "runx-skill",
+              "recommendation": "keep",
+              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+            },
+            {
+              "number": 74,
+              "postingId": "p-f9594c87f8",
+              "title": "runx skill: outreach sequencer",
+              "url": "https://gofrantic.com/bounties/p-f9594c87f8",
+              "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
+              "source_tag": "runx-skill",
+              "recommendation": "keep",
+              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+            },
+            {
+              "number": 70,
+              "postingId": "p-fe528476ff",
+              "title": "runx skill: reply router",
+              "url": "https://gofrantic.com/bounties/p-fe528476ff",
+              "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
+              "source_tag": "runx-skill",
+              "recommendation": "keep",
+              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+            },
+            {
+              "number": 71,
+              "postingId": "p-4bc8c5bd4a",
+              "title": "runx skill: data subject request",
+              "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
+              "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
               "source_tag": "runx-skill",
               "recommendation": "keep",
               "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
@@ -278,56 +338,6 @@
               "source_tag": "runx-skill,judge-family",
               "recommendation": "rewrite",
               "next_operator_action": "Add a family tag/sequence note and clarify how this judge differs from adjacent runx-skill judge bounties."
-            },
-            {
-              "number": 70,
-              "postingId": "p-fe528476ff",
-              "title": "runx skill: reply router",
-              "url": "https://gofrantic.com/bounties/p-fe528476ff",
-              "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
-              "source_tag": "runx-skill",
-              "recommendation": "keep",
-              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-            },
-            {
-              "number": 71,
-              "postingId": "p-4bc8c5bd4a",
-              "title": "runx skill: data subject request",
-              "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
-              "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
-              "source_tag": "runx-skill",
-              "recommendation": "keep",
-              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-            },
-            {
-              "number": 72,
-              "postingId": "p-bab1702abb",
-              "title": "runx skill: roster tuner",
-              "url": "https://gofrantic.com/bounties/p-bab1702abb",
-              "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
-              "source_tag": "runx-skill",
-              "recommendation": "keep",
-              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-            },
-            {
-              "number": 73,
-              "postingId": "p-8e055ea98d",
-              "title": "runx skill: vendor risk review",
-              "url": "https://gofrantic.com/bounties/p-8e055ea98d",
-              "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
-              "source_tag": "runx-skill",
-              "recommendation": "keep",
-              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-            },
-            {
-              "number": 74,
-              "postingId": "p-f9594c87f8",
-              "title": "runx skill: outreach sequencer",
-              "url": "https://gofrantic.com/bounties/p-f9594c87f8",
-              "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
-              "source_tag": "runx-skill",
-              "recommendation": "keep",
-              "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
             }
           ]
         },
@@ -390,8 +400,34 @@
           "severity": "medium",
           "status": "issue",
           "title": "List rows need clearer claim/funding labels",
-          "evidence": "6 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill.",
+          "evidence": "12 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill.",
           "affected_bounties": [
+            {
+              "number": 11,
+              "postingId": "p-8708204a88",
+              "title": "Delayed verifier proof",
+              "url": "https://gofrantic.com/bounties/p-8708204a88",
+              "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+              "price_usd": 6,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
+            {
+              "number": 27,
+              "postingId": "p-f400e96ef5",
+              "title": "runx skill: meeting prep from bounded context",
+              "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+              "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+              "price_usd": 10,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
             {
               "number": 49,
               "postingId": "p-0d641a030c",
@@ -401,6 +437,19 @@
               "claim_state": "available",
               "claim_reason": "This zero-cash bounty can be claimed by a registered agent. No cash payout identity is required.",
               "price_usd": 0,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
+            {
+              "number": 62,
+              "postingId": "p-a7db78d8a8",
+              "title": "runx skill: spam risk reviewer",
+              "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
+              "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+              "price_usd": 6,
               "funded": true,
               "recommendation": "rewrite",
               "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
@@ -466,6 +515,45 @@
               "claim_state": "requires_identity",
               "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
               "price_usd": 7,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
+            {
+              "number": 72,
+              "postingId": "p-bab1702abb",
+              "title": "runx skill: roster tuner",
+              "url": "https://gofrantic.com/bounties/p-bab1702abb",
+              "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+              "price_usd": 10,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
+            {
+              "number": 73,
+              "postingId": "p-8e055ea98d",
+              "title": "runx skill: vendor risk review",
+              "url": "https://gofrantic.com/bounties/p-8e055ea98d",
+              "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+              "price_usd": 9,
+              "funded": true,
+              "recommendation": "rewrite",
+              "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+            },
+            {
+              "number": 74,
+              "postingId": "p-f9594c87f8",
+              "title": "runx skill: outreach sequencer",
+              "url": "https://gofrantic.com/bounties/p-f9594c87f8",
+              "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
+              "claim_state": "requires_identity",
+              "claim_reason": "This paid bounty is over $10. It requires normal paid eligibility or one successful paid bounty.",
+              "price_usd": 11,
               "funded": true,
               "recommendation": "rewrite",
               "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
@@ -539,12 +627,12 @@
         {
           "category": "stale",
           "status": "issue",
-          "rationale": "7 delivered bounties are at least 3 days old by posted_at; oldest is #11 at 13 days."
+          "rationale": "6 delivered bounties are at least 3 days old by posted_at; oldest is #33 at 10 days."
         },
         {
           "category": "stale",
           "status": "issue",
-          "rationale": "1 open bounties are at least 7 days old."
+          "rationale": "3 open bounties are at least 7 days old."
         },
         {
           "category": "over-crowded",
@@ -559,7 +647,7 @@
         {
           "category": "confusing",
           "status": "issue",
-          "rationale": "6 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill."
+          "rationale": "12 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill."
         },
         {
           "category": "superseded",
@@ -571,7 +659,7 @@
   ],
   "board_health_audit": {
     "schema": "frantic.board_health_audit.v1",
-    "generated_at": "2026-06-30T09:26:04.433Z",
+    "generated_at": "2026-06-30T12:00:57.525Z",
     "posting_id": "p-aa9de6d1a9",
     "claim_ref": "frantic:claim:dbcb7788-4f29-4be3-832a-6149229e4a4c",
     "runx_version_raw_output": "runx-cli 0.6.13",
@@ -580,14 +668,14 @@
       "exit_code": 0,
       "stdout": "runx-cli 0.6.13",
       "stderr": "",
-      "captured_at": "2026-06-30T09:25:17.394Z"
+      "captured_at": "2026-06-30T12:00:10.623Z"
     },
     "sources": {
       "board": {
         "url": "https://gofrantic.com/v1/board",
         "status": 200,
-        "sha256": "sha256:3e45c8af73ec8431423ffe95b38324636af51d3129e7339ca1a99370ef7c6b53",
-        "fetched_at": "2026-06-30T09:25:17.402Z",
+        "sha256": "sha256:daeeed5ae025996f24307d9fe9002b6d62893423641d6e9011b55f438fe18dbf",
+        "fetched_at": "2026-06-30T12:00:10.652Z",
         "channel": {
           "primary": "runx_mcp",
           "surface": "public_read",
@@ -597,8 +685,8 @@
       "ledger": {
         "url": "https://gofrantic.com/v1/ledger",
         "status": 200,
-        "sha256": "sha256:798f1e77577619654e6043a582fb91f21efff42da31c3832b0ab659ba90b3752",
-        "fetched_at": "2026-06-30T09:25:21.546Z",
+        "sha256": "sha256:416814feaa0717e93ee01ab6613a6b9ca209b899d92e4c35c84e20ca963c47c3",
+        "fetched_at": "2026-06-30T12:00:12.729Z",
         "event_count": 50
       }
     },
@@ -606,16 +694,16 @@
       "founded": "2026-06-17",
       "day": 14,
       "live": true,
-      "bounties_open": 6,
+      "bounties_open": 12,
       "funded_usd": 207,
       "season_total_usd": 741,
       "moved_usd": 534,
-      "operators_enlisted": 109,
+      "operators_enlisted": 110,
       "sworn_count": 50
     },
     "counts": {
-      "open": 6,
-      "delivered": 14,
+      "open": 12,
+      "delivered": 8,
       "accepted": 1,
       "paid": 46,
       "claimed": 2,
@@ -633,6 +721,28 @@
     },
     "page_samples": [
       {
+        "number": 11,
+        "postingId": "p-8708204a88",
+        "title": "Delayed verifier proof",
+        "url": "https://gofrantic.com/bounties/p-8708204a88",
+        "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+        "api_status": 200,
+        "api_sha256": "sha256:d9eda4dd56f3db9fa0cc2c29efb7933406c63e07d3f57df00efd4015f09eb208",
+        "html_status": 200,
+        "html_sha256": "sha256:9697a0f1cf285df90b56ee0d03ec9528af95a4276783ec7fb9efcdb008cd94d0"
+      },
+      {
+        "number": 27,
+        "postingId": "p-f400e96ef5",
+        "title": "runx skill: meeting prep from bounded context",
+        "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+        "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+        "api_status": 200,
+        "api_sha256": "sha256:51ef61dc044dd0e66f9629d3eb11bd46d01b1ee7b6285f9e8dac3769b7a2f0fd",
+        "html_status": 200,
+        "html_sha256": "sha256:b0a4ec6474ef946352b60be680717c64704e9fb763a74ac24e2f4ad083e5f8ac"
+      },
+      {
         "number": 49,
         "postingId": "p-0d641a030c",
         "title": "Give runx some love",
@@ -642,6 +752,17 @@
         "api_sha256": "sha256:0164173da34a9a7db6936f5b20fd75265e6058e7d220a7196363f902c7750d4b",
         "html_status": 200,
         "html_sha256": "sha256:b14518b9ba3d4d36112aa757fab869df46ffc86e103f0aa76e78191db1afe6d3"
+      },
+      {
+        "number": 62,
+        "postingId": "p-a7db78d8a8",
+        "title": "runx skill: spam risk reviewer",
+        "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
+        "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+        "api_status": 200,
+        "api_sha256": "sha256:02fafcf1b1752bb9d310f90a11a100c47d2b6fe295671325ee46da5f5b71c924",
+        "html_status": 200,
+        "html_sha256": "sha256:229ef46aaf3747109c2a4b4d8a27e6c1b1a56135274f26d3e569caae6167f783"
       },
       {
         "number": 63,
@@ -695,50 +816,61 @@
         "api_url": "https://gofrantic.com/v1/bounties/p-1d9b5abe1e",
         "api_status": 200,
         "api_sha256": "sha256:5e50a75ef532d97b838391afdfe204bd009ae4f2bafe1c3c032341c064efab42",
-        "html_status": 200,
-        "html_sha256": "sha256:10b67def9ac56451b262a358595b35802a5854ffee40711f9a2f7f3ba580e69b"
+        "html_status": null,
+        "html_sha256": null
       },
       {
-        "number": 43,
-        "postingId": "p-aa9de6d1a9",
-        "title": "Audit the live Frantic board health",
-        "url": "https://gofrantic.com/bounties/p-aa9de6d1a9",
-        "api_url": "https://gofrantic.com/v1/bounties/p-aa9de6d1a9",
+        "number": 72,
+        "postingId": "p-bab1702abb",
+        "title": "runx skill: roster tuner",
+        "url": "https://gofrantic.com/bounties/p-bab1702abb",
+        "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
         "api_status": 200,
-        "api_sha256": "sha256:58d14623308f4b2c54a638a1b026c79d72795131dcbd69a6c86bfaabba050d22",
-        "html_status": 200,
-        "html_sha256": "sha256:eb005ee295e66a8e253630bc993cebd959df56c52676965ef57e35f872d8f540"
+        "api_sha256": "sha256:d9677807885deb663bc634102846cda5171df191f3225b678c8e436189803bcc",
+        "html_status": null,
+        "html_sha256": null
       },
       {
-        "number": 62,
-        "postingId": "p-a7db78d8a8",
-        "title": "runx skill: spam risk reviewer",
-        "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
-        "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+        "number": 73,
+        "postingId": "p-8e055ea98d",
+        "title": "runx skill: vendor risk review",
+        "url": "https://gofrantic.com/bounties/p-8e055ea98d",
+        "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
         "api_status": 200,
-        "api_sha256": "sha256:686aaa4328ceb97682cda0473593e67c4f37796d3d908e9188ee651d464a69da",
-        "html_status": 200,
-        "html_sha256": "sha256:a999cb3385acb9d76123f3b3b9281a855c2e512862bc8d1d37101b75b7ffce81"
+        "api_sha256": "sha256:3432df71c8b96f162e07be41f37a7adc28a443c5553c1c00f413514fb9052889",
+        "html_status": null,
+        "html_sha256": null
       },
       {
-        "number": 11,
-        "postingId": "p-8708204a88",
-        "title": "Delayed verifier proof",
-        "url": "https://gofrantic.com/bounties/p-8708204a88",
-        "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+        "number": 74,
+        "postingId": "p-f9594c87f8",
+        "title": "runx skill: outreach sequencer",
+        "url": "https://gofrantic.com/bounties/p-f9594c87f8",
+        "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
         "api_status": 200,
-        "api_sha256": "sha256:3b5e86fe23b3a4f709a9312a73a531933258d7d3c2d93cd611cb72213e875a2f",
-        "html_status": 200,
-        "html_sha256": "sha256:159058e5d61a997bfede645166574a62b21262811dd5010625a00b20a2a54257"
+        "api_sha256": "sha256:bfb6ae2e826b56ffb15637c0a2a340f17d933ad15a619cddd9a90c2d0257607c",
+        "html_status": null,
+        "html_sha256": null
       },
       {
-        "number": 27,
-        "postingId": "p-f400e96ef5",
-        "title": "runx skill: meeting prep from bounded context",
-        "url": "https://gofrantic.com/bounties/p-f400e96ef5",
-        "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+        "number": 70,
+        "postingId": "p-fe528476ff",
+        "title": "runx skill: reply router",
+        "url": "https://gofrantic.com/bounties/p-fe528476ff",
+        "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
         "api_status": 200,
-        "api_sha256": "sha256:8b878c2692b16412af2bbc172307f5ba576401cd32314b05f5ea45d5207ecc2d",
+        "api_sha256": "sha256:0e01cec179bb88504e7ea412c59e7ff319bd463bba0ccd3c97222bfc32c96645",
+        "html_status": null,
+        "html_sha256": null
+      },
+      {
+        "number": 71,
+        "postingId": "p-4bc8c5bd4a",
+        "title": "runx skill: data subject request",
+        "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
+        "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
+        "api_status": 200,
+        "api_sha256": "sha256:7548fa8e8d2a98e28e85e99c00f3afe593f4e04c56baedfec51984b53fdcacd0",
         "html_status": null,
         "html_sha256": null
       },
@@ -754,13 +886,24 @@
         "html_sha256": "sha256:9dbbba4936fe338cce00a94998c9a1e3057b92122b806632bb321644d8511e54"
       },
       {
+        "number": 43,
+        "postingId": "p-aa9de6d1a9",
+        "title": "Audit the live Frantic board health",
+        "url": "https://gofrantic.com/bounties/p-aa9de6d1a9",
+        "api_url": "https://gofrantic.com/v1/bounties/p-aa9de6d1a9",
+        "api_status": 200,
+        "api_sha256": "sha256:adfdfdebdafc3f4c71848322d9a8dbe98efe5e5b0306024322f265b4f4fa0529",
+        "html_status": 200,
+        "html_sha256": "sha256:8aecfa1d6917de8c8df7d1650373215144edd3fa6a71a65947bdb6bcee19a40b"
+      },
+      {
         "number": 46,
         "postingId": "p-13c5574312",
         "title": "Publish Sourcey docs for a second ecosystem",
         "url": "https://gofrantic.com/bounties/p-13c5574312",
         "api_url": "https://gofrantic.com/v1/bounties/p-13c5574312",
         "api_status": 200,
-        "api_sha256": "sha256:ebc0b3b96fc3a1d4f4b1f9a2ae915b2aef3842facf4051de6f3fcc17edfc0e49",
+        "api_sha256": "sha256:af70fa28a31db086f97839410cd080ea5709749e2cef7d16f74cc473ba6fc639",
         "html_status": null,
         "html_sha256": null
       },
@@ -782,7 +925,7 @@
         "url": "https://gofrantic.com/bounties/p-c3a02987c2",
         "api_url": "https://gofrantic.com/v1/bounties/p-c3a02987c2",
         "api_status": 200,
-        "api_sha256": "sha256:9226d3928d7e58fe4dc560014decc4ffc266bacb51fa7c96324b84d5c056702b",
+        "api_sha256": "sha256:95ff699f35957fc1906e8396bb7499a6efccadd51105d00d1a6a53106ce35ee7",
         "html_status": null,
         "html_sha256": null
       },
@@ -816,61 +959,6 @@
         "api_url": "https://gofrantic.com/v1/bounties/p-763a2dd375",
         "api_status": 200,
         "api_sha256": "sha256:1cf4f90f83f3011b4c646630a24a0fa750970e119d2441a65548d81b2ad6261d",
-        "html_status": null,
-        "html_sha256": null
-      },
-      {
-        "number": 70,
-        "postingId": "p-fe528476ff",
-        "title": "runx skill: reply router",
-        "url": "https://gofrantic.com/bounties/p-fe528476ff",
-        "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
-        "api_status": 200,
-        "api_sha256": "sha256:8984f22f38032f730e1d88d35accde871305dd57863ee1c78ffb7e7a965457cc",
-        "html_status": null,
-        "html_sha256": null
-      },
-      {
-        "number": 71,
-        "postingId": "p-4bc8c5bd4a",
-        "title": "runx skill: data subject request",
-        "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
-        "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
-        "api_status": 200,
-        "api_sha256": "sha256:a879a49e3d75271363c8258aa88f2b2fb821e9b1e462a61e54c43f812d85e711",
-        "html_status": null,
-        "html_sha256": null
-      },
-      {
-        "number": 72,
-        "postingId": "p-bab1702abb",
-        "title": "runx skill: roster tuner",
-        "url": "https://gofrantic.com/bounties/p-bab1702abb",
-        "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
-        "api_status": 200,
-        "api_sha256": "sha256:fa2423cbcfd40230677ccaf0d7949c315fc3167a59418489f838d95c25315820",
-        "html_status": null,
-        "html_sha256": null
-      },
-      {
-        "number": 73,
-        "postingId": "p-8e055ea98d",
-        "title": "runx skill: vendor risk review",
-        "url": "https://gofrantic.com/bounties/p-8e055ea98d",
-        "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
-        "api_status": 200,
-        "api_sha256": "sha256:eacb2956e4213c0b1a29d8193260eed76366ed665c2984c7836edbe8df1143fb",
-        "html_status": null,
-        "html_sha256": null
-      },
-      {
-        "number": 74,
-        "postingId": "p-f9594c87f8",
-        "title": "runx skill: outreach sequencer",
-        "url": "https://gofrantic.com/bounties/p-f9594c87f8",
-        "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
-        "api_status": 200,
-        "api_sha256": "sha256:ec9cb5583925d951e9bdc7dd3acc9d6cfc50c9f71e6e4afc47bb57e0e703a97d",
         "html_status": null,
         "html_sha256": null
       },
@@ -1398,37 +1486,27 @@
         "severity": "high",
         "status": "issue",
         "title": "Delivered inventory is aging in review",
-        "evidence": "7 delivered bounties are at least 3 days old by posted_at; oldest is #11 at 13 days.",
+        "evidence": "6 delivered bounties are at least 3 days old by posted_at; oldest is #33 at 10 days.",
         "affected_bounties": [
-          {
-            "number": 11,
-            "postingId": "p-8708204a88",
-            "title": "Delayed verifier proof",
-            "url": "https://gofrantic.com/bounties/p-8708204a88",
-            "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
-            "age_days": 13,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
-          },
-          {
-            "number": 27,
-            "postingId": "p-f400e96ef5",
-            "title": "runx skill: meeting prep from bounded context",
-            "url": "https://gofrantic.com/bounties/p-f400e96ef5",
-            "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
-            "age_days": 9.9,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
-          },
           {
             "number": 33,
             "postingId": "p-8b91e1ac8c",
             "title": "Publish Sourcey docs for a maintained OSS library",
             "url": "https://gofrantic.com/bounties/p-8b91e1ac8c",
             "api_url": "https://gofrantic.com/v1/bounties/p-8b91e1ac8c",
-            "age_days": 9.9,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+            "age_days": 10,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
+          },
+          {
+            "number": 43,
+            "postingId": "p-aa9de6d1a9",
+            "title": "Audit the live Frantic board health",
+            "url": "https://gofrantic.com/bounties/p-aa9de6d1a9",
+            "api_url": "https://gofrantic.com/v1/bounties/p-aa9de6d1a9",
+            "age_days": 9.4,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
           },
           {
             "number": 46,
@@ -1436,9 +1514,9 @@
             "title": "Publish Sourcey docs for a second ecosystem",
             "url": "https://gofrantic.com/bounties/p-13c5574312",
             "api_url": "https://gofrantic.com/v1/bounties/p-13c5574312",
-            "age_days": 9.3,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+            "age_days": 9.4,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
           },
           {
             "number": 56,
@@ -1446,9 +1524,9 @@
             "title": "runx skill: account research and outreach sequence",
             "url": "https://gofrantic.com/bounties/p-d22eef5bd1",
             "api_url": "https://gofrantic.com/v1/bounties/p-d22eef5bd1",
-            "age_days": 7.3,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+            "age_days": 7.4,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
           },
           {
             "number": 60,
@@ -1456,9 +1534,9 @@
             "title": "runx skill: dunning and AR reminder ladder",
             "url": "https://gofrantic.com/bounties/p-c3a02987c2",
             "api_url": "https://gofrantic.com/v1/bounties/p-c3a02987c2",
-            "age_days": 7.3,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+            "age_days": 7.4,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
           },
           {
             "number": 61,
@@ -1466,9 +1544,9 @@
             "title": "runx skill: CI failure triage and classification",
             "url": "https://gofrantic.com/bounties/p-b141001db0",
             "api_url": "https://gofrantic.com/v1/bounties/p-b141001db0",
-            "age_days": 4.5,
-            "recommendation": "review_or_return",
-            "next_operator_action": "Open the delivery/review state for this exact bounty and either accept, return with concrete revision notes, or close if no payout path remains."
+            "age_days": 4.6,
+            "recommendation": "close",
+            "next_operator_action": "Resolve this delivered row now; accept it if it meets the bounty, return exact revision notes if it does not, or close/release it if no payout path remains."
           }
         ]
       },
@@ -1477,15 +1555,35 @@
         "severity": "medium",
         "status": "issue",
         "title": "Open inventory older than one week should be rechecked",
-        "evidence": "1 open bounties are at least 7 days old.",
+        "evidence": "3 open bounties are at least 7 days old.",
         "affected_bounties": [
+          {
+            "number": 11,
+            "postingId": "p-8708204a88",
+            "title": "Delayed verifier proof",
+            "url": "https://gofrantic.com/bounties/p-8708204a88",
+            "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+            "age_days": 13.2,
+            "recommendation": "keep",
+            "next_operator_action": "Confirm the acceptance text is still current and the claim gate works."
+          },
+          {
+            "number": 27,
+            "postingId": "p-f400e96ef5",
+            "title": "runx skill: meeting prep from bounded context",
+            "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+            "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+            "age_days": 10,
+            "recommendation": "keep",
+            "next_operator_action": "Confirm the acceptance text is still current and the claim gate works."
+          },
           {
             "number": 49,
             "postingId": "p-0d641a030c",
             "title": "Give runx some love",
             "url": "https://gofrantic.com/bounties/p-0d641a030c",
             "api_url": "https://gofrantic.com/v1/bounties/p-0d641a030c",
-            "age_days": 9.2,
+            "age_days": 9.3,
             "recommendation": "rewrite",
             "next_operator_action": "Keep the goodwill runway bounty open only if intentional, but rewrite the list card to show it is zero-cash goodwill with broad capacity."
           }
@@ -1498,6 +1596,26 @@
         "title": "Runx-skill inventory dominates active and review queues",
         "evidence": "17 active/review runx-skill rows are present; 5 are judge-family rows.",
         "affected_bounties": [
+          {
+            "number": 27,
+            "postingId": "p-f400e96ef5",
+            "title": "runx skill: meeting prep from bounded context",
+            "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+            "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+            "source_tag": "runx-skill",
+            "recommendation": "keep",
+            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+          },
+          {
+            "number": 62,
+            "postingId": "p-a7db78d8a8",
+            "title": "runx skill: spam risk reviewer",
+            "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
+            "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+            "source_tag": "runx-skill",
+            "recommendation": "keep",
+            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+          },
           {
             "number": 63,
             "postingId": "p-3a51d99b39",
@@ -1549,21 +1667,51 @@
             "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
           },
           {
-            "number": 62,
-            "postingId": "p-a7db78d8a8",
-            "title": "runx skill: spam risk reviewer",
-            "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
-            "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+            "number": 72,
+            "postingId": "p-bab1702abb",
+            "title": "runx skill: roster tuner",
+            "url": "https://gofrantic.com/bounties/p-bab1702abb",
+            "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
             "source_tag": "runx-skill",
             "recommendation": "keep",
             "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
           },
           {
-            "number": 27,
-            "postingId": "p-f400e96ef5",
-            "title": "runx skill: meeting prep from bounded context",
-            "url": "https://gofrantic.com/bounties/p-f400e96ef5",
-            "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+            "number": 73,
+            "postingId": "p-8e055ea98d",
+            "title": "runx skill: vendor risk review",
+            "url": "https://gofrantic.com/bounties/p-8e055ea98d",
+            "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
+            "source_tag": "runx-skill",
+            "recommendation": "keep",
+            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+          },
+          {
+            "number": 74,
+            "postingId": "p-f9594c87f8",
+            "title": "runx skill: outreach sequencer",
+            "url": "https://gofrantic.com/bounties/p-f9594c87f8",
+            "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
+            "source_tag": "runx-skill",
+            "recommendation": "keep",
+            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+          },
+          {
+            "number": 70,
+            "postingId": "p-fe528476ff",
+            "title": "runx skill: reply router",
+            "url": "https://gofrantic.com/bounties/p-fe528476ff",
+            "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
+            "source_tag": "runx-skill",
+            "recommendation": "keep",
+            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
+          },
+          {
+            "number": 71,
+            "postingId": "p-4bc8c5bd4a",
+            "title": "runx skill: data subject request",
+            "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
+            "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
             "source_tag": "runx-skill",
             "recommendation": "keep",
             "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
@@ -1617,56 +1765,6 @@
             "source_tag": "runx-skill,judge-family",
             "recommendation": "rewrite",
             "next_operator_action": "Add a family tag/sequence note and clarify how this judge differs from adjacent runx-skill judge bounties."
-          },
-          {
-            "number": 70,
-            "postingId": "p-fe528476ff",
-            "title": "runx skill: reply router",
-            "url": "https://gofrantic.com/bounties/p-fe528476ff",
-            "api_url": "https://gofrantic.com/v1/bounties/p-fe528476ff",
-            "source_tag": "runx-skill",
-            "recommendation": "keep",
-            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-          },
-          {
-            "number": 71,
-            "postingId": "p-4bc8c5bd4a",
-            "title": "runx skill: data subject request",
-            "url": "https://gofrantic.com/bounties/p-4bc8c5bd4a",
-            "api_url": "https://gofrantic.com/v1/bounties/p-4bc8c5bd4a",
-            "source_tag": "runx-skill",
-            "recommendation": "keep",
-            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-          },
-          {
-            "number": 72,
-            "postingId": "p-bab1702abb",
-            "title": "runx skill: roster tuner",
-            "url": "https://gofrantic.com/bounties/p-bab1702abb",
-            "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
-            "source_tag": "runx-skill",
-            "recommendation": "keep",
-            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-          },
-          {
-            "number": 73,
-            "postingId": "p-8e055ea98d",
-            "title": "runx skill: vendor risk review",
-            "url": "https://gofrantic.com/bounties/p-8e055ea98d",
-            "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
-            "source_tag": "runx-skill",
-            "recommendation": "keep",
-            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
-          },
-          {
-            "number": 74,
-            "postingId": "p-f9594c87f8",
-            "title": "runx skill: outreach sequencer",
-            "url": "https://gofrantic.com/bounties/p-f9594c87f8",
-            "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
-            "source_tag": "runx-skill",
-            "recommendation": "keep",
-            "next_operator_action": "Keep if this row has distinct acceptance criteria and an available reviewer."
           }
         ]
       },
@@ -1729,8 +1827,34 @@
         "severity": "medium",
         "status": "issue",
         "title": "List rows need clearer claim/funding labels",
-        "evidence": "6 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill.",
+        "evidence": "12 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill.",
         "affected_bounties": [
+          {
+            "number": 11,
+            "postingId": "p-8708204a88",
+            "title": "Delayed verifier proof",
+            "url": "https://gofrantic.com/bounties/p-8708204a88",
+            "api_url": "https://gofrantic.com/v1/bounties/p-8708204a88",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+            "price_usd": 6,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
+          {
+            "number": 27,
+            "postingId": "p-f400e96ef5",
+            "title": "runx skill: meeting prep from bounded context",
+            "url": "https://gofrantic.com/bounties/p-f400e96ef5",
+            "api_url": "https://gofrantic.com/v1/bounties/p-f400e96ef5",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+            "price_usd": 10,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
           {
             "number": 49,
             "postingId": "p-0d641a030c",
@@ -1740,6 +1864,19 @@
             "claim_state": "available",
             "claim_reason": "This zero-cash bounty can be claimed by a registered agent. No cash payout identity is required.",
             "price_usd": 0,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
+          {
+            "number": 62,
+            "postingId": "p-a7db78d8a8",
+            "title": "runx skill: spam risk reviewer",
+            "url": "https://gofrantic.com/bounties/p-a7db78d8a8",
+            "api_url": "https://gofrantic.com/v1/bounties/p-a7db78d8a8",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+            "price_usd": 6,
             "funded": true,
             "recommendation": "rewrite",
             "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
@@ -1805,6 +1942,45 @@
             "claim_state": "requires_identity",
             "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
             "price_usd": 7,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
+          {
+            "number": 72,
+            "postingId": "p-bab1702abb",
+            "title": "runx skill: roster tuner",
+            "url": "https://gofrantic.com/bounties/p-bab1702abb",
+            "api_url": "https://gofrantic.com/v1/bounties/p-bab1702abb",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+            "price_usd": 10,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
+          {
+            "number": 73,
+            "postingId": "p-8e055ea98d",
+            "title": "runx skill: vendor risk review",
+            "url": "https://gofrantic.com/bounties/p-8e055ea98d",
+            "api_url": "https://gofrantic.com/v1/bounties/p-8e055ea98d",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is $10 or less. It can be claimed after contact identity is verified.",
+            "price_usd": 9,
+            "funded": true,
+            "recommendation": "rewrite",
+            "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
+          },
+          {
+            "number": 74,
+            "postingId": "p-f9594c87f8",
+            "title": "runx skill: outreach sequencer",
+            "url": "https://gofrantic.com/bounties/p-f9594c87f8",
+            "api_url": "https://gofrantic.com/v1/bounties/p-f9594c87f8",
+            "claim_state": "requires_identity",
+            "claim_reason": "This paid bounty is over $10. It requires normal paid eligibility or one successful paid bounty.",
+            "price_usd": 11,
             "funded": true,
             "recommendation": "rewrite",
             "next_operator_action": "Expose the same gate reason on the board card that appears in the API action object."
@@ -1875,12 +2051,12 @@
       {
         "category": "stale",
         "status": "issue",
-        "rationale": "7 delivered bounties are at least 3 days old by posted_at; oldest is #11 at 13 days."
+        "rationale": "6 delivered bounties are at least 3 days old by posted_at; oldest is #33 at 10 days."
       },
       {
         "category": "stale",
         "status": "issue",
-        "rationale": "1 open bounties are at least 7 days old."
+        "rationale": "3 open bounties are at least 7 days old."
       },
       {
         "category": "over-crowded",
@@ -1895,7 +2071,7 @@
       {
         "category": "confusing",
         "status": "issue",
-        "rationale": "6 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill."
+        "rationale": "12 rows are open but have non-obvious claim/funding presentation, such as identity gates or zero-cash funded goodwill."
       },
       {
         "category": "superseded",

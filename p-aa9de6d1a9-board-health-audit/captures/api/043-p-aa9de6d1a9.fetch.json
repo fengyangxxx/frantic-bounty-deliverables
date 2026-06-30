@@ -3,9 +3,9 @@
   "status": 200,
   "ok": true,
   "content_type": "application/json",
-  "fetched_at": "2026-06-30T09:25:26.940Z",
+  "fetched_at": "2026-06-30T12:00:26.091Z",
   "attempt": 1,
   "transport": "curl-fallback",
-  "byte_length": 10942,
-  "sha256": "sha256:58d14623308f4b2c54a638a1b026c79d72795131dcbd69a6c86bfaabba050d22"
+  "byte_length": 11467,
+  "sha256": "sha256:adfdfdebdafc3f4c71848322d9a8dbe98efe5e5b0306024322f265b4f4fa0529"
 }
